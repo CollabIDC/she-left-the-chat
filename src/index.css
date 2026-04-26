@@ -2,107 +2,85 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&family=DM+Sans:wght@400;500;700&display=swap');
 
-/* shelefthechat - Travel Blog Design System
-   Mediterranean-inspired warm palette with editorial elegance */
+/* shelefthechat - Editorial expat memoir design system
+   Warm ivory, charcoal, antique gold, dusty terracotta, near-black. */
 
 @layer base {
   :root {
-    /* Warm cream background */
-    --background: 40 33% 98%;
-    --foreground: 20 10% 15%;
+    /* Warm ivory cream #FAF7F2 */
+    --background: 38 35% 96%;
+    --foreground: 0 0% 10%;
 
-    /* Card surfaces */
-    --card: 40 30% 96%;
-    --card-foreground: 20 10% 15%;
+    /* White contrast */
+    --surface: 0 0% 100%;
+    --surface-foreground: 0 0% 10%;
 
-    --popover: 40 30% 96%;
-    --popover-foreground: 20 10% 15%;
+    /* Card surfaces (white) */
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
 
-    /* Terracotta primary - Spanish warmth */
-    --primary: 16 65% 50%;
-    --primary-foreground: 40 33% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
 
-    /* Warm sand secondary */
-    --secondary: 35 30% 90%;
-    --secondary-foreground: 20 10% 25%;
+    /* Antique gold #C9A84C - primary accent */
+    --primary: 44 56% 54%;
+    --primary-foreground: 0 0% 10%;
 
-    /* Muted warm grays */
-    --muted: 35 20% 92%;
-    --muted-foreground: 20 8% 45%;
+    /* Sand secondary */
+    --secondary: 38 25% 92%;
+    --secondary-foreground: 0 0% 10%;
 
-    /* Olive accent */
-    --accent: 85 25% 40%;
-    --accent-foreground: 40 33% 98%;
+    /* Muted warm */
+    --muted: 38 20% 90%;
+    --muted-foreground: 0 0% 40%;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 40 33% 98%;
+    /* Dusty terracotta #C4714F - secondary warm */
+    --accent: 16 47% 54%;
+    --accent-foreground: 0 0% 100%;
 
-    --border: 35 20% 88%;
-    --input: 35 20% 88%;
-    --ring: 16 65% 50%;
+    /* Near black #111111 - nav/footer */
+    --ink: 0 0% 7%;
+    --ink-foreground: 38 35% 96%;
 
-    --radius: 0.75rem;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 38 35% 96%;
+
+    --border: 38 18% 85%;
+    --input: 38 18% 85%;
+    --ring: 44 56% 54%;
+
+    --radius: 0.875rem;
 
     /* Custom design tokens */
-    --gradient-hero: linear-gradient(135deg, hsl(16 65% 50% / 0.9), hsl(35 60% 45% / 0.8));
-    --gradient-warm: linear-gradient(180deg, hsl(40 33% 98%), hsl(35 30% 94%));
-    --shadow-soft: 0 4px 20px -4px hsl(20 10% 15% / 0.08);
-    --shadow-elevated: 0 12px 40px -8px hsl(20 10% 15% / 0.12);
-    --shadow-glow: 0 0 40px hsl(16 65% 50% / 0.15);
+    --gold: 44 56% 54%;
+    --gold-soft: 44 56% 64%;
+    --gold-deep: 44 56% 42%;
+    --terracotta: 16 47% 54%;
+    --blush: 16 35% 92%;
+    --ivory: 38 35% 96%;
+    --charcoal: 0 0% 10%;
+
+    --gradient-hero: linear-gradient(90deg, hsl(0 0% 0% / 0.55) 0%, hsl(0 0% 0% / 0.38) 25%, hsl(0 0% 0% / 0.05) 60%, hsl(0 0% 0% / 0) 100%);
+    --gradient-warm: linear-gradient(180deg, hsl(38 35% 96%), hsl(38 30% 93%));
+    --shadow-soft: 0 4px 20px -4px hsl(0 0% 10% / 0.08);
+    --shadow-elevated: 0 14px 40px -10px hsl(0 0% 10% / 0.18);
+    --shadow-glow: 0 0 40px hsl(44 56% 54% / 0.25);
 
     /* Typography */
     --font-display: 'Playfair Display', serif;
     --font-body: 'Inter', sans-serif;
+    --font-label: 'DM Sans', 'Inter', sans-serif;
 
-    --sidebar-background: 40 30% 96%;
-    --sidebar-foreground: 20 10% 25%;
-    --sidebar-primary: 16 65% 50%;
-    --sidebar-primary-foreground: 40 33% 98%;
-    --sidebar-accent: 35 30% 90%;
-    --sidebar-accent-foreground: 20 10% 25%;
-    --sidebar-border: 35 20% 88%;
-    --sidebar-ring: 16 65% 50%;
-  }
-
-  .dark {
-    --background: 20 15% 10%;
-    --foreground: 40 20% 95%;
-
-    --card: 20 15% 13%;
-    --card-foreground: 40 20% 95%;
-
-    --popover: 20 15% 13%;
-    --popover-foreground: 40 20% 95%;
-
-    --primary: 16 70% 55%;
-    --primary-foreground: 20 15% 10%;
-
-    --secondary: 20 15% 18%;
-    --secondary-foreground: 40 20% 90%;
-
-    --muted: 20 15% 18%;
-    --muted-foreground: 35 15% 60%;
-
-    --accent: 85 30% 50%;
-    --accent-foreground: 20 15% 10%;
-
-    --destructive: 0 62% 30%;
-    --destructive-foreground: 40 20% 95%;
-
-    --border: 20 15% 20%;
-    --input: 20 15% 20%;
-    --ring: 16 70% 55%;
-
-    --sidebar-background: 20 15% 12%;
-    --sidebar-foreground: 40 20% 90%;
-    --sidebar-primary: 16 70% 55%;
-    --sidebar-primary-foreground: 20 15% 10%;
-    --sidebar-accent: 20 15% 18%;
-    --sidebar-accent-foreground: 40 20% 90%;
-    --sidebar-border: 20 15% 20%;
-    --sidebar-ring: 16 70% 55%;
+    --sidebar-background: 0 0% 7%;
+    --sidebar-foreground: 38 35% 96%;
+    --sidebar-primary: 44 56% 54%;
+    --sidebar-primary-foreground: 0 0% 10%;
+    --sidebar-accent: 0 0% 12%;
+    --sidebar-accent-foreground: 38 35% 96%;
+    --sidebar-border: 0 0% 18%;
+    --sidebar-ring: 44 56% 54%;
   }
 }
 
@@ -122,26 +100,70 @@
 }
 
 @layer components {
-  .text-gradient {
-    @apply bg-clip-text text-transparent;
-    background-image: var(--gradient-hero);
+  .label-eyebrow {
+    font-family: var(--font-label);
+    @apply text-xs font-medium uppercase tracking-[0.22em];
+    color: hsl(var(--terracotta));
+  }
+
+  .gold-divider {
+    @apply block mx-auto;
+    width: 80px;
+    height: 1px;
+    background: hsl(var(--gold));
   }
 
   .card-elevated {
     box-shadow: var(--shadow-soft);
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    transition: box-shadow 0.4s ease, transform 0.4s ease;
   }
 
   .card-elevated:hover {
     box-shadow: var(--shadow-elevated);
-    transform: translateY(-2px);
+    transform: translateY(-3px);
   }
 
-  .hero-gradient {
+  /* Hero gradient overlay sits between bg image and text */
+  .hero-overlay::before {
+    content: "";
+    position: absolute;
+    inset: 0;
     background: var(--gradient-hero);
+    pointer-events: none;
   }
 
-  .warm-gradient {
-    background: var(--gradient-warm);
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-7 py-3 font-medium transition-all;
+    font-family: var(--font-body);
+    background-color: hsl(var(--gold));
+    color: hsl(var(--charcoal));
+  }
+  .btn-gold:hover {
+    background-color: hsl(var(--gold-deep));
+    box-shadow: var(--shadow-glow);
+    transform: translateY(-1px);
+  }
+
+  .btn-gold-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-7 py-3 font-medium transition-all border;
+    font-family: var(--font-body);
+    border-color: hsl(var(--gold));
+    color: hsl(var(--gold));
+    background: transparent;
+  }
+  .btn-gold-outline:hover {
+    background-color: hsl(var(--gold));
+    color: hsl(var(--charcoal));
+  }
+
+  /* Drop cap for blog body */
+  .drop-cap > p:first-of-type::first-letter {
+    font-family: var(--font-display);
+    float: left;
+    font-size: 4.25rem;
+    line-height: 0.9;
+    padding: 0.5rem 0.75rem 0 0;
+    color: hsl(var(--gold));
+    font-weight: 700;
   }
 }
