@@ -1,53 +1,97 @@
-import { Instagram, Youtube, Mail, Heart } from "lucide-react";
+import { Instagram, Youtube, Mail } from "lucide-react";
+import { Link } from "react-router-dom";
+import Logo from "./Logo";
 
 const Footer = () => {
   return (
-    <footer className="py-12 bg-foreground text-primary-foreground">
-      <div className="container mx-auto px-6">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          {/* Logo */}
+    <footer className="bg-ink text-ivory">
+      <div className="container mx-auto px-6 pt-16 pb-8">
+        {/* Logo + tagline */}
+        <div className="text-center mb-12">
+          <Link to="/" aria-label="Home" className="inline-block">
+            <Logo tone="ivory" size="lg" />
+          </Link>
+          <p className="font-body italic text-sm text-ivory/70 mt-3">
+            Choosing myself, one country at a time.
+          </p>
+        </div>
+
+        {/* Three columns */}
+        <div className="grid md:grid-cols-3 gap-10 pb-10">
+          {/* Brand description */}
           <div className="text-center md:text-left">
-            <h3 className="font-display text-2xl font-semibold mb-2">
-              shelefthechat
-            </h3>
-            <p className="font-body text-sm text-primary-foreground/70">
-              Adventures from Madrid & beyond
+            <p className="font-body text-sm text-ivory/70 leading-relaxed max-w-xs mx-auto md:mx-0">
+              Stories of wanderlust, bold choices, and the beautiful chaos of
+              starting a brand new chapter abroad — from Atlanta to Madrid.
             </p>
           </div>
 
-          {/* Social Links */}
-          <div className="flex items-center gap-4">
-            <a
-              href="https://instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 text-primary-foreground/70 hover:text-primary transition-colors"
-              aria-label="Instagram"
-            >
-              <Instagram className="w-5 h-5" />
-            </a>
-            <a
-              href="https://youtube.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 text-primary-foreground/70 hover:text-primary transition-colors"
-              aria-label="YouTube"
-            >
-              <Youtube className="w-5 h-5" />
-            </a>
-            <a
-              href="mailto:hello@shelefthechat.com"
-              className="p-2 text-primary-foreground/70 hover:text-primary transition-colors"
-              aria-label="Email"
-            >
-              <Mail className="w-5 h-5" />
-            </a>
+          {/* Quick nav */}
+          <div className="text-center">
+            <h4 className="font-label text-xs uppercase tracking-[0.22em] text-ivory/50 mb-4">
+              Explore
+            </h4>
+            <ul className="space-y-2 font-body text-sm">
+              {[
+                { label: "Home", to: "/" },
+                { label: "Stories", to: "/stories" },
+                { label: "Videos", to: "/videos" },
+                { label: "Gallery", to: "/gallery" },
+                { label: "Resources", to: "/resources" },
+                { label: "About", to: "/about" },
+              ].map((l) => (
+                <li key={l.label}>
+                  <Link
+                    to={l.to}
+                    className="text-ivory/85 hover:text-gold transition-colors"
+                  >
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
 
-          {/* Copyright */}
-          <div className="font-body text-sm text-primary-foreground/70 flex items-center gap-1">
-            Made with <Heart className="w-4 h-4 text-primary" fill="currentColor" /> in Madrid
+          {/* Social */}
+          <div className="text-center md:text-right">
+            <h4 className="font-label text-xs uppercase tracking-[0.22em] text-ivory/50 mb-4">
+              Follow Along
+            </h4>
+            <div className="flex items-center justify-center md:justify-end gap-5">
+              <a
+                href="https://instagram.com/shelefthechat"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="text-gold hover:text-gold-soft transition-colors"
+              >
+                <Instagram className="w-5 h-5" />
+              </a>
+              <a
+                href="https://youtube.com/@shelefthechat"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube"
+                className="text-gold hover:text-gold-soft transition-colors"
+              >
+                <Youtube className="w-5 h-5" />
+              </a>
+              <a
+                href="mailto:hello@shelefthechat.com"
+                aria-label="Email"
+                className="text-gold hover:text-gold-soft transition-colors"
+              >
+                <Mail className="w-5 h-5" />
+              </a>
+            </div>
           </div>
+        </div>
+
+        {/* Bottom bar */}
+        <div className="pt-8 border-t border-gold/30">
+          <p className="text-center font-body text-xs text-ivory/60">
+            © 2025 She Left the Chat. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
