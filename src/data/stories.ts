@@ -1,88 +1,130 @@
-// Centralized story data — placeholder content, easy to swap later.
+// Centralized story data — two-stream architecture.
+export type Stream = "view-from-here" | "she-actually-did-it";
+
+export type Destination = "Madrid" | "Paris" | "London" | "Senegal";
+export type Topic =
+  | "Travel Guides"
+  | "Culture and Etiquette"
+  | "Packing and Prep"
+  | "Life Abroad"
+  | "AI and Tech";
+export type ReaderNeed =
+  | "Before You Go"
+  | "When You Arrive"
+  | "While You Are There"
+  | "Living It";
+
 export interface Story {
   slug: string;
   title: string;
   excerpt: string;
   date: string;
-  category: string;
   image: string;
   readTime?: string;
+  stream: Stream;
+  // Only present for view-from-here stream
+  destination?: Destination;
+  topic?: Topic;
+  readerNeed?: ReaderNeed;
 }
+
+export const destinations = ["All", "Madrid", "Paris", "London", "Senegal"] as const;
+export const topics = [
+  "All",
+  "Travel Guides",
+  "Culture and Etiquette",
+  "Packing and Prep",
+  "Life Abroad",
+  "AI and Tech",
+] as const;
+export const readerNeeds = [
+  "All",
+  "Before You Go",
+  "When You Arrive",
+  "While You Are There",
+  "Living It",
+] as const;
 
 export const stories: Story[] = [
   {
-    slug: "finding-home-in-a-foreign-city",
-    title: "Finding Home in a Foreign City",
+    slug: "first-time-in-madrid-start-here",
+    title: "First Time in Madrid? Start Here.",
     excerpt:
-      "What it really means to build a life somewhere entirely new, one cafe at a time.",
+      "Your honest beginner's guide to one of Europe's most underrated cities — what to see, skip, and savor.",
     date: "January 2025",
-    category: "Life Abroad",
     image:
       "https://images.unsplash.com/photo-1543783207-ec64e4d95325?w=1200&q=80",
-    readTime: "6 min read",
-  },
-  {
-    slug: "the-art-of-getting-lost",
-    title: "The Art of Getting Lost",
-    excerpt:
-      "Some of the best adventures happen when you throw away the map and just wander.",
-    date: "December 2024",
-    category: "Adventures",
-    image:
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80",
-    readTime: "5 min read",
-  },
-  {
-    slug: "what-nobody-tells-you-about-moving-abroad-after-50",
-    title: "What Nobody Tells You About Moving Abroad After 50",
-    excerpt:
-      "The practical stuff, the emotional stuff, and everything in between.",
-    date: "November 2024",
-    category: "Travel Tips",
-    image:
-      "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=1200&q=80",
     readTime: "8 min read",
+    stream: "view-from-here",
+    destination: "Madrid",
+    topic: "Travel Guides",
+    readerNeed: "Before You Go",
   },
   {
-    slug: "tapas-tuesdays-and-other-rituals",
-    title: "Tapas Tuesdays and Other Rituals That Saved Me",
+    slug: "everything-before-you-fly-to-madrid",
+    title: "Everything You Need to Do Before You Fly to Madrid",
     excerpt:
-      "How small weekly traditions became the scaffolding of an entirely new life.",
-    date: "October 2024",
-    category: "Food & Culture",
+      "The pre-flight checklist nobody hands you — paperwork, apps, money, and the small things that save you on day one.",
+    date: "January 2025",
+    image:
+      "https://images.unsplash.com/photo-1553531384-cc64ac80f931?w=1200&q=80",
+    readTime: "7 min read",
+    stream: "view-from-here",
+    destination: "Madrid",
+    topic: "Packing and Prep",
+    readerNeed: "Before You Go",
+  },
+  {
+    slug: "what-to-pack-for-madrid",
+    title: "What to Pack for Madrid",
+    excerpt:
+      "A real style and practical guide — what actually earns space in your suitcase for Madrid's seasons and streets.",
+    date: "December 2024",
+    image:
+      "https://images.unsplash.com/photo-1606293459409-6f5b8e8b3c4e?w=1200&q=80",
+    readTime: "6 min read",
+    stream: "view-from-here",
+    destination: "Madrid",
+    topic: "Packing and Prep",
+    readerNeed: "Before You Go",
+  },
+  {
+    slug: "honest-guide-spanish-culture-etiquette",
+    title: "The Honest Guide to Spanish Culture and Etiquette in Madrid",
+    excerpt:
+      "How locals actually greet, eat, queue, and socialize — the unspoken rules that make or break your first weeks.",
+    date: "December 2024",
     image:
       "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&q=80",
-    readTime: "7 min read",
-  },
-  {
-    slug: "the-paperwork-no-one-warns-you-about",
-    title: "The Paperwork No One Warns You About",
-    excerpt:
-      "NIE, empadronamiento, healthcare, taxes — the unsexy guts of becoming an expat.",
-    date: "September 2024",
-    category: "Expat Life",
-    image:
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&q=80",
     readTime: "9 min read",
+    stream: "view-from-here",
+    destination: "Madrid",
+    topic: "Culture and Etiquette",
+    readerNeed: "Before You Go",
   },
   {
-    slug: "a-weekend-in-toledo",
-    title: "A Weekend in Toledo Felt Like Time Travel",
+    slug: "madrid-airport-guide",
+    title: "The Madrid Airport Guide",
     excerpt:
-      "Cobblestone streets, marzipan, and a hilltop view that quietly rearranged me.",
-    date: "August 2024",
-    category: "Adventures",
+      "Everything that happens from the moment you land at Barajas — customs, transit, SIM cards, and getting into the city.",
+    date: "November 2024",
     image:
-      "https://images.unsplash.com/photo-1578912996078-305d92249aa6?w=1200&q=80",
-    readTime: "6 min read",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=80",
+    readTime: "7 min read",
+    stream: "view-from-here",
+    destination: "Madrid",
+    topic: "Travel Guides",
+    readerNeed: "When You Arrive",
+  },
+  {
+    slug: "the-night-i-wondered-if-i-made-a-mistake",
+    title: "The Night I Wondered If I Made a Mistake",
+    excerpt:
+      "And what happened next. A 3am window, a quiet city, and the question every brave woman eventually asks herself.",
+    date: "January 2025",
+    image:
+      "https://images.unsplash.com/photo-1492571350019-22de08371fd3?w=1200&q=80",
+    readTime: "5 min read",
+    stream: "she-actually-did-it",
   },
 ];
-
-export const categories = [
-  "All",
-  "Life Abroad",
-  "Adventures",
-  "Travel Tips",
-  "Expat Life",
-  "Food & Culture",
-] as const;
