@@ -4,33 +4,33 @@ import { ZoomIn } from "lucide-react";
 
 const photos = [
   {
-    src: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=80",
-    alt: "Madrid street at sunset",
+    src: "https://images.unsplash.com/photo-1525193612562-0ec53b0e5d7c?w=900&q=80",
+    alt: "Golden afternoon light through an apartment window",
     aspect: "aspect-[3/4]",
   },
   {
-    src: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=900&q=80",
-    alt: "Cafe in La Latina",
+    src: "https://images.unsplash.com/photo-1497515114629-f71d768fd07c?w=900&q=80",
+    alt: "Quiet cafe window with warm light",
     aspect: "aspect-[4/3]",
   },
   {
-    src: "https://images.unsplash.com/photo-1561409037-c7be81613c1f?w=900&q=80",
-    alt: "Golden hour rooftop view in Madrid",
+    src: "https://images.unsplash.com/photo-1481833761820-0509d3217039?w=900&q=80",
+    alt: "Cobblestone street at golden hour",
     aspect: "aspect-[4/3]",
   },
   {
-    src: "https://images.unsplash.com/photo-1515443961218-a51367888e4b?w=900&q=80",
-    alt: "Warm tapas lunch in a Madrid plaza",
+    src: "https://images.unsplash.com/photo-1493857671505-72967e2e2760?w=900&q=80",
+    alt: "Candid coffee moment on a quiet morning",
     aspect: "aspect-[3/4]",
   },
   {
-    src: "https://images.unsplash.com/photo-1578912996078-305d92249aa6?w=900&q=80",
-    alt: "Toledo day trip",
+    src: "https://images.unsplash.com/photo-1528714091102-7b29bcb52f55?w=900&q=80",
+    alt: "Bookshelf and warm corner of a personal space",
     aspect: "aspect-[3/4]",
   },
   {
-    src: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=900&q=80",
-    alt: "Apartment in Madrid",
+    src: "https://images.unsplash.com/photo-1453235421161-e41b42ebba07?w=900&q=80",
+    alt: "Sunlit interior with linen curtains",
     aspect: "aspect-[4/3]",
   },
 ];
