@@ -19,17 +19,17 @@ const photos = [
     aspect: "aspect-[4/3]",
   },
   {
-    src: "https://images.unsplash.com/photo-1493857671505-72967e2e2760?w=900&q=80",
+    src: "https://images.unsplash.com/photo-1559599101-f09722fb4948?w=900&q=80",
     alt: "Candid coffee moment on a quiet morning",
     aspect: "aspect-[3/4]",
   },
   {
-    src: "https://images.unsplash.com/photo-1528714091102-7b29bcb52f55?w=900&q=80",
+    src: "https://images.unsplash.com/photo-1473625247510-8ceb1760943f?w=900&q=80",
     alt: "Bookshelf and warm corner of a personal space",
     aspect: "aspect-[3/4]",
   },
   {
-    src: "https://images.unsplash.com/photo-1453235421161-e41b42ebba07?w=900&q=80",
+    src: "https://images.unsplash.com/photo-1452860606245-08befc0ff44b?w=900&q=80",
     alt: "Sunlit interior with linen curtains",
     aspect: "aspect-[4/3]",
   },
