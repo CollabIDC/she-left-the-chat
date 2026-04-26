@@ -18,10 +18,32 @@ const BlogPost = () => {
       <main className="pt-28 pb-20">
         <article className="container mx-auto px-6">
           <div className="max-w-[740px] mx-auto">
-            {/* Category pill */}
-            <span className="inline-block px-3 py-1 rounded-full bg-gold text-ivory font-label text-[11px] uppercase tracking-[0.18em] font-medium mb-6">
-              {post.category}
-            </span>
+            {/* Stream / category pills */}
+            <div className="flex flex-wrap gap-2 mb-6">
+              {post.stream === "she-actually-did-it" ? (
+                <span className="inline-block px-3 py-1 rounded-full bg-terracotta text-ivory font-label text-[11px] uppercase tracking-[0.18em] font-medium">
+                  She Actually Did It
+                </span>
+              ) : (
+                <>
+                  {post.destination && (
+                    <span className="inline-block px-3 py-1 rounded-full bg-charcoal text-ivory font-label text-[11px] uppercase tracking-[0.18em] font-medium">
+                      {post.destination}
+                    </span>
+                  )}
+                  {post.topic && (
+                    <span className="inline-block px-3 py-1 rounded-full bg-gold text-ivory font-label text-[11px] uppercase tracking-[0.18em] font-medium">
+                      {post.topic}
+                    </span>
+                  )}
+                  {post.readerNeed && (
+                    <span className="inline-block px-3 py-1 rounded-full bg-terracotta text-ivory font-label text-[11px] uppercase tracking-[0.18em] font-medium">
+                      {post.readerNeed}
+                    </span>
+                  )}
+                </>
+              )}
+            </div>
 
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-charcoal leading-tight mb-5">
               {post.title}
