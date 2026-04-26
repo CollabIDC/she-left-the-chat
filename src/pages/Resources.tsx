@@ -55,7 +55,7 @@ const Resources = () => {
         <PageHeader
           eyebrow="Free Tools"
           title="Your Travel Toolkit"
-          subtitle="AI powered language tools built for women who travel boldly and want to connect wherever they land. Free to use. No strings attached."
+          subtitle="AI powered language tools built for curious travelers and bold dreamers who want to connect wherever they land. Free to use. No strings attached."
         />
 
         <section className="bg-background pb-24">

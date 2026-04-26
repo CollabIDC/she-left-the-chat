@@ -22,7 +22,7 @@ const Footer = () => {
           <div className="text-center md:text-left">
             <p className="font-body text-sm text-ivory/70 leading-relaxed max-w-xs mx-auto md:mx-0">
               Stories of wanderlust, bold choices, and the beautiful chaos of
-              starting a brand new chapter abroad — from Atlanta to Madrid.
+              starting a brand new chapter abroad. From Atlanta to Madrid.
             </p>
           </div>
 

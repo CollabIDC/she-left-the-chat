@@ -6,16 +6,14 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="hero-overlay relative min-h-[100svh] flex items-center overflow-hidden"
+      className="hero-overlay relative h-screen flex items-center overflow-hidden"
     >
       {/* Background image (untouched) */}
-      <div className="absolute inset-0">
-        <img
-          src={heroImage}
-          alt="Woman in a champagne gown overlooking Madrid at golden hour"
-          className="w-full h-full object-cover"
-        />
-      </div>
+      <img
+        src={heroImage}
+        alt="Woman in a champagne gown overlooking Madrid at golden hour"
+        className="absolute inset-0 w-full h-full object-cover object-center"
+      />
 
       {/* Content — left aligned over the gradient area */}
       <div className="relative z-10 container mx-auto px-6 pt-24 pb-20">

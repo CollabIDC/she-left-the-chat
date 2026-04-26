@@ -16,7 +16,7 @@ const CommunityTeaser = () => {
             You're Not the Only One Dreaming of This Life
           </h2>
           <p className="font-body text-charcoal/75 leading-relaxed text-lg mb-8">
-            There's a whole community of women doing exactly what you're
+            There's a whole community of people doing exactly what you're
             thinking about. Moving abroad, starting over, choosing themselves.
             Something special is being built for you. Get on the list and be
             the first to know.
