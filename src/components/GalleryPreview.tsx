@@ -14,13 +14,13 @@ const photos = [
     aspect: "aspect-[4/3]",
   },
   {
-    src: "https://images.unsplash.com/photo-1543783207-ec64e4d95325?w=900&q=80",
-    alt: "Gran Via at night",
+    src: "https://images.unsplash.com/photo-1561409037-c7be81613c1f?w=900&q=80",
+    alt: "Golden hour rooftop view in Madrid",
     aspect: "aspect-[4/3]",
   },
   {
-    src: "https://images.unsplash.com/photo-1509840841025-9088ba78a826?w=900&q=80",
-    alt: "Retiro Park",
+    src: "https://images.unsplash.com/photo-1515443961218-a51367888e4b?w=900&q=80",
+    alt: "Warm tapas lunch in a Madrid plaza",
     aspect: "aspect-[3/4]",
   },
   {

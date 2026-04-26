@@ -57,7 +57,7 @@ const EmailSignup = ({ variant = "cream" }: EmailSignupProps) => {
           </form>
 
           <p className="font-body italic text-sm text-charcoal/60 mt-5">
-            Join 500+ women already on the list.
+            Join a growing community of travelers and dreamers.
           </p>
 
           {/* Bottom divider */}

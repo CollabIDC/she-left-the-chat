@@ -14,16 +14,17 @@ const AboutTeaser = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="relative"
+            className="relative max-w-sm mx-auto lg:mx-0"
           >
-            <div className="relative overflow-hidden rounded-3xl card-elevated">
+            <div className="relative overflow-hidden rounded-xl card-elevated">
               <img
                 src={portrait}
                 alt="Portrait of Kimberly"
-                className="w-full aspect-[4/5] object-cover"
+                className="w-full object-cover"
+                style={{ maxHeight: "420px" }}
               />
             </div>
-            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gold/30 rounded-2xl -z-10" />
+            <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-gold/30 rounded-2xl -z-10" />
           </motion.div>
 
           {/* Copy */}
