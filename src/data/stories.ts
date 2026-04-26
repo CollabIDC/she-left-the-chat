@@ -120,7 +120,7 @@ export const stories: Story[] = [
     slug: "the-night-i-wondered-if-i-made-a-mistake",
     title: "The Night I Wondered If I Made a Mistake",
     excerpt:
-      "And what happened next. A 3am window, a quiet city, and the question every brave woman eventually asks herself.",
+      "And what happened next. A 3am window, a quiet city, and the question every brave person eventually asks herself.",
     date: "January 2025",
     image:
       "https://images.unsplash.com/photo-1492571350019-22de08371fd3?w=1200&q=80",
