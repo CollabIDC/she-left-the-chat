@@ -4,33 +4,30 @@ import heroImage from "@/assets/hero-madrid.jpg";
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
+    <section
+      id="home"
+      className="hero-overlay relative min-h-[100svh] flex items-center overflow-hidden"
+    >
+      {/* Background image (untouched) */}
       <div className="absolute inset-0">
         <img
           src={heroImage}
-          alt="Madrid cityscape at golden hour"
+          alt="Woman in a champagne gown overlooking Madrid at golden hour"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-foreground/40 via-foreground/20 to-background" />
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 container mx-auto px-6 pt-20">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-center max-w-4xl mx-auto"
-        >
+      {/* Content — left aligned over the gradient area */}
+      <div className="relative z-10 container mx-auto px-6 pt-24 pb-20">
+        <div className="max-w-2xl">
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/30 mb-8"
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.1 }}
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold/90 backdrop-blur-sm mb-8"
           >
-            <MapPin className="w-4 h-4 text-primary-foreground" />
-            <span className="font-body text-sm font-medium text-primary-foreground">
+            <MapPin className="w-4 h-4 text-charcoal" />
+            <span className="font-label text-xs font-medium uppercase tracking-[0.18em] text-charcoal">
               Currently in Madrid, Spain
             </span>
           </motion.div>
@@ -38,39 +35,39 @@ const Hero = () => {
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-primary-foreground mb-6 leading-tight"
+            transition={{ duration: 0.8, delay: 0.25 }}
+            className="font-display text-ivory leading-[0.95] mb-6 lowercase"
           >
-            she left
-            <br />
-            <span className="italic font-normal">the chat</span>
+            <span className="block font-bold text-6xl md:text-7xl lg:text-8xl">
+              she left
+            </span>
+            <span className="block italic font-normal text-5xl md:text-6xl lg:text-7xl mt-1">
+              the chat
+            </span>
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="font-body text-lg md:text-xl text-primary-foreground/90 max-w-2xl mx-auto mb-12"
+            transition={{ duration: 0.8, delay: 0.45 }}
+            className="font-body font-light text-base md:text-lg text-ivory/95 max-w-xl mb-10 leading-relaxed"
           >
-            Stories of wanderlust, adventures abroad, and the beautiful chaos of living life on your own terms.
+            From Atlanta to Madrid. Stories of wanderlust, bold choices, and
+            building a life on your own terms. This is what it looks like when
+            you finally choose yourself.
           </motion.p>
 
           <motion.a
-            href="#stories"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            className="inline-flex items-center gap-2 font-body text-sm font-medium text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+            href="#latest-stories"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.65 }}
+            className="btn-gold"
           >
-            Explore my journey
-            <motion.div
-              animate={{ y: [0, 8, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity }}
-            >
-              <ArrowDown className="w-4 h-4" />
-            </motion.div>
+            Explore My Journey
+            <ArrowDown className="w-4 h-4" />
           </motion.a>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
