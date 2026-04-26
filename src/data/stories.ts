@@ -81,7 +81,7 @@ export const stories: Story[] = [
       "A real style and practical guide — what actually earns space in your suitcase for Madrid's seasons and streets.",
     date: "December 2024",
     image:
-      "https://images.unsplash.com/photo-1606293459409-6f5b8e8b3c4e?w=1200&q=80",
+      "https://images.unsplash.com/photo-1581553680321-4fffae59fccd?w=1200&q=80",
     readTime: "6 min read",
     stream: "view-from-here",
     destination: "Madrid",
