@@ -31,7 +31,7 @@ const slides: Slide[] = [
           <span className="block italic font-normal text-5xl md:text-6xl lg:text-7xl mt-1">the chat</span>
         </h1>
         <p className="font-body font-light text-base md:text-lg text-ivory/95 max-w-xl mb-10 leading-relaxed">
-          I was not running away. I was finally running toward something.
+          From Atlanta to Madrid. Stories of wanderlust, bold choices, and building a life on your own terms. This is what it looks like when you finally choose yourself.
         </p>
         <Link to="/about" className="btn-gold">
           Read My Story <ArrowRight className="w-4 h-4" />
