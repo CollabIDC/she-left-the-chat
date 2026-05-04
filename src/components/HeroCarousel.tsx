@@ -41,7 +41,7 @@ const slides: Slide[] = [
   },
   {
     image: slideCobblestone,
-    alt: "Madrid cobblestone streets at golden hour with cafe lights",
+    alt: "Madrid street at blue hour with deep cool blue sky and warm golden cafe lights",
     content: (
       <div className="max-w-3xl mx-auto text-center flex flex-col items-center">
         <h2 className="font-display italic text-4xl md:text-5xl lg:text-6xl text-ivory leading-tight mb-10">
@@ -81,7 +81,7 @@ const slides: Slide[] = [
   },
   {
     image: slideMarket,
-    alt: "Vibrant Madrid market with warm golden light",
+    alt: "Bright outdoor Madrid morning market with fresh produce, flowers, and blue sky",
     content: (
       <div className="max-w-3xl mx-auto text-center flex flex-col items-center">
         <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-ivory leading-tight mb-2">
