@@ -2,23 +2,18 @@ import { motion } from "framer-motion";
 import { useState, FormEvent } from "react";
 import { toast } from "sonner";
 
-interface EmailSignupProps {
-  variant?: "cream" | "white";
-}
-
-const EmailSignup = ({ variant = "cream" }: EmailSignupProps) => {
+const EmailSignup = () => {
   const [email, setEmail] = useState("");
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     if (!email) return;
-    // Placeholder — wire up to Lovable Cloud / email provider later
     toast.success("You're on the list! Check your inbox soon.");
     setEmail("");
   };
 
   return (
-    <section className={variant === "cream" ? "bg-background" : "bg-surface"}>
+    <section className="bg-background">
       <div className="container mx-auto px-6 py-20 md:py-24">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -27,15 +22,14 @@ const EmailSignup = ({ variant = "cream" }: EmailSignupProps) => {
           transition={{ duration: 0.6 }}
           className="max-w-2xl mx-auto text-center"
         >
-          {/* Top divider */}
           <span className="block w-20 h-px bg-gold mx-auto mb-10" />
 
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-charcoal mb-4">
-            Come Travel With Me
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-charcoal mb-4">
+            Want Dispatches From the Other Side of the Decision?
           </h2>
           <p className="font-body text-charcoal/70 leading-relaxed mb-8">
-            Get stories, travel tips, and honest expat updates delivered straight to your inbox.
-            No spam. Just the good stuff.
+            Real stories, honest guides, and the occasional moment that will make you think.
+            Delivered straight to your inbox. No spam. Just the good stuff.
           </p>
 
           <form
@@ -52,7 +46,7 @@ const EmailSignup = ({ variant = "cream" }: EmailSignupProps) => {
               aria-label="Email address"
             />
             <button type="submit" className="btn-gold whitespace-nowrap">
-              Join the Journey
+              Send Me the Dispatches
             </button>
           </form>
 
@@ -60,7 +54,6 @@ const EmailSignup = ({ variant = "cream" }: EmailSignupProps) => {
             Join a growing community of travelers and dreamers.
           </p>
 
-          {/* Bottom divider */}
           <span className="block w-20 h-px bg-gold mx-auto mt-10" />
         </motion.div>
       </div>
