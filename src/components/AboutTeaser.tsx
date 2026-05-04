@@ -16,15 +16,15 @@ const AboutTeaser = () => {
             transition={{ duration: 0.7 }}
             className="relative max-w-sm mx-auto lg:mx-0"
           >
-            <div className="relative overflow-hidden rounded-xl card-elevated">
+            <div className="relative overflow-hidden rounded-xl">
               <img
                 src={portrait}
                 alt="Portrait of Kimberly"
+                loading="lazy"
                 className="w-full object-cover"
-                style={{ maxHeight: "420px" }}
+                style={{ maxHeight: "480px" }}
               />
             </div>
-            <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-gold/30 rounded-2xl -z-10" />
           </motion.div>
 
           {/* Copy */}
@@ -36,14 +36,13 @@ const AboutTeaser = () => {
           >
             <span className="label-eyebrow">About Me</span>
             <h2 className="font-display text-4xl md:text-5xl font-bold text-charcoal mt-4 mb-6 leading-tight">
-              Hey, I'm the one who left the chat.
+              Hey. I am the one who left the chat.
             </h2>
             <p className="font-body text-charcoal/75 leading-relaxed text-lg mb-8">
-              One day I decided the 9 to 5 wasn't enough anymore. I packed my
-              bags, bought a one way ticket to Spain, and never looked back.
-              Now I'm living in the heart of Madrid, figuring out life one
-              adventure at a time. And I'm sharing every messy, magical moment
-              of it here.
+              One day I decided the 9 to 5 was not enough. I packed my bags, bought a one way ticket
+              to Spain, and never looked back. Now I am living in the heart of Madrid, figuring it out
+              one adventure at a time. Building a life entirely on my own terms. And sharing every
+              messy, magical, frustrating, extraordinary moment of it here.
             </p>
             <Link
               to="/about"

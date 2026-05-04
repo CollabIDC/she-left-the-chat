@@ -7,7 +7,8 @@ export type Topic =
   | "Culture and Etiquette"
   | "Packing and Prep"
   | "Life Abroad"
-  | "AI and Tech";
+  | "AI and Tech"
+  | "The Unexpected Business";
 export type ReaderNeed =
   | "Before You Go"
   | "When You Arrive"
@@ -22,7 +23,7 @@ export interface Story {
   image: string;
   readTime?: string;
   stream: Stream;
-  // Only present for view-from-here stream
+  pullQuote?: string;
   destination?: Destination;
   topic?: Topic;
   readerNeed?: ReaderNeed;
@@ -36,6 +37,7 @@ export const topics = [
   "Packing and Prep",
   "Life Abroad",
   "AI and Tech",
+  "The Unexpected Business",
 ] as const;
 export const readerNeeds = [
   "All",
@@ -126,5 +128,19 @@ export const stories: Story[] = [
       "https://images.unsplash.com/photo-1492571350019-22de08371fd3?w=1200&q=80",
     readTime: "5 min read",
     stream: "she-actually-did-it",
+  },
+  {
+    slug: "the-bookstore-that-exists-because-of-a-love-story",
+    title: "The Bookstore That Exists Because of a Love Story",
+    excerpt:
+      "Inside Secret Kingdoms, the English language bookstore in Madrid that a British-Spanish couple built for a community that did not know it needed them yet.",
+    pullQuote: "They did not open a bookstore. They built a home for people who needed one.",
+    date: "February 2025",
+    image: "", // will use featured-bookstore asset
+    readTime: "10 min read",
+    stream: "view-from-here",
+    destination: "Madrid",
+    topic: "The Unexpected Business",
+    readerNeed: "While You Are There",
   },
 ];

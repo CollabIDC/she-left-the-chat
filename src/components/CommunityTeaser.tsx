@@ -13,19 +13,16 @@ const CommunityTeaser = () => {
         >
           <span className="label-eyebrow">Coming Soon</span>
           <h2 className="font-display text-4xl md:text-5xl font-bold text-charcoal mt-4 mb-6 leading-tight">
-            You're Not the Only One Dreaming of This Life
+            You Are Not the Only One Who Feels This Way.
           </h2>
           <p className="font-body text-charcoal/75 leading-relaxed text-lg mb-8">
-            There's a whole community of people doing exactly what you're
-            thinking about. Moving abroad, starting over, choosing themselves.
-            Something special is being built for you. Get on the list and be
-            the first to know.
+            There is a whole community of people doing exactly what you are thinking about.
+            Starting over. Choosing themselves. Something special is being built. Get on the
+            list and be the first to know.
           </p>
-          {/* PLACEHOLDER community URL — swap for real Mighty Networks link */}
+          {/* PLACEHOLDER community URL — swap for real link */}
           <a
-            href="https://mightynetworks.com/?placeholder=shelefthechat"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#email-signup"
             className="btn-gold"
           >
             Notify Me
