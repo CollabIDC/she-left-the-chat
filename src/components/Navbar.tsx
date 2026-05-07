@@ -6,11 +6,11 @@ import { cn } from "@/lib/utils";
 
 const navLinks = [
   { name: "Home", to: "/" },
-  { name: "Stories", to: "/stories" },
+  { name: "The Journal", to: "/stories" },
   { name: "Videos", to: "/videos" },
   { name: "Gallery", to: "/gallery" },
   { name: "Resources", to: "/resources" },
-  { name: "About", to: "/about" },
+  { name: "My Story", to: "/about" },
 ];
 
 const Navbar = () => {

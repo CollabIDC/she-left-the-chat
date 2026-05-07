@@ -2,12 +2,17 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { stories } from "@/data/stories";
+import journalNight from "@/assets/journal-night-window.png";
+import journalMorning from "@/assets/journal-morning-cafe.png";
 
 const LatestStories = () => {
   const nightStory = stories.find((s) => s.slug === "the-night-i-wondered-if-i-made-a-mistake")!;
   const secondJournal = stories.find((s) => s.slug === "the-morning-i-stopped-translating-myself")!;
 
-  const journalCards = [nightStory, secondJournal];
+  const journalCards = [
+    { story: nightStory, image: journalNight, alt: "Dark Madrid apartment window at night with warm amber lamp and city below" },
+    { story: secondJournal, image: journalMorning, alt: "Warm golden morning Madrid cafe with cafe con leche, journal, and city through window" },
+  ];
 
   const anim = (i: number) => ({
     initial: { opacity: 0, y: 20 },
@@ -30,45 +35,43 @@ const LatestStories = () => {
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8">
-          {journalCards.map((story, i) => (
-            <JournalCard key={story.slug} story={story} index={i} />
+          {journalCards.map((card, i) => (
+            <motion.div
+              key={card.story.slug}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+            >
+              <Link
+                to={`/stories/${card.story.slug}`}
+                className="block bg-ink rounded-xl overflow-hidden h-full group transition-all duration-300 hover:shadow-lg"
+              >
+                <div className="aspect-[16/10] overflow-hidden">
+                  <img
+                    src={card.image}
+                    alt={card.alt}
+                    loading="lazy"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                </div>
+                <div className="p-8 md:p-10">
+                  <h3 className="font-display text-2xl md:text-3xl font-bold text-ivory mb-4 leading-tight group-hover:text-gold transition-colors">
+                    {card.story.title}
+                  </h3>
+                  <p className="font-body text-ivory/70 leading-relaxed mb-6">
+                    {card.story.excerpt}
+                  </p>
+                  <span className="inline-flex items-center gap-2 font-body text-sm text-gold group-hover:gap-3 transition-all">
+                    Read the Entry <ArrowRight className="w-4 h-4" />
+                  </span>
+                </div>
+              </Link>
+            </motion.div>
           ))}
         </div>
       </div>
     </section>
-  );
-};
-
-interface CardProps {
-  story: (typeof stories)[0];
-  index: number;
-}
-
-const JournalCard = ({ story, index }: CardProps) => {
-  const anim = {
-    initial: { opacity: 0, y: 20 },
-    whileInView: { opacity: 1, y: 0 },
-    viewport: { once: true },
-    transition: { duration: 0.5, delay: index * 0.1 },
-  };
-
-  return (
-    <motion.div {...anim}>
-      <Link
-        to={`/stories/${story.slug}`}
-        className="block bg-ink rounded-xl p-8 md:p-10 h-full group transition-all duration-300 hover:shadow-lg"
-      >
-        <h3 className="font-display text-2xl md:text-3xl font-bold text-ivory mb-4 leading-tight group-hover:text-gold transition-colors">
-          {story.title}
-        </h3>
-        <p className="font-body text-ivory/70 leading-relaxed mb-6">
-          {story.excerpt}
-        </p>
-        <span className="inline-flex items-center gap-2 font-body text-sm text-gold group-hover:gap-3 transition-all">
-          Read the Entry <ArrowRight className="w-4 h-4" />
-        </span>
-      </Link>
-    </motion.div>
   );
 };
 
