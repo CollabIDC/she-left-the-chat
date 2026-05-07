@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
 const languages = [
-  { name: "Spanish", flag: "🇪🇸", description: "Essential phrases and conversation tools for life in Spain." },
-  { name: "French", flag: "🇫🇷", description: "Get started with everyday French before your trip to Paris." },
-  { name: "Italian", flag: "🇮🇹", description: "Basic Italian for travelers exploring beyond the tourist path." },
-  { name: "Portuguese", flag: "🇵🇹", description: "Practical Portuguese for navigating Lisbon and beyond." },
+  { name: "Spanish", flag: "🇪🇸", description: "Order tapas, navigate the metro, and chat with your portera like a local." },
+  { name: "French", flag: "🇫🇷", description: "From Paris cafes to Provence markets, confidence in every conversation." },
+  { name: "Italian", flag: "🇮🇹", description: "Pronounce the wine list correctly and actually enjoy the dinner." },
+  { name: "Portuguese", flag: "🇵🇹", description: "Lisbon, Porto, or Rio. Soft accents, warm welcomes, real connection." },
 ];
 
 const anim = (i: number) => ({

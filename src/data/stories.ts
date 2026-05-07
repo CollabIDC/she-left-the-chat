@@ -132,8 +132,7 @@ export const stories: Story[] = [
   {
     slug: "the-morning-i-stopped-translating-myself",
     title: "The Morning I Stopped Translating Myself",
-    excerpt:
-      "I woke up and realized I had stopped rehearsing who I was supposed to be. The city did not ask me to explain. So I stopped.",
+    excerpt: "Placeholder.",
     date: "February 2025",
     image:
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&q=80",

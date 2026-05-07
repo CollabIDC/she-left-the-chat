@@ -8,32 +8,32 @@ const angles = [
   {
     icon: Store,
     name: "The Unexpected Business",
-    description: "The hidden shops, studios, and passion projects locals built from scratch.",
+    description: "The shops, restaurants, and people doing something remarkable in plain sight.",
   },
   {
     icon: MapPin,
     name: "While You Are There",
-    description: "The things worth doing once you have actually arrived.",
+    description: "Experiences you will only find if someone who actually lives here tells you.",
   },
   {
     icon: Building2,
     name: "Old Madrid",
-    description: "The history, architecture, and traditions that shaped the city.",
+    description: "The deep traditions, the tabernas, the things that have not changed in a hundred years.",
   },
   {
     icon: Eye,
     name: "Through a Black Lens",
-    description: "Seeing Madrid through a perspective rarely written about.",
+    description: "Madrid through my eyes. My perspective, my experience, my community.",
   },
   {
     icon: Lock,
     name: "Only Locals Know",
-    description: "The places, customs, and secrets you will not find in any guidebook.",
+    description: "The places, the shortcuts, the tips that never make the tourist lists.",
   },
   {
     icon: Compass,
     name: "Things to Do",
-    description: "Curated activities, day trips, and experiences worth your time.",
+    description: "Curated, honest, written from real experience. No affiliate fluff.",
   },
 ];
 
@@ -114,7 +114,7 @@ const StumbledUponMadrid = () => {
                   </blockquote>
                 )}
                 <p className="font-body text-ivory/70 leading-relaxed mb-6 text-sm">
-                  {bookstoreStory.excerpt}
+                  Inside Secret Kingdoms, the English language bookstore in Madrid that a British-Spanish couple built for a community that did not know it needed them yet.
                 </p>
                 <span className="inline-flex items-center gap-2 font-body text-sm text-gold group-hover:gap-3 transition-all">
                   Read the Full Story <ArrowRight className="w-4 h-4" />
