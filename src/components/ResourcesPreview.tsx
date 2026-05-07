@@ -23,8 +23,11 @@ const ResourcesPreview = () => {
         <motion.div {...anim(0)} className="text-center mb-16">
           <span className="label-eyebrow text-gold">Resources and Tools</span>
           <h2 className="font-display text-4xl md:text-5xl font-bold text-ivory mt-4">
-            Everything You Need to Actually Make the Move
+            The Resources I Wish I Had Before I Left
           </h2>
+          <p className="font-display italic text-xl md:text-2xl text-ivory/60 mt-3">
+            Starting with language. More coming soon.
+          </p>
         </motion.div>
 
         <div className="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto mb-12">
@@ -32,13 +35,13 @@ const ResourcesPreview = () => {
             <motion.div
               key={lang.name}
               {...anim(i + 1)}
-              className="bg-ivory/5 border border-ivory/10 rounded-xl p-8 text-center"
+              className="bg-ivory border border-charcoal/10 rounded-xl p-8 text-center"
             >
               <span className="text-5xl mb-4 block">{lang.flag}</span>
-              <h3 className="font-display text-xl font-bold text-ivory mb-2">
+              <h3 className="font-display text-xl font-bold text-ink mb-2">
                 {lang.name}
               </h3>
-              <p className="font-body text-ivory/60 text-sm leading-relaxed mb-6">
+              <p className="font-body text-ink/60 text-sm leading-relaxed mb-6">
                 {lang.description}
               </p>
               <Link
