@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowRight, Store, MapPin, Building2, Eye, Lock, Compass } from "lucide-react";
+import { ArrowRight, Store, PersonStanding, Clock, Eye, Map, Ticket } from "lucide-react";
 import { stories } from "@/data/stories";
 import featuredBookstore from "@/assets/featured-bookstore.jpg";
 
@@ -13,14 +13,14 @@ const angles = [
     iconBg: "#FFF8E7",
   },
   {
-    icon: MapPin,
+    icon: PersonStanding,
     name: "While You Are There",
     description: "Experiences you will only find if someone who actually lives here tells you.",
     iconColor: "#B05A3A",
     iconBg: "#FDF0EA",
   },
   {
-    icon: Building2,
+    icon: Clock,
     name: "Old Madrid",
     description: "The deep traditions, the tabernas, the things that have not changed in a hundred years.",
     iconColor: "#4a7c59",
@@ -34,14 +34,14 @@ const angles = [
     iconBg: "#F0EEF8",
   },
   {
-    icon: Lock,
+    icon: Map,
     name: "Only Locals Know",
     description: "The places, the shortcuts, the tips that never make the tourist lists.",
     iconColor: "#c4603a",
     iconBg: "#FDF0EA",
   },
   {
-    icon: Compass,
+    icon: Ticket,
     name: "Things to Do",
     description: "Curated, honest, written from real experience. No affiliate fluff.",
     iconColor: "#2a6b8a",
