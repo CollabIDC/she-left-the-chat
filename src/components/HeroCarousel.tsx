@@ -58,10 +58,9 @@ const slides: Slide[] = [
     alt: "Intimate Madrid bookstore with warm amber lighting",
     content: (
       <div className="max-w-3xl mx-auto text-center flex flex-col items-center">
-        <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-ivory leading-tight mb-2">
-          The most interesting stories in Madrid are the ones nobody is writing about.
+        <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-ivory leading-tight mb-10">
+          Some places exist because someone refused to accept they couldn't.
         </h2>
-        <p className="font-display italic text-3xl md:text-4xl text-ivory/90 mb-10">Until now.</p>
         <Link to="/stories" className="btn-gold">
           Read the Stories <ArrowRight className="w-4 h-4" />
         </Link>

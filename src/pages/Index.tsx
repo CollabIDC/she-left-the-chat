@@ -1,6 +1,5 @@
 import Navbar from "@/components/Navbar";
 import HeroCarousel from "@/components/HeroCarousel";
-import MissionBanner from "@/components/MissionBanner";
 import LatestStories from "@/components/LatestStories";
 import StumbledUponMadrid from "@/components/StumbledUponMadrid";
 import RealGuides from "@/components/RealGuides";
@@ -14,7 +13,6 @@ const Index = () => {
       <Navbar />
       <main>
         <HeroCarousel />
-        <MissionBanner />
         <LatestStories />
         <StumbledUponMadrid />
         <RealGuides />
