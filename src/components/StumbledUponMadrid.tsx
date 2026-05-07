@@ -85,7 +85,9 @@ const StumbledUponMadrid = () => {
                 {...anim(i + 1)}
                 className="bg-surface rounded-xl p-8 card-elevated"
               >
-                <Icon className="w-7 h-7 text-gold mb-4" />
+                <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-4" style={{ backgroundColor: angle.iconBg }}>
+                  <Icon className="w-6 h-6" style={{ color: angle.iconColor }} />
+                </div>
                 <h3 className="font-display text-lg font-bold text-charcoal mb-2">
                   {angle.name}
                 </h3>
