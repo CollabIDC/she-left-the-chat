@@ -9,31 +9,43 @@ const angles = [
     icon: Store,
     name: "The Unexpected Business",
     description: "The shops, restaurants, and people doing something remarkable in plain sight.",
+    iconColor: "#C5A028",
+    iconBg: "#FFF8E7",
   },
   {
     icon: MapPin,
     name: "While You Are There",
     description: "Experiences you will only find if someone who actually lives here tells you.",
+    iconColor: "#B05A3A",
+    iconBg: "#FDF0EA",
   },
   {
     icon: Building2,
     name: "Old Madrid",
     description: "The deep traditions, the tabernas, the things that have not changed in a hundred years.",
+    iconColor: "#4a7c59",
+    iconBg: "#EEF5F1",
   },
   {
     icon: Eye,
     name: "Through a Black Lens",
     description: "Madrid through my eyes. My perspective, my experience, my community.",
+    iconColor: "#5a4a8a",
+    iconBg: "#F0EEF8",
   },
   {
     icon: Lock,
     name: "Only Locals Know",
     description: "The places, the shortcuts, the tips that never make the tourist lists.",
+    iconColor: "#c4603a",
+    iconBg: "#FDF0EA",
   },
   {
     icon: Compass,
     name: "Things to Do",
     description: "Curated, honest, written from real experience. No affiliate fluff.",
+    iconColor: "#2a6b8a",
+    iconBg: "#EAF3F8",
   },
 ];
 
