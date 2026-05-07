@@ -67,7 +67,7 @@ const About = () => {
                 </p>
                 <p>
                   This blog is my digital journal. A place where I share the raw,
-                  unfiltered experience of being an expat. The wins, the losses,
+                  unfiltered experience of someone who chose a different life. The wins, the losses,
                   the late night walks through empty streets, and the friends who
                   become family.
                 </p>

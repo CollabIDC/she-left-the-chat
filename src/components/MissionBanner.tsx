@@ -13,8 +13,7 @@ const MissionBanner = () => {
         >
           <span className="block w-24 h-px bg-gold mx-auto mb-10" />
           <p className="font-display italic text-2xl md:text-4xl leading-snug text-ivory">
-            “The most powerful thing I ever did was decide that my story wasn't
-            finished yet.”
+            "Nobody told me it would be this hard. Nobody told me it would be this good."
           </p>
           <span className="block w-24 h-px bg-gold mx-auto mt-10" />
         </motion.div>

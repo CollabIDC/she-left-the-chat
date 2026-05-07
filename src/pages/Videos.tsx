@@ -21,7 +21,7 @@ const Videos = () => {
         <PageHeader
           eyebrow="Video Diary"
           title="Watch My Adventures"
-          subtitle="Vlogs, travel guides, and behind the scenes moments of expat life."
+          subtitle="Real moments from the First 60 Days. Life on my own terms in Madrid."
         />
 
         <section className="bg-background pb-24">
