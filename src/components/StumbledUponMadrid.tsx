@@ -55,11 +55,12 @@ const StumbledUponMadrid = () => {
         <motion.div {...anim(0)} className="text-center mb-16">
           <span className="label-eyebrow">Stumbled Upon Madrid</span>
           <h2 className="font-display text-4xl md:text-5xl font-bold text-charcoal mt-4 mb-2 leading-tight">
-            The Most Interesting Stories in Madrid Are the Ones Nobody Is Writing About.
+            The most interesting stories in Madrid are the ones nobody is writing about.
           </h2>
           <p className="font-display italic text-2xl md:text-3xl text-charcoal/70">
             Until now.
           </p>
+          <span className="block w-20 h-px bg-gold mx-auto mt-6" />
         </motion.div>
 
         {/* Angle cards grid */}
@@ -100,9 +101,6 @@ const StumbledUponMadrid = () => {
                 />
               </div>
               <div className="p-8 md:p-10 flex flex-col justify-center">
-                <span className="inline-block self-start px-3 py-1 rounded-full text-xs font-label font-medium uppercase tracking-wider bg-gold text-ivory mb-4">
-                  The Unexpected Business
-                </span>
                 <h3 className="font-display text-2xl md:text-3xl font-bold text-ivory mb-4 leading-tight group-hover:text-gold transition-colors">
                   {bookstoreStory.title}
                 </h3>
@@ -117,7 +115,7 @@ const StumbledUponMadrid = () => {
                   Inside Secret Kingdoms, the English language bookstore in Madrid that a British-Spanish couple built for a community that did not know it needed them yet.
                 </p>
                 <span className="inline-flex items-center gap-2 font-body text-sm text-gold group-hover:gap-3 transition-all">
-                  Read the Full Story <ArrowRight className="w-4 h-4" />
+                  Read the Story <ArrowRight className="w-4 h-4" />
                 </span>
               </div>
             </div>
