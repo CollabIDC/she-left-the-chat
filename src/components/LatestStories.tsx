@@ -22,7 +22,7 @@ const LatestStories = () => {
         <motion.div {...anim(0)} className="text-center mb-16">
           <span className="label-eyebrow">She Actually Did It</span>
           <h2 className="font-display text-4xl md:text-5xl font-bold text-charcoal mt-4 mb-2">
-            She Actually Did It
+            The Stories Nobody Else Is Telling
           </h2>
           <p className="font-display italic text-xl md:text-2xl text-charcoal/60">
             Raw. Real. Written from inside the decision.
@@ -58,14 +58,6 @@ const JournalCard = ({ story, index }: CardProps) => {
         to={`/stories/${story.slug}`}
         className="block bg-ink rounded-xl p-8 md:p-10 h-full group transition-all duration-300 hover:shadow-lg"
       >
-        <div className="flex flex-wrap gap-2 mb-6">
-          <span className="inline-block px-3 py-1 rounded-full text-xs font-label font-medium uppercase tracking-wider bg-terracotta text-ivory">
-            She Actually Did It
-          </span>
-          <span className="inline-block px-3 py-1 rounded-full text-xs font-label font-medium uppercase tracking-wider bg-gold text-ivory">
-            The First 60 Days
-          </span>
-        </div>
         <h3 className="font-display text-2xl md:text-3xl font-bold text-ivory mb-4 leading-tight group-hover:text-gold transition-colors">
           {story.title}
         </h3>
