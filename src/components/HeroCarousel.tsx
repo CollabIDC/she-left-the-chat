@@ -17,7 +17,7 @@ interface Slide {
 const slides: Slide[] = [
   {
     image: heroImage,
-    alt: "Woman with braids in champagne gown on Madrid balcony at golden hour",
+    alt: "Woman with locs in earth tone wrap dress on Madrid balcony overlooking Gran Via",
     content: (
       <div className="max-w-2xl">
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold/90 backdrop-blur-sm mb-8">
@@ -123,13 +123,15 @@ const HeroCarousel = () => {
           <img
             src={slides[current].image}
             alt={slides[current].alt}
-            className="absolute inset-0 w-full h-full object-cover object-center"
+            className={`absolute inset-0 w-full h-full object-cover ${current === 0 ? 'object-[70%_center]' : 'object-center'}`}
           />
           {/* Gradient overlay */}
           <div
             className="absolute inset-0"
             style={{
-              background: "linear-gradient(90deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.25) 40%, rgba(0,0,0,0) 70%)",
+              background: current === 0
+                ? "linear-gradient(90deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.3) 40%, rgba(0,0,0,0) 60%)"
+                : "linear-gradient(90deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.25) 40%, rgba(0,0,0,0) 70%)",
             }}
           />
         </motion.div>

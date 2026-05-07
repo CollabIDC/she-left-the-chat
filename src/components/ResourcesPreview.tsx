@@ -7,6 +7,8 @@ const languages = [
   { name: "French", flag: "🇫🇷", description: "From Paris cafes to Provence markets, confidence in every conversation." },
   { name: "Italian", flag: "🇮🇹", description: "Pronounce the wine list correctly and actually enjoy the dinner." },
   { name: "Portuguese", flag: "🇵🇹", description: "Lisbon, Porto, or Rio. Soft accents, warm welcomes, real connection." },
+  { name: "Wolof", flag: "🇸🇳", description: "Greet your hosts, navigate Dakar, and connect with the warmth Senegal is known for." },
+  { name: "British English", flag: "🇬🇧", description: "Same language. Completely different country. Navigate the culture, the slang, and the unspoken rules." },
 ];
 
 const anim = (i: number) => ({
@@ -30,7 +32,7 @@ const ResourcesPreview = () => {
           </p>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto mb-12">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
           {languages.map((lang, i) => (
             <motion.div
               key={lang.name}
@@ -54,7 +56,7 @@ const ResourcesPreview = () => {
           ))}
         </div>
 
-        <motion.div {...anim(5)} className="text-center">
+        <motion.div {...anim(7)} className="text-center">
           <Link
             to="/resources"
             className="inline-flex items-center gap-2 font-body font-medium text-gold border-b border-gold pb-1 hover:text-ivory hover:border-ivory transition-colors"
