@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowRight, Store, MapPin, Building2, Eye, Lock, Compass } from "lucide-react";
+import { ArrowRight, Store, PersonStanding, Clock, Eye, Map, Ticket } from "lucide-react";
 import { stories } from "@/data/stories";
 import featuredBookstore from "@/assets/featured-bookstore.jpg";
 
