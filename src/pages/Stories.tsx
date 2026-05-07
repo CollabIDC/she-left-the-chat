@@ -94,7 +94,7 @@ const Stories = () => {
               >
                 <Compass className="w-5 h-5" />
                 <span className="font-display text-base sm:text-lg font-semibold">
-                  The View From Here
+                  The Real Guides
                 </span>
               </button>
 
