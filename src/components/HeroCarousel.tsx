@@ -123,7 +123,8 @@ const HeroCarousel = () => {
           <img
             src={slides[current].image}
             alt={slides[current].alt}
-            className={`absolute inset-0 w-full h-full object-cover ${current === 0 ? 'object-[70%_center]' : 'object-center'}`}
+            className={`absolute inset-0 w-full h-full object-cover ${current === 0 ? 'object-[60%_30%]' : 'object-center'}`}
+            style={current === 0 ? { transform: 'scale(0.85)', transformOrigin: '60% 30%' } : undefined}
           />
           {/* Gradient overlay */}
           <div
