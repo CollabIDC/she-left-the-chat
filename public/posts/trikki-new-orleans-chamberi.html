@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>There Is a Portal to New Orleans Hiding in Chamberí | She Left the Chat</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --cream: #F2EDE4;
+    --ink: #1A1714;
+    --warm-mid: #6B5E52;
+    --accent: #9B3A2A;
+    --gold: #B8952A;
+    --soft-line: #D8D0C4;
+    --muted: #8A8078;
+    --dark: #2C1F1A;
+    --tag-bg: #ece5d9;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background-color: var(--cream);
+    color: var(--ink);
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 1.85;
+  }
+
+  .hero-image {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .hero-placeholder {
+    width: 100%;
+    height: 480px;
+    background: linear-gradient(135deg, #2C1F1A 0%, #4a2f24 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cream);
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  .post-header {
+    text-align: center;
+    padding: 52px 24px 0;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+
+  .post-eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 18px;
+    display: block;
+  }
+
+  .post-h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.12;
+    color: var(--ink);
+    margin-bottom: 16px;
+  }
+
+  .post-subhead {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 19px;
+    color: var(--warm-mid);
+    line-height: 1.5;
+    margin-bottom: 22px;
+  }
+
+  .post-divider {
+    width: 48px;
+    height: 2px;
+    background: var(--accent);
+    margin: 0 auto 22px;
+  }
+
+  .post-meta {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 52px;
+  }
+
+  .post-body {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 40px 80px;
+  }
+
+  @media (min-width: 1200px) {
+    .post-body { max-width: 1100px; }
+  }
+
+  .post-body p {
+    font-family: 'Lato', sans-serif !important;
+    font-size: 18px !important;
+    line-height: 1.85 !important;
+    color: #1A1714 !important;
+    font-weight: 400 !important;
+    margin-bottom: 1.7rem;
+  }
+
+  .drop-cap::first-letter {
+    font-family: 'Playfair Display', serif;
+    font-size: 76px;
+    font-weight: 700;
+    float: left;
+    line-height: 0.78;
+    margin-right: 10px;
+    margin-top: 8px;
+    color: var(--accent);
+  }
+
+  .post-body h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--ink);
+    margin: 3rem 0 1rem;
+    line-height: 1.25;
+  }
+
+  .section-break {
+    text-align: center;
+    color: var(--accent);
+    font-size: 14px;
+    letter-spacing: 0.5em;
+    margin: 2.8rem 0;
+    opacity: 0.5;
+  }
+
+  .pull-quote {
+    border-left: 3px solid var(--accent);
+    padding: 6px 0 6px 28px;
+    margin: 3rem 0;
+  }
+
+  .pull-quote p {
+    font-family: 'Playfair Display', serif !important;
+    font-style: italic;
+    font-size: 22px !important;
+    line-height: 1.55 !important;
+    color: var(--ink) !important;
+    margin-bottom: 0 !important;
+    font-weight: 400 !important;
+  }
+
+  .article-closer {
+    margin-top: 3em;
+    padding-top: 2em;
+    border-top: 1px solid var(--soft-line);
+  }
+  .article-closer p {
+    font-size: 1rem !important;
+    color: var(--warm-mid) !important;
+    font-style: italic;
+  }
+
+  .info-card {
+    background: #fff;
+    border: 1.5px solid var(--soft-line);
+    border-radius: 12px;
+    padding: 28px 28px 24px;
+    margin: 3rem 0;
+  }
+
+  .card-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 18px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--soft-line);
+  }
+
+  .info-card p {
+    font-size: 14px !important;
+    color: var(--warm-mid) !important;
+    margin-bottom: 10px;
+    line-height: 1.55 !important;
+    font-weight: 400 !important;
+  }
+
+  .info-card p:last-of-type { margin-bottom: 0; }
+
+  .info-card a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .info-card a:hover { text-decoration: underline; }
+
+  .card-tagline {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 15px;
+    color: var(--ink);
+    display: block;
+    margin-top: 18px;
+    padding-top: 16px;
+    border-top: 1px solid var(--soft-line);
+  }
+
+  .filed-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+  .filed-tag {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.75rem;
+    background: var(--tag-bg);
+    color: var(--warm-mid);
+    padding: 4px 10px;
+    border-radius: 2px;
+  }
+
+  .closing-line {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    margin-top: 52px;
+    padding-top: 24px;
+    border-top: 1px solid var(--soft-line);
+  }
+</style>
+</head>
+<body>
+
+  <div class="hero-placeholder">Hero image placeholder</div>
+
+  <div class="post-header">
+    <span class="post-eyebrow">The Unexpected Business &nbsp;·&nbsp; Madrid</span>
+    <h1 class="post-h1">There Is a Portal to New Orleans Hiding in Chamberí</h1>
+    <p class="post-subhead">A Louisiana kitchen, a Venezuelan chef, a brick wall scraped by hand, and a bowl of gumbo that made me stop talking mid-sentence.</p>
+    <div class="post-divider"></div>
+    <p class="post-meta">By Kimberly &nbsp;·&nbsp; May 2026 &nbsp;·&nbsp; Madrid, Spain</p>
+  </div>
+
+  <div class="post-body">
+
+    <p class="drop-cap">Let me tell you about my complicated relationship with the New Orleans Jazz Festival.</p>
+
+    <p>For several years running, early May meant one thing: New Orleans. My mother had a timeshare, and that Jazz Fest weekend was ours. A friend and I would make the trip every year, and I need to be honest with you about something. We never went to the Jazz Festival. Not once.</p>
+
+    <p>The Jazz Festival is held at the New Orleans Fairgrounds. Outside. In early May. In Louisiana. Which means there is a very real chance it will rain, and when it rains in New Orleans at the fairgrounds, it is not a light sprinkle you can wait out under an umbrella. It is mud. It is soaked shoes. It is crowds of people squishing around in the heat trying to look like they are having the time of their lives.</p>
+
+    <p>Standing in muddy fairgrounds in the rain? That is not my sport. I need to be prepared for conditions. I need a plan. Rain boots and a mud pit at a music festival is not a plan. That is a test of character I was not signing up for.</p>
+
+    <p>And honestly? I did not need the festival to find music. That is the whole magic of New Orleans. You walk outside and music finds you. There is always a parade. There is always a second line happening somewhere. Frenchmen Street at night is basically a free festival that starts whenever it wants and ends whenever it feels like it. I was not missing anything.</p>
+
+    <p>What I was there for was the food. That was always the real purpose.</p>
+
+    <p>Gumbo. Beignets. Po'boys. Fried green tomatoes. Crawfish everything. The kind of eating you have to train for mentally, because you know you are going to commit fully.</p>
+
+    <p>The last trip before my move, I had to skip it. And I will be honest with you about why. I was saving money for the move. A relocation to another country is not cheap and New Orleans is not a budget trip when you do it right. Something had to give. I told myself I would go the following year. Then I got on a plane with Chloe and landed in a city I had chosen on purpose but was still learning to understand.</p>
+
+    <p>A few months into Madrid life, the craving arrived. Not a gentle, wistful little "I could go for some gumbo." A full, serious, occupying-brain-space craving that was not going anywhere.</p>
+
+    <p>I searched. The first promising result was in Barcelona. Three hours away by train.</p>
+
+    <p>I have a friend who is my food co-conspirator. Together we have driven across the state chasing a meal worth talking about. That is the kind of foodie I am. So when I tell you I was seriously considering that three hour train to Barcelona for gumbo, I need you to understand that is not an exaggeration.</p>
+
+    <p>I was already mentally mapping out a weekend trip when I kept searching and Trikki came up.</p>
+
+    <p>A New Orleans restaurant. In Madrid. In the Chamberí neighborhood.</p>
+
+    <p>I sat with that for a moment.</p>
+
+    <p>Then I made a reservation.</p>
+
+    <h2>What You Walk Into</h2>
+
+    <p>Trikki is on Calle Santa Engracia 109, across from the popular Calle Ponzano nightlife strip. From the outside, you could easily walk right past it. And that is actually by design. Trikki does not announce itself. It sits inside its building the way a place does when it has belonged there for decades, quiet and settled and completely unbothered by the need to get your attention. The building itself goes back to the 1950s. Trikki looks like it grew up inside it.</p>
+
+    <p>The moment you step inside, you understand. The overhead lamps are shaped like drums and cymbals. Trumpets and saxophones hang on the walls alongside black and white photos of jazz icons. Bass drums serve as table bases. Jazz plays in the background at exactly the right volume, present but not intrusive. The whole space feels considered and personal, like someone built it to actually feel like something.</p>
+
+    <p>And then there is the brick wall.</p>
+
+    <p>That exposed brick running the length of the restaurant was not always visible. A previous owner had covered the entire thing in cement. Yuliet and her partner Rodolfo spent three weeks, every single day, scraping each brick by hand until what was underneath came back to life. The wall is original to the 1950s construction of that section of the city. When you are sitting in Trikki looking at it, you are looking at something they uncovered with their own hands.</p>
+
+    <p>That tells you everything you need to know about the kind of care that went into this place.</p>
+
+    <h2>The First Visit</h2>
+
+    <p>I came with a friend from my relocation company and her daughter. Three of us, a full table, ready to eat.</p>
+
+    <p>Every day leading up to that reservation I had told myself I would be adventurous. I mentally tried every dish on the menu. The po'boys. The fried green tomatoes. The jambalaya. I had a whole plan.</p>
+
+    <p>Then I sat down and ordered the gumbo. Obviously. The addiction kicked in and I had to feed the need. Some things are not negotiable.</p>
+
+    <p>I should tell you that I do not normally share my food. But I will let you taste something before I start eating. After I start, all bets are off. I offered. Neither my friend nor her daughter took me up on it. Secretly I was relieved. That bowl was always going to be mine.</p>
+
+    <div class="pull-quote">
+      <p>It was like I time traveled through a portal to New Orleans with every bite.</p>
+    </div>
+
+    <p>Every year when I visited New Orleans I would try the gumbo at different restaurants, because gumbo tells you everything you need to know about a kitchen. Trikki's passed every test. Dark, rich, built on the holy trinity of bell pepper, onion, and celery, with chicken, shrimp, Creole sausage, and okra over rice. The kind of bowl that makes you stop talking mid-sentence.</p>
+
+    <p>For dessert I had the bread pudding. Warm, exactly right, the kind of thing that makes you want to sit at the table a little longer just to stay near it.</p>
+
+    <p>My friend's daughter ordered the Cajun fried chicken sandwich. My friend ordered the fried shrimp. Everyone ate. Nobody complained. We had a good time.</p>
+
+    <h2>The Second Visit</h2>
+
+    <p>I brought my friends from Georgia, and this is also the visit where I found something out.</p>
+
+    <p>The young man who had been our server on my first visit, attentive and warm and clearly at home in that restaurant? Yuliet's son. I did not know that the first time. On the second visit it came up and suddenly everything made sense. He was not just working a shift. He was taking care of the family table. That distinction matters and you feel it in the service.</p>
+
+    <p>I ordered the gumbo again. I have no apologies for this. When something is that good, loyalty is a perfectly valid strategy.</p>
+
+    <p>But I also added the crawfish ceviche, which stopped me mid-bite. Crawfish ceviche is not something I expected to find in Madrid. It is bright, fresh, and unexpectedly delicate for something so deeply Southern in origin. It is one of the more quietly excellent things I have eaten since moving here. Order it.</p>
+
+    <p>My friends from Georgia handled the rest of the menu. One ordered the crocodile croquettes and then the crocodile burger and loved every bite of both. Another had the jambalaya. Someone else had a po'boy. We had wine. Every single plate got cleared.</p>
+
+    <p>And then we stayed. Because that is what you do at a table this good in a city that understands the art of sitting with people you love after a meal. The Spanish call it sobremesa, the time spent lingering at the table long after the eating is done, just talking, just being present. It turns out sobremesa works just as well over Cajun food in Chamberí as it does anywhere else in this city. Nobody wanted the evening to end.</p>
+
+    <p>Something else happened on that second visit. I ended up at the same table I had sat at the first time, the one by the window. I could see the entire restaurant from there and watch the tables outside at the same time, people settling in, ordering, leaning toward each other over their food. There is something deeply satisfying about watching other people enjoy a meal this much. I did not plan to sit there again. But I noticed it when I did. And I have decided that is my table now. That is just how it is.</p>
+
+    <h2>The Story Behind It</h2>
+
+    <p>Trikki was built by Yuliet McQuitty, originally from New Orleans, and Chef Rodolfo Rodriguez, originally from Venezuela. The concept was never about fine dining or impressive technique. It was about 100% homemade, fresh food where the only thing that made it special was the cuisine itself. New Orleans cuisine. Her cuisine.</p>
+
+    <p>Yuliet grew up cooking, the eldest of three daughters, helping in the family kitchen from the time she was ten years old. Rodolfo learned from his mother, who he says cooked with her senses, with love and soul in every dish. The recipes that came to Madrid came from family. From memory. From a city that shaped them both.</p>
+
+    <p>Yuliet told me how she ended up in Madrid. Love brought her here, the particular way a person can pull you toward a place you never expected to land. That story deserves more space and more of her own words than I can give it in this post.</p>
+
+    <p>What I will say is this: she carried her culture across an ocean and found a way to keep it alive in a city that had never tasted it. She scraped a wall brick by brick to make the space feel right. Her son works the floor. The food comes from her family's recipes.</p>
+
+    <div class="pull-quote">
+      <p>Their philosophy is simple. Everything with soul. Todo con alma.</p>
+    </div>
+
+    <p>You will feel it the moment you walk in.</p>
+
+    <h2>Let Me Be Real With You</h2>
+
+    <p>Here is what I want you to know before you go.</p>
+
+    <p>The jambalaya is genuinely spicy. Not European spicy. Actually spicy, with heat that builds. The recommendation from the staff is consistent: first visit, start with the gumbo. Second visit, then you go for the jambalaya. Trust them on this.</p>
+
+    <p>The crawfish ceviche does not always appear on aggregator menus and it sounds unexpected, but order it. You will not regret it.</p>
+
+    <p>The restaurant is small and intimate, which means weekends fill up. Reserve in advance by calling +34 91 110 58 15 or booking at trikkicuisine.com. Do not show up on a Friday or Saturday night hoping to walk in.</p>
+
+    <p>Current hours are Thursday for lunch and dinner, Friday and Saturday 1:30pm to 4:30pm and 8:00pm to midnight. Closed Monday through Wednesday. Plan accordingly.</p>
+
+    <p>Prices are genuinely reasonable, averaging around 15 euros per person. This is not budget food dressed up to look cheap. It is excellent food priced fairly.</p>
+
+    <p>Ask for the table by the window if it is available. You can see the whole restaurant from there and watch the tables outside at the same time. People watching while eating good food is its own kind of joy.</p>
+
+    <p>And if you are an American living in Madrid, particularly one who has been here long enough to start missing specific things you cannot quite name, go to Trikki. Order the gumbo. Stay longer than you planned.</p>
+
+    <div class="article-closer">
+      <p>It will not feel exactly like home. But it will feel like a piece of home that someone carried across an ocean, held onto carefully, and decided to share. Spain has not changed. I am the one adapting. But some days, Chamberí gives you a little grace.</p>
+    </div>
+
+    <div class="info-card">
+      <span class="card-label">Trikki New Orleans Cuisine &nbsp;·&nbsp; Plan Your Visit</span>
+      <p>📍 Calle Santa Engracia 109, Chamberí, Madrid</p>
+      <p>🌐 <a href="https://trikkicuisine.com" target="_blank" rel="noopener">trikkicuisine.com</a></p>
+      <p>📞 Reservations: +34 91 110 58 15</p>
+      <p>🕐 Thursday: lunch and dinner</p>
+      <p>🕐 Friday & Saturday: 1:30pm–4:30pm and 8:00pm–midnight</p>
+      <p>🚫 Closed Monday through Wednesday</p>
+      <span class="card-tagline">Todo con alma. Everything with soul.</span>
+    </div>
+
+    <div class="info-card">
+      <span class="card-label">Filed Under</span>
+      <div class="filed-tags">
+        <span class="filed-tag">Chamberí</span>
+        <span class="filed-tag">The Unexpected Business</span>
+        <span class="filed-tag">Food</span>
+        <span class="filed-tag">Life in Madrid</span>
+      </div>
+    </div>
+
+    <p class="closing-line">She Left the Chat &nbsp;·&nbsp; shelefthechat.com &nbsp;·&nbsp; By Kimberly &nbsp;·&nbsp; Madrid, Spain</p>
+
+  </div>
+
+</body>
+</html>
