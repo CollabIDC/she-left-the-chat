@@ -13,6 +13,7 @@ import Videos from "./pages/Videos";
 import Gallery from "./pages/Gallery";
 import SheActuallyDidIt from "./pages/SheActuallyDidIt";
 import StumbledUpon from "./pages/StumbledUpon";
+import StumbledUponPost from "./pages/StumbledUponPost";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/stories" element={<Stories />} />
           <Route path="/she-actually-did-it" element={<SheActuallyDidIt />} />
           <Route path="/stumbled-upon" element={<StumbledUpon />} />
+          <Route path="/stumbled-upon/:slug" element={<StumbledUponPost />} />
           <Route path="/stories/:slug" element={<BlogPost />} />
           <Route path="/videos" element={<Videos />} />
           <Route path="/gallery" element={<Gallery />} />
