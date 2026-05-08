@@ -4,14 +4,15 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Stumbled Upon Madrid: The Night Flamenco Stopped Time | She Left the Chat</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
 <style>
   :root {
-    --cream: #faf7f2;
+    --cream: #F2EDE4;
     --ink: #1a1714;
     --warm-mid: #6b5e52;
-    --accent: #c4602a;
-    --soft-line: #e8e0d6;
+    --accent: #9B3A2A;
+    --soft-line: #D8D0C4;
+    --gold: #B8952A;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -19,10 +20,10 @@
   body {
     background-color: var(--cream);
     color: var(--ink);
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: 300;
     line-height: 1.85;
-    font-size: 1.05rem;
+    font-size: 16px;
   }
 
   .page-wrap {
@@ -43,68 +44,74 @@
     max-width: 720px;
   }
 
-  /* Bookstore-style info blocks */
+  /* Info-card style sidebar blocks */
   .sidebar-section {
-    margin: 2.5rem 0;
+    background: #ffffff;
+    border: 1.5px solid #D8D0C4;
+    border-radius: 12px;
+    padding: 28px;
+    margin: 2rem 0;
   }
   .sidebar-label {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-size: 0.7rem;
-    font-weight: 500;
-    letter-spacing: 0.14em;
+    font-weight: 700;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--warm-mid);
+    color: #9B3A2A;
     margin-bottom: 16px;
     padding-bottom: 10px;
-    border-bottom: 1px solid var(--soft-line);
+    border-bottom: 1px solid #D8D0C4;
   }
   .sidebar-info {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.88rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
     color: var(--ink);
-    line-height: 1.6;
+    line-height: 1.65;
   }
   .sidebar-info strong {
     display: block;
-    font-weight: 500;
+    font-weight: 700;
     margin-bottom: 2px;
   }
   .sidebar-info a {
-    color: var(--accent);
+    color: #9B3A2A;
     text-decoration: none;
   }
   .sidebar-info .detail-row {
     display: flex;
-    gap: 8px;
-    margin-bottom: 8px;
+    gap: 10px;
+    margin-bottom: 10px;
     align-items: flex-start;
   }
   .detail-icon {
-    color: var(--accent);
+    color: #9B3A2A;
     flex-shrink: 0;
     margin-top: 2px;
   }
   .sidebar-angle {
-    background: #fff;
-    border: 1px solid var(--soft-line);
-    padding: 18px 20px;
-    border-radius: 3px;
+    background: transparent;
+    border: none;
+    padding: 0;
   }
   .sidebar-angle p {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.82rem;
-    color: var(--warm-mid);
-    line-height: 1.6;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    color: var(--ink);
+    line-height: 1.65;
     margin-bottom: 0;
   }
   .sidebar-angle .angle-label {
-    font-size: 0.68rem;
-    font-weight: 500;
-    letter-spacing: 0.1em;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--accent);
+    color: #B8952A;
     display: block;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
   }
 
   .brand-label {
@@ -153,47 +160,52 @@
   .essay p {
     margin-bottom: 1.7rem;
     color: var(--ink);
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.85;
   }
 
   .essay p.drop-cap::first-letter {
     font-family: 'Playfair Display', serif;
-    font-size: 3.8rem;
+    font-size: 72px;
     font-weight: 700;
     float: left;
-    line-height: 0.82;
-    margin-right: 0.12em;
-    margin-top: 0.08em;
-    color: var(--accent);
+    line-height: 0.85;
+    margin-right: 12px;
+    margin-top: 6px;
+    color: #9B3A2A;
   }
 
   .essay h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 1.45rem;
+    font-size: 1.6rem;
     font-weight: 700;
     color: var(--ink);
     margin: 3rem 0 1rem;
   }
 
   .essay h3 {
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 500;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
     font-size: 0.72rem;
     letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: var(--accent);
+    color: #9B3A2A;
     margin: 2.5rem 0 0.8rem;
   }
 
   .pull-quote {
-    border-left: 3px solid var(--accent);
-    padding: 0.4rem 0 0.4rem 1.6rem;
+    border-left: 3px solid #9B3A2A;
+    padding: 0.2rem 0 0.2rem 28px;
     margin: 2.8rem 0;
+    background: transparent;
   }
 
   .pull-quote p {
     font-family: 'Playfair Display', serif;
     font-style: italic;
-    font-size: 1.28rem;
+    font-size: 22px;
     line-height: 1.55;
     color: var(--ink);
     margin-bottom: 0 !important;
@@ -201,11 +213,71 @@
 
   .section-break {
     text-align: center;
-    color: var(--accent);
+    color: #9B3A2A;
     font-size: 1.1rem;
     letter-spacing: 0.5em;
     margin: 3rem 0;
     opacity: 0.5;
+  }
+
+  /* Mood break full-color band */
+  .mood-break {
+    background: #2C1F1A;
+    padding: 40px;
+    margin: 3rem 0;
+    text-align: center;
+    border-radius: 4px;
+  }
+  .mood-break p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 1.5;
+    color: rgba(242,237,228,0.85);
+    margin: 0 auto;
+    max-width: 640px;
+  }
+
+  /* YouTube placeholder */
+  .video-placeholder {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    background: #2C1F1A;
+    border-radius: 12px;
+    margin: 2.5rem 0;
+    overflow: hidden;
+  }
+  .video-placeholder span {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 0.92rem;
+    color: rgba(242,237,228,0.65);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  /* Photo placeholder for Gonzalo + Kimberly */
+  .photo-placeholder-tablao {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    margin: 2rem auto;
+    padding: 80px 24px;
+    border: 1.5px solid #D8D0C4;
+    border-radius: 12px;
+    background: #ffffff;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--warm-mid);
   }
 
   /* Insider list */
@@ -215,48 +287,54 @@
     margin: 1rem 0 2rem;
   }
   .insider-list li {
-    padding: 1.1rem 0 1.1rem 1.4rem;
-    border-bottom: 1px solid var(--soft-line);
+    padding: 14px 0 14px 24px;
+    border-bottom: 1px solid #D8D0C4;
     position: relative;
-    font-size: 0.97rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
     color: var(--ink);
     line-height: 1.7;
   }
-  .insider-list li:first-of-type { border-top: 1px solid var(--soft-line); }
+  .insider-list li:first-of-type { border-top: 1px solid #D8D0C4; }
   .insider-list li::before {
-    content: '—';
+    content: '';
     position: absolute;
-    left: 0;
-    color: var(--accent);
+    left: 4px;
+    top: 24px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #9B3A2A;
   }
   .insider-list li strong {
-    font-weight: 500;
+    font-weight: 700;
     color: var(--ink);
   }
 
   /* Personal note */
   .personal-note {
-    background: var(--ink);
-    color: var(--cream);
+    background: #2C1F1A;
+    color: rgba(242,237,228,0.85);
     border-radius: 4px;
-    padding: 2.4rem;
+    padding: 32px;
     margin: 3rem 0;
   }
   .personal-note .note-label {
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 500;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
     font-size: 0.7rem;
     letter-spacing: 0.25em;
     text-transform: uppercase;
-    color: var(--accent);
+    color: #B8952A;
     margin-bottom: 1.4rem;
     display: block;
   }
   .personal-note p {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: 300;
-    font-size: 0.97rem;
-    color: rgba(250,247,242,0.85);
+    font-size: 16px;
+    color: rgba(242,237,228,0.85);
     margin-bottom: 1.2rem;
     line-height: 1.85;
   }
@@ -264,62 +342,67 @@
   .personal-note .signature {
     font-family: 'Playfair Display', serif;
     font-style: italic;
-    font-size: 1rem;
-    color: rgba(250,247,242,0.45);
+    font-size: 1.05rem;
+    color: #B8952A;
     margin-top: 1.8rem;
     padding-top: 1.4rem;
-    border-top: 1px solid rgba(255,255,255,0.1);
+    border-top: 1px solid rgba(184,149,42,0.3);
   }
 
   /* Info card */
   .info-card {
-    border: 1px solid var(--soft-line);
-    border-top: 3px solid var(--accent);
-    border-radius: 4px;
-    padding: 2.2rem;
+    background: #ffffff;
+    border: 1.5px solid #D8D0C4;
+    border-radius: 12px;
+    padding: 28px;
     margin: 3rem 0;
   }
   .info-card .card-label {
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 500;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
     font-size: 0.7rem;
     letter-spacing: 0.25em;
     text-transform: uppercase;
-    color: var(--accent);
+    color: #9B3A2A;
     margin-bottom: 1.2rem;
     display: block;
   }
   .info-card p {
-    font-size: 0.94rem;
-    color: var(--warm-mid);
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    color: var(--ink);
     margin-bottom: 0.6rem;
     line-height: 1.65;
   }
   .info-card p:last-child { margin-bottom: 0; }
   .info-card a {
-    color: var(--accent);
+    color: #9B3A2A;
     text-decoration: none;
   }
   .info-card a:hover { text-decoration: underline; }
   .info-card .card-tagline {
     font-family: 'Playfair Display', serif;
     font-style: italic;
-    font-size: 0.97rem;
+    font-size: 1rem;
     color: var(--ink);
     margin-top: 1.4rem;
     padding-top: 1.2rem;
-    border-top: 1px solid var(--soft-line);
+    border-top: 1px solid #D8D0C4;
     margin-bottom: 0;
   }
 
   .closing-line {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    font-size: 1.05rem;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 0.78rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
     color: var(--warm-mid);
     margin-top: 3.5rem;
     padding-top: 2rem;
-    border-top: 1px solid var(--soft-line);
+    border-top: 1px solid #D8D0C4;
   }
 
   @media (max-width: 600px) {
@@ -392,6 +475,8 @@
 
     <p>Children under 6 are not admitted. You will understand exactly why the moment the show begins.</p>
 
+    <div class="video-placeholder"><span>Video coming soon</span></div>
+
     <div class="section-break">· · ·</div>
 
     <h2>The Night Itself</h2>
@@ -403,6 +488,10 @@
     <p>Then he was off again, back to the business of the evening.</p>
 
     <p>At 7:30 PM, the lights went down.</p>
+
+    <div class="mood-break">
+      <p>What followed was an hour that shifted and breathed like a living thing.</p>
+    </div>
 
     <p>Three men walked out first. One took his seat at the cajón, a wooden box drum originally from Peru, introduced to Flamenco in the late 1970s by the legendary guitarist Paco de Lucía. The musician sits on top and plays it with both hands, striking the front face to produce sounds that range from a deep bass thud to a sharp cracking snap. If you have never seen one up close it looks remarkably like a wooden crate. What it sounds like is something between a heartbeat and a thunderclap.</p>
 
@@ -433,6 +522,8 @@
     <p>When I was leaving, I mentioned the blog. I told him I was going to write about the experience and share it on social media. He had not known. Not when he came over before the show. Not during the performance. Not when he stopped to talk with us afterward. Every bit of warmth, every story shared, every moment he took out of a busy evening to connect with his guests, all of it was genuine. No audience in mind. No camera rolling. Just a man who loves what he built and wanted to share it.</p>
 
     <p>We got a picture together on the way out. I think you can see it on my face.</p>
+
+    <div class="photo-placeholder-tablao">Photo coming soon</div>
 
     <div class="section-break">· · ·</div>
 
