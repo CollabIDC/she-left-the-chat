@@ -38,8 +38,73 @@
   .page-wrap .subhead,
   .page-wrap .divider,
   .page-wrap .meta,
-  .page-wrap .essay {
+  .page-wrap .essay,
+  .page-wrap .sidebar-section {
     max-width: 720px;
+  }
+
+  /* Bookstore-style info blocks */
+  .sidebar-section {
+    margin: 2.5rem 0;
+  }
+  .sidebar-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--warm-mid);
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--soft-line);
+  }
+  .sidebar-info {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.88rem;
+    color: var(--ink);
+    line-height: 1.6;
+  }
+  .sidebar-info strong {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 2px;
+  }
+  .sidebar-info a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .sidebar-info .detail-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+    align-items: flex-start;
+  }
+  .detail-icon {
+    color: var(--accent);
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .sidebar-angle {
+    background: #fff;
+    border: 1px solid var(--soft-line);
+    padding: 18px 20px;
+    border-radius: 3px;
+  }
+  .sidebar-angle p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.82rem;
+    color: var(--warm-mid);
+    line-height: 1.6;
+    margin-bottom: 0;
+  }
+  .sidebar-angle .angle-label {
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 6px;
   }
 
   .brand-label {
