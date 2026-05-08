@@ -146,30 +146,6 @@ const StumbledUponPost = () => {
                     __html: scopeCss(content.styleHtml, ".stumbled-post-scope"),
                   }}
                 />
-                <style
-                  dangerouslySetInnerHTML={{
-                    __html: `
-                      .stumbled-post-scope article,
-                      .stumbled-post-scope .post-column,
-                      .stumbled-post-scope .post-intro,
-                      .stumbled-post-scope header,
-                      .stumbled-post-scope .closing-line {
-                        max-width: 680px !important;
-                        margin-left: auto !important;
-                        margin-right: auto !important;
-                        padding-left: 24px !important;
-                        padding-right: 24px !important;
-                        box-sizing: border-box;
-                      }
-                      .stumbled-post-scope .post-hero,
-                      .stumbled-post-scope .mood-break-fullwidth {
-                        max-width: none !important;
-                        padding-left: 0 !important;
-                        padding-right: 0 !important;
-                      }
-                    `,
-                  }}
-                />
                 <div
                   dangerouslySetInnerHTML={{ __html: content.bodyHtml }}
                 />

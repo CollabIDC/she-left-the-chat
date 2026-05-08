@@ -11,275 +11,374 @@
     --ink: #1A1714;
     --warm-mid: #6B5E52;
     --accent: #9B3A2A;
-    --soft-line: #D8D0C4;
     --gold: #B8952A;
+    --soft-line: #D8D0C4;
     --muted: #8A8078;
+    --dark: #2C1F1A;
     --tag-bg: #ece5d9;
   }
+
   * { margin: 0; padding: 0; box-sizing: border-box; }
+
   body {
-    background: var(--cream);
+    background-color: var(--cream);
     color: var(--ink);
     font-family: 'Lato', sans-serif;
-    font-weight: 300;
-    font-size: 16px;
+    font-weight: 400;
+    font-size: 17px;
     line-height: 1.85;
-    -webkit-font-smoothing: antialiased;
   }
 
-  .post-hero { position: relative; width: 100%; height: 420px; overflow: hidden; }
-  .post-hero img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  .post-hero::after {
-    content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 30%;
-    background: linear-gradient(to bottom, rgba(26,23,20,0) 0%, rgba(26,23,20,0.45) 100%);
-    pointer-events: none;
+  /* HERO IMAGE */
+  .hero-image {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    display: block;
   }
 
-  .post-intro { max-width: 680px; margin: 0 auto; padding: 48px 24px 0; text-align: center; }
+  /* POST HEADER */
+  .post-header {
+    text-align: center;
+    padding: 52px 24px 0;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+
   .post-eyebrow {
-    font-family: 'Lato', sans-serif; font-size: 11px; letter-spacing: 0.2em;
-    text-transform: uppercase; color: var(--accent); font-weight: 700;
-    display: block; margin-bottom: 22px;
-  }
-  .post-title {
-    font-family: 'Playfair Display', serif; font-weight: 700; font-size: 42px;
-    line-height: 1.15; color: var(--ink); margin: 0 auto 18px;
-  }
-  .post-subtitle {
-    font-family: 'Playfair Display', serif; font-style: italic; font-size: 18px;
-    color: var(--warm-mid); margin: 0 auto 18px; line-height: 1.45;
-  }
-  .post-divider { width: 48px; height: 2px; background: var(--accent); margin: 24px auto; border: 0; }
-  .post-byline {
-    font-family: 'Lato', sans-serif; font-size: 11px; font-weight: 700;
-    letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 18px;
+    display: block;
   }
 
-  .post-column { max-width: 680px; margin: 0 auto; padding: 40px 24px 40px; position: relative; }
-  .post-column p {
-    font-family: 'Lato', sans-serif; font-weight: 300; font-size: 16px;
-    line-height: 1.85; color: var(--ink); margin-bottom: 1.7rem;
+  .post-h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.12;
+    color: var(--ink);
+    margin-bottom: 16px;
   }
-  .post-column > p.drop-cap:first-of-type::first-letter {
-    font-family: 'Playfair Display', serif; font-size: 72px; font-weight: 700;
-    float: left; line-height: 0.78; margin-right: 8px; margin-top: 6px; color: var(--accent);
+
+  .post-subhead {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 19px;
+    color: var(--warm-mid);
+    line-height: 1.5;
+    margin-bottom: 22px;
   }
-  .post-column h2 {
-    font-family: 'Playfair Display', serif; font-weight: 700; font-size: 26px;
-    color: var(--ink); margin: 3rem 0 1rem; line-height: 1.25;
+
+  .post-divider {
+    width: 48px;
+    height: 2px;
+    background: var(--accent);
+    margin: 0 auto 22px;
   }
-  .post-column h3 {
-    font-family: 'Lato', sans-serif; font-weight: 700; font-size: 10px;
-    letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent);
+
+  .post-meta {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 52px;
+  }
+
+  /* CONTENT COLUMN */
+  .post-body {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 24px 80px;
+  }
+
+  /* PARAGRAPHS */
+  .post-body p {
+    font-size: 17px;
+    line-height: 1.85;
+    color: var(--ink);
+    margin-bottom: 1.7rem;
+    font-weight: 400;
+  }
+
+  /* DROP CAP */
+  .drop-cap::first-letter {
+    font-family: 'Playfair Display', serif;
+    font-size: 76px;
+    font-weight: 700;
+    float: left;
+    line-height: 0.78;
+    margin-right: 10px;
+    margin-top: 8px;
+    color: var(--accent);
+  }
+
+  /* HEADINGS */
+  .post-body h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--ink);
+    margin: 3rem 0 1rem;
+    line-height: 1.25;
+  }
+
+  .post-body h3 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--accent);
     margin: 2.5rem 0 0.8rem;
   }
 
-  /* Pull quote breakout */
-  .pull-quote {
-    width: 100%; max-width: 100%;
-    margin: 3rem 0;
-    padding: 6px 0 6px 28px;
-    border-left: 3px solid var(--accent);
-    background: transparent; border-radius: 0;
-  }
-  .pull-quote p {
-    font-family: 'Playfair Display', serif !important;
-    font-style: italic; font-size: 22px !important;
-    line-height: 1.55 !important; color: var(--ink) !important; margin: 0 !important;
-  }
-  .pull-quote p::first-letter {
-    font-family: inherit !important; font-size: inherit !important; float: none !important;
-    color: inherit !important; font-weight: inherit !important; line-height: inherit !important; margin: 0 !important;
-  }
-
+  /* SECTION BREAK */
   .section-break {
-    text-align: center; color: var(--accent); font-size: 14px;
-    letter-spacing: 0.5em; opacity: 0.5; margin: 2.8rem auto;
+    text-align: center;
+    color: var(--accent);
+    font-size: 14px;
+    letter-spacing: 0.5em;
+    margin: 2.8rem 0;
+    opacity: 0.5;
   }
 
-  .image-block { margin: 2.4em 0; border-radius: 12px; overflow: hidden; }
-  .image-placeholder {
-    width: 100%; min-height: 280px;
-    background: linear-gradient(135deg, #e8e0d4, #d4c8b8);
-    display: flex; align-items: center; justify-content: center;
-    border: 1.5px solid var(--soft-line); border-radius: 12px;
+  /* PULL QUOTE */
+  .pull-quote {
+    border-left: 3px solid var(--accent);
+    border-radius: 0;
+    padding: 6px 0 6px 28px;
+    margin: 3rem 0;
   }
-  .image-placeholder span {
-    font-family: 'Lato', sans-serif; font-style: italic;
-    font-size: 0.9rem; color: var(--muted);
+
+  .pull-quote p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 22px;
+    line-height: 1.55;
+    color: var(--ink);
+    margin-bottom: 0 !important;
+    font-weight: 400;
   }
+
+  /* PHOTO PLACEHOLDER */
+  .photo-placeholder {
+    width: 100%;
+    max-width: 480px;
+    min-height: 300px;
+    border: 1.5px solid var(--soft-line);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem auto;
+  }
+
+  .photo-placeholder span {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
   .image-caption {
-    font-family: 'Lato', sans-serif; font-size: 0.82rem;
-    color: var(--muted); font-style: italic; margin-top: 10px; padding-left: 4px;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.82rem;
+    color: var(--muted);
+    font-style: italic;
+    margin-top: 10px;
+    text-align: center;
   }
 
-  .article-closer { margin-top: 3em; padding-top: 2em; border-top: 1px solid var(--soft-line); }
-  .article-closer p { font-size: 1rem !important; color: var(--warm-mid) !important; font-style: italic; }
-
-  /* Sidebar / info card */
-  .sidebar-section {
-    background: #ffffff; border: 1.5px solid var(--soft-line);
-    border-radius: 12px; padding: 28px; margin: 2.5rem 0;
+  /* ARTICLE CLOSER */
+  .article-closer {
+    margin-top: 3em;
+    padding-top: 2em;
+    border-top: 1px solid var(--soft-line);
   }
-  .sidebar-label {
-    font-family: 'Lato', sans-serif; font-weight: 700; font-size: 10px;
-    letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent);
-    display: block; margin-bottom: 1.2rem; padding-bottom: 10px;
+  .article-closer p {
+    font-size: 1rem !important;
+    color: var(--warm-mid) !important;
+    font-style: italic;
+  }
+
+  /* INFO CARD */
+  .info-card {
+    background: #fff;
+    border: 1.5px solid var(--soft-line);
+    border-radius: 12px;
+    padding: 28px 28px 24px;
+    margin: 3rem 0;
+  }
+
+  .card-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 18px;
+    padding-bottom: 16px;
     border-bottom: 1px solid var(--soft-line);
   }
-  .sidebar-info { font-family: 'Lato', sans-serif; font-weight: 300; font-size: 15px; color: var(--ink); line-height: 1.65; }
-  .sidebar-info a { color: var(--accent); text-decoration: none; }
-  .sidebar-info .detail-row { display: flex; gap: 10px; margin-bottom: 10px; align-items: flex-start; }
-  .sidebar-info strong { display: block; font-weight: 700; margin-bottom: 2px; }
-  .detail-icon { color: var(--accent); flex-shrink: 0; margin-top: 2px; }
-  .sidebar-angle { background: transparent; border: none; padding: 0; }
-  .sidebar-angle .angle-label {
-    font-family: 'Lato', sans-serif; font-weight: 700; font-size: 10px;
-    letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold);
-    display: block; margin-bottom: 8px;
-  }
-  .sidebar-angle p { font-family: 'Lato', sans-serif; font-weight: 300; font-size: 15px; color: var(--ink); line-height: 1.65; margin: 0; }
 
-  .filed-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
-  .filed-tag {
-    font-family: 'Lato', sans-serif; font-size: 0.75rem;
-    background: var(--tag-bg); color: var(--warm-mid);
-    padding: 4px 10px; border-radius: 2px;
+  .info-card p {
+    font-size: 14px;
+    color: var(--warm-mid);
+    margin-bottom: 10px;
+    line-height: 1.55;
+    font-weight: 400;
   }
 
-  .closing-line {
-    text-align: center; font-family: 'Lato', sans-serif; font-weight: 700;
-    font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
-    color: var(--muted); margin: 52px auto 0;
-    padding: 24px 24px 40px; max-width: 680px;
+  .info-card p:last-of-type { margin-bottom: 0; }
+
+  .info-card a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .info-card a:hover { text-decoration: underline; }
+
+  .card-tagline {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 15px;
+    color: var(--ink);
+    display: block;
+    margin-top: 18px;
+    padding-top: 16px;
     border-top: 1px solid var(--soft-line);
   }
 
-  @media (max-width: 780px) {
-    .pull-quote { width: 100%; margin-left: 0; margin-right: 0; max-width: 100%; }
+  /* FILED TAGS */
+  .filed-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+  .filed-tag {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.75rem;
+    background: var(--tag-bg);
+    color: var(--warm-mid);
+    padding: 4px 10px;
+    border-radius: 2px;
   }
-  @media (max-width: 600px) {
-    .post-hero { height: 280px; }
-    .post-title { font-size: 32px; }
-    .post-column { padding: 32px 20px 40px; }
-    .sidebar-section { padding: 22px; }
+
+  /* CLOSING LINE */
+  .closing-line {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    margin-top: 52px;
+    padding-top: 24px;
+    border-top: 1px solid var(--soft-line);
   }
 </style>
 </head>
 <body>
 
-<div class="post-hero">
-  <img src="/posts/images/bookstore-hero.jpg" alt="Inside Secret Kingdoms bookstore in Madrid" />
-</div>
+  <img class="hero-image" src="/posts/images/bookstore-hero.jpg" alt="Inside Secret Kingdoms bookstore in Madrid" />
 
-<header class="post-intro">
-  <span class="post-eyebrow">The Unexpected Business · Madrid</span>
-  <h1 class="post-title">The Bookstore That Decided Madrid Deserved One</h1>
-  <p class="post-subtitle">A British-Spanish couple, twenty thousand books, and a reader who didn't know she'd been holding her breath.</p>
-  <hr class="post-divider" />
-  <p class="post-byline">By Kimberly &nbsp;·&nbsp; May 2026 &nbsp;·&nbsp; Madrid, Spain</p>
-</header>
-
-<article class="post-column">
-
-  <p class="drop-cap">There's a ritual that book lovers have. You probably know the one. It's not just reading. It's the carved out portion of the day that belongs entirely to you. The train ride where you disappear into someone else's world before the workday starts. The balcony in the late afternoon with something cold to drink and no one needing anything from you. That specific exhale that happens when you open to your page and everything else goes quiet.</p>
-
-  <p>I used to have that. Then life happened, the way it does.</p>
-
-  <p>When I moved from Chicago to Atlanta, my books went into storage. When I knew I was moving to Madrid, I had to make peace with leaving them behind entirely. Books are heavy. They eat luggage weight. So I made the practical decision and told myself the Kindle app on my iPad would be enough. And it is, technically. But it's not the same as running your hand along a spine and pulling something out on instinct. It's not the same as being surrounded by the kind of abundance that makes you feel like you could disappear for months and never run out of somewhere to go.</p>
-
-  <p>What I didn't realize until I walked into Secret Kingdoms is how much I'd been missing it.</p>
-
-  <div class="pull-quote">
-    <p>"Walking in felt like the familiarity of seeing an old friend. Or going back to a place that always made you feel at home."</p>
+  <div class="post-header">
+    <span class="post-eyebrow">The Unexpected Business &nbsp;·&nbsp; Madrid</span>
+    <h1 class="post-h1">The Bookstore That Decided Madrid Deserved One</h1>
+    <p class="post-subhead">A British-Spanish couple, twenty thousand books, and a reader who didn't know she'd been holding her breath.</p>
+    <div class="post-divider"></div>
+    <p class="post-meta">By Kimberly &nbsp;·&nbsp; May 2026 &nbsp;·&nbsp; Madrid, Spain</p>
   </div>
 
-  <div class="image-block">
-    <div class="image-placeholder"><span>Photo coming soon</span></div>
+  <div class="post-body">
+
+    <p class="drop-cap">There's a ritual that book lovers have. You probably know the one. It's not just reading. It's the carved out portion of the day that belongs entirely to you. The train ride where you disappear into someone else's world before the workday starts. The balcony in the late afternoon with something cold to drink and no one needing anything from you. That specific exhale that happens when you open to your page and everything else goes quiet.</p>
+
+    <p>I used to have that. Then life happened, the way it does.</p>
+
+    <p>When I moved from Chicago to Atlanta, my books went into storage. When I knew I was moving to Madrid, I had to make peace with leaving them behind entirely. Books are heavy. They eat luggage weight. So I made the practical decision and told myself the Kindle app on my iPad would be enough. And it is, technically. But it's not the same as running your hand along a spine and pulling something out on instinct. It's not the same as being surrounded by the kind of abundance that makes you feel like you could disappear for months and never run out of somewhere to go.</p>
+
+    <p>What I didn't realize until I walked into Secret Kingdoms is how much I'd been missing it.</p>
+
+    <div class="pull-quote">
+      <p>Walking in felt like the familiarity of seeing an old friend. Or going back to a place that always made you feel at home.</p>
+    </div>
+
+    <div class="photo-placeholder"><span>Photo coming soon</span></div>
     <p class="image-caption">Inside Secret Kingdoms — floor to ceiling shelves, warm light, and more books than you'll finish in a lifetime.</p>
-  </div>
 
-  <h2>A British-Spanish Couple and a Gap Nobody Else Was Filling</h2>
+    <h2>A British-Spanish Couple and a Gap Nobody Else Was Filling</h2>
 
-  <p>Calle Moratín 7 sits in the heart of the Barrio de las Letras, Madrid's Literary Quarter. Look up when you get there. The old signage from the building's previous life is still painted across the facade. "Billares de Precisión." A precision billiards workshop. Now it holds something that fits the street far better.</p>
+    <p>Calle Moratín 7 sits in the heart of the Barrio de las Letras, Madrid's Literary Quarter. Look up when you get there. The old signage from the building's previous life is still painted across the facade. "Billares de Precisión." A precision billiards workshop. Now it holds something that fits the street far better.</p>
 
-  <p>David Price and Beatriz Fernandez opened Secret Kingdoms in June 2022. David is British. Beatriz is Spanish. Together they looked at a city they loved and identified something missing. Not a tourist shop with a small English section tucked near the register. A real bookstore. Over 20,000 titles across two rooms of new books and a second-hand room in the back that doubles as an events space for book clubs, poetry nights, philosophical debates, and author visits. The kind of place that doesn't just sell you something. It gives something back.</p>
+    <p>David Price and Beatriz Fernandez opened Secret Kingdoms in June 2022. David is British. Beatriz is Spanish. Together they looked at a city they loved and identified something missing. Not a tourist shop with a small English section tucked near the register. A real bookstore. Over 20,000 titles across two rooms of new books and a second-hand room in the back that doubles as an events space for book clubs, poetry nights, philosophical debates, and author visits. The kind of place that doesn't just sell you something. It gives something back.</p>
 
-  <p>I want to correct something you've probably read before, including in an earlier version of this post. English books in Spanish bookstores aren't tucked in some forgotten corner. They do have a section. It's just small. Which makes walking into Secret Kingdoms feel like a specific kind of relief you didn't know you needed until you were standing in the middle of it.</p>
+    <p>I want to correct something you've probably read before, including in an earlier version of this post. English books in Spanish bookstores aren't tucked in some forgotten corner. They do have a section. It's just small. Which makes walking into Secret Kingdoms feel like a specific kind of relief you didn't know you needed until you were standing in the middle of it.</p>
 
-  <h2>I Came as a Hunter, Not a Grazer</h2>
+    <h2>I Came as a Hunter, Not a Grazer</h2>
 
-  <p>I walked in that day on a mission. I was picking up books for someone who can't easily get English titles in their country. So I wasn't there to browse. I knew what I needed. I asked for help in Spanish and my friend looked at me sideways. "They speak English," she said. I know, I told her. I don't care. I'm in the mood to practice.</p>
+    <p>I walked in that day on a mission. I was picking up books for someone who can't easily get English titles in their country. So I wasn't there to browse. I knew what I needed. I asked for help in Spanish and my friend looked at me sideways. "They speak English," she said. I know, I told her. I don't care. I'm in the mood to practice.</p>
 
-  <p>I found what I came for and left with four books, all for someone else.</p>
+    <p>I found what I came for and left with four books, all for someone else.</p>
 
-  <p>But somewhere in between walking in and walking out, something shifted. That's the thing about a good bookstore. Even when you're on a mission, it slows you down. You start touching spines. You pick things up that you didn't plan to. You remember who you used to be when you had the time and the ritual and the balcony and the train ride.</p>
+    <p>But somewhere in between walking in and walking out, something shifted. That's the thing about a good bookstore. Even when you're on a mission, it slows you down. You start touching spines. You pick things up that you didn't plan to. You remember who you used to be when you had the time and the ritual and the balcony and the train ride.</p>
 
-  <p>I used to keep up with the entire In Death series by J.D. Robb. Hundreds of books deep, a whole world I could live in. She writes a couple of books a year and I was keeping pace. Then life happened and I set it down. The ritual went with it. And somewhere between packing up my apartment, giving up my physical books, and learning to walk uphill every day in a new country, I stopped making time for the part of the day that used to be just mine.</p>
+    <p>I used to keep up with the entire In Death series by J.D. Robb. Hundreds of books deep, a whole world I could live in. She writes a couple of books a year and I was keeping pace. Then life happened and I set it down. The ritual went with it. And somewhere between packing up my apartment, giving up my physical books, and learning to walk uphill every day in a new country, I stopped making time for the part of the day that used to be just mine.</p>
 
-  <div class="pull-quote">
-    <p>"Standing in that store, even on a mission, even not there for myself, something exhaled in me that I hadn't realized was holding its breath."</p>
-  </div>
-
-  <h2>The Woman at the Register</h2>
-
-  <p>Just past the entrance there's a small step up, and to your right behind the register was a young woman who greeted me warmly. American. She had come to Madrid for just over six months. That was five years ago. She's still here. She didn't give me her full backstory and I didn't ask for it, but I got the impression she came for something specific, loved what she found, and just never left. Now she's part of the place itself, one of the people who welcomes everyone else in.</p>
-
-  <p>She said it the way people say things that have become so true they've stopped being surprising.</p>
-
-  <p>I thought about that the whole walk home.</p>
-
-  <h2>A Promise I Made to Myself on the Way Out</h2>
-
-  <p>I made myself a promise before I left. I'm coming back. Not as someone running an errand. As a reader who's ready to reclaim her ritual. The Barrio de las Letras is a neighborhood I want to explore properly anyway, and I've recently decided that at least one day on my weekends belongs to what I call scoring. Getting out into this city and actually living in it instead of just moving through it.</p>
-
-  <p>In the States, you drive everywhere. Errands happen on weekends in a car. Here, I was walking uphill seven days a week and by Sunday I was done. So I gave myself Sundays back. And now I'm filling them deliberately, with neighborhoods, with streets, with places like this one that remind me why I made this decision in the first place.</p>
-
-  <p>Secret Kingdoms is going to be one of my spots.</p>
-
-  <div class="article-closer">
-    <p>If any of this sounds familiar, if you made the move and quietly gave up the version of yourself who used to read, this is your sign to go get her back. It's at Calle Moratín 7 in the Barrio de las Letras, two minutes from Antón Martín metro. Walk in. Let David recommend something. And if you came here for six months and you're still here, say hello to the woman at the register. She'll understand completely.</p>
-  </div>
-
-  <div class="sidebar-section">
-    <div class="sidebar-label">About This Place</div>
-    <div class="sidebar-info">
-      <div class="detail-row"><span class="detail-icon">📍</span><span><strong>Secret Kingdoms</strong>Calle Moratín 7, Barrio de las Letras, Madrid</span></div>
-      <div class="detail-row"><span class="detail-icon">🚇</span><span>2 min walk from Antón Martín metro</span></div>
-      <div class="detail-row"><span class="detail-icon">🕐</span><span>Mon–Thu: 11:00–14:30 / 16:00–20:00<br>Fri–Sat: 11:00–20:00<br>Sun: 11:00–14:30</span></div>
-      <div class="detail-row"><span class="detail-icon">📚</span><span>20,000+ English titles, new and second-hand</span></div>
-      <div class="detail-row"><span class="detail-icon">🌐</span><span><a href="https://thesecretkingdoms.net" target="_blank">thesecretkingdoms.net</a></span></div>
+    <div class="pull-quote">
+      <p>Standing in that store, even on a mission, even not there for myself, something exhaled in me that I hadn't realized was holding its breath.</p>
     </div>
-  </div>
 
-  <div class="sidebar-section">
-    <div class="sidebar-label">The Angle</div>
-    <div class="sidebar-angle">
-      <span class="angle-label">The Unexpected Business</span>
-      <p>Not just a bookstore. The story behind why it exists — and why a British-Spanish couple decided Madrid's English-speaking community deserved a home.</p>
+    <h2>The Woman at the Register</h2>
+
+    <p>Just past the entrance there's a small step up, and to your right behind the register was a young woman who greeted me warmly. American. She had come to Madrid for just over six months. That was five years ago. She's still here. She didn't give me her full backstory and I didn't ask for it, but I got the impression she came for something specific, loved what she found, and just never left. Now she's part of the place itself, one of the people who welcomes everyone else in.</p>
+
+    <p>She said it the way people say things that have become so true they've stopped being surprising.</p>
+
+    <p>I thought about that the whole walk home.</p>
+
+    <h2>A Promise I Made to Myself on the Way Out</h2>
+
+    <p>I made myself a promise before I left. I'm coming back. Not as someone running an errand. As a reader who's ready to reclaim her ritual. The Barrio de las Letras is a neighborhood I want to explore properly anyway, and I've recently decided that at least one day on my weekends belongs to what I call scoring. Getting out into this city and actually living in it instead of just moving through it.</p>
+
+    <p>In the States, you drive everywhere. Errands happen on weekends in a car. Here, I was walking uphill seven days a week and by Sunday I was done. So I gave myself Sundays back. And now I'm filling them deliberately, with neighborhoods, with streets, with places like this one that remind me why I made this decision in the first place.</p>
+
+    <p>Secret Kingdoms is going to be one of my spots.</p>
+
+    <div class="article-closer">
+      <p>If any of this sounds familiar, if you made the move and quietly gave up the version of yourself who used to read, this is your sign to go get her back. It's at Calle Moratín 7 in the Barrio de las Letras, two minutes from Antón Martín metro. Walk in. Let David recommend something. And if you came here for six months and you're still here, say hello to the woman at the register. She'll understand completely.</p>
     </div>
-  </div>
 
-  <div class="sidebar-section">
-    <div class="sidebar-label">Currently Reading</div>
-    <div class="sidebar-info">
-      <div class="detail-row"><span class="detail-icon">📖</span><span><strong>I, Medusa</strong> by Ayana Gray</span></div>
+    <div class="info-card">
+      <span class="card-label">Secret Kingdoms &nbsp;·&nbsp; Plan Your Visit</span>
+      <p>📍 Calle Moratín 7, Barrio de las Letras, Madrid</p>
+      <p>🚇 2 min walk from Antón Martín metro</p>
+      <p>🕐 Mon–Thu: 11:00–14:30 / 16:00–20:00 &nbsp;·&nbsp; Fri–Sat: 11:00–20:00 &nbsp;·&nbsp; Sun: 11:00–14:30</p>
+      <p>📚 20,000+ English titles, new and second-hand</p>
+      <p>🌐 <a href="https://thesecretkingdoms.net" target="_blank">thesecretkingdoms.net</a></p>
+      <span class="card-tagline">Walk in. Let it slow you down.</span>
     </div>
-  </div>
 
-  <div class="sidebar-section">
-    <div class="sidebar-label">Filed Under</div>
-    <div class="filed-tags">
-      <span class="filed-tag">Barrio de las Letras</span>
-      <span class="filed-tag">Books</span>
-      <span class="filed-tag">Local Finds</span>
-      <span class="filed-tag">Life in Madrid</span>
+    <div class="info-card">
+      <span class="card-label">Currently Reading</span>
+      <p>📖 <strong>I, Medusa</strong> by Ayana Gray</p>
     </div>
+
+    <div class="info-card">
+      <span class="card-label">Filed Under</span>
+      <div class="filed-tags">
+        <span class="filed-tag">Barrio de las Letras</span>
+        <span class="filed-tag">Books</span>
+        <span class="filed-tag">Local Finds</span>
+        <span class="filed-tag">Life in Madrid</span>
+      </div>
+    </div>
+
+    <p class="closing-line">She Left the Chat &nbsp;·&nbsp; shelefthechat.com &nbsp;·&nbsp; By Kimberly &nbsp;·&nbsp; Madrid, Spain</p>
+
   </div>
-
-</article>
-
-<p class="closing-line">She Left the Chat &nbsp;·&nbsp; shelefthechat.com &nbsp;·&nbsp; By Kimberly &nbsp;·&nbsp; Madrid, Spain</p>
 
 </body>
 </html>
