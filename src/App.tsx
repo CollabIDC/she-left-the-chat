@@ -11,6 +11,7 @@ import Resources from "./pages/Resources";
 import About from "./pages/About";
 import Videos from "./pages/Videos";
 import Gallery from "./pages/Gallery";
+import SheActuallyDidIt from "./pages/SheActuallyDidIt";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,6 +26,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/stories" element={<Stories />} />
+          <Route path="/she-actually-did-it" element={<SheActuallyDidIt />} />
           <Route path="/stories/:slug" element={<BlogPost />} />
           <Route path="/videos" element={<Videos />} />
           <Route path="/gallery" element={<Gallery />} />
