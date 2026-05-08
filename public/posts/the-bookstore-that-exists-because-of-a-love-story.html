@@ -232,7 +232,7 @@
     margin-bottom: 1.6em;
   }
 
-  .article-body p:first-child::first-letter {
+  .article-body > p.drop-cap:first-of-type::first-letter {
     font-family: 'Playfair Display', serif;
     font-size: 72px;
     font-weight: 700;
@@ -539,18 +539,7 @@
 </head>
 <body>
 
-<!-- Header -->
-<header class="site-header">
-  <a href="#" class="site-logo">she left <span>the chat</span></a>
-  <nav>
-    <ul class="site-nav">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Stories</a></li>
-      <li><a href="#">Video</a></li>
-      <li><a href="#">About</a></li>
-    </ul>
-  </nav>
-</header>
+<!-- Header removed: site Navbar component renders globally -->
 
 <!-- Post intro -->
 <section style="max-width: 1100px; margin: 0 auto; padding: 56px 40px 24px; text-align: left;">
@@ -568,7 +557,7 @@
 
 <!-- Meta bar -->
 <div class="meta-bar">
-  <div class="meta-author">By <strong>Kimberly Willis</strong></div>
+  <div class="meta-author">By <strong>Kimberly</strong></div>
   <div class="meta-divider"></div>
   <div class="meta-date">May 2026</div>
   <span class="meta-tag">She Left the Chat</span>
@@ -580,7 +569,7 @@
   <!-- Body -->
   <article class="article-body">
 
-    <p>There's a ritual that book lovers have. You probably know the one. It's not just reading. It's the carved out portion of the day that belongs entirely to you. The train ride where you disappear into someone else's world before the workday starts. The balcony in the late afternoon with something cold to drink and no one needing anything from you. That specific exhale that happens when you open to your page and everything else goes quiet.</p>
+    <p class="drop-cap">There's a ritual that book lovers have. You probably know the one. It's not just reading. It's the carved out portion of the day that belongs entirely to you. The train ride where you disappear into someone else's world before the workday starts. The balcony in the late afternoon with something cold to drink and no one needing anything from you. That specific exhale that happens when you open to your page and everything else goes quiet.</p>
 
     <p>I used to have that. Then life happened, the way it does.</p>
 
