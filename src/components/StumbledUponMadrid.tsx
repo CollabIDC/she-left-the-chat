@@ -80,21 +80,22 @@ const StumbledUponMadrid = () => {
           {angles.map((angle, i) => {
             const Icon = angle.icon;
             return (
-              <motion.div
-                key={angle.name}
-                {...anim(i + 1)}
-                className="bg-surface rounded-xl p-8 card-elevated"
-              >
-                <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-4" style={{ backgroundColor: angle.iconBg }}>
-                  <Icon className="w-6 h-6" style={{ color: angle.iconColor }} />
-                </div>
-                <h3 className="font-display text-lg font-bold text-charcoal mb-2">
-                  {angle.name}
-                </h3>
-                <p className="font-body text-charcoal/70 text-sm leading-relaxed">
-                  {angle.description}
-                </p>
-              </motion.div>
+              <Link to="/she-actually-did-it" key={angle.name} className="block">
+                <motion.div
+                  {...anim(i + 1)}
+                  className="bg-surface rounded-xl p-8 card-elevated cursor-pointer hover:shadow-lg transition-shadow"
+                >
+                  <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-4" style={{ backgroundColor: angle.iconBg }}>
+                    <Icon className="w-6 h-6" style={{ color: angle.iconColor }} />
+                  </div>
+                  <h3 className="font-display text-lg font-bold text-charcoal mb-2">
+                    {angle.name}
+                  </h3>
+                  <p className="font-body text-charcoal/70 text-sm leading-relaxed">
+                    {angle.description}
+                  </p>
+                </motion.div>
+              </Link>
             );
           })}
         </div>
