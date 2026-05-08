@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>I Went to a Bullfight in Madrid and I Wasn't Ready | She Left the Chat</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --cream: #faf7f2;
+    --ink: #1a1714;
+    --warm-mid: #6b5e52;
+    --accent: #c4602a;
+    --soft-line: #e8e0d6;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background-color: var(--cream);
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.85;
+    font-size: 1.05rem;
+  }
+
+  .page-wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 4rem 2rem 6rem;
+  }
+
+  .brand-label {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 0.7rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 2.5rem;
+    display: block;
+  }
+
+  .content-warning {
+    background: #fff8f5;
+    border-left: 3px solid var(--accent);
+    padding: 1.2rem 1.6rem;
+    margin-bottom: 3rem;
+    border-radius: 0 4px 4px 0;
+  }
+
+  .content-warning p {
+    font-size: 0.88rem;
+    color: var(--warm-mid);
+    font-style: italic;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  .content-warning strong {
+    font-style: normal;
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--ink);
+    margin-bottom: 0.6rem;
+  }
+
+  .subhead {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.15rem;
+    color: var(--warm-mid);
+    margin-bottom: 2.5rem;
+  }
+
+  .divider {
+    width: 48px;
+    height: 2px;
+    background: var(--accent);
+    margin-bottom: 2.8rem;
+  }
+
+  .meta {
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--warm-mid);
+    margin-bottom: 3rem;
+  }
+
+  .essay p {
+    margin-bottom: 1.7rem;
+    color: var(--ink);
+  }
+
+  .essay p.drop-cap::first-letter {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.8rem;
+    font-weight: 700;
+    float: left;
+    line-height: 0.82;
+    margin-right: 0.12em;
+    margin-top: 0.08em;
+    color: var(--accent);
+  }
+
+  .section-header {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.45rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin: 3.2rem 0 1.4rem;
+  }
+
+  .section-divider {
+    width: 100%;
+    height: 1px;
+    background: var(--soft-line);
+    margin: 3rem 0;
+  }
+
+  .pull-quote {
+    border-left: 3px solid var(--accent);
+    padding: 0.4rem 0 0.4rem 1.6rem;
+    margin: 2.8rem 0;
+  }
+
+  .pull-quote p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.28rem;
+    line-height: 1.65;
+    color: var(--ink);
+    margin: 0;
+  }
+
+  .emphasis-bold {
+    font-weight: 500;
+  }
+
+  .sources {
+    margin-top: 4rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--soft-line);
+  }
+
+  .sources h3 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--warm-mid);
+    font-weight: 500;
+    margin-bottom: 1.2rem;
+  }
+
+  .sources ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .sources ul li {
+    font-size: 0.88rem;
+    color: var(--warm-mid);
+    margin-bottom: 0.55rem;
+    padding-left: 1.2rem;
+    position: relative;
+  }
+
+  .sources ul li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+  }
+
+  .sources ul li a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .sources ul li a:hover {
+    text-decoration: underline;
+  }
+
+  .byline {
+    margin-top: 3.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--soft-line);
+  }
+
+  .byline p {
+    font-size: 0.85rem;
+    color: var(--warm-mid);
+    font-style: italic;
+    margin-bottom: 0.3rem;
+  }
+
+  .photo-placeholder {
+    background: var(--soft-line);
+    border-radius: 4px;
+    padding: 2rem;
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 0.82rem;
+    color: var(--warm-mid);
+    font-style: italic;
+  }
+</style>
+</head>
+<body>
+<div class="page-wrap">
+
+  <span class="brand-label">She Left the Chat</span>
+
+  <div class="content-warning">
+    <p><strong>Content Warning</strong> — This post contains descriptions and images of bullfighting including animal injury and death. I'm sharing this experience honestly and without filters because that's what She Left the Chat is about. If this is not something you can read right now please take care of yourself first. I'll see you in the next post.</p>
+  </div>
+
+  <h1>I Went to a Bullfight in Madrid and I Wasn't Ready</h1>
+  <p class="subhead">Some experiences teach you where your line is.</p>
+  <div class="divider"></div>
+  <p class="meta">By Kimberly Willis &nbsp;·&nbsp; May 3, 2026 &nbsp;·&nbsp; Madrid, Spain</p>
+
+  <div class="essay">
+
+    <p class="drop-cap">Let me tell you how we even ended up here.</p>
+
+    <p>I was planning our Friday night and asked one of the guys in our group what he wanted to do. I gave him options. He said bullfighting. Just like that. Bullfighting. So here we are.</p>
+
+    <p>We hopped on Metro Line 5 straight from the Mercado de San Fernando in Lavapiés where we had been browsing the stalls as they were closing out for the day. Grabbed something quick and kept it moving. Line 5 straight to Las Ventas. Easy.</p>
+
+    <p>When I came up from that metro stop I was not prepared for what was standing in front of me. Las Ventas is massive. Genuinely massive. Historic. I stood there just staring at it taking pictures trying to capture the scale of it. The architecture stopped me cold. If you have ever seen the Colosseum in Rome you will get the vibe. Same circular energy. Same feeling that this space has held something ancient and human for a very long time. It was moving just to stand there.</p>
+
+    <div class="photo-placeholder">[ Photo: Las Ventas exterior — arena shots ]</div>
+
+    <p>Getting tickets was straightforward. You can buy online ahead of time and pick your exact section or walk up to the window and choose your seats right there on the spot. No drama. We got ours and went in.</p>
+
+    <p>Now here is a tip. Read your ticket carefully before you move. I did not have my glasses on and completely misread our section. We walked confidently in the wrong direction. Full commitment. Wrong way entirely. Had to backtrack past the entrance to find our actual seats. Glasses on. Ticket out. Learn from me.</p>
+
+    <p>Once we found our section I just stood there for a second taking it all in. Thousands of people. The buzz of the crowd settling in. The sand arena below us. It felt like arriving somewhere that actually meant something. I did not know yet what kind of something.</p>
+
+    <div class="section-divider"></div>
+
+    <h2 class="section-header">A Little History Before We Get Into It</h2>
+
+    <p>Bullfighting in Spain dates back to the early 18th century though its roots go much deeper into ancient rituals involving bulls across the Iberian Peninsula. It became formalized as a public spectacle around 1726 when Francisco Romero is credited as the first matador to use the red cape and sword in the way we recognize today.</p>
+
+    <p>For centuries it was considered Spain's national festival. The corrida. Kings attended. Artists painted it. Hemingway wrote about it. Picasso was obsessed with it. It became woven into Spanish identity in a way that goes far beyond sport. It is theater. It is ritual. It is deeply controversial and fiercely protected at the same time.</p>
+
+    <p>Today bullfighting is banned in Catalonia, the Canary Islands, and the Balearic Islands. But in Madrid it is not just legal. It is officially recognized as protected cultural heritage. Las Ventas alone draws thousands of spectators every season and the San Isidro Fair running from May through June is considered the most prestigious bullfighting event in the entire world.</p>
+
+    <p>It contributes over 4 billion euros to the Spanish economy annually. It employs breeders, trainers, matadors, agents, arena staff, and vendors across the country. It is a whole world unto itself.</p>
+
+    <p>I knew some of this before I arrived. I thought I understood what I was walking into.</p>
+
+    <div class="pull-quote">
+      <p>I did not.</p>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <h2 class="section-header">The Horse Nobody Warned Me About</h2>
+
+    <p>Nobody warned me about the horse. That is the thing I want you to know before anything else.</p>
+
+    <p>When you picture a bullfight you picture a matador and a bull. The cape. The crowd. The drama. What you do not picture is a horse.</p>
+
+    <p>In the first stage of the fight a rider called a picador enters the ring on horseback. His job is to weaken the bull's neck muscles using a long lance so the bull lowers his head for the matador later. The horse wears protective padding called a peto covering its body. What they do not tell you is that the horse is completely blindfolded. Fully. Cannot see a single thing. Especially not the bull.</p>
+
+    <p>Now here is a little history that made this moment even harder for me to process.</p>
+
+    <p>Before 1928 horses in bullfighting had absolutely no protection whatsoever. None. They entered the ring completely exposed. Hundreds of horses died every single season. The international outrage over the horses actually exceeded the outrage over the bulls. In 1928 the Spanish government made the peto mandatory after years of public pressure.</p>
+
+    <p>So the padding was supposed to make it more humane.</p>
+
+    <p>Then I watched the bull charge that horse.</p>
+
+    <p>He did not just hit the horse. He got his horns underneath that horse and he stayed there. Pushing. Ramming. Over and over. That completely blindfolded horse had absolutely no idea what was happening or where it was coming from. The bull just kept going, horns buried, pushing that horse down until the horse went down all the way to the ground.</p>
+
+    <p>I started crying. Right there in my seat. Camera still rolling because my hands were moving on autopilot but I could not look at the screen.</p>
+
+    <p>Then the banderilleros came sprinting out. Those are the matador's support team, his cuadrilla, always watching from the sides and ready to run in when things go wrong. They came out waving their capes and creating enough of a distraction to draw the bull away. While they had his attention the rest of the crew rushed in and helped pull that horse back up.</p>
+
+    <div class="pull-quote">
+      <p>A completely blindfolded horse. Could not see it coming. Could not protect itself. Even with all that padding. Imagine what it looked like before 1928.</p>
+    </div>
+
+    <p>By the time the second and third horses came out I had my fingers in my ears and I was humming. Loudly. To drown out everything. Eyes closed. Just sitting there humming until it was over. The people around me did not even flinch.</p>
+
+    <div class="section-divider"></div>
+
+    <h2 class="section-header">Why I Started Writing This in Real Time</h2>
+
+    <p>Somewhere in the middle of all of this I picked up my phone and started writing.</p>
+
+    <p>Not because I planned to. I did not come here with a blog post in mind. I came here because someone in my group wanted to experience this and I wanted to be a good sport about it.</p>
+
+    <p>But somewhere between what I was watching and what I was feeling I needed to do something with it all. Writing became the outlet. A way to process. A way to stay present without completely falling apart. So what you are reading right now was written in real time from the stands of Las Ventas while the fights were happening around me.</p>
+
+    <p>That has never happened to me before. I hope it never happens again quite like this.</p>
+
+    <div class="section-divider"></div>
+
+    <h2 class="section-header">The Dance</h2>
+
+    <p>I want to be honest with you because this is the complicated part.</p>
+
+    <p>There were moments out there that were genuinely beautiful. I did not expect that.</p>
+
+    <p>Watching the matador and the bull move together I kept thinking this looks like a dance. Not a fight. They moved back and forth like they had some kind of understanding between them. At one point the matador turned his back completely on the bull. Just stood there. Back turned. And the bull waited. Stood still. Like he knew his cue.</p>
+
+    <p>I genuinely wondered if they had some kind of connection. Because what I was watching did not look like chaos. The cape called a capote in the opening stages and a muleta in the final act was not just a prop. It was a language. And both of them seemed to speak it.</p>
+
+    <p>Then there were the banderilleros again. When the bull would charge toward them you would see grown men sprinting for the wooden barriers and vaulting over them. That part almost made me laugh. Almost.</p>
+
+    <p>But then came the banderillas. Those colorful barbed sticks placed into the bull's shoulders one by one. I understood the explanation. It weakens the bull. It is part of the tradition. But watching it happen right in front of you is something completely different. There is no way to make it okay in your head while you are sitting there watching it.</p>
+
+    <p>I noticed one of the matadors was very young. Impossibly young. Standing in that ring facing a half ton of animal with nothing but a cape and a sword. I thought about his mother. I could not imagine raising a child and watching them choose this.</p>
+
+    <p>I had my camera out. Sometimes I was recording. Sometimes I just could not.</p>
+
+    <div class="photo-placeholder">[ Photo: Matador and bull in the ring ]</div>
+
+    <div class="section-divider"></div>
+
+    <h2 class="section-header">The End</h2>
+
+    <p>The last bull was killed right in front of my section.</p>
+
+    <p>He fought so hard. So incredibly hard. Right up until the very end he kept going. Every time that red cape swung he charged. Again and again. Because that is all he knew how to do.</p>
+
+    <p>Before the matador moved in for the final time something happened that I did not expect. The crowd started waving white handkerchiefs. Hundreds of them. All at once. I did not understand what it meant at first. I looked it up right there on my phone.</p>
+
+    <p>They were asking for a pardon. The crowd was asking the matador to spare that bull's life. It happens when a bull has shown exceptional courage and heart throughout the fight. The audience sees it. They feel it. And they wave white handkerchiefs to petition for mercy.</p>
+
+    <p>The matador looked at the crowd.</p>
+
+    <p>He killed the bull anyway.</p>
+
+    <p>I am sitting here with tears in my eyes. My heart genuinely hurts for that animal. That poor animal who never asked for any of this. Who came out into that ring and gave everything he had and never once understood why.</p>
+
+    <p>And then the crowd started clapping.</p>
+
+    <div class="pull-quote">
+      <p>I hate every moment of this. Every single moment. For him. For that bull who fought with everything he had until he had absolutely nothing left. Who the crowd tried to save. Who did not get saved.</p>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <h2 class="section-header">What Happens After</h2>
+
+    <p>I had to know. So I looked it up right there in my seat.</p>
+
+    <p>After the bull is killed the mule team drags the body across the sand and out of the arena. The bull goes straight to a slaughterhouse. The meat is sold to local restaurants and butcher shops. During bullfighting season it becomes part of the festival itself. People watch the fights then go eat the bulls.</p>
+
+    <div class="photo-placeholder">[ Photo: Bull being dragged by mule team ]</div>
+
+    <p>Every part of the animal gets used. The meat for steaks and stews. The skin tanned into leather for bags, shoes, and belts. The horns turned into crafts and decorative items.</p>
+
+    <p>Nothing goes to waste.</p>
+
+    <p>There used to be a restaurant called Casa Toribio located literally right down the street from Las Ventas. For 28 years they held the exclusive rights to all the bull meat from the ring and served it every single day of the year. People would watch the fights then walk down the street and eat the bulls for dinner. Casa Toribio closed in 2022. But the fact that it existed at all for nearly three decades says everything you need to know about the relationship between this city and this tradition.</p>
+
+    <p>Three bulls fought tonight. The crowd tried to save the last one.</p>
+
+    <p>None of them were pardoned.</p>
+
+    <div class="section-divider"></div>
+
+    <p>I came here because someone in my group wanted to go and I said yes. I wanted to be open minded. I wanted to be a good sport. I wanted to be the kind of traveler who says yes and figures it out later.</p>
+
+    <p>I am leaving Las Ventas with my heart a little broken and a lot more clarity about who I am.</p>
+
+    <p>Some experiences teach you something about yourself you did not know before you arrived.</p>
+
+    <p>Today taught me I have a line.</p>
+
+    <p class="emphasis-bold">Now I know exactly where it is.</p>
+
+  </div>
+
+  <div class="byline">
+    <p>Kimberly Willis</p>
+    <p>She Left the Chat</p>
+    <p>Written in real time from Las Ventas, Madrid — May 3, 2026</p>
+  </div>
+
+  <div class="sources">
+    <h3>Sources &amp; Further Reading</h3>
+    <ul>
+      <li>Las Ventas Bullring: <a href="https://las-ventas.com" target="_blank">las-ventas.com</a></li>
+      <li>Tickets: <a href="https://madridbullfighting.com" target="_blank">madridbullfighting.com</a></li>
+      <li>Bullfighting History: <a href="https://britannica.com/sports/bullfighting" target="_blank">britannica.com/sports/bullfighting</a></li>
+      <li>Bullfighting History: <a href="https://wikipedia.org/wiki/Bullfighting" target="_blank">wikipedia.org/wiki/Bullfighting</a></li>
+      <li>Horse Protection History (Peto): <a href="https://humaneworld.org/en/issue/bullfighting-long-cruel-death" target="_blank">humaneworld.org</a></li>
+      <li>What Happens to the Bull: <a href="https://livescience.com/56488-what-happens-to-bulls-after-bullfight.html" target="_blank">livescience.com</a></li>
+      <li>What Happens to the Bull: <a href="https://entradascorrida.com/en/what-happens-to-the-bull-after-the-bullfight" target="_blank">entradascorrida.com</a></li>
+      <li>Casa Toribio Archive: <a href="https://npr.org/sections/thesalt/2019/08/01/746659693" target="_blank">npr.org</a></li>
+      <li>Casa Toribio Archive: <a href="https://esmadrid.com/en/restaurants/casa-toribio" target="_blank">esmadrid.com</a></li>
+    </ul>
+  </div>
+
+</div>
+</body>
+</html>
