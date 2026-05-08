@@ -10,6 +10,7 @@ import {
   MapPin,
   Ticket,
   PencilLine,
+  type LucideIcon,
 } from "lucide-react";
 
 /* ---------- Brand tokens (scoped to this page) ---------- */
@@ -43,7 +44,7 @@ type Section = {
   description: string;
   iconBg: string;
   iconColor: string;
-  Icon: React.ComponentType<{ size?: number; color?: string }>;
+  Icon: LucideIcon;
   posts: Post[];
   emptyFirstLabel?: string;
   totalSlots: number;
