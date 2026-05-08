@@ -11,115 +11,139 @@
     --ink: #1A1714;
     --warm-mid: #6B5E52;
     --accent: #9B3A2A;
-    --soft-line: #D8D0C4;
     --gold: #B8952A;
+    --soft-line: #D8D0C4;
     --muted: #8A8078;
+    --dark: #2C1F1A;
   }
+
   * { margin: 0; padding: 0; box-sizing: border-box; }
+
   body {
-    background: var(--cream);
+    background-color: var(--cream);
     color: var(--ink);
     font-family: 'Lato', sans-serif;
-    font-weight: 300;
-    font-size: 16px;
+    font-weight: 400;
+    font-size: 17px;
     line-height: 1.85;
-    -webkit-font-smoothing: antialiased;
   }
 
-  /* Full-width hero */
-  .post-hero {
-    position: relative;
+  /* HERO IMAGE */
+  .hero-image {
     width: 100%;
-    height: 420px;
-    overflow: hidden;
-  }
-  .post-hero img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  .post-hero::after {
-    content: '';
-    position: absolute; left: 0; right: 0; bottom: 0;
-    height: 30%;
-    background: linear-gradient(to bottom, rgba(26,23,20,0) 0%, rgba(26,23,20,0.45) 100%);
-    pointer-events: none;
+    height: 480px;
+    object-fit: cover;
+    display: block;
   }
 
-  /* Centered intro */
-  .post-intro {
-    max-width: 680px;
-    margin: 0 auto;
-    padding: 48px 24px 0;
-    text-align: center;
+  .hero-placeholder {
+    width: 100%;
+    height: 480px;
+    background: var(--dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  .post-eyebrow {
-    font-family: 'Lato', sans-serif;
+
+  .hero-placeholder span {
     font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(242, 237, 228, 0.2);
+  }
+
+  /* POST HEADER */
+  .post-header {
+    text-align: center;
+    padding: 52px 24px 0;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+
+  .post-eyebrow {
+    font-size: 11px;
+    font-weight: 700;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: var(--accent);
-    font-weight: 700;
+    margin-bottom: 18px;
     display: block;
-    margin-bottom: 22px;
   }
-  .post-title {
+
+  .post-h1 {
     font-family: 'Playfair Display', serif;
+    font-size: 48px;
     font-weight: 700;
-    font-size: 42px;
-    line-height: 1.15;
+    line-height: 1.12;
     color: var(--ink);
-    margin: 0 auto 18px;
+    margin-bottom: 16px;
   }
-  .post-subtitle {
+
+  .post-subhead {
     font-family: 'Playfair Display', serif;
     font-style: italic;
-    font-size: 18px;
+    font-size: 19px;
     color: var(--warm-mid);
-    margin: 0 auto 18px;
-    line-height: 1.45;
+    line-height: 1.5;
+    margin-bottom: 22px;
   }
-  .post-divider { width: 48px; height: 2px; background: var(--accent); margin: 24px auto; border: 0; }
-  .post-byline {
-    font-family: 'Lato', sans-serif;
+
+  .post-divider {
+    width: 48px;
+    height: 2px;
+    background: var(--accent);
+    margin: 0 auto 22px;
+  }
+
+  .post-meta {
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--muted);
+    margin-bottom: 52px;
   }
 
-  /* 680px content column */
-  .post-column {
+  /* CONTENT COLUMN */
+  .post-body {
     max-width: 680px;
     margin: 0 auto;
-    padding: 40px 24px 40px;
-    position: relative;
+    padding: 0 24px 80px;
   }
-  .post-column p {
-    font-family: 'Lato', sans-serif;
-    font-weight: 300;
-    font-size: 16px;
+
+  /* PARAGRAPHS */
+  .post-body p {
+    font-size: 17px;
     line-height: 1.85;
     color: var(--ink);
     margin-bottom: 1.7rem;
+    font-weight: 400;
   }
-  .post-column > p:first-of-type::first-letter,
-  .post-column p.drop-cap::first-letter {
+
+  /* DROP CAP */
+  .drop-cap::first-letter {
     font-family: 'Playfair Display', serif;
-    font-size: 72px;
+    font-size: 76px;
     font-weight: 700;
     float: left;
     line-height: 0.78;
-    margin-right: 8px;
-    margin-top: 6px;
+    margin-right: 10px;
+    margin-top: 8px;
     color: var(--accent);
   }
-  .post-column h2 {
+
+  /* HEADINGS */
+  .post-body h2 {
     font-family: 'Playfair Display', serif;
+    font-size: 28px;
     font-weight: 700;
-    font-size: 26px;
     color: var(--ink);
     margin: 3rem 0 1rem;
     line-height: 1.25;
   }
-  .post-column h3 {
+
+  .post-body h3 {
     font-family: 'Lato', sans-serif;
     font-weight: 700;
     font-size: 10px;
@@ -129,377 +153,391 @@
     margin: 2.5rem 0 0.8rem;
   }
 
-  /* Pull quote breakout to 780px */
-  .pull-quote {
-    width: 100%;
-    max-width: 100%;
-    margin: 3rem 0;
-    padding: 6px 0 6px 28px;
-    border-left: 3px solid var(--accent);
-    background: transparent;
-    border-radius: 0;
-  }
-  .pull-quote p {
-    font-family: 'Playfair Display', serif !important;
-    font-style: italic;
-    font-size: 22px !important;
-    line-height: 1.55 !important;
-    color: var(--ink) !important;
-    margin: 0 !important;
-  }
-  .pull-quote p::first-letter {
-    font-family: inherit !important;
-    font-size: inherit !important;
-    float: none !important;
-    color: inherit !important;
-    font-weight: inherit !important;
-    line-height: inherit !important;
-    margin: 0 !important;
-  }
-
-  /* Section break */
-  .section-break, .section-divider {
+  /* SECTION BREAK */
+  .section-break {
     text-align: center;
     color: var(--accent);
     font-size: 14px;
     letter-spacing: 0.5em;
+    margin: 2.8rem 0;
     opacity: 0.5;
-    margin: 2.8rem auto;
   }
 
-  /* Insider list */
-  .insider-list { list-style: none; padding: 0; margin: 1.5rem 0 2rem; }
+  /* PULL QUOTE */
+  .pull-quote {
+    border-left: 3px solid var(--accent);
+    border-radius: 0;
+    padding: 6px 0 6px 28px;
+    margin: 3rem 0;
+  }
+
+  .pull-quote p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 22px;
+    line-height: 1.55;
+    color: var(--ink);
+    margin-bottom: 0 !important;
+    font-weight: 400;
+  }
+
+  /* MOOD BREAK — full width dark band */
+  .mood-break {
+    background: var(--dark);
+    margin: 3.5rem -24px;
+    padding: 52px 48px;
+    text-align: center;
+  }
+
+  .mood-break p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 22px;
+    color: rgba(242, 237, 228, 0.85);
+    line-height: 1.6;
+    max-width: 540px;
+    margin: 0 auto;
+    font-weight: 400;
+  }
+
+  /* VIDEO PLACEHOLDER */
+  .video-placeholder {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: var(--dark);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2.5rem 0;
+  }
+
+  .video-placeholder span {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(242, 237, 228, 0.3);
+  }
+
+  /* PHOTO PLACEHOLDER */
+  .photo-placeholder {
+    width: 100%;
+    max-width: 480px;
+    min-height: 300px;
+    border: 1.5px solid var(--soft-line);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem auto;
+  }
+
+  .photo-placeholder span {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  /* PERSONAL NOTE */
+  .personal-note {
+    background: var(--dark);
+    border-radius: 4px;
+    padding: 36px 36px 32px;
+    margin: 3rem 0;
+  }
+
+  .note-label {
+    font-family: 'Lato', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 18px;
+  }
+
+  .personal-note p {
+    font-size: 15px;
+    line-height: 1.85;
+    color: rgba(242, 237, 228, 0.9);
+    margin-bottom: 1.2rem;
+    font-weight: 400;
+  }
+
+  .personal-note p:last-of-type { margin-bottom: 0; }
+
+  .signature {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 17px;
+    color: var(--gold);
+    margin-top: 22px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(184, 149, 42, 0.3);
+    display: block;
+  }
+
+  /* INSIDER LIST */
+  .insider-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2.5rem;
+  }
+
   .insider-list li {
-    padding: 14px 0 14px 24px;
-    border-bottom: 1px solid var(--soft-line);
-    position: relative;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.7;
     color: var(--ink);
-    font-weight: 300;
+    padding: 16px 0 16px 22px;
+    border-bottom: 1px solid var(--soft-line);
+    font-weight: 400;
+    position: relative;
   }
-  .insider-list li:first-of-type { border-top: 1px solid var(--soft-line); }
+
+  .insider-list li:first-child { border-top: 1px solid var(--soft-line); }
+
   .insider-list li::before {
     content: '';
     position: absolute;
-    left: 4px; top: 24px;
-    width: 8px; height: 8px;
+    left: 0;
+    top: 24px;
+    width: 7px;
+    height: 7px;
     border-radius: 50%;
     background: var(--accent);
   }
-  .insider-list li strong { font-weight: 700; }
 
-  /* Info card */
-  .sidebar-section, .info-card {
-    background: #ffffff;
+  .insider-list li strong {
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  /* INFO CARD */
+  .info-card {
+    background: #fff;
     border: 1.5px solid var(--soft-line);
     border-radius: 12px;
-    padding: 28px;
+    padding: 28px 28px 24px;
     margin: 3rem 0;
   }
-  .sidebar-label {
-    font-family: 'Lato', sans-serif;
-    font-weight: 700;
+
+  .card-label {
     font-size: 10px;
+    font-weight: 700;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: var(--accent);
     display: block;
-    margin-bottom: 1.2rem;
-    padding-bottom: 10px;
+    margin-bottom: 18px;
+    padding-bottom: 16px;
     border-bottom: 1px solid var(--soft-line);
   }
-  .sidebar-info { font-family: 'Lato', sans-serif; font-weight: 300; font-size: 15px; color: var(--ink); line-height: 1.65; }
-  .sidebar-info a { color: var(--accent); text-decoration: none; }
-  .sidebar-info .detail-row { display: flex; gap: 10px; margin-bottom: 10px; align-items: flex-start; }
-  .sidebar-info strong { display: block; font-weight: 700; margin-bottom: 2px; }
-  .detail-icon { color: var(--accent); flex-shrink: 0; margin-top: 2px; }
-  .sidebar-angle { background: transparent; border: none; padding: 0; }
-  .sidebar-angle .angle-label {
-    font-family: 'Lato', sans-serif;
-    font-weight: 700;
-    font-size: 10px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--gold);
-    display: block;
-    margin-bottom: 8px;
-  }
-  .sidebar-angle p { font-family: 'Lato', sans-serif; font-weight: 300; font-size: 15px; color: var(--ink); line-height: 1.65; margin: 0; }
 
-  /* Mood break — full width band */
-  .mood-break-fullwidth {
-    background: #2C1F1A;
-    padding: 52px 24px;
-    margin: 3rem 0;
-    text-align: center;
-  }
-  .mood-break-fullwidth p {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    font-size: 20px;
-    line-height: 1.5;
-    color: rgba(242,237,228,0.85);
-    margin: 0 auto;
-    max-width: 640px;
+  .info-card p {
+    font-size: 14px;
+    color: var(--warm-mid);
+    margin-bottom: 10px;
+    line-height: 1.55;
+    font-weight: 400;
   }
 
-  /* Personal note inside column */
-  .personal-note {
-    background: #2C1F1A;
-    color: rgba(242,237,228,0.85);
-    border-radius: 4px;
-    padding: 32px;
-    margin: 3rem 0;
+  .info-card p:last-of-type { margin-bottom: 0; }
+
+  .info-card a {
+    color: var(--accent);
+    text-decoration: none;
   }
-  .personal-note .note-label {
-    font-family: 'Lato', sans-serif;
-    font-weight: 700;
-    font-size: 10px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 1.4rem;
-    display: block;
-  }
-  .personal-note p {
-    font-family: 'Lato', sans-serif !important;
-    font-weight: 300;
-    font-size: 15px !important;
-    color: rgba(242,237,228,0.85) !important;
-    margin-bottom: 1.2rem !important;
-    line-height: 1.8 !important;
-  }
-  .personal-note p:last-child { margin-bottom: 0 !important; }
-  .personal-note .signature {
+
+  .info-card a:hover { text-decoration: underline; }
+
+  .card-tagline {
     font-family: 'Playfair Display', serif;
     font-style: italic;
-    font-size: 16px;
-    color: var(--gold);
-    margin-top: 20px;
+    font-size: 15px;
+    color: var(--ink);
+    display: block;
+    margin-top: 18px;
     padding-top: 16px;
-    border-top: 1px solid rgba(184,149,42,0.3);
-  }
-
-  /* Video / photo placeholders */
-  .video-placeholder {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%;
-    background: #2C1F1A;
-    border-radius: 12px;
-    margin: 2.5rem 0;
-    overflow: hidden;
-  }
-  .video-placeholder span {
-    position: absolute; inset: 0;
-    display: flex; align-items: center; justify-content: center;
-    font-family: 'Lato', sans-serif; font-weight: 400; font-size: 0.92rem;
-    color: rgba(242,237,228,0.65); letter-spacing: 0.1em; text-transform: uppercase;
-  }
-  .photo-placeholder-tablao {
-    display: flex; align-items: center; justify-content: center;
-    width: 100%; max-width: 400px; min-height: 280px;
-    margin: 2rem auto; padding: 24px;
-    border: 1.5px solid var(--soft-line); border-radius: 12px;
-    background: #ffffff; text-align: center;
-    font-family: 'Lato', sans-serif; font-weight: 300; font-size: 0.9rem;
-    color: var(--muted); font-style: italic;
-  }
-
-  /* Closing line */
-  .closing-line {
-    text-align: center;
-    font-family: 'Lato', sans-serif;
-    font-weight: 700;
-    font-size: 11px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin: 52px auto 0;
-    padding: 24px 24px 40px;
-    max-width: 680px;
     border-top: 1px solid var(--soft-line);
   }
 
-  @media (max-width: 780px) {
-    .pull-quote { width: 100%; margin-left: 0; margin-right: 0; max-width: 100%; }
-  }
-  @media (max-width: 600px) {
-    .post-hero { height: 280px; }
-    .post-title { font-size: 32px; }
-    .post-column { padding: 32px 20px 40px; }
-    .personal-note { padding: 24px; }
-    .sidebar-section, .info-card { padding: 22px; }
+  /* CLOSING LINE */
+  .closing-line {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    margin-top: 52px;
+    padding-top: 24px;
+    border-top: 1px solid var(--soft-line);
   }
 </style>
 </head>
 <body>
 
-<!-- Full-width hero -->
-<div class="post-hero">
-  <img src="/posts/images/tablao-hero.jpg" alt="Flamenco dancer at Tablao de la Villa in Madrid" />
-</div>
-
-<!-- Centered intro -->
-<header class="post-intro">
-  <span class="post-eyebrow">Stumbled Upon Madrid</span>
-  <h1 class="post-title">The Night Flamenco Stopped Time</h1>
-  <p class="post-subtitle">Some experiences you plan. Some find you. This one did both.</p>
-  <hr class="post-divider" />
-  <p class="post-byline">By Kimberly &nbsp;·&nbsp; Tablao de la Villa &nbsp;·&nbsp; Madrid, Spain</p>
-</header>
-
-<!-- Article body in 680px column -->
-<article class="post-column">
-
-  <p class="drop-cap">There are moments when you sit somewhere and realize you are not just watching a performance. You are watching a people. The Gitano people, Spain's Roma community, whose roots stretch back centuries through Andalusia, through North Africa, through the Middle East, all the way to northern India. You are watching their survival, their joy, their grief, and their pride compressed into one hour on a small stage in a 19th century palace in the heart of Madrid. That was my Friday night at Tablao de la Villa.</p>
-
-  <p>I almost missed it. Let's start there.</p>
-
-  <p>Madrid is the problem. Not in a bad way. In the best possible way. There is so much to do, so many places to go, so many experiences competing for space on your calendar that even the things you absolutely want to do can get caught in the shuffle of trying to fit everything in. That is what happened here. We knew we wanted to go. We just could not land on when to put it in the schedule. By the time we finally committed and went to book, the seats were nearly gone. I got us in, and I will say this plainly right now: if Flamenco is on your list, book it the moment you decide you want to go. More on why in a moment.</p>
-
-  <div class="section-break">· · ·</div>
-
-  <h2>What Is Flamenco, Really?</h2>
-
-  <p>Before I tell you what I saw, let me tell you what you are actually walking into. Most people sit down at a tablao with a vague idea that Flamenco involves stomping and a red dress. They leave having felt something they cannot fully explain. That gap between expectation and experience deserves a little context.</p>
-
-  <p>Flamenco is one of the most culturally layered art forms in the world. It was born in Andalusia in southern Spain, shaped over centuries primarily by the Gitano people. Their roots trace back to northern India, and along the migration west they absorbed the music of the Moors, the rhythms of Africa, Jewish musical traditions, and Andalusian folk song. What you hear when you hear Flamenco is not one culture. It is many cultures, compressed and transformed into something entirely its own.</p>
-
-  <p>The Gitano community carried this art form in their families, passing it from parent to child, grandparent to grandchild, in kitchens and courtyards long before any tablao stage existed. That is not a romantic detail. It is the reason Flamenco sounds the way it does. It was never written down. It was never formally taught. It was lived.</p>
-
-  <p>I did not fully understand the depth of that until after the show, when Gonzalo, the owner of Tablao de la Villa, took a few minutes to talk with me about what I had just witnessed. But I am getting ahead of myself.</p>
-
-  <div class="section-break">· · ·</div>
-
-  <h2>Before You Arrive: What You Need to Know</h2>
-
-  <h3>Reservations and Seating</h3>
-
-  <p>Book directly through the Tablao de la Villa website or by calling +34 912 042 428. When you book, you pay for the show. Dinner is separate and optional, though I highly recommend adding it.</p>
-
-  <p>Here is what nobody tells you until you get there. Your table is assigned at the moment you make your reservation. Not when you arrive. Not when you ask nicely at the door. When you click confirm. When Gonzalo showed us to our table I mentioned I would love a different spot. He was gracious about it, and his explanation was clear: the table is determined by when you reserved. We had a high four top, which was perfectly fine, but if a front row experience matters to you, book as early as possible.</p>
-
-  <h3>Dinner</h3>
-
-  <p>Dinner is not included in the show price. If you want to eat, you arrive before the performance. For the 7:30 PM show, dinner seatings are available at 6:00, 6:15, and 6:30 PM, giving you a comfortable hour before the show begins. Depending on the day, some bookings include just the show with a complimentary first drink rather than a full dinner option. Check the website when you book so you know exactly what your evening looks like.</p>
-
-  <p>We were the first table seated that evening, which I have zero regrets about. The food is traditional Spanish cuisine and it is genuinely good. Not an afterthought. Real food, well prepared, with warm and attentive service throughout.</p>
-
-  <h3>Photography and Video</h3>
-
-  <p>I recorded at the very beginning of the show because I wanted to capture the opening and then actually be present for the rest. That turned out to be exactly the right call. Put the phone down and let it in. You can describe a video to someone later. You cannot describe what it feels like to have the sound of a cajón hit you in the chest from ten feet away.</p>
-
-  <h3>Children</h3>
-
-  <p>Children under 6 are not admitted. You will understand exactly why the moment the show begins.</p>
-
-  <div class="video-placeholder"><span>Video coming soon</span></div>
-
-  <div class="section-break">· · ·</div>
-
-  <h2>The Night Itself</h2>
-
-  <p>Because we arrived early, Gonzalo had a moment to come over. He was moving fast, the way anyone moves before a show, managing staff, checking details, making sure everything was in order. But he stopped. Stood at our table for a few minutes. That small gesture said something about the kind of host he is. He did not have to do that. He had a full house to prepare for. He did it anyway.</p>
-
-  <p>That is when he told me he had owned Tablao de la Villa for four years. And then he mentioned his grandfather. A civil engineer who traveled to London, saw one of their great train stations, and came home to Madrid with a vision. He brought that idea back, presented it to the city council, and helped shape what became one of Madrid's landmark structures. Gonzalo carries that legacy of building something meaningful quietly and completely. You feel it in how he runs this place.</p>
-
-  <p>Then he was off again, back to the business of the evening.</p>
-
-  <p>At 7:30 PM, the lights went down.</p>
-
-</article>
-
-<!-- Mood break full width -->
-<div class="mood-break-fullwidth">
-  <p>What followed was an hour that shifted and breathed like a living thing.</p>
-</div>
-
-<article class="post-column">
-
-  <p>Three men walked out first. One took his seat at the cajón, a wooden box drum originally from Peru, introduced to Flamenco in the late 1970s by the legendary guitarist Paco de Lucía. The musician sits on top and plays it with both hands, striking the front face to produce sounds that range from a deep bass thud to a sharp cracking snap. If you have never seen one up close it looks remarkably like a wooden crate. What it sounds like is something between a heartbeat and a thunderclap.</p>
-
-  <p>The second man began the palmas, the rhythmic handclapping that is as old as Flamenco itself, a complex percussive language entirely its own. The third man sang. Then the fourth came out with the guitar.</p>
-
-  <p>And then the dancers arrived.</p>
-
-  <p>What followed was an hour that shifted and breathed like a living thing. Sometimes the female dancer was on stage alone. Sometimes the male dancer. Sometimes both together. And sometimes it was just the four men, the singers, the cajón, the guitar, the palmas, filling the room with something that needed no dancer at all to be complete.</p>
-
-  <div class="pull-quote">
-    <p>The footwork alone. The sound of heels on that floor, rapid and precise and somehow both controlled and completely free at the same time. The female dancer's hands, fingers trailing through the air like she was writing in a language that predates words.</p>
+  <!-- HERO IMAGE: replace src with your actual image path in Lovable -->
+  <div class="hero-placeholder">
+    <span>Hero photo goes here</span>
   </div>
 
-  <p>At one point during the performance, one of the performer's sons came to the stage and played the cajón. Young. Grown up around this. Learning it the way Flamenco has always been learned, by living inside it.</p>
-
-  <p>I recorded at the start. Then I put my phone down. And I am glad I did.</p>
-
-  <div class="section-break">· · ·</div>
-
-  <h2>After the Show: The Conversation That Made It Complete</h2>
-
-  <p>When the performance ended and the room began to settle, Gonzalo came back. This time there was no rushing. He stood with us and talked about what we had just seen. The history of Flamenco. The African rhythms, the Moorish influence, the Jewish musical traditions, the Gitano heritage at the center of it all. The way it arrived in Andalusia through centuries of migration and collision and survival and became something that belonged to no single origin and yet was completely, unmistakably itself.</p>
-
-  <p>He told me that sometimes, at different performances, children as young as seven come out and dance. Because they grow up inside this. It is in their homes, at their family gatherings, passed down without a curriculum or a lesson plan. That is why no performance is ever scripted. You cannot script something that lives in a person that deeply.</p>
-
-  <p>I listened to all of it and felt it landing differently because I had just spent an hour watching it with my own eyes.</p>
-
-  <p>When I was leaving, I mentioned the blog. I told him I was going to write about the experience and share it on social media. He had not known. Not when he came over before the show. Not during the performance. Not when he stopped to talk with us afterward. Every bit of warmth, every story shared, every moment he took out of a busy evening to connect with his guests, all of it was genuine. No audience in mind. No camera rolling. Just a man who loves what he built and wanted to share it.</p>
-
-  <p>We got a picture together on the way out. I think you can see it on my face.</p>
-
-  <div class="photo-placeholder-tablao">Photo coming soon</div>
-
-  <div class="section-break">· · ·</div>
-
-  <div class="personal-note">
-    <span class="note-label">A Personal Note</span>
-    <p>I want to say something here that I do not usually say in a review.</p>
-    <p>Sitting in that room, watching these performers move with that kind of pride and rootedness, I felt something complicated. Something that was equal parts joy and grief.</p>
-    <p>I am a Black American woman. And the history of Black Americans is, in part, a history of having culture stripped away. Systematically. Deliberately. The languages, the traditions, the rituals, the music, the dances that connected people to their ancestors and to each other. Gone. Or so fractured that the thread is hard to trace.</p>
-    <p>When I watch someone perform from a place of deep, unbroken cultural inheritance, it moves me in a way that is hard to explain without also acknowledging the loss. I was not sad because Flamenco is sad, though it can be. I was moved because I was watching something that survived. Something that was protected, carried forward, refused to be erased.</p>
-    <p>I celebrated it fully. And I felt the weight of what that kind of continuity means.</p>
-    <div class="signature">Spain has not changed. I am the one adapting.</div>
+  <!-- POST HEADER -->
+  <div class="post-header">
+    <span class="post-eyebrow">Stumbled Upon Madrid &nbsp;·&nbsp; While You Are There</span>
+    <h1 class="post-h1">The Night Flamenco Stopped Time</h1>
+    <p class="post-subhead">Tablao de la Villa. A 19th century palace. One Friday night I will not forget.</p>
+    <div class="post-divider"></div>
+    <p class="post-meta">By Kimberly &nbsp;·&nbsp; May 2026 &nbsp;·&nbsp; Madrid, Spain</p>
   </div>
 
-  <div class="section-break">· · ·</div>
+  <!-- POST BODY -->
+  <div class="post-body">
 
-  <h2>What Other Guides Don't Tell You</h2>
+    <p class="drop-cap">There are moments when you sit somewhere and realize you are not just watching a performance. You are watching a people. The Gitano people, Spain's Roma community, whose roots stretch back centuries through Andalusia, through North Africa, through the Middle East, all the way to northern India. You are watching their survival, their joy, their grief, and their pride compressed into one hour on a small stage in a 19th century palace in the heart of Madrid. That was my Friday night at Tablao de la Villa.</p>
 
-  <ul class="insider-list">
-    <li><strong>Your table is set at booking, not at arrival.</strong> The earlier you reserve, the better your placement. This is not something they advertise. Now you know.</li>
-    <li><strong>Madrid will fight for your schedule.</strong> There is always something else calling. Book Flamenco first and build around it. You will not regret it.</li>
-    <li><strong>The performance is completely impromptu.</strong> Every night is different. What you see will never happen again in exactly that way. That is not a marketing line. That is the whole point.</li>
-    <li><strong>It shifts and breathes.</strong> Sometimes dancers, sometimes singers only, sometimes both. Let it move at its own pace and stop waiting for the next big moment. They are all big moments.</li>
-    <li><strong>The cajón is not Spanish.</strong> It came from Peru, brought into Flamenco by Paco de Lucía. The story of how it got there is worth looking up.</li>
-    <li><strong>Flamenco is Gitano.</strong> It belongs to Spain's Roma community. Honoring the performance means knowing who built it.</li>
-    <li><strong>Children grow up in this.</strong> Seven-year-olds sometimes perform. Not as a show. As a way of life. When you understand that, the whole evening changes.</li>
-    <li><strong>Put your phone down after the opening.</strong> Capture the first moments. Then be there. You will thank yourself later.</li>
-  </ul>
+    <p>I almost missed it. Let's start there.</p>
 
-  <div class="sidebar-section">
-    <div class="sidebar-label">About This Place</div>
-    <div class="sidebar-info">
-      <div class="detail-row"><span class="detail-icon">📍</span><span><strong>Tablao de la Villa</strong>Calle de Torija 7, Madrid 28013</span></div>
-      <div class="detail-row"><span class="detail-icon">🚇</span><span>Metro: Opera (Line 2 or 5) or Santo Domingo (Line 2)</span></div>
-      <div class="detail-row"><span class="detail-icon">🕐</span><span>Shows at 7:30 PM, 8:30 PM, and 9:45 PM nightly. Hours subject to change, check website when booking.</span></div>
-      <div class="detail-row"><span class="detail-icon">🍽</span><span>Dinner available before the 7:30 PM show. First drink complimentary with some bookings. Check the website for your specific package.</span></div>
-      <div class="detail-row"><span class="detail-icon">🌐</span><span><a href="https://tablaodelavilla.com" target="_blank">tablaodelavilla.com</a></span></div>
-      <div class="detail-row"><span class="detail-icon">📞</span><span>+34 662 299 923</span></div>
+    <p>Madrid is the problem. Not in a bad way. In the best possible way. There is so much to do, so many places to go, so many experiences competing for space on your calendar that even the things you absolutely want to do can get caught in the shuffle of trying to fit everything in. That is what happened here. We knew we wanted to go. We just could not land on when to put it in the schedule. By the time we finally committed and went to book, the seats were nearly gone. I got us in, and I will say this plainly right now: if Flamenco is on your list, book it the moment you decide you want to go. More on why in a moment.</p>
+
+    <div class="section-break">· · ·</div>
+
+    <h2>What Is Flamenco, Really?</h2>
+
+    <p>Before I tell you what I saw, let me tell you what you are actually walking into. Most people sit down at a tablao with a vague idea that Flamenco involves stomping and a red dress. They leave having felt something they cannot fully explain. That gap between expectation and experience deserves a little context.</p>
+
+    <p>Flamenco is one of the most culturally layered art forms in the world. It was born in Andalusia in southern Spain, shaped over centuries primarily by the Gitano people. Their roots trace back to northern India, and along the migration west they absorbed the music of the Moors, the rhythms of Africa, Jewish musical traditions, and Andalusian folk song. What you hear when you hear Flamenco is not one culture. It is many cultures, compressed and transformed into something entirely its own.</p>
+
+    <p>The Gitano community carried this art form in their families, passing it from parent to child, grandparent to grandchild, in kitchens and courtyards long before any tablao stage existed. That is not a romantic detail. It is the reason Flamenco sounds the way it does. It was never written down. It was never formally taught. It was lived.</p>
+
+    <p>I did not fully understand the depth of that until after the show, when Gonzalo, the owner of Tablao de la Villa, took a few minutes to talk with me about what I had just witnessed. But I am getting ahead of myself.</p>
+
+    <div class="section-break">· · ·</div>
+
+    <h2>Before You Arrive: What You Need to Know</h2>
+
+    <h3>Reservations and Seating</h3>
+
+    <p>Book directly through the Tablao de la Villa website or by calling +34 912 042 428. When you book, you pay for the show. Dinner is separate and optional, though I highly recommend adding it.</p>
+
+    <p>Here is what nobody tells you until you get there. Your table is assigned at the moment you make your reservation. Not when you arrive. Not when you ask nicely at the door. When you click confirm. When Gonzalo showed us to our table I mentioned I would love a different spot. He was gracious about it, and his explanation was clear: the table is determined by when you reserved. We had a high four top, which was perfectly fine, but if a front row experience matters to you, book as early as possible.</p>
+
+    <h3>Dinner</h3>
+
+    <p>Dinner is not included in the show price. If you want to eat, you arrive before the performance. For the 7:30 PM show, dinner seatings are available at 6:00, 6:15, and 6:30 PM, giving you a comfortable hour before the show begins. Depending on the day, some bookings include just the show with a complimentary first drink rather than a full dinner option. Check the website when you book so you know exactly what your evening looks like.</p>
+
+    <p>We were the first table seated that evening, which I have zero regrets about. The food is traditional Spanish cuisine and it is genuinely good. Not an afterthought. Real food, well prepared, with warm and attentive service throughout.</p>
+
+    <h3>Photography and Video</h3>
+
+    <p>I recorded at the very beginning of the show because I wanted to capture the opening and then actually be present for the rest. That turned out to be exactly the right call. Put the phone down and let it in. You can describe a video to someone later. You cannot describe what it feels like to have the sound of a cajón hit you in the chest from ten feet away.</p>
+
+    <h3>Children</h3>
+
+    <p>Children under 6 are not admitted. You will understand exactly why the moment the show begins.</p>
+
+    <!-- VIDEO PLACEHOLDER: replace with YouTube iframe embed when ready -->
+    <div class="video-placeholder">
+      <span>Video coming soon</span>
     </div>
-  </div>
 
-  <div class="sidebar-section">
-    <div class="sidebar-label">The Angle</div>
-    <div class="sidebar-angle">
-      <span class="angle-label">While You Are There</span>
-      <p>This section is coming soon. Check back for more experiences only a resident would know to tell you about.</p>
+    <div class="section-break">· · ·</div>
+
+    <h2>The Night Itself</h2>
+
+    <p>Because we arrived early, Gonzalo had a moment to come over. He was moving fast, the way anyone moves before a show, managing staff, checking details, making sure everything was in order. But he stopped. Stood at our table for a few minutes. That small gesture said something about the kind of host he is. He did not have to do that. He had a full house to prepare for. He did it anyway.</p>
+
+    <p>That is when he told me he had owned Tablao de la Villa for four years. And then he mentioned his grandfather. A civil engineer who traveled to London, saw one of their great train stations, and came home to Madrid with a vision. He brought that idea back, presented it to the city council, and helped shape what became one of Madrid's landmark structures. Gonzalo carries that legacy of building something meaningful quietly and completely. You feel it in how he runs this place.</p>
+
+    <p>Then he was off again, back to the business of the evening.</p>
+
+    <p>At 7:30 PM, the lights went down.</p>
+
+    <!-- MOOD BREAK -->
+    <div class="mood-break">
+      <p>What followed was an hour that shifted and breathed like a living thing.</p>
     </div>
+
+    <p>Three men walked out first. One took his seat at the cajón, a wooden box drum originally from Peru, introduced to Flamenco in the late 1970s by the legendary guitarist Paco de Lucía. The musician sits on top and plays it with both hands, striking the front face to produce sounds that range from a deep bass thud to a sharp cracking snap. If you have never seen one up close it looks remarkably like a wooden crate. What it sounds like is something between a heartbeat and a thunderclap.</p>
+
+    <p>The second man began the palmas, the rhythmic handclapping that is as old as Flamenco itself, a complex percussive language entirely its own. The third man sang. Then the fourth came out with the guitar.</p>
+
+    <p>And then the dancers arrived.</p>
+
+    <p>What followed was an hour that shifted and breathed like a living thing. Sometimes the female dancer was on stage alone. Sometimes the male dancer. Sometimes both together. And sometimes it was just the four men, the singers, the cajón, the guitar, the palmas, filling the room with something that needed no dancer at all to be complete.</p>
+
+    <div class="pull-quote">
+      <p>The footwork alone. The sound of heels on that floor, rapid and precise and somehow both controlled and completely free at the same time. The female dancer's hands, fingers trailing through the air like she was writing in a language that predates words.</p>
+    </div>
+
+    <p>At one point during the performance, one of the performer's sons came to the stage and played the cajón. Young. Grown up around this. Learning it the way Flamenco has always been learned, by living inside it.</p>
+
+    <p>I recorded at the start. Then I put my phone down. And I am glad I did.</p>
+
+    <div class="section-break">· · ·</div>
+
+    <h2>After the Show: The Conversation That Made It Complete</h2>
+
+    <p>When the performance ended and the room began to settle, Gonzalo came back. This time there was no rushing. He stood with us and talked about what we had just seen. The history of Flamenco. The African rhythms, the Moorish influence, the Jewish musical traditions, the Gitano heritage at the center of it all. The way it arrived in Andalusia through centuries of migration and collision and survival and became something that belonged to no single origin and yet was completely, unmistakably itself.</p>
+
+    <p>He told me that sometimes, at different performances, children as young as seven come out and dance. Because they grow up inside this. It is in their homes, at their family gatherings, passed down without a curriculum or a lesson plan. That is why no performance is ever scripted. You cannot script something that lives in a person that deeply.</p>
+
+    <p>I listened to all of it and felt it landing differently because I had just spent an hour watching it with my own eyes.</p>
+
+    <p>When I was leaving, I mentioned the blog. I told him I was going to write about the experience and share it on social media. He had not known. Not when he came over before the show. Not during the performance. Not when he stopped to talk with us afterward. Every bit of warmth, every story shared, every moment he took out of a busy evening to connect with his guests, all of it was genuine. No audience in mind. No camera rolling. Just a man who loves what he built and wanted to share it.</p>
+
+    <p>We got a picture together on the way out. I think you can see it on my face.</p>
+
+    <!-- PHOTO PLACEHOLDER: replace with real photo when ready -->
+    <div class="photo-placeholder">
+      <span>Photo coming soon</span>
+    </div>
+
+    <div class="section-break">· · ·</div>
+
+    <div class="personal-note">
+      <span class="note-label">A Personal Note</span>
+      <p>I want to say something here that I do not usually say in a review.</p>
+      <p>Sitting in that room, watching these performers move with that kind of pride and rootedness, I felt something complicated. Something that was equal parts joy and grief.</p>
+      <p>I am a Black American woman. And the history of Black Americans is, in part, a history of having culture stripped away. Systematically. Deliberately. The languages, the traditions, the rituals, the music, the dances that connected people to their ancestors and to each other. Gone. Or so fractured that the thread is hard to trace.</p>
+      <p>When I watch someone perform from a place of deep, unbroken cultural inheritance, it moves me in a way that is hard to explain without also acknowledging the loss. I was not sad because Flamenco is sad, though it can be. I was moved because I was watching something that survived. Something that was protected, carried forward, refused to be erased.</p>
+      <p>I celebrated it fully. And I felt the weight of what that kind of continuity means.</p>
+      <span class="signature">Spain has not changed. I am the one adapting.</span>
+    </div>
+
+    <div class="section-break">· · ·</div>
+
+    <h2>What Other Guides Don't Tell You</h2>
+
+    <ul class="insider-list">
+      <li><strong>Your table is set at booking, not at arrival.</strong> The earlier you reserve, the better your placement. This is not something they advertise. Now you know.</li>
+      <li><strong>Madrid will fight for your schedule.</strong> There is always something else calling. Book Flamenco first and build around it. You will not regret it.</li>
+      <li><strong>The performance is completely impromptu.</strong> Every night is different. What you see will never happen again in exactly that way. That is not a marketing line. That is the whole point.</li>
+      <li><strong>It shifts and breathes.</strong> Sometimes dancers, sometimes singers only, sometimes both. Let it move at its own pace and stop waiting for the next big moment. They are all big moments.</li>
+      <li><strong>The cajón is not Spanish.</strong> It came from Peru, brought into Flamenco by Paco de Lucía. The story of how it got there is worth looking up.</li>
+      <li><strong>Flamenco is Gitano.</strong> It belongs to Spain's Roma community. Honoring the performance means knowing who built it.</li>
+      <li><strong>Children grow up in this.</strong> Seven-year-olds sometimes perform. Not as a show. As a way of life. When you understand that, the whole evening changes.</li>
+      <li><strong>Put your phone down after the opening.</strong> Capture the first moments. Then be there. You will thank yourself later.</li>
+    </ul>
+
+    <div class="info-card">
+      <span class="card-label">Tablao de la Villa &nbsp;·&nbsp; Plan Your Visit</span>
+      <p>📍 Calle Torija 7, Madrid 28013</p>
+      <p>🕐 Shows at 7:30 PM &nbsp;·&nbsp; 8:30 PM &nbsp;·&nbsp; 9:45 PM nightly</p>
+      <p>🍽 Dinner from 6:00 PM for the 7:30 show &nbsp;·&nbsp; First drink complimentary</p>
+      <p>🚇 Metro: Opera (Line 2 or 5) or Santo Domingo (Line 2)</p>
+      <p>🌐 <a href="https://tablaodelavilla.com" target="_blank">tablaodelavilla.com</a></p>
+      <p>📞 +34 662 299 923</p>
+      <span class="card-tagline">Book early. Sit close. Put your phone down.</span>
+    </div>
+
+    <p class="closing-line">She Left the Chat &nbsp;·&nbsp; shelefthechat.com &nbsp;·&nbsp; By Kimberly &nbsp;·&nbsp; Madrid, Spain</p>
+
   </div>
-
-</article>
-
-<p class="closing-line">She Left the Chat &nbsp;·&nbsp; shelefthechat.com &nbsp;·&nbsp; By Kimberly &nbsp;·&nbsp; Madrid, Spain</p>
 
 </body>
 </html>
