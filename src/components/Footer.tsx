@@ -34,7 +34,7 @@ const Footer = () => {
             <ul className="space-y-2 font-body text-sm">
               {[
                 { label: "Home", to: "/" },
-                { label: "The Journal", to: "/stories" },
+                { label: "The Real Guides", to: "/stories" },
                 { label: "Videos", to: "/videos" },
                 { label: "Gallery", to: "/gallery" },
                 { label: "Resources", to: "/resources" },

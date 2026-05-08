@@ -74,9 +74,9 @@ const Stories = () => {
       <Navbar />
       <main>
         <PageHeader
-          eyebrow="The Journal"
-          title="All Stories"
-          subtitle="Two streams. One honest second act."
+          eyebrow="The Real Guides"
+          title="The Real Guides"
+          subtitle="The Practical Stuff. Honestly."
         />
 
         {/* Stream selector */}
