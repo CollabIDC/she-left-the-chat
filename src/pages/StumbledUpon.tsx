@@ -68,8 +68,9 @@ const sections: Section[] = [
           "Most bookstores in Madrid sell books. This one exists because someone refused to let a love story end. It has been here for decades, and almost no one outside the neighborhood knows why.",
       },
       {
-        title: "Trikki",
-        slug: "trikki",
+        title: "There Is a Portal to New Orleans Hiding in Chamberí",
+        cardTitle: "Trikki",
+        slug: "trikki-new-orleans-chamberi",
         teaser:
           "On paper it should not work. The concept is too specific, the location too quiet. In practice it is exactly the kind of place Madrid keeps producing and the rest of the world has not caught up to yet.",
       },

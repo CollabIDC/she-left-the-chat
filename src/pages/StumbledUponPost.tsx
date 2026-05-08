@@ -17,12 +17,11 @@ const POST_FILES: Record<string, string> = {
   "the-bookstore-that-exists-because-of-a-love-story":
     "/posts/the-bookstore-that-exists-because-of-a-love-story.html",
   "the-bullfight": "/posts/the-bullfight.html",
+  "trikki-new-orleans-chamberi": "/posts/trikki-new-orleans-chamberi.html",
 };
 
 // Inline placeholders for slugs without an uploaded file yet
-const PLACEHOLDERS: Record<string, { eyebrow: string; title: string }> = {
-  trikki: { eyebrow: "The Unexpected Business", title: "Trikki" },
-};
+const PLACEHOLDERS: Record<string, { eyebrow: string; title: string }> = {};
 
 type Extracted = { styleHtml: string; bodyHtml: string };
 
