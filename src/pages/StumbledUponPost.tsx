@@ -110,6 +110,7 @@ const StumbledUponPost = () => {
     <div style={{ background: C.cream, minHeight: "100vh" }}>
       <FontLoader />
       <Navbar />
+      <div style={{ height: 72 }} aria-hidden />
       <BackLink />
       <main>
         {filePath ? (
