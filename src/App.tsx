@@ -12,6 +12,7 @@ import About from "./pages/About";
 import Videos from "./pages/Videos";
 import Gallery from "./pages/Gallery";
 import SheActuallyDidIt from "./pages/SheActuallyDidIt";
+import StumbledUpon from "./pages/StumbledUpon";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();

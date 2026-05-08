@@ -80,7 +80,7 @@ const StumbledUponMadrid = () => {
           {angles.map((angle, i) => {
             const Icon = angle.icon;
             return (
-              <Link to="/she-actually-did-it" key={angle.name} className="block">
+              <Link to="/stumbled-upon" key={angle.name} className="block">
                 <motion.div
                   {...anim(i + 1)}
                   className="bg-surface rounded-xl p-8 card-elevated cursor-pointer hover:shadow-lg transition-shadow"
@@ -103,7 +103,7 @@ const StumbledUponMadrid = () => {
         {/* Featured bookstore story */}
         <motion.div {...anim(7)}>
           <Link
-            to={`/stories/${bookstoreStory.slug}`}
+            to="/stumbled-upon"
             className="block bg-ink rounded-xl overflow-hidden group"
           >
             <div className="grid md:grid-cols-2">

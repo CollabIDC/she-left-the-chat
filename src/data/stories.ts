@@ -20,6 +20,7 @@ export interface Story {
   title: string;
   excerpt: string;
   date: string;
+  section?: "stumbled-upon-madrid";
   image: string;
   readTime?: string;
   stream: Stream;

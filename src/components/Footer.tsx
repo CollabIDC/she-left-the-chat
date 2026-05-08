@@ -35,9 +35,10 @@ const Footer = () => {
               {[
                 { label: "Home", to: "/" },
                 { label: "Stories", to: "/she-actually-did-it" },
-                { label: "The Real Guides", to: "/stories" },
+                { label: "Stumbled Upon", to: "/stumbled-upon" },
                 { label: "Videos", to: "/videos" },
                 { label: "Gallery", to: "/gallery" },
+                { label: "The Real Guides", to: "/stories" },
                 { label: "Resources", to: "/resources" },
                 { label: "My Story", to: "/about" },
               ].map((l) => (
@@ -91,7 +92,7 @@ const Footer = () => {
         {/* Bottom bar */}
         <div className="pt-8 border-t border-gold/30">
           <p className="text-center font-body text-xs text-ivory/60">
-            © 2025 She Left the Chat. All rights reserved.
+            © 2026 She Left the Chat. All rights reserved.
           </p>
         </div>
       </div>
