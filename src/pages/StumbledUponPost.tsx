@@ -226,6 +226,7 @@ function scopeCss(css: string, scope: string): string {
   return css
     .replace(/(^|\})\s*body\b/g, `$1 ${scope}`)
     .replace(/(^|\})\s*html\b/g, `$1 ${scope}`)
+    .replace(/(^|\})\s*:root\b/g, `$1 ${scope}`)
     .replace(/(^|\})\s*\*\s*\{/g, `$1 ${scope} * {`);
 }
 
