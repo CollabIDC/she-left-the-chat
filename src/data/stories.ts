@@ -150,6 +150,7 @@ export const stories: Story[] = [
     image: "", // will use featured-bookstore asset
     readTime: "10 min read",
     stream: "view-from-here",
+    section: "stumbled-upon-madrid",
     destination: "Madrid",
     topic: "The Unexpected Business",
     readerNeed: "While You Are There",
