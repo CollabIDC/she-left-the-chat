@@ -110,7 +110,7 @@ const HeroCarousel = () => {
   }, [next]);
 
   return (
-    <section className="relative overflow-hidden" style={{ height: "calc(100vh - 120px)" }}>
+    <section className="relative overflow-hidden" style={{ height: "calc(100vh - 220px)" }}>
       <AnimatePresence mode="wait">
         <motion.div
           key={current}
