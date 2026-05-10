@@ -1,16 +1,107 @@
 import { useParams, Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 import { Instagram, Youtube, Mail } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import EmailSignup from "@/components/EmailSignup";
 import StoryCard from "@/components/StoryCard";
 import { stories } from "@/data/stories";
+import { extractStyleAndBody, scopeCss, type ExtractedHtml } from "@/lib/htmlPost";
 import portrait from "@/assets/portrait-kimberly.jpg";
 
+const POST_FILES: Record<string, string> = {
+  "she-actually-did-it": "/posts/she-actually-did-it.html",
+};
+
 const BlogPost = () => {
-  const { slug } = useParams();
+  const { slug = "" } = useParams();
   const post = stories.find((s) => s.slug === slug) ?? stories[0];
   const related = stories.filter((s) => s.slug !== post.slug).slice(0, 3);
+  const filePath = POST_FILES[slug];
+
+  const [htmlContent, setHtmlContent] = useState<ExtractedHtml | null>(null);
+  const [htmlLoading, setHtmlLoading] = useState<boolean>(Boolean(filePath));
+  const [htmlError, setHtmlError] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (!filePath) {
+      setHtmlContent(null);
+      return;
+    }
+    setHtmlLoading(true);
+    fetch(filePath)
+      .then((r) => {
+        if (!r.ok) throw new Error(`Failed to load post (${r.status})`);
+        return r.text();
+      })
+      .then((html) => {
+        setHtmlContent(extractStyleAndBody(html));
+        setHtmlLoading(false);
+      })
+      .catch((e) => {
+        setHtmlError(e.message);
+        setHtmlLoading(false);
+      });
+  }, [filePath]);
+
+  useEffect(() => {
+    if (!filePath) return;
+    const id = "blog-html-post-fonts";
+    if (document.getElementById(id)) return;
+    const link = document.createElement("link");
+    link.id = id;
+    link.rel = "stylesheet";
+    link.href =
+      "https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@400;700&display=swap";
+    document.head.appendChild(link);
+  }, [filePath]);
+
+  if (filePath) {
+    const backHref =
+      post.stream === "she-actually-did-it" ? "/she-actually-did-it" : "/stories";
+    const backLabel =
+      post.stream === "she-actually-did-it"
+        ? "← Back to She Actually Did It"
+        : "← Back to Stories";
+    return (
+      <div className="min-h-screen bg-background">
+        <Navbar />
+        <div className="h-16" aria-hidden />
+        <div className="max-w-[1100px] mx-auto px-6 pt-6">
+          <Link
+            to={backHref}
+            className="font-label text-xs uppercase tracking-[0.18em] text-gold font-semibold hover:text-gold-deep"
+          >
+            {backLabel}
+          </Link>
+        </div>
+        <main>
+          {htmlLoading && (
+            <div className="text-center py-20 font-body text-charcoal/60">
+              Loading story…
+            </div>
+          )}
+          {htmlError && (
+            <div className="text-center py-20 font-body text-terracotta">
+              {htmlError}
+            </div>
+          )}
+          {htmlContent && (
+            <div className="story-post-scope">
+              <style
+                dangerouslySetInnerHTML={{
+                  __html: scopeCss(htmlContent.styleHtml, ".story-post-scope"),
+                }}
+              />
+              <div dangerouslySetInnerHTML={{ __html: htmlContent.bodyHtml }} />
+            </div>
+          )}
+        </main>
+        <EmailSignup />
+        <Footer />
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-background">

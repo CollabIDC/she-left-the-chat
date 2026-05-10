@@ -2,6 +2,7 @@ import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { extractStyleAndBody, scopeCss, type ExtractedHtml } from "@/lib/htmlPost";
 
 const C = {
   cream: "#faf7f2",
@@ -23,16 +24,6 @@ const POST_FILES: Record<string, string> = {
 // Inline placeholders for slugs without an uploaded file yet
 const PLACEHOLDERS: Record<string, { eyebrow: string; title: string }> = {};
 
-type Extracted = { styleHtml: string; bodyHtml: string };
-
-function extractStyleAndBody(html: string): Extracted {
-  const styles = Array.from(html.matchAll(/<style[^>]*>([\s\S]*?)<\/style>/gi))
-    .map((m) => m[1])
-    .join("\n");
-  const bodyMatch = html.match(/<body[^>]*>([\s\S]*?)<\/body>/i);
-  const body = bodyMatch ? bodyMatch[1] : html;
-  return { styleHtml: styles, bodyHtml: body };
-}
 
 const FontLoader = () => {
   useEffect(() => {
@@ -83,7 +74,7 @@ const StumbledUponPost = () => {
   const filePath = POST_FILES[slug];
   const placeholder = PLACEHOLDERS[slug];
 
-  const [content, setContent] = useState<Extracted | null>(null);
+  const [content, setContent] = useState<ExtractedHtml | null>(null);
   const [loading, setLoading] = useState<boolean>(Boolean(filePath));
   const [error, setError] = useState<string | null>(null);
 
@@ -211,20 +202,5 @@ const StumbledUponPost = () => {
   );
 };
 
-/**
- * Lightly scope the embedded post CSS so its body/html resets and font-family
- * declarations only affect the post container, not the rest of the site.
- * - body { ... }  ->  .stumbled-post-scope { ... }
- * - html { ... }  ->  .stumbled-post-scope { ... }
- * - * { ... }     ->  .stumbled-post-scope * { ... }
- * - :root { ... } left as-is (safe — defines CSS vars)
- */
-function scopeCss(css: string, scope: string): string {
-  return css
-    .replace(/(^|\})\s*body\b/g, `$1 ${scope}`)
-    .replace(/(^|\})\s*html\b/g, `$1 ${scope}`)
-    .replace(/(^|\})\s*:root\b/g, `$1 ${scope}`)
-    .replace(/(^|\})\s*\*\s*\{/g, `$1 ${scope} * {`);
-}
 
 export default StumbledUponPost;
