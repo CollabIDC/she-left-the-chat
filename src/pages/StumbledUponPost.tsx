@@ -2,7 +2,7 @@ import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { extractStyleAndBody, scopeCss } from "@/lib/htmlPost";
+import { extractStyleAndBody, scopeCss, type ExtractedHtml } from "@/lib/htmlPost";
 
 const C = {
   cream: "#faf7f2",
@@ -74,7 +74,7 @@ const StumbledUponPost = () => {
   const filePath = POST_FILES[slug];
   const placeholder = PLACEHOLDERS[slug];
 
-  const [content, setContent] = useState<Extracted | null>(null);
+  const [content, setContent] = useState<ExtractedHtml | null>(null);
   const [loading, setLoading] = useState<boolean>(Boolean(filePath));
   const [error, setError] = useState<string | null>(null);
 
