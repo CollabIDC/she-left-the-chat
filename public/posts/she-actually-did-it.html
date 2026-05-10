@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>She Actually Did It | She Left the Chat</title>
+<meta name="description" content="A story about choosing yourself, leaving the chat, and the quiet morning you realize you actually did it." />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --cream: #F2EDE4;
+    --ink: #1A1714;
+    --warm-mid: #6B5E52;
+    --accent: #9B3A2A;
+    --gold: #B8952A;
+    --soft-line: #D8D0C4;
+    --muted: #8A8078;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background-color: var(--cream);
+    color: var(--ink);
+    font-family: Georgia, 'Times New Roman', serif;
+  }
+
+  /* HERO WITH OVERLAY */
+  .hero {
+    position: relative;
+    width: 100%;
+    height: 78vh;
+    min-height: 520px;
+    overflow: hidden;
+  }
+  .hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(26,23,20,0.25) 0%,
+      rgba(26,23,20,0.45) 55%,
+      rgba(26,23,20,0.78) 100%
+    );
+  }
+  .hero-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    padding: 0 24px 72px;
+    z-index: 2;
+    color: #F2EDE4;
+  }
+  .hero-eyebrow {
+    font-family: 'Lato', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 22px;
+  }
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: clamp(40px, 7vw, 84px);
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    max-width: 900px;
+    margin-bottom: 18px;
+  }
+  .hero-subhead {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(17px, 1.6vw, 22px);
+    color: rgba(242,237,228,0.9);
+    max-width: 640px;
+    line-height: 1.5;
+  }
+  .hero-meta {
+    font-family: 'Lato', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(242,237,228,0.75);
+    margin-top: 28px;
+  }
+
+  /* BODY */
+  .post-body {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 72px 28px 96px;
+  }
+
+  .post-body p {
+    font-family: Georgia, 'Times New Roman', serif !important;
+    font-size: 19px !important;
+    line-height: 1.95 !important;
+    color: var(--ink) !important;
+    font-weight: 400 !important;
+    margin-bottom: 1.9rem;
+  }
+
+  .post-body p.lead {
+    font-size: 22px !important;
+    line-height: 1.7 !important;
+    color: var(--dark, #2C1F1A) !important;
+  }
+
+  .post-body p.lead::first-letter {
+    font-family: 'Playfair Display', serif;
+    font-size: 78px;
+    font-weight: 700;
+    float: left;
+    line-height: 0.82;
+    margin: 8px 12px 0 0;
+    color: var(--accent);
+  }
+
+  /* CENTERED ASTERISK DIVIDER */
+  .asterisk {
+    text-align: center;
+    color: var(--accent);
+    font-family: Georgia, serif;
+    font-size: 22px;
+    letter-spacing: 0.6em;
+    margin: 3.2rem 0 3.2rem;
+    opacity: 0.7;
+  }
+
+  /* PULL QUOTE */
+  .pull-quote {
+    border-left: 3px solid var(--accent);
+    padding: 4px 0 4px 26px;
+    margin: 2.8rem 0;
+  }
+  .pull-quote p {
+    font-family: 'Playfair Display', serif !important;
+    font-style: italic;
+    font-size: 24px !important;
+    line-height: 1.5 !important;
+    color: var(--ink) !important;
+    margin-bottom: 0 !important;
+  }
+
+  .closing-line {
+    font-family: 'Lato', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    margin-top: 64px;
+    padding-top: 28px;
+    border-top: 1px solid var(--soft-line);
+  }
+
+  @media (max-width: 600px) {
+    .hero { height: 88vh; }
+    .post-body { padding: 56px 22px 72px; }
+    .post-body p { font-size: 18px !important; }
+    .post-body p.lead { font-size: 20px !important; }
+  }
+</style>
+</head>
+<body>
+
+  <section class="hero">
+    <img src="https://images.unsplash.com/photo-1492571350019-22de08371fd3?w=1800&q=80" alt="A woman walking a quiet street at golden hour" />
+    <div class="hero-content">
+      <span class="hero-eyebrow">Stories &nbsp;·&nbsp; She Actually Did It</span>
+      <h1 class="hero-title">She Actually Did It</h1>
+      <p class="hero-subhead">The morning the second-guessing went quiet, and the life I'd been rehearsing in my head finally became the one I was living.</p>
+      <p class="hero-meta">By Kimberly &nbsp;·&nbsp; May 2026</p>
+    </div>
+  </section>
+
+  <article class="post-body">
+
+    <p class="lead">There was no fanfare. No movie moment. Just a Tuesday morning in Madrid, the smell of coffee from the bar downstairs, and the realization, quiet as a held breath, that I had actually done the thing.</p>
+
+    <p>For months, the sentence had lived in my head as a question. Could I really go? Could I really uproot a whole life I'd built carefully, brick by brick, in a country I knew by heart? The question had a weight to it. It sat on my chest at 3am. It tagged along on every commute, every grocery run, every dinner with friends who loved me but couldn't quite picture it.</p>
+
+    <p>And then one day the question stopped being a question. It became a date on a calendar. Then a packed suitcase. Then a one-way boarding pass with my name on it, printed on the kind of cheap paper that should not be allowed to carry that much meaning.</p>
+
+    <div class="pull-quote">
+      <p>The bravest thing I ever did was stop waiting for the version of me who would be ready.</p>
+    </div>
+
+    <p>People keep asking me what it feels like. They want a clean answer. A poster line they can screenshot. The truth is messier and better than that. It feels like waking up in a room that smells like someone else's laundry detergent and slowly, over weeks, replacing it with your own. It feels like ordering coffee in a language you're still learning and having the woman behind the counter smile at you instead of switching to English. It feels like loneliness on Sunday afternoons and the deepest quiet joy on Wednesday nights for no particular reason at all.</p>
+
+    <div class="asterisk">* &nbsp; * &nbsp; *</div>
+
+    <p>I think we're sold a story about big decisions. That you'll know. That a sign will appear. That the universe will hand you a permission slip with your name spelled correctly and the time and place clearly listed. Mine didn't work that way. Mine looked like a series of small, unglamorous yeses. Yes to the consultation. Yes to the visa appointment. Yes to selling the couch. Yes to telling my mother. Yes to the airport at 5am with a suitcase too heavy and a stomach that wouldn't settle.</p>
+
+    <p>None of those yeses felt like courage in the moment. They felt like math. Like the only honest answer to a question I'd already been asking for years.</p>
+
+    <p>What I didn't know is that courage isn't a feeling you have before. It's a thing you notice afterward, when you turn around and see how far you walked while you were busy being afraid.</p>
+
+    <div class="pull-quote">
+      <p>I didn't leap. I took one small, unglamorous step and then another, and one day I looked down and I was already on the other side.</p>
+    </div>
+
+    <p>So this is the part where I'm supposed to tell you it was worth it. And it is. But not in the way the highlight reels promise. It's worth it in the small things. The way I move through my own apartment now. The way my shoulders sit lower than they used to. The way I catch myself laughing at something a stranger said in Spanish and realize I understood it without translating first.</p>
+
+    <p>If you're standing where I was standing — phone in hand at midnight, half a life packed in your head, wondering if you're allowed — let this be your sign. Not to do exactly what I did. To do the thing that's been knocking on your chest. The one you keep talking yourself out of.</p>
+
+    <p>You don't have to be ready. You just have to be honest. The rest is one small yes at a time, until one Tuesday morning, in a kitchen that finally smells like yours, you realize you actually did it.</p>
+
+    <p class="closing-line">She Left the Chat &nbsp;·&nbsp; shelefthechat.com &nbsp;·&nbsp; By Kimberly</p>
+
+  </article>
+
+</body>
+</html>
