@@ -141,6 +141,17 @@ export const stories: Story[] = [
     stream: "she-actually-did-it",
   },
   {
+    slug: "she-actually-did-it",
+    title: "She Actually Did It",
+    excerpt:
+      "The morning the second-guessing went quiet, and the life I'd been rehearsing in my head finally became the one I was living.",
+    date: "May 2026",
+    image:
+      "https://images.unsplash.com/photo-1492571350019-22de08371fd3?w=1200&q=80",
+    readTime: "6 min read",
+    stream: "she-actually-did-it",
+  },
+  {
     slug: "the-bookstore-that-exists-because-of-a-love-story",
     title: "The Bookstore That Exists Because of a Love Story",
     excerpt:

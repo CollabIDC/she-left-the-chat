@@ -2,6 +2,7 @@ import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { extractStyleAndBody, scopeCss } from "@/lib/htmlPost";
 
 const C = {
   cream: "#faf7f2",
