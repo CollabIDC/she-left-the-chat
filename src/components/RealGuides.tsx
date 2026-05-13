@@ -75,7 +75,7 @@ const RealGuides = () => {
         </div>
 
         <div className="mt-14 text-center">
-          <Link to="/stories" className="btn-gold">
+          <Link to="/the-real-guides" className="btn-gold">
             Browse All Guides
           </Link>
         </div>
