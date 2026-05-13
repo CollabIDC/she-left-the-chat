@@ -44,7 +44,7 @@ const LatestStories = () => {
               transition={{ duration: 0.5, delay: i * 0.1 }}
             >
               <Link
-                to={`/stories/${card.story.slug}`}
+                to={`${card.story.stream === "she-actually-did-it" ? "/she-actually-did-it" : "/stories"}/${card.story.slug}`}
                 className="block bg-ink rounded-xl overflow-hidden h-full group transition-all duration-300 hover:shadow-lg"
               >
                 <div className="aspect-[16/10] overflow-hidden">
