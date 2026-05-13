@@ -6,11 +6,11 @@ import { cn } from "@/lib/utils";
 
 const navLinks = [
   { name: "Home", to: "/" },
-  { name: "Stories", to: "/she-actually-did-it" },
+  { name: "Stories", to: "/stories" },
   { name: "Stumbled Upon", to: "/stumbled-upon" },
   { name: "Videos", to: "/videos" },
   { name: "Gallery", to: "/gallery" },
-  { name: "The Real Guides", to: "/stories" },
+  { name: "The Real Guides", to: "/the-real-guides" },
   { name: "Resources", to: "/resources" },
   { name: "My Story", to: "/about" },
 ];
