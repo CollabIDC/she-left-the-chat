@@ -1,47 +1,33 @@
-## Goal
+# What went wrong & how to fix it
 
-Make the existing `public/posts/she-actually-did-it.html` post reachable from the app at `/stories/she-actually-did-it`, with entry-point cards on both the **She Actually Did It** page and the **Stories** page.
+## Why these issues happened
 
-## Changes
+**Problem 1 — Duplicate hero text.** Your uploaded hero image already has the title, subhead and "MY STORY" button baked into the photo (visible on the left side). The HTML post template also renders its own centered overlay (eyebrow + h1 + subhead + byline) on top of that same image. Result: two versions of the title showing at once.
 
-### 1. Render the HTML post under `/stories/:slug`
+**Problem 2 & 3 — Wrong nav highlight / "moved under The Real Guides".** The post route is `/stories/:slug` and the navbar item "The Real Guides" points to `/stories`. React Router's `NavLink` matches by prefix unless `end` is set — so `/stories/she-actually-did-it` makes The Real Guides light up, and the post effectively lives "under" that nav item. Meanwhile the "Stories" nav item points to `/she-actually-did-it`, which never matches the post URL, so Stories never highlights.
 
-Update `src/pages/BlogPost.tsx` to support HTML-file posts using the same loader pattern as `StumbledUponPost.tsx`:
+---
 
-- Add a `POST_FILES` map: `"she-actually-did-it" → "/posts/she-actually-did-it.html"`.
-- When the slug matches, fetch the HTML, extract `<style>` and `<body>`, scope the CSS (reusing the same `scopeCss` + `extractStyleAndBody` helpers from `StumbledUponPost`), and render inside a `.story-post-scope` wrapper between the existing `Navbar` and `Footer`.
-- When the slug does NOT match a file, keep the current `stories` array rendering path unchanged so all existing posts keep working.
-- Add a small "← Back to She Actually Did It" link at the top when the post belongs to that stream, otherwise "← Back to Stories".
+## Correction plan (no new content, presentation only)
 
-To avoid duplication, extract the two helpers (`extractStyleAndBody`, `scopeCss`) into a small shared module `src/lib/htmlPost.ts` and import from both `BlogPost.tsx` and `StumbledUponPost.tsx`.
+### Fix 1 — Single hero, no duplicate overlay
+In `public/posts/she-actually-did-it.html`, remove the overlay text block inside `.hero-content` (eyebrow, h1, subhead, byline) and the dark gradient `::after`, so the hero shows only the image with its existing baked-in title and MY STORY button. Keep all body content, pull quotes, divider, byline and signup section exactly as-is.
 
-### 2. Add the post to the stories data
+### Fix 2 — Move the post under the Stories nav
+Move the post route so it lives under the URL the Stories nav points to.
 
-In `src/data/stories.ts`, add one new entry so the card components can render it:
+- `src/App.tsx`: change `<Route path="/stories/:slug" …>` to `<Route path="/she-actually-did-it/:slug" element={<BlogPost />} />`.
+- Update internal links to the new path:
+  - `src/components/HeroCarousel.tsx` → `/she-actually-did-it/she-actually-did-it`
+  - `src/components/StoryCard.tsx` and `src/components/LatestStories.tsx` → link She Actually Did It stream cards to `/she-actually-did-it/${slug}`, keep other streams on `/stories/${slug}` (so Real Guides posts still belong to The Real Guides).
+  - `src/components/FeaturedStory.tsx` left unchanged (Real Guides post).
+- `src/pages/BlogPost.tsx`: back link for `she-actually-did-it` stream stays `/she-actually-did-it`.
 
-- `slug: "she-actually-did-it"`
-- `title: "She Actually Did It"`
-- `excerpt`: short subhead matching the hero overlay
-- `date: "May 2026"`
-- `image`: same Unsplash hero used in the HTML file (so the card preview matches)
-- `stream: "she-actually-did-it"`
-- `readTime: "6 min read"`
+### Fix 3 — Correct active highlight
+- `src/components/Navbar.tsx`: add `end` to the "The Real Guides" NavLink (`to="/stories"`) so it only highlights on the exact `/stories` index page, not on every `/stories/*` URL.
+- After Fix 2, visiting `/she-actually-did-it/she-actually-did-it` will correctly highlight the "Stories" nav item (which points to `/she-actually-did-it`) via the same prefix behavior.
 
-This automatically makes it appear on the **She Actually Did It** page (which already filters by `stream === "she-actually-did-it"`) and lets `StoryCard` link it to `/stories/she-actually-did-it`.
+### Verification
+After the edits I'll reload `/she-actually-did-it/she-actually-did-it` and confirm: (a) only one set of hero text, (b) "Stories" highlighted in the navbar, (c) "The Real Guides" not highlighted, (d) `/stories` index still highlights "The Real Guides".
 
-### 3. Surface it on the Stories page
-
-Confirm `src/pages/Stories.tsx` lists all stories (or both streams). If it currently filters out `she-actually-did-it` entries, add a section/card so this post appears there too. The card uses the existing `StoryCard` component for visual consistency.
-
-### 4. Verify
-
-- Click the card from `/she-actually-did-it` → lands on `/stories/she-actually-did-it` and the HTML hero + serif body + asterisk divider render correctly.
-- Click the card from `/stories` → same destination.
-- Existing posts (`first-time-in-madrid-start-here`, the bookstore, etc.) still render with the current `BlogPost` layout — no regression.
-- Stumbled Upon HTML posts continue to work after the helper extraction.
-
-## Out of scope
-
-- No edits to the HTML post itself.
-- No global style or design-token changes.
-- No changes to the Stumbled Upon route or its existing posts beyond the helper import.
+No content rewrites, no design changes, no other pages touched.
