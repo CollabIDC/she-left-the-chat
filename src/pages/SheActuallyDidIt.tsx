@@ -5,7 +5,9 @@ import StoryCard from "@/components/StoryCard";
 import { stories } from "@/data/stories";
 
 const SheActuallyDidIt = () => {
-  const filtered = stories.filter((s) => s.stream === "she-actually-did-it");
+  const filtered = stories.filter(
+    (s) => s.stream === "she-actually-did-it" && s.slug === "she-actually-did-it"
+  );
 
   return (
     <div className="min-h-screen bg-background">

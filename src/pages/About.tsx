@@ -60,21 +60,43 @@ const About = () => {
               </h1>
               <div className="space-y-5 font-body text-[17px] text-charcoal/80 leading-[1.8]">
                 <p>
-                  One day I decided that the 9 to 5 wasn't cutting it anymore.
-                  I packed my bags, booked a one way ticket to Spain, and never
-                  looked back. Now I'm living in the heart of Madrid, eating
-                  tapas for dinner, and figuring out life one adventure at a time.
+                  I am Kimberly. Program manager. Corporate trainer. AI consultant. And the woman who spent forty years knowing she was supposed to be somewhere else and kept putting everyone else first instead.
                 </p>
                 <p>
-                  This blog is my digital journal. A place where I share the raw,
-                  unfiltered experience of someone who chose a different life. The wins, the losses,
-                  the late night walks through empty streets, and the friends who
-                  become family.
+                  You need to be ready is the lie we were told to keep us still.
                 </p>
                 <p>
-                  Whether you're dreaming of your own escape or just along for
-                  the ride, I'm glad you're here. Pull up a chair, grab a café
-                  con leche, and let's explore together.
+                  My grandmother did it. My mother did it. I did it. We called it love and devotion and doing the right thing. What it actually was is self-abandonment, self-erasure, and dutiful disappearing. Three generations of women who were last in their own lives.
+                </p>
+                <p>
+                  I raised three kids, two of whom were not biologically mine, and I loved all three of them completely. I built a career. I showed up for everyone who needed me. And somewhere in the middle of all of that, I quietly stopped asking what I actually wanted.
+                </p>
+                <p>
+                  Until one October, I stopped stopping.
+                </p>
+                <p>
+                  I signed with a relocation company. I hired an immigration lawyer. I made sure my dog Chloe had every document she needed to come with me because she was never optional. I booked a Delta One flight for 420,000 miles because if I was finally doing this after forty years I was doing it right. And I had saved quietly and intentionally for years because I am a program manager and planning is not something I do, it is something I am.
+                </p>
+                <p>
+                  And then my client contract fell through.
+                </p>
+                <p>
+                  No income. No safety net visible to anyone on the outside. Just everything already in motion and a decision about whether I actually believed what I always said I believed.
+                </p>
+                <p>
+                  My eldest daughter, who already lives abroad, said go anyway. This one is for you. No more sacrificing for everyone else. It is your turn.
+                </p>
+                <p>
+                  So I prayed on it. Stood still. Let the Lord work.
+                </p>
+                <p>
+                  And I got on the plane.
+                </p>
+                <p>
+                  She Left the Chat exists to prove it is never too late to choose yourself. This is not a travel brand. It is not a consulting platform. It is proof. Raw, real, and written from inside the decision.
+                </p>
+                <p>
+                  If you have a forty year dream sitting in the back of a room somewhere, this is for you.
                 </p>
               </div>
 
