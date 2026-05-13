@@ -34,11 +34,11 @@ const Footer = () => {
             <ul className="space-y-2 font-body text-sm">
               {[
                 { label: "Home", to: "/" },
-                { label: "Stories", to: "/she-actually-did-it" },
+                { label: "Stories", to: "/stories" },
                 { label: "Stumbled Upon", to: "/stumbled-upon" },
                 { label: "Videos", to: "/videos" },
                 { label: "Gallery", to: "/gallery" },
-                { label: "The Real Guides", to: "/stories" },
+                { label: "The Real Guides", to: "/the-real-guides" },
                 { label: "Resources", to: "/resources" },
                 { label: "My Story", to: "/about" },
               ].map((l) => (
