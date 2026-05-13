@@ -146,8 +146,7 @@ export const stories: Story[] = [
     excerpt:
       "The morning the second-guessing went quiet, and the life I'd been rehearsing in my head finally became the one I was living.",
     date: "May 2026",
-    image:
-      "https://images.unsplash.com/photo-1492571350019-22de08371fd3?w=1200&q=80",
+    image: "/posts/she-actually-did-it-hero.png",
     readTime: "6 min read",
     stream: "she-actually-did-it",
   },
