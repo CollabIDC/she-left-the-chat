@@ -58,11 +58,11 @@ const BlogPost = () => {
 
   if (filePath) {
     const backHref =
-      post.stream === "she-actually-did-it" ? "/she-actually-did-it" : "/stories";
+      post.stream === "she-actually-did-it" ? "/stories" : "/the-real-guides";
     const backLabel =
       post.stream === "she-actually-did-it"
-        ? "← Back to She Actually Did It"
-        : "← Back to Stories";
+        ? "← Back to Stories"
+        : "← Back to The Real Guides";
     return (
       <div className="min-h-screen bg-background">
         <Navbar />

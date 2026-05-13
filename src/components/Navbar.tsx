@@ -38,7 +38,7 @@ const Navbar = () => {
               <NavLink
                 key={link.name}
                 to={link.to}
-                end={link.to === "/" || link.to === "/stories"}
+                end={link.to === "/"}
                 className={({ isActive }) =>
                   cn(
                     "font-label text-sm font-medium uppercase tracking-[0.18em] transition-colors duration-300",
@@ -68,7 +68,7 @@ const Navbar = () => {
               <NavLink
                 key={link.name}
                 to={link.to}
-                end={link.to === "/" || link.to === "/stories"}
+                end={link.to === "/"}
                 className={({ isActive }) =>
                   cn(
                     "block py-3 font-label text-base uppercase tracking-[0.18em] transition-colors",

@@ -33,7 +33,7 @@ const slides: Slide[] = [
         <p className="font-body font-light text-base md:text-lg text-ivory/95 max-w-xl mb-10 leading-relaxed">
           From Atlanta to Madrid. Stories of wanderlust, bold choices, and building a life on your own terms. This is what it looks like when you finally choose yourself.
         </p>
-        <Link to="/she-actually-did-it/she-actually-did-it" className="btn-gold">
+        <Link to="/stories/she-actually-did-it" className="btn-gold">
           Read My Story <ArrowRight className="w-4 h-4" />
         </Link>
       </div>
@@ -47,7 +47,7 @@ const slides: Slide[] = [
         <h2 className="font-display italic text-4xl md:text-5xl lg:text-6xl text-ivory leading-tight mb-10">
           "Nobody told me it would be this hard. Nobody told me it would be this good."
         </h2>
-        <Link to="/stories?stream=she-actually-did-it" className="btn-gold">
+        <Link to="/stories" className="btn-gold">
           She Actually Did It <ArrowRight className="w-4 h-4" />
         </Link>
       </div>
@@ -61,7 +61,7 @@ const slides: Slide[] = [
         <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-ivory leading-tight mb-10">
           Some places exist because someone refused to accept they couldn't.
         </h2>
-        <Link to="/stories" className="btn-gold">
+        <Link to="/the-real-guides" className="btn-gold">
           Read the Stories <ArrowRight className="w-4 h-4" />
         </Link>
       </div>
