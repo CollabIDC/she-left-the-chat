@@ -1,33 +1,52 @@
-# What went wrong & how to fix it
+# Separate Stories and The Real Guides
 
-## Why these issues happened
+Two distinct content sections. No shared page, no shared filter, no shared route prefix.
 
-**Problem 1 — Duplicate hero text.** Your uploaded hero image already has the title, subhead and "MY STORY" button baked into the photo (visible on the left side). The HTML post template also renders its own centered overlay (eyebrow + h1 + subhead + byline) on top of that same image. Result: two versions of the title showing at once.
+## Final structure
 
-**Problem 2 & 3 — Wrong nav highlight / "moved under The Real Guides".** The post route is `/stories/:slug` and the navbar item "The Real Guides" points to `/stories`. React Router's `NavLink` matches by prefix unless `end` is set — so `/stories/she-actually-did-it` makes The Real Guides light up, and the post effectively lives "under" that nav item. Meanwhile the "Stories" nav item points to `/she-actually-did-it`, which never matches the post URL, so Stories never highlights.
+| Nav item | Route | Content |
+|---|---|---|
+| Stories | `/stories` | She Actually Did It entries only |
+| Stories post | `/stories/:slug` | She Actually Did It post |
+| The Real Guides | `/the-real-guides` | View From Here practical guides only |
+| Real Guides post | `/the-real-guides/:slug` | View From Here post |
 
----
+The current `/she-actually-did-it` and `/she-actually-did-it/:slug` routes go away (or 301 to `/stories`).
 
-## Correction plan (no new content, presentation only)
+## Changes
 
-### Fix 1 — Single hero, no duplicate overlay
-In `public/posts/she-actually-did-it.html`, remove the overlay text block inside `.hero-content` (eyebrow, h1, subhead, byline) and the dark gradient `::after`, so the hero shows only the image with its existing baked-in title and MY STORY button. Keep all body content, pull quotes, divider, byline and signup section exactly as-is.
+### 1. Routes — `src/App.tsx`
+- `/stories` → `<SheActuallyDidIt />` (rename component later, see step 2)
+- `/stories/:slug` → `<BlogPost />`
+- `/the-real-guides` → new `<RealGuidesIndex />` page (built from current `Stories.tsx`, stripped of stream selector and journal tagline — only View From Here filter pills + cards)
+- `/the-real-guides/:slug` → `<BlogPost />`
+- Remove `/she-actually-did-it` and `/she-actually-did-it/:slug` (or keep as redirects to `/stories`)
 
-### Fix 2 — Move the post under the Stories nav
-Move the post route so it lives under the URL the Stories nav points to.
+### 2. Pages
+- Rename `src/pages/SheActuallyDidIt.tsx` purpose → it becomes the Stories index. Header label "Stories" (keep "She Actually Did It" as subtitle/eyebrow if desired).
+- Rename `src/pages/Stories.tsx` → `src/pages/RealGuides.tsx`. Remove the stream selector and the journal stream entirely; show only View From Here cards with destination/topic/reader-need filters. Header label "The Real Guides".
+- Note: there's already a `src/components/RealGuides.tsx` (homepage section). Name the new page file `RealGuidesPage.tsx` to avoid collision.
 
-- `src/App.tsx`: change `<Route path="/stories/:slug" …>` to `<Route path="/she-actually-did-it/:slug" element={<BlogPost />} />`.
-- Update internal links to the new path:
-  - `src/components/HeroCarousel.tsx` → `/she-actually-did-it/she-actually-did-it`
-  - `src/components/StoryCard.tsx` and `src/components/LatestStories.tsx` → link She Actually Did It stream cards to `/she-actually-did-it/${slug}`, keep other streams on `/stories/${slug}` (so Real Guides posts still belong to The Real Guides).
-  - `src/components/FeaturedStory.tsx` left unchanged (Real Guides post).
-- `src/pages/BlogPost.tsx`: back link for `she-actually-did-it` stream stays `/she-actually-did-it`.
+### 3. Navbar — `src/components/Navbar.tsx`
+- Stories → `/stories`
+- The Real Guides → `/the-real-guides`
+- Update `end` flags accordingly (both should match prefix so post pages highlight correctly; remove `end` from `/stories`).
 
-### Fix 3 — Correct active highlight
-- `src/components/Navbar.tsx`: add `end` to the "The Real Guides" NavLink (`to="/stories"`) so it only highlights on the exact `/stories` index page, not on every `/stories/*` URL.
-- After Fix 2, visiting `/she-actually-did-it/she-actually-did-it` will correctly highlight the "Stories" nav item (which points to `/she-actually-did-it`) via the same prefix behavior.
+### 4. Internal links
+- `src/components/HeroCarousel.tsx` → `/stories/she-actually-did-it`
+- `src/components/StoryCard.tsx` → `${isJournal ? "/stories" : "/the-real-guides"}/${slug}`
+- `src/components/LatestStories.tsx` → same mapping
+- `src/components/FeaturedStory.tsx` → `/the-real-guides/${slug}`
+- `src/pages/BlogPost.tsx` back link → `/stories` for journal stream, `/the-real-guides` for view-from-here
 
-### Verification
-After the edits I'll reload `/she-actually-did-it/she-actually-did-it` and confirm: (a) only one set of hero text, (b) "Stories" highlighted in the navbar, (c) "The Real Guides" not highlighted, (d) `/stories` index still highlights "The Real Guides".
+### 5. BlogPost slug resolution
+`BlogPost` already looks up by slug across both streams, so a single component handles both route prefixes. No data changes in `src/data/stories.ts`.
 
-No content rewrites, no design changes, no other pages touched.
+## Verification
+- `/stories` shows only She Actually Did It cards; "Stories" nav highlighted.
+- `/stories/she-actually-did-it` renders the post; "Stories" highlighted; "The Real Guides" not highlighted.
+- `/the-real-guides` shows only View From Here cards with the three filter rows; "The Real Guides" highlighted.
+- `/the-real-guides/<slug>` renders a guide post; "The Real Guides" highlighted.
+- Old `/she-actually-did-it` URLs no longer route (or redirect cleanly).
+
+No content rewrites, no design changes outside removing the now-unneeded stream selector on the Real Guides page.

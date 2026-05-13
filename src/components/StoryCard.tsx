@@ -20,7 +20,7 @@ const StoryCard = ({ story, index = 0 }: StoryCardProps) => {
       transition={{ duration: 0.6, delay: index * 0.08 }}
       className="group"
     >
-      <Link to={`${isJournal ? "/she-actually-did-it" : "/stories"}/${story.slug}`} className="block">
+      <Link to={`${isJournal ? "/stories" : "/the-real-guides"}/${story.slug}`} className="block">
         {isJournal ? (
           // ───────── She Actually Did It (intimate, near-black) ─────────
           <div className="rounded-2xl overflow-hidden card-elevated bg-[hsl(var(--ink))] text-[hsl(var(--ink-foreground))]">

@@ -50,7 +50,7 @@ const FeaturedStory = () => {
               Inside Secret Kingdoms, the English language bookstore in Madrid that a British-Spanish couple built for a community that did not know it needed them yet.
             </p>
             <Link
-              to="/stories/the-bookstore-that-exists-because-of-a-love-story"
+              to="/the-real-guides/the-bookstore-that-exists-because-of-a-love-story"
               className="btn-gold self-start"
             >
               Read the Full Story <ArrowRight className="w-4 h-4" />
