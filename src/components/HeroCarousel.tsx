@@ -33,7 +33,7 @@ const slides: Slide[] = [
         <p className="font-body font-light text-base md:text-lg text-ivory/95 max-w-xl mb-10 leading-relaxed">
           From Atlanta to Madrid. Stories of wanderlust, bold choices, and building a life on your own terms. This is what it looks like when you finally choose yourself.
         </p>
-        <Link to="/stories/she-actually-did-it" className="btn-gold">
+        <Link to="/she-actually-did-it/she-actually-did-it" className="btn-gold">
           Read My Story <ArrowRight className="w-4 h-4" />
         </Link>
       </div>
