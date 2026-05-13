@@ -234,8 +234,8 @@ const BlogPost = () => {
             ))}
           </div>
           <div className="mt-12 text-center">
-            <Link to="/stories" className="btn-gold-outline">
-              Back to All Stories
+            <Link to={post.stream === "she-actually-did-it" ? "/stories" : "/the-real-guides"} className="btn-gold-outline">
+              {post.stream === "she-actually-did-it" ? "Back to All Stories" : "Back to The Real Guides"}
             </Link>
           </div>
         </section>

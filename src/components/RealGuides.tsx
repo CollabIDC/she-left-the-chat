@@ -45,7 +45,7 @@ const RealGuides = () => {
               transition={{ duration: 0.5, delay: i * 0.1 }}
             >
               <Link
-                to={`/stories?destination=${dest.name}`}
+                to={`/the-real-guides?destination=${dest.name}`}
                 className="relative block overflow-hidden rounded-xl aspect-[4/5] group"
               >
                 <img
