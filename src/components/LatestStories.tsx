@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { stories } from "@/data/stories";
-import journalNight from "@/assets/journal-night-window.png";
+
 
 const LatestStories = () => {
   const nowWhat = stories.find((s) => s.slug === "now-what-what-nobody-tells-you-about-after")!;
