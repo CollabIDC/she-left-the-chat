@@ -125,7 +125,7 @@ export const stories: Story[] = [
     excerpt:
       "The achievement, the arrival, and the silence that follows when the goal is done and the life has not filled in yet.",
     date: "January 2025",
-    image: "/posts/now-what-hero.png",
+    image: "/posts/now-what-hero-v2.png",
     readTime: "8 min read",
     stream: "she-actually-did-it",
     pullQuote:
@@ -137,7 +137,7 @@ export const stories: Story[] = [
     excerpt:
       "The morning the second-guessing went quiet, and the life I'd been rehearsing in my head finally became the one I was living.",
     date: "May 2026",
-    image: "/posts/she-actually-did-it-hero.png",
+    image: "/posts/she-actually-did-it-hero-v2.png",
     readTime: "6 min read",
     stream: "she-actually-did-it",
   },
