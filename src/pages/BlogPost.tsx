@@ -11,6 +11,7 @@ import portrait from "@/assets/portrait-kimberly.jpg";
 
 const POST_FILES: Record<string, string> = {
   "she-actually-did-it": "/posts/she-actually-did-it.html",
+  "now-what-what-nobody-tells-you-about-after": "/posts/now-what.html",
 };
 
 const BlogPost = () => {

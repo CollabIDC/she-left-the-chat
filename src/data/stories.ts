@@ -120,25 +120,16 @@ export const stories: Story[] = [
     readerNeed: "When You Arrive",
   },
   {
-    slug: "the-night-i-wondered-if-i-made-a-mistake",
-    title: "The Night I Wondered If I Made a Mistake",
+    slug: "now-what-what-nobody-tells-you-about-after",
+    title: "Now What: What Nobody Tells You About After",
     excerpt:
-      "And what happened next. A 3am window, a quiet city, and the question every brave person eventually asks herself.",
+      "The achievement, the arrival, and the silence that follows when the goal is done and the life has not filled in yet.",
     date: "January 2025",
-    image:
-      "https://images.unsplash.com/photo-1492571350019-22de08371fd3?w=1200&q=80",
-    readTime: "5 min read",
+    image: "/posts/now-what-hero.png",
+    readTime: "8 min read",
     stream: "she-actually-did-it",
-  },
-  {
-    slug: "the-morning-i-stopped-translating-myself",
-    title: "The Morning I Stopped Translating Myself",
-    excerpt: "Placeholder.",
-    date: "February 2025",
-    image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&q=80",
-    readTime: "4 min read",
-    stream: "she-actually-did-it",
+    pullQuote:
+      "Standing on faith does not always look like peace. Sometimes it looks like a long Wednesday with nowhere to be and a dog who wants to go home and a phone that cannot ring for six more hours.",
   },
   {
     slug: "she-actually-did-it",
