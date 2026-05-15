@@ -3,15 +3,14 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { stories } from "@/data/stories";
 import journalNight from "@/assets/journal-night-window.png";
-import journalMorning from "@/assets/journal-morning-cafe.png";
 
 const LatestStories = () => {
-  const nightStory = stories.find((s) => s.slug === "the-night-i-wondered-if-i-made-a-mistake")!;
-  const secondJournal = stories.find((s) => s.slug === "the-morning-i-stopped-translating-myself")!;
+  const nowWhat = stories.find((s) => s.slug === "now-what-what-nobody-tells-you-about-after")!;
+  const sheDidIt = stories.find((s) => s.slug === "she-actually-did-it")!;
 
   const journalCards = [
-    { story: nightStory, image: journalNight, alt: "Dark Madrid apartment window at night with warm amber lamp and city below" },
-    { story: secondJournal, image: journalMorning, alt: "Warm golden morning Madrid cafe with cafe con leche, journal, and city through window" },
+    { story: nowWhat, image: nowWhat.image, alt: "Woman at a Madrid balcony window with her dog at her feet" },
+    { story: sheDidIt, image: sheDidIt.image, alt: "She Actually Did It hero" },
   ];
 
   const anim = (i: number) => ({
