@@ -53,7 +53,7 @@ const StoryCard = ({ story, index = 0 }: StoryCardProps) => {
               </div>
 
               <span className="inline-flex items-center gap-2 font-body text-sm font-medium text-gold group-hover:gap-3 transition-all">
-                Read the entry
+                Read on
                 <ArrowRight className="w-4 h-4" />
               </span>
             </div>
