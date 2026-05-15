@@ -18,13 +18,13 @@ const StoryCard = ({ story, index = 0 }: StoryCardProps) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.6, delay: index * 0.08 }}
-      className="group"
+      className="group h-full"
     >
-      <Link to={`${isJournal ? "/stories" : "/the-real-guides"}/${story.slug}`} className="block">
+      <Link to={`${isJournal ? "/stories" : "/the-real-guides"}/${story.slug}`} className="block h-full">
         {isJournal ? (
           // ───────── She Actually Did It (intimate, near-black) ─────────
-          <div className="rounded-2xl overflow-hidden card-elevated bg-[hsl(var(--ink))] text-[hsl(var(--ink-foreground))]">
-            <div className="relative overflow-hidden">
+          <div className="rounded-2xl overflow-hidden card-elevated bg-[hsl(var(--ink))] text-[hsl(var(--ink-foreground))] flex flex-col h-full min-h-[640px]">
+            <div className="relative overflow-hidden shrink-0">
               <img
                 src={story.image}
                 alt={story.title}
@@ -34,8 +34,8 @@ const StoryCard = ({ story, index = 0 }: StoryCardProps) => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
             </div>
 
-            <div className="p-7">
-              <span className="inline-block px-3 py-1 rounded-full bg-terracotta text-ivory font-label text-[11px] uppercase tracking-[0.18em] font-medium mb-4">
+            <div className="p-7 flex flex-col flex-1">
+              <span className="inline-block self-start px-3 py-1 rounded-full bg-terracotta text-ivory font-label text-[11px] uppercase tracking-[0.18em] font-medium mb-4">
                 She Actually Did It
               </span>
 
@@ -47,7 +47,7 @@ const StoryCard = ({ story, index = 0 }: StoryCardProps) => {
                 {story.excerpt}
               </p>
 
-              <div className="flex items-center gap-2 text-ivory/50 mb-4">
+              <div className="flex items-center gap-2 text-ivory/50 mb-4 mt-auto">
                 <Calendar className="w-3.5 h-3.5" />
                 <span className="font-body text-xs">{story.date}</span>
               </div>
