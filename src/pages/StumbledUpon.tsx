@@ -28,7 +28,7 @@ const C = {
 };
 
 const PLACEHOLDER =
-  "https://images.unsplash.com/photo-1543783207-ec64e4d95325?w=900&q=70";
+  "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=900&q=70";
 
 type Post = {
   title: string;
