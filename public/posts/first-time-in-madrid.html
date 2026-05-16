@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>First Time in Madrid? Start Here. | She Left the Chat</title>
+<meta name="description" content="Your honest beginner's guide to one of Europe's most underrated cities." />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --cream: #F2EDE4;
+    --ink: #1A1714;
+    --warm-mid: #6B5E52;
+    --accent: #9B3A2A;
+    --gold: #B8952A;
+    --muted: #8A8078;
+    --dark: #2C1F1A;
+    --soft-line: #D8D0C4;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background-color: var(--cream);
+    color: var(--ink);
+    font-family: 'Lato', sans-serif;
+  }
+
+  .hero {
+    width: 100%;
+    height: 460px;
+    overflow: hidden;
+  }
+  .hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .post-header {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 72px 28px 0;
+    text-align: center;
+  }
+  .post-header .eyebrow {
+    font-family: 'Lato', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 22px;
+  }
+  .post-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: clamp(34px, 5vw, 48px);
+    line-height: 1.1;
+    color: var(--ink);
+    margin-bottom: 18px;
+  }
+  .post-header .subhead {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 19px;
+    color: var(--warm-mid);
+    margin-bottom: 28px;
+  }
+  .post-header .divider {
+    width: 48px;
+    height: 2px;
+    background: var(--accent);
+    margin: 0 auto 22px;
+  }
+  .post-header .byline {
+    font-family: 'Lato', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 24px;
+  }
+
+  .pills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+  .pill {
+    display: inline-block;
+    padding: 7px 16px;
+    border-radius: 999px;
+    color: var(--cream);
+    font-family: 'Lato', sans-serif;
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+  .pill.destination { background: var(--ink); }
+  .pill.topic { background: var(--gold); }
+  .pill.need { background: var(--accent); }
+
+  .post-body {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 56px 40px 80px;
+  }
+
+  .post-body p {
+    font-family: 'Lato', sans-serif !important;
+    font-size: 17.5px !important;
+    line-height: 1.85 !important;
+    color: var(--ink) !important;
+    font-weight: 400 !important;
+    margin-bottom: 1.7rem;
+  }
+
+  .post-body p.lead::first-letter {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-weight: 700;
+    float: left;
+    line-height: 0.78;
+    margin: 6px 12px 0 0;
+    color: var(--accent);
+  }
+
+  .post-body h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 28px;
+    color: var(--ink);
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .post-body h3 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--accent);
+    margin-top: 2.5rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .section-dots {
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    color: var(--accent);
+    opacity: 0.5;
+    letter-spacing: 0.5em;
+    margin: 2.8rem 0;
+  }
+
+  .pull-quote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 22px;
+    line-height: 1.5;
+    color: var(--ink);
+    border-left: 3px solid var(--accent);
+    padding-left: 28px;
+    margin: 3rem 0;
+  }
+
+  .mood-break {
+    background: var(--dark);
+    padding: 52px 40px;
+    margin: 3rem -40px;
+    text-align: center;
+  }
+  .mood-break p {
+    font-family: 'Playfair Display', serif !important;
+    font-style: italic;
+    font-size: 21px !important;
+    line-height: 1.5 !important;
+    color: rgba(242, 237, 228, 0.85) !important;
+    max-width: 640px;
+    margin: 0 auto !important;
+  }
+
+  .personal-note {
+    background: var(--dark);
+    border-radius: 4px;
+    padding: 34px;
+    margin: 3rem 0;
+  }
+  .personal-note .label {
+    font-family: 'Lato', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+  .personal-note p {
+    font-family: 'Lato', sans-serif !important;
+    font-size: 15px !important;
+    line-height: 1.85 !important;
+    color: rgba(242, 237, 228, 0.85) !important;
+    margin-bottom: 1rem;
+  }
+  .personal-note .signature {
+    border-top: 1px solid rgba(184, 149, 42, 0.3);
+    margin-top: 18px;
+    padding-top: 18px;
+    font-family: 'Playfair Display', serif !important;
+    font-style: italic;
+    font-size: 17px !important;
+    color: var(--gold) !important;
+    margin-bottom: 0 !important;
+  }
+
+  .insider-list {
+    margin: 1rem 0 2rem;
+  }
+  .insider-list .item {
+    position: relative;
+    padding: 16px 0 16px 28px;
+    border-bottom: 1px solid var(--soft-line);
+  }
+  .insider-list .item:last-child { border-bottom: none; }
+  .insider-list .item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 24px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+  .insider-list .item strong {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    color: var(--ink);
+    display: block;
+    margin-bottom: 4px;
+    font-size: 15.5px;
+  }
+  .insider-list .item span {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    color: var(--ink);
+    font-size: 15.5px;
+    line-height: 1.7;
+  }
+
+  .closing-line {
+    font-family: 'Lato', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    margin-top: 64px;
+    padding-top: 28px;
+    border-top: 1px solid var(--soft-line);
+  }
+
+  @media (max-width: 640px) {
+    .hero { height: 320px; }
+    .post-body { padding: 48px 22px 64px; }
+    .mood-break { margin: 3rem -22px; padding: 44px 24px; }
+    .post-body p { font-size: 17px !important; }
+    .post-body h2 { font-size: 24px; }
+  }
+</style>
+</head>
+<body>
+
+  <section class="hero">
+    <img src="https://images.unsplash.com/photo-1543783207-ec64e4d95325?w=1600&q=80" alt="Madrid rooftops at golden hour" />
+  </section>
+
+  <header class="post-header">
+    <p class="eyebrow">The Real Guides · Madrid</p>
+    <h1>First Time in Madrid? Start Here.</h1>
+    <p class="subhead">Your honest beginner's guide to one of Europe's most underrated cities.</p>
+    <div class="divider"></div>
+    <p class="byline">By Kimberly &nbsp;·&nbsp; May 2026 &nbsp;·&nbsp; Madrid, Spain</p>
+  </header>
+
+  <div class="pills">
+    <span class="pill destination">Madrid</span>
+    <span class="pill topic">Travel Guides</span>
+    <span class="pill need">Before You Go</span>
+  </div>
+
+  <article class="post-body">
+
+    <p class="lead">There are a thousand Madrid travel guides on the internet. Most of them were written by someone who spent a long weekend there, ate at the most Instagrammable spots, took approximately 400 photos of churros, and called themselves an expert.</p>
+
+    <p>This is not that guide.</p>
+
+    <p>I actually live here. I packed up my life, booked a one way ticket, and moved to Madrid because I always wanted to experience living abroad. How long am I staying? Honestly, I have no idea. Ask me after a couple of tinto de veranos. That is the local version of a sangria and yes, it is exactly as dangerous to your decision making as it sounds.</p>
+
+    <p>What I can tell you is that Madrid has a way of making you forget you ever had a plan. And I say that as a program manager, corporate trainer, and AI consultant who builds plans for a living. Color coded, perfectly timed, logically sequenced plans. Madrid looked at my plans, smiled politely, and then told me Thursday was actually Jueves Santo, a national holiday, and everything was closed. Google had not mentioned this. My color coded calendar had not mentioned this. Madrid did not feel the need to mention this in advance either.</p>
+
+    <blockquote class="pull-quote">Spain has not changed. I am the one adapting.</blockquote>
+
+    <p>That sentence right there is the whole thesis of She Left the Chat. I did not come here to critique or compare. I came here to experience, to learn, to figure it out, and to bring you along for the ride. Some days that looks like discovering the most beautiful park you have ever seen in your life. Other days it looks like standing in a grocery store aisle having a full consultation with my AI tool trying to locate the butter while my dog Chloe waits at home with absolutely zero sympathy.</p>
+
+    <p>Speaking of Chloe. She is here too. She has opinions about every park in Madrid. We will get to that.</p>
+
+    <div class="section-dots">· · ·</div>
+
+    <h2>Why Madrid Though</h2>
+
+    <p>Let me be honest with you about something. Madrid does not get the hype that Barcelona gets. Tourists flock to Barcelona for the beaches and the Gaudí architecture and the content. Madrid just sits there being extraordinary while nobody pays attention.</p>
+
+    <p>And honestly? That is part of what makes it so good.</p>
+
+    <p>Madrid rewards the people who actually show up for it. It is walkable in a way that surprises most visitors. It is affordable in a way that will make you question every expensive city you have ever lived in. It has world class art, food that will genuinely introduce you to flavors you did not know you were missing, and a pace of life that makes you rethink everything you thought your schedule needed to look like.</p>
+
+    <p>The people are warm. The coffee costs €1.50 and tastes like it was made by someone who actually cares. The parks are the kind of green that makes you want to sit on a bench and read an actual book like it is 1987. And the food. We are going to talk about the food a lot throughout this series. Consider yourself warned.</p>
+
+    <p>There is also the small matter of the hills. Nobody puts the hills in the travel guides. The photos show charming cobblestone streets and romantic staircases and it all looks very lovely. What the photos do not show is what your face looks like at the top. Comfortable shoes are not a suggestion here. They are a survival strategy. We will talk about this more in the packing guide.</p>
+
+    <div class="mood-break">
+      <p>Madrid did not come to fit my plan. It came to rearrange it.</p>
+    </div>
+
+    <h2>A Quick Note About Who I Am and Why This Guide Exists</h2>
+
+    <p>I am a program manager, corporate trainer, and AI consultant with over two decades of experience building systems, solving problems, and helping organizations figure out how to work smarter. I have managed complex programs with hundreds of moving parts and significant stakes.</p>
+
+    <p>Madrid has humbled me in the best possible way.</p>
+
+    <p>I moved here because I always wanted to experience living abroad. How long am I staying? Still negotiating that with myself over tinto de veranos. What I know for certain is that this city has given me more material for a blog than I ever anticipated and I am committed to making sure every single thing I learn the hard way saves you from having to learn it the same way.</p>
+
+    <p>She Left the Chat is my honest chronicle of figuring out life in one of Europe's most extraordinary cities. No paid placements. No sponsored opinions. No version of Madrid that has been polished until it no longer resembles reality. Just real experience, practical guidance, and the occasional grocery store story that involves artificial intelligence and a missing bottle of white vinegar.</p>
+
+    <p>You are going to be fine here. Better than fine actually. But let me help you get there a little faster than I did.</p>
+
+    <div class="personal-note">
+      <p class="label">A Personal Note</p>
+      <p>I did not come to Madrid because I had everything figured out. I came because I had stopped waiting to. Every guide in this series is written from inside that decision, not from a glossy outside looking in. If you are reading this from your own kitchen at 2 AM wondering whether you are allowed to want something different, this whole resource is for you.</p>
+      <p class="signature">Spain has not changed. I am the one adapting.</p>
+    </div>
+
+    <div class="section-dots">· · ·</div>
+
+    <h2>What This Guide Series Covers</h2>
+
+    <p>Think of this post as the front door. Everything else in the series is a room you can walk into whenever you need it. Here is the full map:</p>
+
+    <h3>Before You Leave Home</h3>
+    <p>Everything you need to do before you fly to Madrid. What to pack, a real style and practical guide. Spanish culture and etiquette, the honest version.</p>
+
+    <h3>When You Land</h3>
+    <p>The complete Madrid airport guide, step by step. Getting from the airport to your hotel, every option compared. How to use the Madrid metro like you have done it before.</p>
+
+    <h3>Understanding the City</h3>
+    <p>Madrid neighborhoods guide, which barrio is right for you. Hidden gems the tourist guides always miss. Safety in Madrid, what is real and what is overhyped. Public holidays and closures, the thing that catches every tourist off guard.</p>
+
+    <h3>Eating and Drinking</h3>
+    <p>What to eat in Madrid, the essential food guide. Where locals actually eat, how to avoid the tourist traps. The Menú del Día, the best kept secret for eating well without spending a fortune. International food and grocery shopping for longer stays.</p>
+
+    <h3>Things to Do</h3>
+    <p>Must see landmarks for first timers. Madrid parks guide including the hidden gems. Parks, dogs, and the leash optional life in Madrid. Flamenco, how to find the real thing. Nightlife, what you actually need to know before you go out. Vintage and thrift shopping. Tours and experiences worth booking.</p>
+
+    <h3>Beyond Madrid</h3>
+    <p>Day trips from Madrid, Toledo, Segovia, Ávila and more. Exploring Spain by high speed AVE train.</p>
+
+    <h3>Practical Essentials</h3>
+    <p>Health, medical and emergency resources. Accessibility guide. Extended stay and long term living tips.</p>
+
+    <p>You do not need to read everything before you go. Starting with the first few posts in order will make a real difference though. By the time you land at Barajas you will feel like you have done this before.</p>
+
+    <div class="section-dots">· · ·</div>
+
+    <h2>A Few Things Nobody Told Me Before I Got Here</h2>
+
+    <p>Before we get into the detailed guides, here are the things I wish someone had just said to me straight:</p>
+
+    <h3>The Food Schedule Is Real And It Will Mess With You</h3>
+    <p>Lunch is at 2 PM. Dinner is at 9 PM or later. Show up to a restaurant at 6 PM looking for dinner and you will be met with genuine confusion and possibly an empty dining room. Back home, 9 PM was pajamas and a rerun of something comfortable. In Madrid 9 PM is when the restaurant starts to fill up. I am not saying one approach is wrong. I am saying I had to buy new pajamas. Adjust your schedule and you will have one of the best eating experiences of your life.</p>
+
+    <h3>Not Every Restaurant Does Takeaway</h3>
+    <p>This one surprises almost every visitor. In Madrid eating is a sit down social experience. Many traditional restaurants and bars simply do not offer takeaway. If you want to ask, the phrase is para llevar which means to take away. But ask before you order so you are not caught off guard if the answer is no.</p>
+
+    <h3>Madrid Is Incredibly Walkable But Some Of It Is Uphill</h3>
+    <p>Significantly uphill in certain areas. I am a logical person. I plan routes. I factor in distance. What I did not factor in was the elevation change between where I was standing and where I needed to be. The walk was further than anticipated and parts of it were straight up. Comfortable shoes are non negotiable. We will talk about this properly in the packing guide.</p>
+
+    <h3>The Metro Is Your Best Friend</h3>
+    <p>Clean, fast, affordable, and easy to use even if you do not speak a word of Spanish. There is an entire post dedicated to it. Read it before you land.</p>
+
+    <h3>Tipping Is Not What You Are Used To</h3>
+    <p>If you are coming from the US the instinct to tip 20% on everything is going to kick in immediately. Resist it. A euro or two for genuinely great service is considered generous here. Nobody is watching you leave and calculating a percentage. That is just not how it works. Full details in the culture guide.</p>
+
+    <h3>Bring A Reusable Bag Everywhere</h3>
+    <p>Every single shop in Spain charges for plastic bags. Every one. You will learn this lesson once and carry a tote for the rest of your life.</p>
+
+    <h3>Download Your Apps Before You Land</h3>
+    <p>Uber, Cabify, Bolt, Google Translate, the Metro Madrid app, and WhatsApp. All of it, set up and ready before your wheels touch the tarmac. There is a full post on exactly which apps to download and why. Future you will be grateful that present you handled this.</p>
+
+    <h3>Seatbelts In The Back Seat Are Mandatory</h3>
+    <p>In Spain wearing a seatbelt is mandatory for all passengers in every seat including the back seat. This is strictly enforced and fines apply. Whether you are in a taxi, a Cabify, a Bolt, or anyone else's car, buckle up the moment you get in.</p>
+
+    <h3>Google Is Not Always Your Friend Here</h3>
+    <p>Specifically when it comes to holiday closures. There is an entire post dedicated to this topic because learning it the hard way is not the experience you want. Google Maps will confidently tell you a place is open when it is completely, absolutely not open. Plan accordingly. We will get into all of it.</p>
+
+    <div class="section-dots">· · ·</div>
+
+    <h2>What Other Guides Do Not Tell You</h2>
+
+    <div class="insider-list">
+      <div class="item">
+        <strong>The food schedule will genuinely catch you off guard</strong>
+        <span>Lunch at 2 PM. Dinner at 9 PM or later. This is not a suggestion. This is how the city runs. Plan around it and you will eat extraordinarily well.</span>
+      </div>
+      <div class="item">
+        <strong>Para llevar is not always an option</strong>
+        <span>Not every restaurant offers takeaway. Ask before you order. The phrase is para llevar.</span>
+      </div>
+      <div class="item">
+        <strong>The hills are real</strong>
+        <span>Parts of historic Madrid involve significant uphill walking. Comfortable shoes are not optional.</span>
+      </div>
+      <div class="item">
+        <strong>The metro closes at 1:30 AM</strong>
+        <span>After that you need the Airport Express Bus, a taxi, or a rideshare. Plan your late nights accordingly.</span>
+      </div>
+      <div class="item">
+        <strong>Semana Santa will close the city and Google will not tell you</strong>
+        <span>Holy Week closures are widespread and poorly reflected in online listings. Check esmadrid.com before any important outing around Easter.</span>
+      </div>
+      <div class="item">
+        <strong>Seatbelts apply in the back seat</strong>
+        <span>Mandatory for all passengers in every seat. Fines apply.</span>
+      </div>
+      <div class="item">
+        <strong>The grocery store has rules</strong>
+        <span>Put on the plastic gloves before touching fruit and vegetables. This is standard practice and expected of everyone.</span>
+      </div>
+      <div class="item">
+        <strong>Tap water is safe and free</strong>
+        <span>Madrid's tap water is excellent. Ask for agua del grifo at restaurants to avoid being charged for bottled water.</span>
+      </div>
+      <div class="item">
+        <strong>WhatsApp is how Spain communicates</strong>
+        <span>Set it up before you land. Many businesses, landlords, and locals communicate exclusively through WhatsApp.</span>
+      </div>
+    </div>
+
+    <div class="section-dots">· · ·</div>
+
+    <h2>A Word About This Resource</h2>
+
+    <p>Everything in this series comes from real experience, real mistakes, and real conversations with people who live and work in Madrid. Where I am recommending something I have not personally visited I will tell you. Where something comes from lived experience you will know that too.</p>
+
+    <p>Nothing here is a paid placement. Nobody is sponsoring my opinion. She Left the Chat exists to be genuinely useful, not to sell you something you do not need.</p>
+
+    <p>This is a free resource because good information should be accessible. If it helps you have a better trip or a smoother stay, that is the whole point.</p>
+
+    <p>And if something makes you laugh along the way, even better. We have a lot of ground to cover and we might as well enjoy the walk. Even the uphill parts.</p>
+
+    <p class="closing-line">She Left the Chat &nbsp;·&nbsp; shelefthechat.com &nbsp;·&nbsp; By Kimberly &nbsp;·&nbsp; Madrid, Spain</p>
+
+  </article>
+
+</body>
+</html>
