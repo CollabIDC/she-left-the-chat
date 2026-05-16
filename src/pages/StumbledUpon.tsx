@@ -64,6 +64,7 @@ const sections: Section[] = [
       {
         title: "The Bookstore That Exists Because of a Love Story",
         slug: "the-bookstore-that-exists-because-of-a-love-story",
+        image: "/posts/images/bookstore-hero.jpg",
         teaser:
           "Most bookstores in Madrid sell books. This one exists because someone refused to let a love story end. It has been here for decades, and almost no one outside the neighborhood knows why.",
       },
