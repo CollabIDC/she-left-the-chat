@@ -51,7 +51,7 @@ export const readerNeeds = [
 
 export const stories: Story[] = [
   {
-    slug: "first-time-in-madrid-start-here",
+    slug: "first-time-in-madrid",
     title: "First Time in Madrid? Start Here.",
     excerpt:
       "Your honest beginner's guide to one of Europe's most underrated cities — what to see, skip, and savor.",
