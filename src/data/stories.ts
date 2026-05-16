@@ -132,6 +132,18 @@ export const stories: Story[] = [
       "Standing on faith does not always look like peace. Sometimes it looks like a long Wednesday with nowhere to be and a dog who wants to go home and a phone that cannot ring for six more hours.",
   },
   {
+    slug: "i-walked-an-hour-for-ribs",
+    title: "I Walked an Hour for Ribs and Christmas Eve Dinner Was a Sorry Ham Sandwich",
+    excerpt:
+      "A Christmas Eve in Madrid that went sideways, a 70 euro lesson, and the family Zoom I missed by 45 minutes.",
+    date: "December 24, 2024",
+    image: "/posts/ribs-sandwich-hero.png",
+    readTime: "7 min read",
+    stream: "she-actually-did-it",
+    pullQuote:
+      "You can do everything right. And some years, Christmas Eve is just going to be a sandwich.",
+  },
+  {
     slug: "she-actually-did-it",
     title: "She Actually Did It",
     excerpt:
