@@ -91,6 +91,7 @@ const sections: Section[] = [
         title: "The Night Flamenco Stopped Time",
         cardTitle: "Tablao de la Villa",
         slug: "tablao-de-la-villa",
+        image: "/posts/images/tablao-hero.jpg",
         teaser:
           "There are tourist flamenco shows and then there is this. One performs flamenco. The other lives it. You will know the difference the moment you walk in.",
       },
