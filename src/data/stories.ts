@@ -25,6 +25,7 @@ export interface Story {
   readTime?: string;
   stream: Stream;
   pullQuote?: string;
+  hideStreamLabel?: boolean;
   destination?: Destination;
   topic?: Topic;
   readerNeed?: ReaderNeed;
