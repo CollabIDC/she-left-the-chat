@@ -35,9 +35,11 @@ const StoryCard = ({ story, index = 0 }: StoryCardProps) => {
             </div>
 
             <div className="p-7 flex flex-col flex-1">
-              <span className="inline-block self-start px-3 py-1 rounded-full bg-terracotta text-ivory font-label text-[11px] uppercase tracking-[0.18em] font-medium mb-4">
-                She Actually Did It
-              </span>
+              {!story.hideStreamLabel && (
+                <span className="inline-block self-start px-3 py-1 rounded-full bg-terracotta text-ivory font-label text-[11px] uppercase tracking-[0.18em] font-medium mb-4">
+                  She Actually Did It
+                </span>
+              )}
 
               <h3 className="font-display text-2xl font-semibold text-ivory mb-3 leading-snug group-hover:text-gold transition-colors">
                 {story.title}
