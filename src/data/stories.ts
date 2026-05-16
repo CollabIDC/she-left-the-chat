@@ -140,7 +140,7 @@ export const stories: Story[] = [
     image: "/posts/ribs-sandwich-hero-v2.png",
     readTime: "7 min read",
     stream: "she-actually-did-it",
-    hideStreamLabel: true,
+    
     pullQuote:
       "You can do everything right. And some years, Christmas Eve is just going to be a sandwich.",
   },

@@ -1,24 +1,17 @@
-## Why the images look unchanged
+# Restore the SHE ACTUALLY DID IT pill on the Christmas Eve card
 
-The PNG files were correctly replaced on disk:
-- `public/posts/now-what-hero.png` → new "dog with carrier" image
-- `public/posts/she-actually-did-it-hero.png` → new "woman at balcony with Chloe" image
+Single, minimal change so the card matches the other She Actually Did It cards exactly.
 
-Both are referenced by `src/data/stories.ts` and by the post HTML files. The cards on `/stories` and the post hero images load from those exact paths, so the new images are being served — your browser is just showing its cached copy from before the swap.
+## Change
 
-## Fix
+In `src/data/stories.ts`, remove `hideStreamLabel: true` from the `i-walked-an-hour-for-ribs` entry (or set it to `false`).
 
-Rename the new image files so the URL changes (cleanest cache bust, no code-side query strings to maintain):
+That's it — the card will now render the "She Actually Did It" pill, title, excerpt, date, and "Read on" in the same vertical rhythm as every other She Actually Did It card.
 
-1. Rename on disk:
-   - `public/posts/now-what-hero.png` → `public/posts/now-what-hero-v2.png`
-   - `public/posts/she-actually-did-it-hero.png` → `public/posts/she-actually-did-it-hero-v2.png`
+## Optional cleanup
 
-2. Update the two references for each:
-   - `src/data/stories.ts` — update the `image:` field for the `now-what-what-nobody-tells-you-about-after` and `she-actually-did-it` entries.
-   - `public/posts/now-what.html` — update the `<img src="/posts/now-what-hero.png">` to `-v2`.
-   - `public/posts/she-actually-did-it.html` — same update for its hero `<img>`.
+Leave the `hideStreamLabel?: boolean` flag on the `Story` type and the conditional in `StoryCard.tsx` in place — harmless, no other story uses it, and it stays available if needed later. (Can remove if you prefer a clean type.)
 
-No component logic, routing, or layout changes. After this, a normal page load will fetch the new files.
+## Verify
 
-(Alternative if you'd rather not rename: hard-refresh the preview with Cmd/Ctrl+Shift+R — same files, just a forced reload.)
+Reload `/stories` and confirm the Christmas Eve card now has the terracotta SHE ACTUALLY DID IT pill above the title, matching the other cards in the section.
