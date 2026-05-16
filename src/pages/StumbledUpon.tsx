@@ -28,7 +28,7 @@ const C = {
 };
 
 const PLACEHOLDER =
-  "https://images.unsplash.com/photo-1543783207-ec64e4d95325?w=900&q=70";
+  "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=900&q=70";
 
 type Post = {
   title: string;
@@ -64,6 +64,7 @@ const sections: Section[] = [
       {
         title: "The Bookstore That Exists Because of a Love Story",
         slug: "the-bookstore-that-exists-because-of-a-love-story",
+        image: "/posts/images/bookstore-hero.jpg",
         teaser:
           "Most bookstores in Madrid sell books. This one exists because someone refused to let a love story end. It has been here for decades, and almost no one outside the neighborhood knows why.",
       },
@@ -90,6 +91,7 @@ const sections: Section[] = [
         title: "The Night Flamenco Stopped Time",
         cardTitle: "Tablao de la Villa",
         slug: "tablao-de-la-villa",
+        image: "/posts/images/tablao-hero.jpg",
         teaser:
           "There are tourist flamenco shows and then there is this. One performs flamenco. The other lives it. You will know the difference the moment you walk in.",
       },
