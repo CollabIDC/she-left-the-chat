@@ -13,6 +13,7 @@ const POST_FILES: Record<string, string> = {
   "she-actually-did-it": "/posts/she-actually-did-it.html",
   "now-what-what-nobody-tells-you-about-after": "/posts/now-what.html",
   "i-walked-an-hour-for-ribs": "/posts/ribs-sandwich.html",
+  "she-made-sure-i-wasnt-alone-at-midnight": "/posts/midnight-facetime.html",
 };
 
 const BlogPost = () => {

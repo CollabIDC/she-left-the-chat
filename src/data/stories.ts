@@ -133,6 +133,18 @@ export const stories: Story[] = [
       "Standing on faith does not always look like peace. Sometimes it looks like a long Wednesday with nowhere to be and a dog who wants to go home and a phone that cannot ring for six more hours.",
   },
   {
+    slug: "she-made-sure-i-wasnt-alone-at-midnight",
+    title: "She Made Sure I Wasn't Alone at Midnight",
+    excerpt:
+      "The night I realized that choosing yourself does not mean the people who matter forget about you.",
+    date: "January 2026",
+    image: "/posts/midnight-facetime-hero.png",
+    readTime: "6 min read",
+    stream: "she-actually-did-it",
+    pullQuote:
+      "Not enough people talk about the ones who quietly make sure you are held while you figure out how to stay.",
+  },
+  {
     slug: "i-walked-an-hour-for-ribs",
     title: "I Walked an Hour for Ribs and Christmas Eve Dinner Was a Sorry Ham Sandwich",
     excerpt: "This was not how Christmas Eve was supposed to go.",
