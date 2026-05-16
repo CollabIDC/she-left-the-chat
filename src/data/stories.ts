@@ -25,6 +25,7 @@ export interface Story {
   readTime?: string;
   stream: Stream;
   pullQuote?: string;
+  hideStreamLabel?: boolean;
   destination?: Destination;
   topic?: Topic;
   readerNeed?: ReaderNeed;
@@ -134,12 +135,12 @@ export const stories: Story[] = [
   {
     slug: "i-walked-an-hour-for-ribs",
     title: "I Walked an Hour for Ribs and Christmas Eve Dinner Was a Sorry Ham Sandwich",
-    excerpt:
-      "A Christmas Eve in Madrid that went sideways, a 70 euro lesson, and the family Zoom I missed by 45 minutes.",
+    excerpt: "This was not how Christmas Eve was supposed to go.",
     date: "December 24, 2024",
-    image: "/posts/ribs-sandwich-hero.png",
+    image: "/posts/ribs-sandwich-hero-v2.png",
     readTime: "7 min read",
     stream: "she-actually-did-it",
+    hideStreamLabel: true,
     pullQuote:
       "You can do everything right. And some years, Christmas Eve is just going to be a sandwich.",
   },
