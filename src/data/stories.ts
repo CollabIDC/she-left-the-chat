@@ -125,7 +125,7 @@ export const stories: Story[] = [
     title: "Now What: What Nobody Tells You About After",
     excerpt:
       "The achievement, the arrival, and the silence that follows when the goal is done and the life has not filled in yet.",
-    date: "January 2025",
+    date: "January 2026",
     image: "/posts/now-what-hero-v2.png",
     readTime: "8 min read",
     stream: "she-actually-did-it",
