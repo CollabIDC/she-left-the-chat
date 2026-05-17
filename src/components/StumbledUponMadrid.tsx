@@ -55,9 +55,6 @@ const anim = (i: number) => ({
 });
 
 const StumbledUponMadrid = () => {
-  const bookstoreStory = stories.find(
-    (s) => s.slug === "the-bookstore-that-exists-because-of-a-love-story"
-  )!;
 
   return (
     <section className="py-24 bg-background">
