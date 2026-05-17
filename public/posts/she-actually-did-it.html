@@ -39,6 +39,13 @@
     object-fit: cover;
     display: block;
   }
+  .hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.0) 35%, rgba(0,0,0,0.55) 100%);
+    z-index: 1;
+  }
   .hero-content {
     position: absolute;
     inset: 0;
@@ -63,11 +70,12 @@
   .hero-title {
     font-family: 'Playfair Display', serif;
     font-weight: 700;
-    font-size: clamp(40px, 7vw, 84px);
+    font-size: clamp(36px, 6vw, 72px);
     line-height: 1.05;
     letter-spacing: -0.01em;
     max-width: 900px;
     margin-bottom: 18px;
+    text-shadow: 0 2px 24px rgba(0,0,0,0.55);
   }
   .hero-subhead {
     font-family: 'Playfair Display', serif;
@@ -170,7 +178,11 @@
 <body>
 
   <section class="hero">
-    <img src="/posts/she-actually-did-it-hero-v2.png" alt="She Actually Did It — a woman on a Madrid balcony at golden hour looking out over Gran Vía" />
+    <img src="/posts/she-actually-did-it-hero-v2.png" alt="A woman on a Madrid balcony at golden hour looking out over Gran Vía" />
+    <div class="hero-content">
+      <h1 class="hero-title">My Grandmother Did It. My Mother Did It. I Did It.</h1>
+      <div class="hero-meta">By Kimberly</div>
+    </div>
   </section>
 
   <article class="post-body">
