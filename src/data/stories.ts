@@ -136,7 +136,7 @@ export const stories: Story[] = [
     slug: "she-made-sure-i-wasnt-alone-at-midnight",
     title: "She Made Sure I Wasn't Alone at Midnight",
     excerpt:
-      "The night I realized that choosing yourself does not mean the people who matter forget about you.",
+      "One week in. No mirrors. No English. No familiar faces. And then my phone rang.",
     date: "January 2026",
     image: "/posts/midnight-facetime-hero.png",
     readTime: "6 min read",
@@ -158,9 +158,9 @@ export const stories: Story[] = [
   },
   {
     slug: "she-actually-did-it",
-    title: "She Actually Did It",
+    title: "My Grandmother Did It. My Mother Did It. I Did It.",
     excerpt:
-      "The morning the second-guessing went quiet, and the life I'd been rehearsing in my head finally became the one I was living.",
+      "Three women. Three generations. One pattern nobody thought to question. Until now.",
     date: "December 2025",
     image: "/posts/she-actually-did-it-hero-v2.png",
     readTime: "6 min read",
