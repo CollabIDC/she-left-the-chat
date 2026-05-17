@@ -72,6 +72,7 @@ const sections: Section[] = [
         title: "There Is a Portal to New Orleans Hiding in Chamberí",
         cardTitle: "Trikki",
         slug: "trikki-new-orleans-chamberi",
+        image: "/posts/images/trikki-hero.jpg",
         teaser:
           "On paper it should not work. The concept is too specific, the location too quiet. In practice it is exactly the kind of place Madrid keeps producing and the rest of the world has not caught up to yet.",
       },
