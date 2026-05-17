@@ -161,7 +161,7 @@ export const stories: Story[] = [
     title: "She Actually Did It",
     excerpt:
       "The morning the second-guessing went quiet, and the life I'd been rehearsing in my head finally became the one I was living.",
-    date: "May 2026",
+    date: "December 2025",
     image: "/posts/she-actually-did-it-hero-v2.png",
     readTime: "6 min read",
     stream: "she-actually-did-it",
