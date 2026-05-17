@@ -100,42 +100,6 @@ const StumbledUponMadrid = () => {
           })}
         </div>
 
-        {/* Featured bookstore story */}
-        <motion.div {...anim(7)}>
-          <Link
-            to="/stumbled-upon"
-            className="block bg-ink rounded-xl overflow-hidden group"
-          >
-            <div className="grid md:grid-cols-2">
-              <div className="aspect-[16/10] md:aspect-auto overflow-hidden">
-                <img
-                  src={featuredBookstore}
-                  alt="Warm bookstore interior with amber lighting"
-                  loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-              </div>
-              <div className="p-8 md:p-10 flex flex-col justify-center">
-                <h3 className="font-display text-2xl md:text-3xl font-bold text-ivory mb-4 leading-tight group-hover:text-gold transition-colors">
-                  {bookstoreStory.title}
-                </h3>
-                {bookstoreStory.pullQuote && (
-                  <blockquote className="border-l-[3px] border-gold pl-5 mb-4">
-                    <p className="font-display italic text-lg text-ivory/80 leading-relaxed">
-                      "{bookstoreStory.pullQuote}"
-                    </p>
-                  </blockquote>
-                )}
-                <p className="font-body text-ivory/70 leading-relaxed mb-6 text-sm">
-                  Inside Secret Kingdoms, the English language bookstore in Madrid that a British-Spanish couple built for a community that did not know it needed them yet.
-                </p>
-                <span className="inline-flex items-center gap-2 font-body text-sm text-gold group-hover:gap-3 transition-all">
-                  Read the Story <ArrowRight className="w-4 h-4" />
-                </span>
-              </div>
-            </div>
-          </Link>
-        </motion.div>
       </div>
     </section>
   );
