@@ -1,42 +1,25 @@
-## Plan: Restore Trikki post hero image
+## Fix: Restore bullfight image on the Stumbled Upon card
 
-### Scope
-Only `/stumbled-upon/trikki-new-orleans-chamberi` post page. No other page, card, listing, or the First Time in Madrid post will be touched.
+### What's wrong
+In `src/pages/StumbledUpon.tsx`, the "The Bullfight" post entry (in the "Old Madrid" section) has no `image` field. The `PostCard` component falls back to a generic Unsplash placeholder when `image` is missing — that's why the card looks wrong.
 
-### Steps
+The actual file `public/posts/images/bullfight-hero.jpg` already exists and is used correctly on the post hero.
 
-1. **Save the uploaded gumbo image** to the same folder the other post heroes live in:
-   - Copy `user-uploads://Gumbo.png` → `public/posts/images/trikki-hero.jpg`
-   - This matches the existing convention used by `bookstore-hero.jpg` and `tablao-hero.jpg`.
+### The change (one line, one file)
+`src/pages/StumbledUpon.tsx`, in the Bullfight post object (~line 110), add the image path — same pattern Bookstore and Tablao already use:
 
-2. **Replace the placeholder in `public/posts/trikki-new-orleans-chamberi.html`:**
-   - Current line 251 is:
-     ```html
-     <div class="hero-placeholder">Hero image placeholder</div>
-     ```
-   - Replace with:
-     ```html
-     <img class="hero-image" src="/posts/images/trikki-hero.jpg" alt="Bowl of gumbo at Trikki in Chamberí, Madrid" />
-     ```
-   - This is the exact same pattern used by the Bookstore and Tablao post pages.
-
-3. **No CSS changes.** The existing `.hero-image` rule on the Trikki page is already identical to Bookstore/Tablao:
-   - `width: 100%`
-   - `object-fit: cover`
-   - `display: block`
-   - `height: 480px`
-
-### One thing to confirm before I build
-
-Your message says **"height 420 to 450px"**, but you also said **"match the same hero image styling as the Bookstore and Tablao post pages exactly."** Those two pages currently use **480px**. I will not guess — please pick one:
-
-- **A)** Match Bookstore/Tablao exactly → keep `height: 480px` (no CSS change).
-- **B)** Use the 420–450px range you specified → change Trikki's `.hero-image` and `.hero-placeholder` height to `440px` (Trikki only, Bookstore and Tablao untouched).
+```ts
+{
+  title: "The Bullfight",
+  slug: "the-bullfight",
+  image: "/posts/images/bullfight-hero.jpg",
+  teaser: "I went. I had opinions before I arrived. ...",
+},
+```
 
 ### What will NOT change
-- No edits to the Stumbled Upon listing or any card images.
-- No edits to the First Time in Madrid post.
-- No edits to Bookstore or Tablao pages.
-- No new components, no routing changes, no style-token changes.
+- No edits to the bullfight post page itself.
+- No edits to any other card, section, or image.
+- No CSS, no routing, no component changes.
 
-Reply with **A** or **B** and I'll implement.
+Approve and I'll make the one-line edit.
