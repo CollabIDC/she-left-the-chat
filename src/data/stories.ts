@@ -148,7 +148,7 @@ export const stories: Story[] = [
     slug: "i-walked-an-hour-for-ribs",
     title: "I Walked an Hour for Ribs and Christmas Eve Dinner Was a Sorry Ham Sandwich",
     excerpt: "This was not how Christmas Eve was supposed to go.",
-    date: "December 24, 2024",
+    date: "December 2025",
     image: "/posts/ribs-sandwich-hero-v2.png",
     readTime: "7 min read",
     stream: "she-actually-did-it",
