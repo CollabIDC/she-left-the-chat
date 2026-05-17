@@ -5,7 +5,12 @@ import StoryCard from "@/components/StoryCard";
 import { stories } from "@/data/stories";
 
 const SheActuallyDidIt = () => {
-  const filtered = stories.filter((s) => s.stream === "she-actually-did-it");
+  const filtered = [
+    stories.find((s) => s.slug === "she-actually-did-it")!,
+    stories.find((s) => s.slug === "i-walked-an-hour-for-ribs")!,
+    stories.find((s) => s.slug === "she-made-sure-i-wasnt-alone-at-midnight")!,
+    stories.find((s) => s.slug === "now-what-what-nobody-tells-you-about-after")!,
+  ];
 
   return (
     <div className="min-h-screen bg-background">
