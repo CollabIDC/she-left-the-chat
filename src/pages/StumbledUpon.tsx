@@ -110,6 +110,7 @@ const sections: Section[] = [
       {
         title: "The Bullfight",
         slug: "the-bullfight",
+        image: "/posts/images/bullfight-hero.jpg",
         teaser:
           "I went. I had opinions before I arrived. I have different ones now. This is not a post about whether you should go. It is a post about what actually happens when you do.",
       },
