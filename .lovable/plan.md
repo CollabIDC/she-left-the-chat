@@ -1,17 +1,8 @@
-I’ll make only these targeted post-page changes:
+I found the problem: the words **“She Actually Did It”** are baked directly into the hero image file used by the ribs story (`/posts/ribs-sandwich-hero-v2.png`). That is why removing HTML eyebrow text did not fix what you’re seeing.
 
-1. **Three generations post (`public/posts/she-actually-did-it.html`)**
-   - Add the visible H1 heading after the hero image and before the article body:
-     `My Grandmother Did It. My Mother Did It. I Did It.`
-   - Use the existing post-page typography/style pattern so it appears as the post title, without changing body copy or the Stories card.
+Plan:
+1. Create a cleaned replacement version of the ribs hero image with the top text removed from the image itself.
+2. Save it over the existing public image path so the ribs post continues using the same image reference and no page structure changes are needed.
+3. Verify the ribs post file and image no longer contain/show the “She Actually Did It” label.
 
-2. **Now What post (`public/posts/now-what.html`)**
-   - Ensure the visible H1 heading appears in the hero/post header as:
-     `Now What: What Nobody Tells You About After`
-   - If it is currently hidden or only present in metadata/overlay markup, adjust only that heading area so it is visibly rendered.
-
-3. **Ribs and Christmas Eve post (`public/posts/ribs-sandwich.html`)**
-   - Remove any remaining `She Actually Did It` eyebrow/label from the post page entirely.
-   - Verify the text does not appear anywhere in that specific post file.
-
-I will not change the Stories page grid, card titles, card teasers, images, dates, navigation, or any other page.
+Scope: only the ribs and Christmas Eve story hero image will change. No Stories page cards, titles, dates, body copy, navigation, or other pages will be changed.
