@@ -81,12 +81,12 @@ const planningTools = [
 ];
 
 const comingSoon = [
-  { icon: Map, title: "City Cheat Sheets", desc: "Paris done. London next. More cities as the journey expands." },
-  { icon: Globe, title: "Country Matching App", desc: "Figure out where you actually want to live. Builds your personal roadmap." },
-  { icon: Route, title: "Move Abroad Roadmap", desc: "Step by step for people who are actually planning to do this." },
-  { icon: PawPrint, title: "Service Dog Travel Guide", desc: "Everything that comes with traveling internationally with a service animal." },
-  { icon: IdCard, title: "What I Learned About Visas", desc: "An honest overview of the options, what I researched, and what nobody told me upfront.", badge: "READ THE OVERVIEW", href: "/resources/spain-visa-overview" },
-  { icon: Clock, title: "Extended Stay Guide", desc: "For people settling in longer. The things you only learn by actually living here." },
+  { emoji: "🗺️", title: "City Cheat Sheets", desc: "Paris done. London next. More cities as the journey expands." },
+  { emoji: "🌍", title: "Country Matching App", desc: "Figure out where you actually want to live. Builds your personal roadmap." },
+  { emoji: "🧭", title: "Move Abroad Roadmap", desc: "Step by step for people who are actually planning to do this." },
+  { emoji: "🐾", title: "Service Dog Travel Guide", desc: "Everything that comes with traveling internationally with a service animal." },
+  { emoji: "📋", title: "What I Learned About Visas", desc: "An honest overview of the options, what I researched, and what nobody told me upfront.", live: true, button: "READ THE OVERVIEW", href: "/resources/spain-visa-overview" },
+  { emoji: "🏡", title: "Extended Stay Guide", desc: "For people settling in longer. The things you only learn by actually living here." },
 ];
 
 const pills = ["Before You Leave", "At the Airport", "Getting Around", "Food & Dining", "Culture", "Safety", "Essential Apps", "Money Tips"];
