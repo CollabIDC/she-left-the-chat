@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Download, ExternalLink, Map, Globe, Route, PawPrint, IdCard, Clock, FileText, Wifi } from "lucide-react";
+import { Download, FileText } from "lucide-react";
 
 const PAGE_BG = "#F2EDE4";
 const INK = "#1A1714";
@@ -81,12 +81,12 @@ const planningTools = [
 ];
 
 const comingSoon = [
-  { icon: Map, title: "City Cheat Sheets", desc: "Paris done. London next. More cities as the journey expands." },
-  { icon: Globe, title: "Country Matching App", desc: "Figure out where you actually want to live. Builds your personal roadmap." },
-  { icon: Route, title: "Move Abroad Roadmap", desc: "Step by step for people who are actually planning to do this." },
-  { icon: PawPrint, title: "Service Dog Travel Guide", desc: "Everything that comes with traveling internationally with a service animal." },
-  { icon: IdCard, title: "What I Learned About Visas", desc: "An honest overview of the options, what I researched, and what nobody told me upfront.", badge: "READ THE OVERVIEW", href: "/resources/spain-visa-overview" },
-  { icon: Clock, title: "Extended Stay Guide", desc: "For people settling in longer. The things you only learn by actually living here." },
+  { emoji: "🗺️", title: "City Cheat Sheets", desc: "Paris done. London next. More cities as the journey expands." },
+  { emoji: "🌍", title: "Country Matching App", desc: "Figure out where you actually want to live. Builds your personal roadmap." },
+  { emoji: "🧭", title: "Move Abroad Roadmap", desc: "Step by step for people who are actually planning to do this." },
+  { emoji: "🐾", title: "Service Dog Travel Guide", desc: "Everything that comes with traveling internationally with a service animal." },
+  { emoji: "📋", title: "What I Learned About Visas", desc: "An honest overview of the options, what I researched, and what nobody told me upfront.", live: true, button: "READ THE OVERVIEW", href: "/resources/spain-visa-overview" },
+  { emoji: "🏡", title: "Extended Stay Guide", desc: "For people settling in longer. The things you only learn by actually living here." },
 ];
 
 const pills = ["Before You Leave", "At the Airport", "Getting Around", "Food & Dining", "Culture", "Safety", "Essential Apps", "Money Tips"];
@@ -243,9 +243,9 @@ const Resources = () => {
                     flexDirection: "column",
                   }}
                 >
-                  <span style={{ fontSize: 24, display: "block", marginBottom: 10, lineHeight: 1 }}>{l.flag}</span>
-                  <h3 style={{ fontFamily: display, fontWeight: 700, fontSize: 15, color: INK, margin: "0 0 5px" }}>{l.name}</h3>
-                  <p style={{ fontFamily: lato, fontSize: 12, color: MUTED, lineHeight: 1.6, margin: 0, marginBottom: 14, flex: 1 }}>{l.desc}</p>
+                  <span style={{ fontSize: 26, display: "block", marginBottom: 10, lineHeight: 1 }}>{l.flag}</span>
+                  <h3 style={{ fontFamily: display, fontWeight: 700, fontSize: 14, color: INK, lineHeight: 1.3, margin: "0 0 5px" }}>{l.name}</h3>
+                  <p style={{ fontFamily: lato, fontSize: 12, color: MUTED, lineHeight: 1.6, margin: 0, marginBottom: l.href ? 14 : 0, flex: 1 }}>{l.desc}</p>
                   {l.href && (
                     <a
                       href={l.href}
@@ -322,8 +322,8 @@ const Resources = () => {
                     flexDirection: "column",
                   }}
                 >
-                  <span style={{ fontSize: 24, display: "block", marginBottom: 10, lineHeight: 1 }}>{p.emoji}</span>
-                  <h3 style={{ fontFamily: display, fontWeight: 700, fontSize: 15, color: INK, lineHeight: 1.3, margin: "0 0 5px" }}>{p.title}</h3>
+                  <span style={{ fontSize: 26, display: "block", marginBottom: 10, lineHeight: 1 }}>{p.emoji}</span>
+                  <h3 style={{ fontFamily: display, fontWeight: 700, fontSize: 14, color: INK, lineHeight: 1.3, margin: "0 0 5px" }}>{p.title}</h3>
                   <p style={{ fontFamily: lato, fontSize: 12, color: MUTED, lineHeight: 1.6, margin: 0 }}>{p.desc}</p>
                 </div>
               ))}
@@ -344,64 +344,48 @@ const Resources = () => {
               style={{
                 marginTop: 24,
                 background: "#FFFFFF",
-                border: `1.5px solid ${BORDER}`,
+                border: `1.5px solid ${GOLD}`,
                 borderRadius: 12,
-                padding: 24,
+                padding: 22,
                 display: "flex",
-                alignItems: "center",
-                gap: 20,
-                flexWrap: "wrap",
+                flexDirection: "column",
+                maxWidth: 360,
               }}
             >
-              <div
-                style={{
-                  background: "#EAF3F8",
-                  borderRadius: 10,
-                  width: 48,
-                  height: 48,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  flexShrink: 0,
-                }}
-              >
-                <Wifi color="#2A6B8A" size={24} />
-              </div>
-              <div style={{ flex: 1, minWidth: 240 }}>
-                <div style={{ fontFamily: lato, fontWeight: 700, fontSize: 15, color: INK }}>
-                  Compare eSIM Providers for Spain
-                </div>
-                <p style={{ fontFamily: lato, fontSize: 13, color: MUTED, margin: "6px 0 0", lineHeight: 1.6 }}>
-                  Jetpac, Holafly, Airalo, and Saily all work well for Spain. Use esimdb.com to compare current pricing before you buy.
-                </p>
-              </div>
+              <span style={{ fontSize: 26, display: "block", marginBottom: 10, lineHeight: 1 }}>📶</span>
+              <h3 style={{ fontFamily: display, fontWeight: 700, fontSize: 14, color: INK, lineHeight: 1.3, margin: "0 0 5px" }}>
+                Compare eSIM Providers for Spain
+              </h3>
+              <p style={{ fontFamily: lato, fontSize: 12, color: MUTED, lineHeight: 1.6, margin: 0, marginBottom: 14 }}>
+                Jetpac, Holafly, Airalo, and Saily all work well for Spain. Use esimdb.com to compare current pricing before you buy.
+              </p>
               <a
                 href="https://esimdb.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: 6,
+                  alignSelf: "flex-start",
+                  background: GOLD,
+                  color: INK,
                   fontFamily: lato,
                   fontWeight: 700,
-                  fontSize: 12,
+                  fontSize: 10,
                   letterSpacing: "0.1em",
                   textTransform: "uppercase",
-                  color: "#2A6B8A",
+                  padding: "8px 16px",
+                  borderRadius: 20,
                   textDecoration: "none",
                 }}
               >
-                Visit esimdb.com <ExternalLink size={14} />
+                Visit esimdb.com
               </a>
             </div>
           </section>
 
           <Dots />
 
-          {/* SECTION 4 — Coming Soon */}
+          {/* SECTION 4 — More Being Built */}
           <section>
-            <div style={sectionLabelStyle}>COMING SOON</div>
             <h2 style={sectionTitleStyle}>More Being Built</h2>
             <p style={sectionSubStyle}>The toolkit grows as the journey continues. Check back often.</p>
 
@@ -409,49 +393,49 @@ const Resources = () => {
               style={{
                 marginTop: 24,
                 display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+                gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
                 gap: 20,
               }}
             >
               {comingSoon.map((c) => {
-                const Icon = c.icon;
-                const isLink = !!c.href;
-                const inner = (
-                  <>
-                    <span
-                      style={{
-                        alignSelf: "flex-start",
-                        fontFamily: lato,
-                        fontWeight: 700,
-                        fontSize: 9,
-                        letterSpacing: "0.14em",
-                        textTransform: "uppercase",
-                        background: PAGE_BG,
-                        color: c.badge ? TERRA : FOOT,
-                        borderRadius: 20,
-                        padding: "5px 10px",
-                      }}
-                    >
-                      {c.badge || "Coming Soon"}
-                    </span>
-                    <Icon color={c.badge ? TERRA : BORDER} size={32} style={{ marginTop: 14 }} />
-                    <h3 style={{ fontFamily: display, fontWeight: 700, fontSize: 17, color: INK, margin: "10px 0 6px" }}>{c.title}</h3>
-                    <p style={{ fontFamily: lato, fontSize: 13, color: MUTED, lineHeight: 1.6, margin: 0 }}>{c.desc}</p>
-                  </>
-                );
                 const cardStyle: React.CSSProperties = {
                   background: "#FFFFFF",
-                  border: `1.5px dashed ${BORDER}`,
+                  border: c.live ? `1.5px solid ${GOLD}` : `1.5px solid ${BORDER}`,
+                  borderLeft: c.live ? `1.5px solid ${GOLD}` : `4px solid ${GOLD}`,
                   borderRadius: 12,
-                  padding: 20,
+                  padding: 22,
                   display: "flex",
                   flexDirection: "column",
                   textDecoration: "none",
                 };
-                return isLink ? (
-                  <a key={c.title} href={c.href} style={cardStyle}>{inner}</a>
-                ) : (
-                  <div key={c.title} style={cardStyle}>{inner}</div>
+                return (
+                  <div key={c.title} style={cardStyle}>
+                    <span style={{ fontSize: 26, display: "block", marginBottom: 10, lineHeight: 1 }}>{c.emoji}</span>
+                    <h3 style={{ fontFamily: display, fontWeight: 700, fontSize: 14, color: INK, lineHeight: 1.3, margin: "0 0 5px" }}>{c.title}</h3>
+                    <p style={{ fontFamily: lato, fontSize: 12, color: MUTED, lineHeight: 1.6, margin: 0, marginBottom: c.live ? 14 : 0, flex: 1 }}>{c.desc}</p>
+                    {c.live && c.href && (
+                      <a
+                        href={c.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                          alignSelf: "flex-start",
+                          background: GOLD,
+                          color: INK,
+                          fontFamily: lato,
+                          fontWeight: 700,
+                          fontSize: 10,
+                          letterSpacing: "0.1em",
+                          textTransform: "uppercase",
+                          padding: "8px 16px",
+                          borderRadius: 20,
+                          textDecoration: "none",
+                        }}
+                      >
+                        {c.button}
+                      </a>
+                    )}
+                  </div>
                 );
               })}
             </div>
