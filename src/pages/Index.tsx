@@ -16,7 +16,7 @@ const Index = () => {
         <LatestStories />
         <StumbledUponMadrid />
         <RealGuides />
-        <ResourcesPreview />
+        
         <CommunityTeaser />
       </main>
       <Footer />
