@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Honest Guide to Spanish Culture and Etiquette in Madrid | She Left the Chat</title>
+<meta name="description" content="How locals actually greet, eat, queue, and socialize. The unspoken rules that make or break your first weeks in Madrid." />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --cream: #F2EDE4;
+    --ink: #1A1714;
+    --warm-mid: #6B5E52;
+    --accent: #9B3A2A;
+    --gold: #B8952A;
+    --muted: #8A8078;
+    --dark: #2C1F1A;
+    --soft-line: #D8D0C4;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background-color: var(--cream);
+    color: var(--ink);
+    font-family: 'Lato', sans-serif;
+  }
+
+  .hero { width: 100%; height: 460px; overflow: hidden; }
+  .hero img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+  .post-header {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 72px 28px 0;
+    text-align: center;
+  }
+  .post-header .eyebrow {
+    font-family: 'Lato', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 22px;
+  }
+  .post-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: clamp(34px, 5vw, 48px);
+    line-height: 1.1;
+    color: var(--ink);
+    margin-bottom: 18px;
+  }
+  .post-header .subhead {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 19px;
+    color: var(--warm-mid);
+    margin-bottom: 28px;
+  }
+  .post-header .divider {
+    width: 48px;
+    height: 2px;
+    background: var(--accent);
+    margin: 0 auto 22px;
+  }
+  .post-header .byline {
+    font-family: 'Lato', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 24px;
+  }
+
+  .pills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+  .pill {
+    display: inline-block;
+    padding: 7px 16px;
+    border-radius: 999px;
+    color: var(--cream);
+    font-family: 'Lato', sans-serif;
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+  .pill.destination { background: var(--ink); }
+  .pill.topic { background: var(--gold); }
+  .pill.need { background: var(--accent); }
+
+  .post-body {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 56px 40px 80px;
+  }
+
+  .post-body p {
+    font-family: 'Lato', sans-serif !important;
+    font-size: 18px !important;
+    line-height: 1.9 !important;
+    color: var(--ink) !important;
+    font-weight: 400 !important;
+    margin-bottom: 1.7rem;
+  }
+
+  .post-body p.lead::first-letter {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-weight: 700;
+    float: left;
+    line-height: 0.78;
+    margin: 6px 12px 0 0;
+    color: var(--accent);
+  }
+
+  .post-body h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 28px;
+    color: var(--ink);
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .post-body h3 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--accent);
+    margin-top: 2.5rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .section-dots {
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    color: var(--accent);
+    opacity: 0.5;
+    letter-spacing: 0.5em;
+    margin: 2.8rem 0;
+  }
+
+  .pull-quote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 22px;
+    line-height: 1.5;
+    color: var(--ink);
+    border-left: 3px solid var(--accent);
+    padding-left: 28px;
+    margin: 3rem 0;
+  }
+
+  .mood-break {
+    background: var(--dark);
+    padding: 52px 40px;
+    margin: 3rem -40px;
+    text-align: center;
+  }
+  .mood-break p {
+    font-family: 'Playfair Display', serif !important;
+    font-style: italic;
+    font-size: 21px !important;
+    line-height: 1.5 !important;
+    color: rgba(242, 237, 228, 0.85) !important;
+    max-width: 640px;
+    margin: 0 auto !important;
+  }
+
+  .personal-note {
+    background: var(--dark);
+    border-radius: 4px;
+    padding: 34px;
+    margin: 3rem 0;
+  }
+  .personal-note .label {
+    font-family: 'Lato', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+  .personal-note p {
+    font-family: 'Lato', sans-serif !important;
+    font-size: 18px !important;
+    line-height: 1.9 !important;
+    color: rgba(242, 237, 228, 0.9) !important;
+    margin-bottom: 1rem;
+  }
+  .personal-note .signature {
+    border-top: 1px solid rgba(184, 149, 42, 0.3);
+    margin-top: 18px;
+    padding-top: 18px;
+    font-family: 'Playfair Display', serif !important;
+    font-style: italic;
+    font-size: 18px !important;
+    color: var(--gold) !important;
+    margin-bottom: 0 !important;
+  }
+
+  .insider-list { margin: 1rem 0 2rem; }
+  .insider-list .item {
+    position: relative;
+    padding: 18px 0 18px 28px;
+    border-bottom: 1px solid var(--soft-line);
+  }
+  .insider-list .item:last-child { border-bottom: none; }
+  .insider-list .item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 26px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+  .insider-list .item strong {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    color: var(--ink);
+    display: block;
+    margin-bottom: 4px;
+    font-size: 18px;
+  }
+  .insider-list .item span {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    color: var(--ink);
+    font-size: 18px;
+    line-height: 1.9;
+  }
+
+  .phrase-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0 2.5rem;
+    border-top: 1px solid var(--soft-line);
+    border-bottom: 1px solid var(--soft-line);
+  }
+  .phrase-table tr { border-bottom: 1px solid var(--soft-line); }
+  .phrase-table tr:last-child { border-bottom: none; }
+  .phrase-table tr:nth-child(odd) { background: var(--cream); }
+  .phrase-table tr:nth-child(even) { background: #ffffff; }
+  .phrase-table td {
+    padding: 14px 18px;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    vertical-align: middle;
+  }
+  .phrase-table td.en {
+    color: var(--muted);
+    font-weight: 400;
+    width: 50%;
+  }
+  .phrase-table td.es {
+    color: var(--ink);
+    font-weight: 700;
+  }
+
+  .closing-line {
+    font-family: 'Lato', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    margin-top: 64px;
+    padding-top: 28px;
+    border-top: 1px solid var(--soft-line);
+  }
+
+  @media (max-width: 640px) {
+    .hero { height: 320px; }
+    .post-body { padding: 48px 22px 64px; }
+    .mood-break { margin: 3rem -22px; padding: 44px 24px; }
+    .post-body p { font-size: 18px !important; }
+    .post-body h2 { font-size: 24px; }
+    .phrase-table td { padding: 12px 12px; font-size: 15px; }
+  }
+</style>
+</head>
+<body>
+
+  <section class="hero">
+    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600&q=80" alt="Madrid dining and tapas table, warm evening light" />
+  </section>
+
+  <header class="post-header">
+    <p class="eyebrow">The Real Guides · Madrid</p>
+    <h1>The Honest Guide to Spanish Culture and Etiquette in Madrid</h1>
+    <p class="subhead">How locals actually greet, eat, queue, and socialize. The unspoken rules that make or break your first weeks.</p>
+    <div class="divider"></div>
+    <p class="byline">By Kimberly &nbsp;·&nbsp; May 2026 &nbsp;·&nbsp; Madrid, Spain</p>
+  </header>
+
+  <div class="pills">
+    <span class="pill destination">Madrid</span>
+    <span class="pill topic">Culture and Etiquette</span>
+    <span class="pill need">Before You Go</span>
+  </div>
+
+  <article class="post-body">
+
+    <p class="lead">Let me tell you about the day I yelled in the Madrid metro.</p>
+
+    <p>Not on purpose. Not because I was upset. But because I saw a woman walking toward me who looked like she was from the States, and she saw me, and something in both of us just decided that was enough of a reason to try to communicate.</p>
+
+    <p>She was heading down the stairs to catch her train. Moving fast. She called out something that started with donde and I knew she was asking where I was from. I knew it. My A1 Spanish class had covered this. Buenos dias. Como estas. De donde eres. I had the notes. I had done the homework.</p>
+
+    <p>What my A1 class had not covered was real world speed. She was not speaking classroom Spanish. She was speaking actual Spanish, fast, fluid, running down the stairs while she talked, and my brain just completely left the building.</p>
+
+    <p>I froze for a full second.</p>
+
+    <p>And then I yelled after her.</p>
+
+    <p>She yelled back from the stairs.</p>
+
+    <p>I yelled again.</p>
+
+    <p>She yelled no.</p>
+
+    <p>I yelled no.</p>
+
+    <p>Two women having a full volume exchange in a Madrid metro station. One running for a train. One standing on the platform with her A1 Spanish scattered somewhere on the floor around her.</p>
+
+    <blockquote class="pull-quote">In a city that does not yell.</blockquote>
+
+    <p>The other passengers were very patient about the whole thing.</p>
+
+    <p>Spain had not changed. I was the one adapting. At full volume apparently.</p>
+
+    <p>That story is funny but it taught me something real about Madrid that no etiquette guide had prepared me for. This city has its own rhythm, its own unspoken rules, and its own beautiful way of doing things that will catch you off guard if nobody tells you what to look for. So consider this me telling you.</p>
+
+    <div class="section-dots">· · ·</div>
+
+    <h2>The Thing That Hit Me First: People Actually Acknowledge Each Other Here</h2>
+
+    <p>This sounds simple. It is not.</p>
+
+    <p>I got on the elevator in my building early in my first week. Small elevator. Holds maybe three adults comfortably. A neighbor got on. And instead of doing what you do in an American elevator, which is face the door, stare at your phone, and pretend the other person is a piece of furniture, he turned and looked at me. Said something in Spanish. Waited for a response.</p>
+
+    <p>I said hola because that much I had.</p>
+
+    <p>He nodded. We rode up together. He said something when he got off. I said gracias because that was the other word I had.</p>
+
+    <p>And then I stood there in the elevator thinking about it.</p>
+
+    <p>In Madrid people face inward in elevators. Not toward the door with their backs to everyone else. They face each other. They acknowledge each other. They speak when they get on and they speak when they get off. When you pass someone in the hallway they make eye contact and they speak. When someone is getting off the elevator and passing you in the lobby they speak.</p>
+
+    <blockquote class="pull-quote">It is such a small thing. And it is such a significant thing.</blockquote>
+
+    <p>Coming from a big American city where elevator rides are basically a collective agreement to pretend nobody else exists, this hit me in a quiet and meaningful way. People here see each other. Not in a dramatic way. Just in the basic human way of acknowledging that another person is present and worthy of a greeting.</p>
+
+    <p>I have thought about that elevator moment more than once since it happened.</p>
+
+    <div class="section-dots">· · ·</div>
+
+    <h2>The Unspoken Rules of Daily Life in Madrid</h2>
+
+    <h3>Speak when you enter a space</h3>
+
+    <p>When you walk into a small shop, a café, an elevator, or any space where people are gathered, a simple buenos dias or buenas tardes is expected and appreciated. Not doing it is not rude exactly but doing it immediately marks you as someone who respects the local way of doing things. It takes approximately one second and costs nothing.</p>
+
+    <p>Buenos dias means good morning and is used until around 2 PM. Buenas tardes means good afternoon and evening and is used from around 2 PM onward. Buenas noches means good night for late evening. Hola works any time when you cannot remember which one applies.</p>
+
+    <h3>The two kiss greeting</h3>
+
+    <p>In Spain people often greet each other with two light kisses on the cheeks, starting with the right cheek. This is mostly between women or between a man and a woman. Men typically shake hands unless they are close friends or family. Since COVID some people have shifted to handshakes or a simple wave. The rule is simple. Follow the other person's lead. If they come in for the kiss, go with it. If they extend a hand, shake it. Nobody is keeping score.</p>
+
+    <h3>Eye contact is normal and not aggressive</h3>
+
+    <p>In some American cities sustained eye contact from a stranger reads as a challenge or an invitation you did not ask for. In Madrid it is just how people communicate. Making eye contact, nodding, smiling slightly. These are normal acknowledgments of another human being. Lean into it. It feels good once you get used to it.</p>
+
+    <h3>Escalator etiquette is non-negotiable</h3>
+
+    <p>Stand on the right. Walk on the left. This rule applies on every single escalator in the Madrid metro and throughout public spaces in the city. It is not a suggestion. It is the system and everyone operates by it. Standing on the left side of an escalator will block commuters and you will know about it very quickly.</p>
+
+    <div class="section-dots">· · ·</div>
+
+    <h2>The Dining Culture: The Honest Version</h2>
+
+    <p>Let me be straight with you about something. Every Madrid guide will tell you about the late dining culture with great enthusiasm. Lunch at 2 PM. Dinner at 9 PM. Embrace the Spanish way.</p>
+
+    <p>Here is my honest experience. I have not fully embraced it. I am up early. I am usually in bed by 11 PM. The latest I have eaten dinner is maybe 4 or 5 PM. And that is completely fine. You do not have to eat on the Spanish schedule to have a wonderful time in Madrid. What you do need to know is that if you show up to a restaurant at 6 PM looking for dinner service you may be met with genuine confusion and an empty dining room. So know the schedule even if you choose to work around it.</p>
+
+    <h3>Breakfast (desayuno)</h3>
+    <p>Usually light. Coffee and a pastry or toast. Most cafes do not open until 8 or 9 AM.</p>
+
+    <h3>Lunch (comida)</h3>
+    <p>The main meal of the day. Starts around 2 PM. This is when most restaurants are at their best and when the Menu del Dia is served.</p>
+
+    <h3>Dinner (cena)</h3>
+    <p>Starts around 9 PM or later. Many restaurants do not even begin dinner service until 8:30 PM. If you are used to eating at 6 PM this will require adjustment or creative planning.</p>
+
+    <h2>Sobremesa: The Art of Lingering</h2>
+
+    <p>This is one cultural practice I have genuinely loved from the moment I encountered it and I say that as someone who has traveled internationally for 25 years.</p>
+
+    <p>Sobremesa literally means over the table. It is the Spanish tradition of lingering at the table after a meal, not to order more food necessarily, just to talk, to be present, to let the meal breathe before you go back to the rest of your day.</p>
+
+    <p>In the US dining culture is efficient. You eat, you pay, you leave. The table needs to turn over. The server needs the tip. There is always somewhere else to be.</p>
+
+    <p>In Spain your server is not going to rush you. Nobody is going to bring you the check until you ask for it. You could sit at that table for two hours after your last bite and nobody will bother you. This is not an accident or poor service. It is intentional. It is cultural. And it is connected to something important.</p>
+
+    <blockquote class="pull-quote">Service workers in Spain earn a living wage.</blockquote>
+
+    <p>I want to say that clearly because it reframes everything about the dining experience here. The tip is genuinely a bonus, not a survival mechanism. Nobody is rushing you out the door to turn the table because their rent depends on it. The relaxed dining pace and the living wage are connected and that connection is worth understanding before you arrive.</p>
+
+    <p>For those of us coming from the US where servers make as little as $2.35 an hour and depend entirely on tips to make a living, this feels almost radical. Sitting at a table for two hours after a meal. Nobody hovering. Nobody hinting. Just time and conversation and good company.</p>
+
+    <p>I wish we could import that one.</p>
+
+    <div class="mood-break">
+      <p>People here see each other. Not in a dramatic way. Just in the basic human way of acknowledging that another person is present and worthy of a greeting.</p>
+    </div>
+
+    <h2>Tipping: What You Actually Need to Know</h2>
+
+    <p>Tipping is not mandatory in Spain. It is not expected the way it is in the US. Service workers earn proper wages so a tip is genuinely a bonus for exceptional service rather than a baseline expectation.</p>
+
+    <p>At casual bars and cafes, round up or leave small change. Leaving one euro is considered generous. At sit down restaurants, rounding up or leaving 5% for good service is the local norm. Up to 10% for exceptional service at a nicer spot. For taxis, round up to the nearest euro. No tip is expected at fast food or counter service spots.</p>
+
+    <p>For visitors from the US please resist the 20% instinct. It is not expected and can feel out of place in a local setting. When in doubt watch what the person next to you does.</p>
+
+    <p>In more touristy areas you may see a tip option on the card reader. You are never obligated to use it. Cash tips go directly to the person who served you and are generally more appreciated.</p>
+
+    <h2>Eating in Restaurants</h2>
+
+    <p>When you walk in, greet staff with buenos dias or buenas tardes. The waiter will not bring you the check until you ask for it. This is not poor service. It is the culture. When you are ready to leave, catch their attention and say la cuenta, por favor.</p>
+
+    <p>Water is not automatically brought to the table. If you want water you will pay for bottled water unless you specifically ask for tap water. Say agua del grifo to request tap water, which is perfectly safe to drink in Madrid.</p>
+
+    <p>Not every restaurant in Madrid offers takeaway. Many traditional restaurants and bars simply do not do it. If you want to ask, the phrase is para llevar which means to take away. But ask before you order so you are not caught off guard if the answer is no.</p>
+
+    <div class="section-dots">· · ·</div>
+
+    <h2>Metro and Train Etiquette</h2>
+
+    <p>The metro has its own unwritten rulebook and knowing it before you arrive makes the whole experience smoother.</p>
+
+    <p>Stand to the sides of the doors and wait for passengers to exit before you board. Stepping onto a metro car before the exiting passengers have cleared the doorway is one of the fastest ways to create friction with locals who are just trying to get to work.</p>
+
+    <p>Keep your voice down. The metro is not a place for loud phone calls, speaker audio, or conversations at full volume.</p>
+
+    <p>Give up priority seats. The seats near the doors marked with specific symbols are reserved for elderly passengers, pregnant women, people with disabilities, and passengers with small children. Stand up without being asked.</p>
+
+    <p>Do not eat on the metro. It is not done.</p>
+
+    <p>If the car is crowded, move toward the center rather than hovering near the doors. Keep your bag off the seat next to you during busy periods.</p>
+
+    <h2>The Grocery Store Has Rules and I Did Not Know Them</h2>
+
+    <p>This one caught me completely off guard and I am still adjusting if I am being honest.</p>
+
+    <p>In Spanish grocery stores you do not touch the fruit and vegetables with your bare hands. You put on the plastic gloves provided near the produce section, select your produce, and then bag it. This is standard practice and expected of everyone.</p>
+
+    <p>I reached for an apple with my bare hand and the energy in that produce section shifted immediately.</p>
+
+    <div class="personal-note">
+      <p class="label">A Personal Note</p>
+      <p>I now use the gloves. Every time. Without being reminded. I do not roll my eyes. I do not think of it as one more thing to learn. I think of it as the city quietly teaching me how to belong in it.</p>
+      <p>That is the whole posture of being here. The rules are not against you. They are the language of the place. You either learn the language or you stay a stranger.</p>
+      <p class="signature">Spain has not changed. I am the one adapting.</p>
+    </div>
+
+    <h2>The Sneeze Situation</h2>
+
+    <p>I am going to tell you this because nobody else will and you deserve to be prepared.</p>
+
+    <p>Covering your mouth when you sneeze or cough is not as universally practiced in Spain as it is in the US. You will be in a public space and someone near you will sneeze and nothing will happen in the way you expect it to happen. No hand. No elbow. Just a sneeze, fully expressed, in the general direction of wherever it goes.</p>
+
+    <p>I have developed what I can only describe as a Matrix style defensive lean for these moments. A subtle shift. A slight turn. An attempt to create distance without making a scene. I do not always succeed. If you are particularly sensitive to this, carry hand sanitizer and consider a mask for crowded metro rides.</p>
+
+    <div class="section-dots">· · ·</div>
+
+    <h2>The Language Reality</h2>
+
+    <p>Your Spanish does not have to be perfect. It does not even have to be good. But making an effort matters enormously here and people genuinely appreciate it even when the result is imperfect.</p>
+
+    <p>The Spanish you learn in a classroom and the Spanish spoken on the street are two different experiences entirely. In class you learn de donde eres said clearly, at a measured pace, with every syllable accounted for. On the street someone running down metro stairs will say something that sounds like donde followed by several other words at a speed your brain cannot process in real time.</p>
+
+    <p>You will freeze. It is okay. Smile, say no hablo espanol or no entiendo, and do your best. Most people will slow down, switch to simpler words, or find another way to communicate. Madrid is a patient city when it comes to language barriers.</p>
+
+    <h3>Phrases worth knowing before you land</h3>
+
+    <table class="phrase-table">
+      <tbody>
+        <tr><td class="en">Hello</td><td class="es">Hola</td></tr>
+        <tr><td class="en">Good morning</td><td class="es">Buenos dias</td></tr>
+        <tr><td class="en">Good afternoon</td><td class="es">Buenas tardes</td></tr>
+        <tr><td class="en">Please</td><td class="es">Por favor</td></tr>
+        <tr><td class="en">Thank you</td><td class="es">Gracias</td></tr>
+        <tr><td class="en">Excuse me</td><td class="es">Perdona</td></tr>
+        <tr><td class="en">I don't speak Spanish</td><td class="es">No hablo espanol</td></tr>
+        <tr><td class="en">I don't understand</td><td class="es">No entiendo</td></tr>
+        <tr><td class="en">Do you speak English?</td><td class="es">Habla ingles?</td></tr>
+        <tr><td class="en">Where is...?</td><td class="es">Donde esta...?</td></tr>
+        <tr><td class="en">How much does this cost?</td><td class="es">Cuanto cuesta?</td></tr>
+        <tr><td class="en">The check please</td><td class="es">La cuenta, por favor</td></tr>
+        <tr><td class="en">To take away</td><td class="es">Para llevar</td></tr>
+        <tr><td class="en">Tap water please</td><td class="es">Agua del grifo, por favor</td></tr>
+        <tr><td class="en">Help</td><td class="es">Ayuda</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Learn Your Numbers Before You Go</h2>
+
+    <p>This is specific advice that most guides skip entirely. Learn your Spanish numbers before you arrive.</p>
+
+    <p>I went to get my boots repaired. The cobbler told me the price. I thought he said one number. He said a completely different number. I only had 15 euros. The actual price was 26 euros. The ATM did not cooperate. He was closing at 1 PM until 4. It was a 30 minute walk back. I did not go back.</p>
+
+    <p>The boots are still not fully repaired.</p>
+
+    <p>Learn your numbers. Uno through cien at minimum. It will save you from a very specific kind of confusion that I have now experienced personally so you do not have to.</p>
+
+    <h2>Shopping: Bring Your Own Bag</h2>
+
+    <p>Every single shop in Spain charges for plastic bags. Every one. The fee is small but you will be charged every time without exception. Carry a reusable bag everywhere. It will become second nature within a week.</p>
+
+    <h2>Safety: What Is Real and What Is Overhyped</h2>
+
+    <p>Madrid is genuinely safe. I want to say that clearly because some people read about European cities and imagine something more dramatic than the reality.</p>
+
+    <p>That said, like any major tourist destination, it pays to stay aware especially in crowded areas and on busy metro cars. Keep your bag zipped and close to your body. Keep your phone in a front pocket or use a wrist strap. Use a crossbody bag worn across the body not just on one shoulder.</p>
+
+    <p>Watch for common tourist scams. The friendship bracelet where someone ties something on your wrist without asking and then demands payment. Street gambling games that are rigged. People offering unsolicited gifts or roses. Clipboard petition signers followed by requests for cash. Walk away from all of these.</p>
+
+    <p>Seatbelts are mandatory for all passengers in every seat in Spain including the back seat. This is strictly enforced and fines apply. Whether you are in a taxi, a Cabify, a Bolt, or anyone else's car, buckle up the moment you get in.</p>
+
+    <h2>A Few More Things Worth Knowing</h2>
+
+    <p>Smoking is more common in Spain than most US or UK visitors are used to. Indoor smoking in restaurants and bars is not permitted but outdoor terraces are fair game. Be mindful when choosing where to sit outside.</p>
+
+    <p>Madrid is loud at night. Restaurants fill after 9 PM and streets stay active well past midnight on weekends. This is part of the charm. Pack those earplugs if you are a light sleeper.</p>
+
+    <p>Ask permission before photographing people especially in local markets and neighborhoods. A simple smile and gesture toward your camera is usually enough and most people will say yes.</p>
+
+    <div class="section-dots">· · ·</div>
+
+    <h2>What Other Guides Do Not Tell You</h2>
+
+    <div class="insider-list">
+      <div class="item">
+        <strong>The classroom Spanish and the street Spanish are different languages</strong>
+        <span>You will study. You will practice. You will feel prepared. And then someone will speak to you at full speed and your brain will simply stop working. This is normal. Smile, say no entiendo, and let the conversation find another way.</span>
+      </div>
+      <div class="item">
+        <strong>The acknowledgment culture will change how you see home</strong>
+        <span>After a few weeks of people saying hello in elevators and making eye contact in hallways you will go home to visit and the American elevator silence will feel genuinely strange.</span>
+      </div>
+      <div class="item">
+        <strong>The dining pace is connected to dignity</strong>
+        <span>When a server is not rushing you it is not because they are slow or inattentive. It is because they are not depending on your tip to survive. That changes the entire energy of a meal in ways that are hard to describe until you have experienced it.</span>
+      </div>
+      <div class="item">
+        <strong>The fruit gloves are not optional</strong>
+        <span>I am telling you this clearly so you do not have to learn it the way I did. Put the gloves on. Select your fruit. Bag it. Move on.</span>
+      </div>
+      <div class="item">
+        <strong>The sneeze dodge is a skill you will develop</strong>
+        <span>Nobody told me. Now I am telling you. You are welcome.</span>
+      </div>
+      <div class="item">
+        <strong>Numbers will matter more than you expect</strong>
+        <span>Learn uno through cien before you land. It will save you from at least one situation that ends with unrepaired boots and an ATM that did not cooperate.</span>
+      </div>
+      <div class="item">
+        <strong>Para llevar is not always available</strong>
+        <span>Not every restaurant offers takeaway. Eating is a sit down social experience here. Ask before you order. The phrase is para llevar.</span>
+      </div>
+      <div class="item">
+        <strong>Stand right walk left on every escalator</strong>
+        <span>Non-negotiable. Everywhere in the metro and in public spaces throughout the city. Standing on the left will block commuters and you will know about it immediately.</span>
+      </div>
+      <div class="item">
+        <strong>Seatbelts apply in the back seat</strong>
+        <span>Mandatory for all passengers in every seat. Fines apply. Buckle up the moment you get in any vehicle.</span>
+      </div>
+      <div class="item">
+        <strong>La Calima will affect your eyes without warning</strong>
+        <span>Saharan dust periodically drifts over Madrid and the sky can look perfectly beautiful while the invisible particles irritate your eyes. Pack glasses and check calimacanarias.com. Full details in the packing guide.</span>
+      </div>
+    </div>
+
+    <div class="section-dots">· · ·</div>
+
+    <p>Want updates as new posts drop? Subscribe to the She Left the Chat newsletter below. No spam. Just Madrid, the real version, delivered to your inbox.</p>
+
+    <p>Follow along on Instagram [INSTAGRAM HANDLE PLACEHOLDER]</p>
+
+    <p>Spain has not changed. I am the one adapting. And I will see you in the next post.</p>
+
+    <p class="closing-line">She Left the Chat &nbsp;·&nbsp; shelefthechat.com &nbsp;·&nbsp; By Kimberly &nbsp;·&nbsp; Madrid, Spain</p>
+
+  </article>
+
+</body>
+</html>
