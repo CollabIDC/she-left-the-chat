@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Everything You Need to Do Before You Fly to Madrid | She Left the Chat</title>
+<meta name="description" content="The pre-flight checklist nobody hands you. Paperwork, apps, money, and the small things that save you on day one in Madrid." />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --cream: #F2EDE4;
+    --ink: #1A1714;
+    --warm-mid: #6B5E52;
+    --accent: #9B3A2A;
+    --gold: #B8952A;
+    --muted: #8A8078;
+    --dark: #2C1F1A;
+    --soft-line: #D8D0C4;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background-color: var(--cream);
+    color: var(--ink);
+    font-family: 'Lato', sans-serif;
+  }
+
+  .hero {
+    width: 100%;
+    height: 460px;
+    overflow: hidden;
+  }
+  .hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .post-header {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 72px 28px 0;
+    text-align: center;
+  }
+  .post-header .eyebrow {
+    font-family: 'Lato', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 22px;
+  }
+  .post-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: clamp(34px, 5vw, 48px);
+    line-height: 1.1;
+    color: var(--ink);
+    margin-bottom: 18px;
+  }
+  .post-header .subhead {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 19px;
+    color: var(--warm-mid);
+    margin-bottom: 28px;
+  }
+  .post-header .divider {
+    width: 48px;
+    height: 2px;
+    background: var(--accent);
+    margin: 0 auto 22px;
+  }
+  .post-header .byline {
+    font-family: 'Lato', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 24px;
+  }
+
+  .pills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+  .pill {
+    display: inline-block;
+    padding: 7px 16px;
+    border-radius: 999px;
+    color: var(--cream);
+    font-family: 'Lato', sans-serif;
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+  .pill.destination { background: var(--ink); }
+  .pill.topic { background: var(--gold); }
+  .pill.need { background: var(--accent); }
+
+  .post-body {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 56px 40px 80px;
+  }
+
+  .post-body p {
+    font-family: 'Lato', sans-serif !important;
+    font-size: 18px !important;
+    line-height: 1.9 !important;
+    color: var(--ink) !important;
+    font-weight: 400 !important;
+    margin-bottom: 1.7rem;
+  }
+
+  .post-body p.lead::first-letter {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-weight: 700;
+    float: left;
+    line-height: 0.78;
+    margin: 6px 12px 0 0;
+    color: var(--accent);
+  }
+
+  .post-body h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 28px;
+    color: var(--ink);
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .post-body h3 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--accent);
+    margin-top: 2.5rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .section-dots {
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    color: var(--accent);
+    opacity: 0.5;
+    letter-spacing: 0.5em;
+    margin: 2.8rem 0;
+  }
+
+  .pull-quote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 22px;
+    line-height: 1.5;
+    color: var(--ink);
+    border-left: 3px solid var(--accent);
+    padding-left: 28px;
+    margin: 3rem 0;
+  }
+
+  .mood-break {
+    background: var(--dark);
+    padding: 52px 40px;
+    margin: 3rem -40px;
+    text-align: center;
+  }
+  .mood-break p {
+    font-family: 'Playfair Display', serif !important;
+    font-style: italic;
+    font-size: 21px !important;
+    line-height: 1.5 !important;
+    color: rgba(242, 237, 228, 0.85) !important;
+    max-width: 640px;
+    margin: 0 auto !important;
+  }
+
+  .personal-note {
+    background: var(--dark);
+    border-radius: 4px;
+    padding: 34px;
+    margin: 3rem 0;
+  }
+  .personal-note .label {
+    font-family: 'Lato', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+  .personal-note p {
+    font-family: 'Lato', sans-serif !important;
+    font-size: 16px !important;
+    line-height: 1.85 !important;
+    color: rgba(242, 237, 228, 0.85) !important;
+    margin-bottom: 1rem;
+  }
+  .personal-note .signature {
+    border-top: 1px solid rgba(184, 149, 42, 0.3);
+    margin-top: 18px;
+    padding-top: 18px;
+    font-family: 'Playfair Display', serif !important;
+    font-style: italic;
+    font-size: 17px !important;
+    color: var(--gold) !important;
+    margin-bottom: 0 !important;
+  }
+
+  .insider-list { margin: 1rem 0 2rem; }
+  .insider-list .item {
+    position: relative;
+    padding: 18px 0 18px 28px;
+    border-bottom: 1px solid var(--soft-line);
+  }
+  .insider-list .item:last-child { border-bottom: none; }
+  .insider-list .item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 26px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+  .insider-list .item strong {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    color: var(--ink);
+    display: block;
+    margin-bottom: 4px;
+    font-size: 18px;
+  }
+  .insider-list .item span {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    color: var(--ink);
+    font-size: 18px;
+    line-height: 1.9;
+  }
+
+  .closing-line {
+    font-family: 'Lato', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    margin-top: 64px;
+    padding-top: 28px;
+    border-top: 1px solid var(--soft-line);
+  }
+
+  @media (max-width: 640px) {
+    .hero { height: 320px; }
+    .post-body { padding: 48px 22px 64px; }
+    .mood-break { margin: 3rem -22px; padding: 44px 24px; }
+    .post-body p { font-size: 18px !important; }
+    .post-body h2 { font-size: 24px; }
+  }
+</style>
+</head>
+<body>
+
+  <section class="hero">
+    <img src="/posts/pre-flight-hero.png" alt="Flat lay of passport, boarding pass, phone, euros, and a pen on a warm ivory linen surface" />
+  </section>
+
+  <header class="post-header">
+    <p class="eyebrow">The Real Guides · Madrid</p>
+    <h1>Everything You Need to Do Before You Fly to Madrid</h1>
+    <p class="subhead">The pre-flight checklist nobody hands you. Paperwork, apps, money, and the small things that save you on day one.</p>
+    <div class="divider"></div>
+    <p class="byline">By Kimberly &nbsp;·&nbsp; May 2026 &nbsp;·&nbsp; Madrid, Spain</p>
+  </header>
+
+  <div class="pills">
+    <span class="pill destination">Madrid</span>
+    <span class="pill topic">Packing and Prep</span>
+    <span class="pill need">Before You Go</span>
+  </div>
+
+  <article class="post-body">
+
+    <p class="lead">I want to tell you about the moment it all became real.</p>
+
+    <p>It was not at the airport. It was not on the plane somewhere over the Atlantic in a seat that for the first time in my life had an actual meal service with multiple courses and a flight attendant who remembered my name. It was not even when the wheels touched down at Barajas and I thought okay, we are here.</p>
+
+    <p>It was in the car.</p>
+
+    <p>The driver who picked me up did not speak English. I did not speak Spanish. Chloe was done with the entire situation and had made her feelings very clear for the last several hours. We had four checked bags weighing 65 pounds each, a carry on roller suitcase, a shoulder bag approximately the size of a small country, and the particular silence of two people who have absolutely nothing to say to each other in any shared language. Madrid was going by outside the window and somewhere between the highway and my new neighborhood something very quiet happened.</p>
+
+    <blockquote class="pull-quote">Wow. I actually did it.</blockquote>
+
+    <p>No plan B. No return ticket. Just me, my dog, my luggage, and a city that was about to become home.</p>
+
+    <p>But let us back up. Because before that moment in the car there was a whole series of events I need to walk you through. Starting with the suitcase. The one that decided fifteen minutes before my driver arrived was the perfect time to give up on life entirely.</p>
+
+    <div class="section-dots">· · ·</div>
+
+    <h2>The Suitcase. Oh, The Suitcase.</h2>
+
+    <p>I am a program manager, corporate trainer, and AI consultant by profession. I build systems. I create contingency plans. I think three steps ahead for a living. I had packed my entire life into perfectly organized, color coded, categorically sorted luggage. Summer clothes in one bag. Sweaters in another. Pants in their own designated bag. It was honestly a masterpiece of organizational thinking.</p>
+
+    <p>And then the zipper said absolutely not.</p>
+
+    <p>Fifteen minutes before my driver was scheduled to arrive. That is when it happened. My friend who was there helping me, bless her entirely, started transferring everything into another suitcase. A smaller suitcase. Because of course it was smaller. Not everything fit. Decisions had to be made in real time about what was coming to Madrid and what was staying behind in Atlanta. Things I had carefully packed, cold weather clothes, my neti pot, my teas, my health supplements, my superfoods, all stayed behind because there was no room and absolutely no time.</p>
+
+    <p>I boarded that flight leaving pieces of my carefully organized life behind. And I want you to learn from this so you do not have to.</p>
+
+    <p>Check every zipper, wheel, and latch on every piece of luggage at least one week before you travel. Not the night before. Not the morning of. One full week before so you have time to replace, repair, or reorganize without a racing heart and a driver on the way.</p>
+
+    <h2>Pack Smart, Not by Category</h2>
+
+    <p>Here is the thing nobody tells you about packing for a long term stay abroad. Packing by category makes perfect organizational sense until the plan changes. And the plan will change.</p>
+
+    <p>I initially thought I would be making a return trip to pick up more of my things. When that became financially impractical I had one day to repack everything into what I would actually need for the next three to six months. One day.</p>
+
+    <p>Pack by priority instead. What do I need in the first 30 days regardless of season? What health and wellness items can I not easily replace abroad? What clothing covers the most occasions with the least space? What makes my living space feel like home for an extended stay?</p>
+
+    <h3>Things I Wish I Had Brought</h3>
+
+    <p>In between shoes. I had my Hokas, my Bonda booties which later betrayed me via zipper, my winter boots, and some Adidas that lean slightly dressy. What I did not have was anything for that transitional spring weather that is neither boots nor sneakers. Bring the in between shoes. You will want them.</p>
+
+    <p>Cold weather dress shoes. The repair shop and I had a disagreement about my booties and I lost.</p>
+
+    <p>Health and wellness items from home. Certain things simply do not exist here in the same form. My neti pot is still in Atlanta judging me from whatever corner it ended up in.</p>
+
+    <p>Warm weather clothing. More than I thought I would need.</p>
+
+    <p>Familiar food items, teas, supplements, and superfoods. You will be surprised what you miss and what is genuinely hard to find.</p>
+
+    <h3>Wear Your Bulkiest Shoes Onto The Plane</h3>
+
+    <p>I wore my Hokas because they are big, bulky, and would have taken up entirely too much space in an already stressed suitcase. Your feet will thank you on an eight hour flight and your luggage will thank you when it actually closes. This is a pro move and I am passing it along freely.</p>
+
+    <h3>Pack Your Carry On Bag Weeks In Advance</h3>
+
+    <p>Not days. Weeks. I started packing my carry on shoulder bag a full month before I left because I was not sure what I was going to need and I wanted a clear head making those decisions, not a stressed one. I used folders to organize everything by category. Documents in one folder. Financial items in another. I had a dedicated pouch for my euros because I had traveled to Europe before and came prepared with local currency. That carry on bag was the most intentional thing I packed and it showed.</p>
+
+    <h3>Do Not Forget</h3>
+
+    <p>Scissors in your checked bag obviously, not carry on. But bring them. You will need scissors and you will not think about it until 11 PM on a Sunday when every shop in your neighborhood is closed. A pen. Always. On the plane, at customs, everywhere. A notebook. Physical paper still matters especially when your phone is dead and your translation app is loading. A measuring tape. Make sure it has both inches AND centimeters on it. Everything in Europe is metric. An inches only measuring tape in a Madrid apartment is a very humbling experience. Boo on that. Two portable charging banks. Bring two. Not one. Two. If one of your charging banks has multiple plug end types built in, even better. Android, iPhone, iPad, all from one device. Download your Netflix shows, movies, podcasts, and anything else you want before you leave. Do not assume you will have WiFi on the plane or during your first few hours in a new apartment.</p>
+
+    <div class="section-dots">· · ·</div>
+
+    <h2>The Most Important Packing Rule of All</h2>
+
+    <p>Everything critical goes in your carry on. Every. Single. Document.</p>
+
+    <p>Visa paperwork. Dog paperwork. Passport copies. Insurance documents. All of it. In your carry on bag. Not your checked bags.</p>
+
+    <p>I know what you are thinking. I am going to get my checked bags before I get to customs so it does not matter. Here is the thing. Stress does interesting things to logical people. When you are moving abroad, managing luggage, managing a dog, navigating a new airport in a language you do not speak, the variable you can eliminate entirely is whether your important documents are accessible. Put them in your carry on and remove that variable completely.</p>
+
+    <blockquote class="pull-quote">Folders. Labeled. In your carry on. That is the system.</blockquote>
+
+    <h2>Before You Leave Home — Download These Apps First</h2>
+
+    <p>One of the best things you can do before you even board your flight is get your transportation apps downloaded and set up with payment. That way you can request a ride the moment you clear customs without fumbling around on your phone in an unfamiliar place.</p>
+
+    <h3>Rideshare Apps to Download</h3>
+
+    <p>Uber, works just like home. Cabify, very popular in Spain, reliable and well priced. Bolt, has dedicated pickup areas at the airport offering flat rate fares into the city.</p>
+
+    <p>Make sure your payment method is set up and verified before you travel. Do not wait until you land.</p>
+
+    <p>Always have your hotel or accommodation address saved in Spanish on your phone. Many taxi and rideshare drivers do not speak English, and being able to show them the exact address rather than trying to communicate it verbally will save you a lot of stress.</p>
+
+    <div class="section-dots">· · ·</div>
+
+    <h2>The Flight: Go Direct and Go Overnight</h2>
+
+    <p>If you can fly direct to Madrid, do it. An eight hour flight with a layover is unnecessary complexity on top of everything else you are already managing. Book the direct flight.</p>
+
+    <p>Book the overnight flight if you can. You leave in the evening, you arrive in Madrid in the morning, and your body thinks it just woke up. Madrid is just starting its day. You are synchronized from the jump. This is the closest thing to a jetlag strategy that actually works. I left Atlanta just after 7 PM and arrived in Madrid around 9:30 AM. Even with everything that happened before and after that flight, arriving in the morning gave me a full day to get settled.</p>
+
+    <p>On the cost. I used miles for my Delta One ticket and I want to say for the record that Delta One is an experience worth having if the opportunity presents itself. The food quality, the service, the attention to detail, genuinely exceptional. What it is not is spacious in the way you might expect. The cabin is designed around sleeping flat and dining well, not around sitting upright with room to stretch.</p>
+
+    <p>For those without miles, here is my honest advice. Do not go broke getting to Madrid and arrive with nothing to live on. Having money when you land matters more than the seat you sat in to get there. If you can afford a comfort upgrade, great. If you cannot, a direct overnight flight in economy still gets you there.</p>
+
+    <h2>Chloe and The Four Hour Negotiation</h2>
+
+    <p>Let me tell you about the flight.</p>
+
+    <p>I settled into my seat. The flight attendants were warm and wonderful and then they met Chloe. From that point forward she was the star of the cabin and I was simply her travel companion. They rearranged my entire setup so she could be comfortable. Tray repositioned. Everything adjusted. She had a better situation than I did honestly.</p>
+
+    <p>I learned on a previous trip that Chloe does not do the window seat. Aisle seat. Always. She needs to see the aisle. She needs to assess every single person who walks past. This is not negotiable and she will make that very clear if you forget.</p>
+
+    <p>For the first four hours of that flight I was sitting relatively upright. Chloe is small but she is a long dog. She did not have enough room to stretch out. Up. Down. Up. Down. Reposition. Adjust. Every person who walked past that aisle got the full Chloe assessment because she was awake, she was alert, and she had opinions about everyone.</p>
+
+    <p>It was not until I reclined my seat just slightly, just enough to stretch my legs out a little, that she finally had the length she needed. She stretched out. She settled. She slept for the last four hours of the flight like she had not spent the previous four hours conducting a full review of every passenger on that plane.</p>
+
+    <p>I did not sleep. But she was magnificent.</p>
+
+    <div class="mood-break">
+      <p>Wow. I actually did it.</p>
+    </div>
+
+    <h2>The Arrival: Four Bags, One Dog, Zero Keys, and a Driver Who Was Done</h2>
+
+    <p>My agent was scheduled to meet me at my new apartment.</p>
+
+    <p>The driver who picked me up at the airport did not speak English. I did not speak Spanish. We had managed the journey in companionable silence which was fine. What was not fine was when we arrived at my building, my agent was running about ten minutes behind, and the driver decided ten minutes was ten minutes too long to wait.</p>
+
+    <p>He unloaded all four of my 65 pound bags. My carry on roller. My shoulder bag. Chloe in her carrier. He got them inside the gate of the property. And then he left.</p>
+
+    <p>There I was. Inside the gate of an apartment building I had never entered before. No key. No Spanish. No agent yet. About 30 degrees outside. Chloe whining because it was cold and she did not have a sweater on. LOL. Chloe cannot pack. Her sweaters were absolutely in the suitcase. I just did not think to put one on her for the airport to apartment journey. That is on me entirely.</p>
+
+    <p>Spain had not changed. I was the one adapting. Freezing. Inside a gate. With six bags and a dog with an attitude about the temperature.</p>
+
+    <p>My agent arrived shortly after, got us inside, and I walked into my apartment for the first time.</p>
+
+    <p>I did not rent a furnished apartment. I rented furniture separately on a short term basis because I did not want to arrive in a new country on a Sunday, alone, after an overnight flight, and walk into an empty space. That furniture rental was one of the smartest decisions of this entire move. The apartment was set up and waiting and when I walked in and looked around at this space that was mine, in this city I had chosen, after everything it had taken to get there, something very simple happened.</p>
+
+    <blockquote class="pull-quote">I live here. This is my home.</blockquote>
+
+    <p>And then I looked at Chloe.</p>
+
+    <p>I had packed a brand new bed for her. Identical to the one she slept on every night in Atlanta. Same size. Same style. I wanted her to feel at home from the moment we walked in. She walked past it, gave it approximately one sniff of acknowledgment, and went and laid down next to her carrier.</p>
+
+    <p>She stayed there for the next month and a half.</p>
+
+    <p>I bought her a whole bed. A whole identical thoughtful loving bed. Spain had not changed. Chloe was also the one adapting. At her own pace. On her own terms. As is her right apparently.</p>
+
+    <div class="personal-note">
+      <p class="label">A Personal Note</p>
+      <p>If you are reading this somewhere between deciding and doing, I want you to know that the night before you fly is not the moment you become brave. The brave part already happened the day you decided. Everything after that is just logistics, suitcase zippers, and trusting that the version of you who made this choice knew what she was doing.</p>
+      <p class="signature">Spain has not changed. I am the one adapting.</p>
+    </div>
+
+    <div class="section-dots">· · ·</div>
+
+    <h2>Your Pre-Departure Checklist</h2>
+
+    <h3>One Month Before</h3>
+
+    <p>Check and test every piece of luggage, zippers, wheels, handles, everything. Research and book your flight, direct and overnight if possible. Download and set up all essential apps, Uber, Cabify, Bolt, Google Translate, Metro Madrid, WhatsApp, Citymapper. Purchase or arrange your eSIM. Check with your carrier first about international plans. Buy your plug adapter. Spain uses Type C and F plugs at 220V. Notify your bank and credit cards of your travel. If traveling with a dog, schedule your vet visit for required health certificates and documentation. Research shipping companies if needed and ask every question.</p>
+
+    <h3>Two Weeks Before</h3>
+
+    <p>Repack strategically by priority not category. Confirm your accommodation and save the address in Spanish on your phone. Download offline Google Maps for Madrid. Arrange airport transportation and confirm pickup details. Download entertainment on your tablet or phone for the flight. Check current public holiday dates at esmadrid.com for your arrival period.</p>
+
+    <h3>One Week Before</h3>
+
+    <p>Final luggage check, weight, zippers, contents. Confirm all apps are set up with payment verified. Confirm pickup arrangements and build in extra time. Make sure your measuring tape has centimeters on it.</p>
+
+    <h3>Day Before</h3>
+
+    <p>Charge all devices and both portable charging banks. Pack your carry on with everything you need for the first 24 hours in case checked bags are delayed. If traveling with a dog, begin the fasting schedule your vet recommended. Put on your Hokas or whatever your bulkiest shoes are so they do not take up suitcase space.</p>
+
+    <h3>Day Of</h3>
+
+    <p>Leave earlier than you think you need to. If traveling with a dog, build in 30 minutes before entering the airport for a proper outdoor stop. Bring a pen for the customs forms on the plane. Have your accommodation address saved and ready to show your driver. All documents in your carry on. Every single one. Take a breath. You have done everything you can do. The rest is Madrid's job now.</p>
+
+    <div class="section-dots">· · ·</div>
+
+    <h2>What Other Guides Do Not Tell You</h2>
+
+    <div class="insider-list">
+      <div class="item">
+        <strong>Check your zippers a week out, not the morning of</strong>
+        <span>I learned this fifteen minutes before my driver arrived. One week gives you options. Fifteen minutes gives you a smaller suitcase and a lot of hard decisions.</span>
+      </div>
+      <div class="item">
+        <strong>Pack by priority, not by category</strong>
+        <span>Category packing makes sense until the plan changes. Pack what you need first, not what goes together neatly.</span>
+      </div>
+      <div class="item">
+        <strong>Wear your bulkiest shoes onto the plane</strong>
+        <span>They take up too much suitcase space. Wear them. Your feet will be fine on an eight hour flight.</span>
+      </div>
+      <div class="item">
+        <strong>The carry on is for documents, not just convenience</strong>
+        <span>Visa paperwork, passport copies, insurance, all of it. In the carry on. Always.</span>
+      </div>
+      <div class="item">
+        <strong>Start your carry on a month early</strong>
+        <span>You will remember things you would have forgotten if you started the night before.</span>
+      </div>
+      <div class="item">
+        <strong>Shout Wipes are hard to find in Spain</strong>
+        <span>Bring the orange and blue stain remover wipes from home. Small and useful.</span>
+      </div>
+      <div class="item">
+        <strong>Your neti pot will not have a Spanish equivalent</strong>
+        <span>If you use one regularly, bring it. The Spanish version is not the same.</span>
+      </div>
+      <div class="item">
+        <strong>The measuring tape needs centimeters</strong>
+        <span>Inches only is useless in a European apartment. Boo on that. I said what I said.</span>
+      </div>
+      <div class="item">
+        <strong>Two charging banks, not one</strong>
+        <span>You will use your phone constantly. Two banks means you are never stranded with a dead device.</span>
+      </div>
+      <div class="item">
+        <strong>Scissors in checked bags save you on Sundays</strong>
+        <span>Everything closes on Sunday. The scissors you forgot will be needed at 11 PM. Pack them.</span>
+      </div>
+      <div class="item">
+        <strong>Download your entertainment before you fly</strong>
+        <span>Do not assume WiFi. Download everything. Your first few hours in a new apartment may be offline.</span>
+      </div>
+      <div class="item">
+        <strong>Glovo is your first week lifeline</strong>
+        <span>Download it before you land. You can order food, groceries, and essentials delivered to your door while you figure out your neighborhood. Delivery fees vary and menu prices may differ slightly from ordering direct, but for the first few days it is genuinely useful.</span>
+      </div>
+    </div>
+
+    <div class="section-dots">· · ·</div>
+
+    <p>Want updates as new posts drop? Subscribe to the She Left the Chat newsletter below. No spam. Just Madrid, the real version, delivered to your inbox.</p>
+
+    <p>Follow along on Instagram <strong>@shelefthechat</strong>.</p>
+
+    <p>Spain has not changed. I am the one adapting. And I will see you in the next post.</p>
+
+    <p class="closing-line">She Left the Chat &nbsp;·&nbsp; shelefthechat.com &nbsp;·&nbsp; By Kimberly &nbsp;·&nbsp; Madrid, Spain</p>
+
+  </article>
+
+</body>
+</html>

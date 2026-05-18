@@ -65,14 +65,13 @@ export const stories: Story[] = [
     readerNeed: "Before You Go",
   },
   {
-    slug: "everything-before-you-fly-to-madrid",
+    slug: "everything-you-need-to-do-before-you-fly-to-madrid",
     title: "Everything You Need to Do Before You Fly to Madrid",
     excerpt:
-      "The pre-flight checklist nobody hands you — paperwork, apps, money, and the small things that save you on day one.",
-    date: "January 2025",
-    image:
-      "https://images.unsplash.com/photo-1553531384-cc64ac80f931?w=1200&q=80",
-    readTime: "7 min read",
+      "The pre-flight checklist nobody hands you. Paperwork, apps, money, and the small things that save you on day one.",
+    date: "May 2026",
+    image: "/posts/pre-flight-hero.png",
+    readTime: "12 min read",
     stream: "view-from-here",
     destination: "Madrid",
     topic: "Packing and Prep",

@@ -15,6 +15,8 @@ const POST_FILES: Record<string, string> = {
   "i-walked-an-hour-for-ribs": "/posts/ribs-sandwich.html",
   "she-made-sure-i-wasnt-alone-at-midnight": "/posts/midnight-facetime.html",
   "first-time-in-madrid": "/posts/first-time-in-madrid.html",
+  "everything-you-need-to-do-before-you-fly-to-madrid":
+    "/posts/everything-you-need-to-do-before-you-fly-to-madrid.html",
 };
 
 const BlogPost = () => {
