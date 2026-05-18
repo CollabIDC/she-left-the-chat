@@ -243,9 +243,9 @@ const Resources = () => {
                     flexDirection: "column",
                   }}
                 >
-                  <span style={{ fontSize: 24, display: "block", marginBottom: 10, lineHeight: 1 }}>{l.flag}</span>
-                  <h3 style={{ fontFamily: display, fontWeight: 700, fontSize: 15, color: INK, margin: "0 0 5px" }}>{l.name}</h3>
-                  <p style={{ fontFamily: lato, fontSize: 12, color: MUTED, lineHeight: 1.6, margin: 0, marginBottom: 14, flex: 1 }}>{l.desc}</p>
+                  <span style={{ fontSize: 26, display: "block", marginBottom: 10, lineHeight: 1 }}>{l.flag}</span>
+                  <h3 style={{ fontFamily: display, fontWeight: 700, fontSize: 14, color: INK, lineHeight: 1.3, margin: "0 0 5px" }}>{l.name}</h3>
+                  <p style={{ fontFamily: lato, fontSize: 12, color: MUTED, lineHeight: 1.6, margin: 0, marginBottom: l.href ? 14 : 0, flex: 1 }}>{l.desc}</p>
                   {l.href && (
                     <a
                       href={l.href}
