@@ -21,6 +21,7 @@ const RealGuidesPage = () => {
 
   const filtered = stories.filter((s) => {
     if (s.stream !== "view-from-here") return false;
+    if (s.section === "stumbled-upon-madrid") return false;
     if (destination !== "All" && s.destination !== destination) return false;
     if (topic !== "All" && s.topic !== topic) return false;
     if (readerNeed !== "All" && s.readerNeed !== readerNeed) return false;
