@@ -62,13 +62,10 @@ const Dots = () => (
   </div>
 );
 
-const liveLanguages = [
-  { flag: "🇪🇸", name: "Spanish", desc: "Order tapas, navigate the metro, and chat with your portera like a local.", href: "https://chat.openai.com/?placeholder=spanish" },
-  { flag: "🇸🇳", name: "Wolof", desc: "Connect in Senegal. Greetings, market phrases, and everyday conversation.", href: "https://chat.openai.com/?placeholder=wolof" },
-];
-
-const soonLanguages = [
-  { flag: "🇫🇷", name: "French", desc: "From Paris cafes to Provence markets, confidence in every conversation." },
+const languageCards = [
+  { flag: "🇪🇸", name: "Spanish", desc: "Order tapas, navigate the metro, and chat with your portera like a local.", href: "https://chatgpt.com/g/g-69988b23c4748191b2a354f34ea19105-spanish-for-your-life-abroad" },
+  { flag: "🇫🇷", name: "French", desc: "From Paris cafes to Provence markets, confidence in every conversation.", href: "https://chatgpt.com/g/g-69ad4b7548988191aca96625b641a542-french-for-life-abroad" },
+  { flag: "🇸🇳", name: "Wolof", desc: "Connect in Senegal. Greetings, market phrases, and everyday conversation.", href: "https://chatgpt.com/g/g-6999f1271bf08191aefe55d6a7e39c45-wolof-for-life-abroad" },
   { flag: "🇮🇹", name: "Italian", desc: "Pronounce the wine list correctly and actually enjoy the conversation." },
   { flag: "🇵🇹", name: "Portuguese", desc: "Lisbon, Porto, or Rio. Soft accents, warm people, worth every word." },
   { flag: "🇬🇧", name: "British English", desc: "Navigate London like you belong there. The phrases that actually matter." },
