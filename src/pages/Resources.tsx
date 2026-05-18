@@ -322,8 +322,8 @@ const Resources = () => {
                     flexDirection: "column",
                   }}
                 >
-                  <span style={{ fontSize: 24, display: "block", marginBottom: 10, lineHeight: 1 }}>{p.emoji}</span>
-                  <h3 style={{ fontFamily: display, fontWeight: 700, fontSize: 15, color: INK, lineHeight: 1.3, margin: "0 0 5px" }}>{p.title}</h3>
+                  <span style={{ fontSize: 26, display: "block", marginBottom: 10, lineHeight: 1 }}>{p.emoji}</span>
+                  <h3 style={{ fontFamily: display, fontWeight: 700, fontSize: 14, color: INK, lineHeight: 1.3, margin: "0 0 5px" }}>{p.title}</h3>
                   <p style={{ fontFamily: lato, fontSize: 12, color: MUTED, lineHeight: 1.6, margin: 0 }}>{p.desc}</p>
                 </div>
               ))}
