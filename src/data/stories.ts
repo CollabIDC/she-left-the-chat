@@ -92,7 +92,7 @@ export const stories: Story[] = [
     readerNeed: "Before You Go",
   },
   {
-    slug: "honest-guide-spanish-culture-etiquette",
+    slug: "honest-guide-spanish-culture-etiquette-madrid",
     title: "The Honest Guide to Spanish Culture and Etiquette in Madrid",
     excerpt:
       "How locals actually greet, eat, queue, and socialize — the unspoken rules that make or break your first weeks.",
