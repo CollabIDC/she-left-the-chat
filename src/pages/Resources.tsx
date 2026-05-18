@@ -62,13 +62,10 @@ const Dots = () => (
   </div>
 );
 
-const liveLanguages = [
-  { flag: "🇪🇸", name: "Spanish", desc: "Order tapas, navigate the metro, and chat with your portera like a local.", href: "https://chat.openai.com/?placeholder=spanish" },
-  { flag: "🇸🇳", name: "Wolof", desc: "Connect in Senegal. Greetings, market phrases, and everyday conversation.", href: "https://chat.openai.com/?placeholder=wolof" },
-];
-
-const soonLanguages = [
-  { flag: "🇫🇷", name: "French", desc: "From Paris cafes to Provence markets, confidence in every conversation." },
+const languageCards = [
+  { flag: "🇪🇸", name: "Spanish", desc: "Order tapas, navigate the metro, and chat with your portera like a local.", href: "https://chatgpt.com/g/g-69988b23c4748191b2a354f34ea19105-spanish-for-your-life-abroad" },
+  { flag: "🇫🇷", name: "French", desc: "From Paris cafes to Provence markets, confidence in every conversation.", href: "https://chatgpt.com/g/g-69ad4b7548988191aca96625b641a542-french-for-life-abroad" },
+  { flag: "🇸🇳", name: "Wolof", desc: "Connect in Senegal. Greetings, market phrases, and everyday conversation.", href: "https://chatgpt.com/g/g-6999f1271bf08191aefe55d6a7e39c45-wolof-for-life-abroad" },
   { flag: "🇮🇹", name: "Italian", desc: "Pronounce the wine list correctly and actually enjoy the conversation." },
   { flag: "🇵🇹", name: "Portuguese", desc: "Lisbon, Porto, or Rio. Soft accents, warm people, worth every word." },
   { flag: "🇬🇧", name: "British English", desc: "Navigate London like you belong there. The phrases that actually matter." },
@@ -205,13 +202,15 @@ const Resources = () => {
           <section>
             <div style={sectionLabelStyle}>FREE AI TOOLS</div>
             <h2 style={sectionTitleStyle}>Tools That Think With You</h2>
-            <p style={sectionSubStyle}>Interactive AI tools built for people who are curious, planning, or already on their way. Free to use.</p>
+            <p style={sectionSubStyle}>Interactive AI tools built for people who are curious, planning, or already on their way.</p>
+            <p style={{ fontFamily: lato, fontStyle: "italic", fontSize: 14, color: FOOT, marginTop: 8, marginBottom: 28 }}>
+              These tools are built on ChatGPT. A ChatGPT account is required to use them.
+            </p>
 
-            {/* Group: Language Tools — Live Now */}
+            {/* Language Tools label */}
             <div
               style={{
-                marginTop: 32,
-                marginBottom: 14,
+                marginBottom: 16,
                 paddingBottom: 8,
                 borderBottom: `1px solid ${BORDER}`,
                 fontFamily: lato,
@@ -222,72 +221,7 @@ const Resources = () => {
                 color: FOOT,
               }}
             >
-              LANGUAGE TOOLS — LIVE NOW
-            </div>
-
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-                gap: 20,
-              }}
-            >
-              {liveLanguages.map((l) => (
-                <div
-                  key={l.name}
-                  style={{
-                    background: "#FFFFFF",
-                    border: `1.5px solid ${BORDER}`,
-                    borderRadius: 12,
-                    padding: 24,
-                    display: "flex",
-                    flexDirection: "column",
-                  }}
-                >
-                  <div style={{ fontSize: 36, lineHeight: 1 }}>{l.flag}</div>
-                  <h3 style={{ fontFamily: display, fontWeight: 700, fontSize: 17, color: INK, margin: "12px 0 8px" }}>{l.name}</h3>
-                  <p style={{ fontFamily: lato, fontSize: 14, color: MUTED, lineHeight: 1.6, margin: 0, flex: 1 }}>{l.desc}</p>
-                  <a
-                    href={l.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{
-                      marginTop: 16,
-                      alignSelf: "flex-start",
-                      background: GOLD,
-                      color: INK,
-                      fontFamily: lato,
-                      fontWeight: 700,
-                      fontSize: 11,
-                      letterSpacing: "0.1em",
-                      textTransform: "uppercase",
-                      padding: "9px 18px",
-                      borderRadius: 20,
-                      textDecoration: "none",
-                    }}
-                  >
-                    Try It Free
-                  </a>
-                </div>
-              ))}
-            </div>
-
-            {/* Group: Language Tools — Coming Soon */}
-            <div
-              style={{
-                marginTop: 32,
-                marginBottom: 14,
-                paddingBottom: 8,
-                borderBottom: `1px solid ${BORDER}`,
-                fontFamily: lato,
-                fontWeight: 700,
-                fontSize: 10,
-                letterSpacing: "0.18em",
-                textTransform: "uppercase",
-                color: FOOT,
-              }}
-            >
-              LANGUAGE TOOLS — COMING SOON
+              LANGUAGE TOOLS
             </div>
 
             <div
@@ -297,44 +231,47 @@ const Resources = () => {
                 gap: 20,
               }}
             >
-              {soonLanguages.map((l) => (
+              {languageCards.map((l) => (
                 <div
                   key={l.name}
                   style={{
                     background: "#FFFFFF",
-                    border: `1.5px dashed ${BORDER}`,
+                    border: `1.5px solid ${GOLD}`,
                     borderRadius: 12,
-                    padding: 24,
+                    padding: 22,
                     display: "flex",
                     flexDirection: "column",
                   }}
                 >
-                  <span
-                    style={{
-                      alignSelf: "flex-start",
-                      fontFamily: lato,
-                      fontWeight: 700,
-                      fontSize: 9,
-                      letterSpacing: "0.14em",
-                      textTransform: "uppercase",
-                      background: PAGE_BG,
-                      color: FOOT,
-                      border: `1px solid ${BORDER}`,
-                      borderRadius: 20,
-                      padding: "3px 10px",
-                      marginBottom: 10,
-                    }}
-                  >
-                    Coming Soon
-                  </span>
-                  <div style={{ fontSize: 36, lineHeight: 1, opacity: 0.4 }}>{l.flag}</div>
-                  <h3 style={{ fontFamily: display, fontWeight: 700, fontSize: 17, color: FOOT, margin: "12px 0 8px" }}>{l.name}</h3>
-                  <p style={{ fontFamily: lato, fontSize: 14, color: "#B0A89E", lineHeight: 1.6, margin: 0 }}>{l.desc}</p>
+                  <span style={{ fontSize: 24, display: "block", marginBottom: 10, lineHeight: 1 }}>{l.flag}</span>
+                  <h3 style={{ fontFamily: display, fontWeight: 700, fontSize: 15, color: INK, margin: "0 0 5px" }}>{l.name}</h3>
+                  <p style={{ fontFamily: lato, fontSize: 12, color: MUTED, lineHeight: 1.6, margin: 0, marginBottom: 14, flex: 1 }}>{l.desc}</p>
+                  {l.href && (
+                    <a
+                      href={l.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        alignSelf: "flex-start",
+                        background: GOLD,
+                        color: INK,
+                        fontFamily: lato,
+                        fontWeight: 700,
+                        fontSize: 10,
+                        letterSpacing: "0.1em",
+                        textTransform: "uppercase",
+                        padding: "8px 16px",
+                        borderRadius: 20,
+                        textDecoration: "none",
+                      }}
+                    >
+                      Try It Free
+                    </a>
+                  )}
                 </div>
               ))}
             </div>
 
-            {/* Dots break */}
             <div
               style={{
                 textAlign: "center",
@@ -348,10 +285,10 @@ const Resources = () => {
               · · ·
             </div>
 
-            {/* Group: Planning Tools — Coming Soon */}
+            {/* Planning Tools label */}
             <div
               style={{
-                marginBottom: 14,
+                marginBottom: 16,
                 paddingBottom: 8,
                 borderBottom: `1px solid ${BORDER}`,
                 fontFamily: lato,
@@ -362,68 +299,37 @@ const Resources = () => {
                 color: FOOT,
               }}
             >
-              PLANNING TOOLS — COMING SOON
+              PLANNING TOOLS
             </div>
 
             <div
               style={{
                 display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+                gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
                 gap: 20,
               }}
             >
-              {planningTools.map((p, i) => {
-                const isTerra = i % 2 === 0;
-                return (
-                  <div
-                    key={p.title}
-                    style={{
-                      background: "#2C1F1A",
-                      borderRadius: 12,
-                      padding: 24,
-                      display: "flex",
-                      flexDirection: "column",
-                    }}
-                  >
-                    <span
-                      style={{
-                        alignSelf: "flex-start",
-                        fontFamily: lato,
-                        fontWeight: 700,
-                        fontSize: 9,
-                        letterSpacing: "0.14em",
-                        textTransform: "uppercase",
-                        background: "rgba(155,58,42,0.3)",
-                        color: "#E07A5F",
-                        borderRadius: 20,
-                        padding: "3px 10px",
-                        marginBottom: 16,
-                      }}
-                    >
-                      Coming Soon
-                    </span>
-                    <div
-                      style={{
-                        width: 46,
-                        height: 46,
-                        borderRadius: "50%",
-                        background: isTerra ? "rgba(155,58,42,0.28)" : "rgba(42,107,138,0.28)",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        fontSize: 22,
-                        marginBottom: 16,
-                      }}
-                    >
-                      {p.emoji}
-                    </div>
-                    <h3 style={{ fontFamily: display, fontWeight: 700, fontSize: 15, color: "#F2EDE4", lineHeight: 1.3, margin: "0 0 8px" }}>{p.title}</h3>
-                    <p style={{ fontFamily: lato, fontSize: 12, color: "rgba(242,237,228,0.6)", lineHeight: 1.7, margin: 0 }}>{p.desc}</p>
-                  </div>
-                );
-              })}
+              {planningTools.map((p) => (
+                <div
+                  key={p.title}
+                  style={{
+                    background: "#FFFFFF",
+                    border: `1.5px solid ${BORDER}`,
+                    borderLeft: `4px solid ${GOLD}`,
+                    borderRadius: 12,
+                    padding: 22,
+                    display: "flex",
+                    flexDirection: "column",
+                  }}
+                >
+                  <span style={{ fontSize: 24, display: "block", marginBottom: 10, lineHeight: 1 }}>{p.emoji}</span>
+                  <h3 style={{ fontFamily: display, fontWeight: 700, fontSize: 15, color: INK, lineHeight: 1.3, margin: "0 0 5px" }}>{p.title}</h3>
+                  <p style={{ fontFamily: lato, fontSize: 12, color: MUTED, lineHeight: 1.6, margin: 0 }}>{p.desc}</p>
+                </div>
+              ))}
             </div>
           </section>
+
 
 
           <Dots />

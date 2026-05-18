@@ -3,7 +3,7 @@ import HeroCarousel from "@/components/HeroCarousel";
 import LatestStories from "@/components/LatestStories";
 import StumbledUponMadrid from "@/components/StumbledUponMadrid";
 import RealGuides from "@/components/RealGuides";
-import ResourcesPreview from "@/components/ResourcesPreview";
+
 import CommunityTeaser from "@/components/CommunityTeaser";
 import Footer from "@/components/Footer";
 
@@ -16,7 +16,7 @@ const Index = () => {
         <LatestStories />
         <StumbledUponMadrid />
         <RealGuides />
-        <ResourcesPreview />
+        
         <CommunityTeaser />
       </main>
       <Footer />
