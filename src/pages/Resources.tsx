@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Download, ExternalLink, Map, Globe, Route, PawPrint, IdCard, Clock, FileText, Wifi } from "lucide-react";
+import { Download, FileText } from "lucide-react";
 
 const PAGE_BG = "#F2EDE4";
 const INK = "#1A1714";
