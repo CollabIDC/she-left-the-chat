@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Madrid Airport Guide: Everything That Happens From the Moment You Land | She Left the Chat</title>
+<meta name="description" content="Everything that happens from the moment you land at Madrid Barajas. Customs, transit, cash, and getting to the city without the stress." />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --cream: #F2EDE4;
+    --ink: #1A1714;
+    --warm-mid: #6B5E52;
+    --accent: #9B3A2A;
+    --gold: #B8952A;
+    --muted: #8A8078;
+    --dark: #2C1F1A;
+    --soft-line: #D8D0C4;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background-color: var(--cream);
+    color: var(--ink);
+    font-family: 'Lato', sans-serif;
+  }
+
+  .hero { width: 100%; height: 460px; overflow: hidden; }
+  .hero img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+  .post-header {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 72px 28px 0;
+    text-align: center;
+  }
+  .post-header .eyebrow {
+    font-family: 'Lato', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 22px;
+  }
+  .post-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: clamp(34px, 5vw, 48px);
+    line-height: 1.1;
+    color: var(--ink);
+    margin-bottom: 18px;
+  }
+  .post-header .subhead {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 19px;
+    color: var(--warm-mid);
+    margin-bottom: 28px;
+    line-height: 1.5;
+  }
+  .post-header .divider {
+    width: 48px;
+    height: 2px;
+    background: var(--accent);
+    margin: 0 auto 22px;
+  }
+  .post-header .byline {
+    font-family: 'Lato', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 24px;
+  }
+
+  .pills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+  .pill {
+    display: inline-block;
+    padding: 7px 16px;
+    border-radius: 999px;
+    color: var(--cream);
+    font-family: 'Lato', sans-serif;
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+  .pill.destination { background: var(--ink); }
+  .pill.topic { background: var(--gold); }
+  .pill.need { background: var(--accent); }
+
+  .post-body {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 56px 40px 80px;
+  }
+
+  .post-body p {
+    font-family: 'Lato', sans-serif !important;
+    font-size: 18px !important;
+    line-height: 1.9 !important;
+    color: var(--ink) !important;
+    font-weight: 400 !important;
+    margin-bottom: 1.7rem;
+  }
+
+  .post-body p.lead::first-letter {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-weight: 700;
+    float: left;
+    line-height: 0.78;
+    margin: 6px 12px 0 0;
+    color: var(--accent);
+  }
+
+  .post-body h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 28px;
+    color: var(--ink);
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .post-body h3 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--accent);
+    margin-top: 2.5rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .section-dots {
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    color: var(--accent);
+    opacity: 0.5;
+    letter-spacing: 0.5em;
+    margin: 2.8rem 0;
+  }
+
+  .pull-quote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 22px;
+    line-height: 1.5;
+    color: var(--ink);
+    border-left: 3px solid var(--accent);
+    padding-left: 28px;
+    margin: 3rem 0;
+  }
+
+  .mood-break {
+    background: var(--dark);
+    padding: 52px 40px;
+    margin: 3rem -40px;
+    text-align: center;
+  }
+  .mood-break p {
+    font-family: 'Playfair Display', serif !important;
+    font-style: italic;
+    font-size: 21px !important;
+    line-height: 1.5 !important;
+    color: rgba(242, 237, 228, 0.85) !important;
+    max-width: 640px;
+    margin: 0 auto !important;
+  }
+
+  .personal-note {
+    background: var(--dark);
+    border-radius: 4px;
+    padding: 34px;
+    margin: 3rem 0;
+  }
+  .personal-note .label {
+    font-family: 'Lato', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+  .personal-note p {
+    font-family: 'Lato', sans-serif !important;
+    font-size: 16px !important;
+    line-height: 1.85 !important;
+    color: rgba(242, 237, 228, 0.85) !important;
+    margin-bottom: 1rem;
+  }
+  .personal-note .signature {
+    border-top: 1px solid rgba(184, 149, 42, 0.3);
+    margin-top: 18px;
+    padding-top: 18px;
+    font-family: 'Playfair Display', serif !important;
+    font-style: italic;
+    font-size: 17px !important;
+    color: var(--gold) !important;
+    margin-bottom: 0 !important;
+  }
+
+  .insider-list { margin: 1rem 0 2rem; }
+  .insider-list .item {
+    position: relative;
+    padding: 18px 0 18px 28px;
+    border-bottom: 1px solid var(--soft-line);
+  }
+  .insider-list .item:last-child { border-bottom: none; }
+  .insider-list .item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 26px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+  .insider-list .item strong {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    color: var(--ink);
+    display: block;
+    margin-bottom: 4px;
+    font-size: 18px;
+  }
+  .insider-list .item span {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    color: var(--ink);
+    font-size: 18px;
+    line-height: 1.9;
+  }
+
+  /* Transport reference list */
+  .ref-list {
+    margin: 1.5rem 0 2rem;
+    border: 1px solid var(--soft-line);
+  }
+  .ref-list .row {
+    padding: 18px 22px;
+    border-bottom: 1px solid var(--soft-line);
+  }
+  .ref-list .row:last-child { border-bottom: none; }
+  .ref-list .row:nth-child(odd) { background: var(--cream); }
+  .ref-list .row:nth-child(even) { background: #ffffff; }
+  .ref-list .name {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+  .ref-list .meta {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  /* Spanish phrase table */
+  .phrase-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0 2rem;
+    border: 1px solid var(--soft-line);
+  }
+  .phrase-table tr { border-bottom: 1px solid var(--soft-line); }
+  .phrase-table tr:last-child { border-bottom: none; }
+  .phrase-table tr:nth-child(odd) { background: var(--cream); }
+  .phrase-table tr:nth-child(even) { background: #ffffff; }
+  .phrase-table td {
+    padding: 14px 18px;
+    vertical-align: top;
+  }
+  .phrase-table td.en {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--muted);
+    width: 50%;
+  }
+  .phrase-table td.es {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--ink);
+  }
+
+  .closing-line {
+    font-family: 'Lato', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    margin-top: 64px;
+    padding-top: 28px;
+    border-top: 1px solid var(--soft-line);
+  }
+
+  @media (max-width: 640px) {
+    .hero { height: 320px; }
+    .post-body { padding: 48px 22px 64px; }
+    .mood-break { margin: 3rem -22px; padding: 44px 24px; }
+    .post-body p { font-size: 18px !important; }
+    .post-body h2 { font-size: 24px; }
+  }
+</style>
+</head>
+<body>
+
+  <section class="hero">
+    <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1600&q=80" alt="View from an airplane wing above the clouds" />
+  </section>
+
+  <header class="post-header">
+    <p class="eyebrow">The Real Guides · Madrid</p>
+    <h1>The Madrid Airport Guide: Everything That Happens From the Moment You Land</h1>
+    <p class="subhead">Everything that happens from the moment you land at Barajas. Customs, transit, cash, and getting to the city without the stress.</p>
+    <div class="divider"></div>
+    <p class="byline">By Kimberly · May 2026 · Madrid, Spain</p>
+  </header>
+
+  <div class="pills">
+    <span class="pill destination">Madrid</span>
+    <span class="pill topic">Travel Guides</span>
+    <span class="pill need">When You Arrive</span>
+  </div>
+
+  <article class="post-body">
+
+    <p class="lead">Let me tell you about the moment I cleared customs at Adolfo Suarez Madrid-Barajas Airport.</p>
+
+    <p>I had four checked bags weighing 65 pounds each. A carry on roller. A shoulder bag the size of a small country. And Chloe on my back in her carrier because my hands were already completely occupied with two luggage carts that operate on a squeeze to move, release to stop mechanism that nobody warned me about.</p>
+
+    <p>I was navigating two of those carts simultaneously. Through passport control. Through baggage claim. Through customs. In an airport where I did not speak the language and the signage, while perfectly logical once you know it, is not immediately obvious when you are jet lagged, overpacked, and responsible for a dog who has opinions about everything.</p>
+
+    <p>And that was before the EES situation.</p>
+
+    <p>We are going to talk about all of it. Because the Madrid airport is actually a wonderful, well organized, efficient airport and I want you to experience it that way. The key is knowing what to expect before you get there. That is what this guide is for.</p>
+
+    <div class="section-dots">· · ·</div>
+
+    <h2>About the Airport</h2>
+    <p>Madrid-Barajas Adolfo Suarez Airport, MAD for short, is Spain's largest and busiest airport and one of the major hubs in Europe. It has four active terminals. Most international flights from the US arrive at Terminal 1 or Terminal 4. Terminal 4 is the newest and largest and is connected to a satellite terminal called T4S via an automated people mover. Terminals 1, 2, and 3 are connected to each other but not to Terminal 4. There is a free shuttle bus between the terminal groups.</p>
+    <p>Before you land, check your ticket and confirm which terminal you are arriving at. This matters for knowing where to find your transport options on the other side.</p>
+
+    <h2>Step by Step: What Happens When You Land</h2>
+
+    <h3>Step 1: Follow Signs for Llegadas / Arrivals</h3>
+    <p>After the plane doors open, follow the signs that say Llegadas / Arrivals. Do not follow Transferencias / Transfers unless you have a connecting flight. The signs are clear and well placed throughout the terminal.</p>
+    <p>If you are arriving at T4S, the satellite terminal, you will need to take the automated people mover to the main T4 building before proceeding through passport control. Just follow the crowd and the signs.</p>
+
+    <h3>Step 2: Passport Control, Control de Pasaportes</h3>
+    <p>This is where things slow down for non-EU visitors and where you need to build extra time into your arrival plans.</p>
+    <p>US citizens, UK citizens, and all non-EU travelers must go through full passport control before anything else. EU citizens have a faster lane and an automated system available to them. You do not. You are in the queue marked for non-EU travelers and depending on the time of day and the season, that queue can be significant.</p>
+    <p>The EES Entry Exit System is now in effect. This is a digital border management system introduced across the European Union. What it means for you practically is that your biometric data, fingerprints and a photograph, will be recorded on entry. Officers also log your expected departure date. This added step has increased average processing times and wait times of two to three hours have been reported during busy periods.</p>
+
+    <p class="pull-quote">Build this into your plans. Do not book a connecting train or arrange a pickup for thirty minutes after your scheduled landing time. Give yourself real runway.</p>
+
+    <div class="personal-note">
+      <p class="label">A Personal Note</p>
+      <p>When I arrived in December during the soft rollout period, the system was being managed by airport staff rather than being self-service. I was directed to an officer who spoke no English. I spoke no Spanish. I tried to show her my visa documentation to explain that I was not a tourist passing through for a few days but a visa holder with permission to be in Spain for an extended period.</p>
+      <p>She entered one day into the system. One day.</p>
+      <p>I did not fully understand what had happened until I was already outside the airport. I sent an emergency email to my immigration lawyer the moment I had WiFi, knowing he was on holiday and would not see it for days, just because I needed to do something with the anxiety that was building. He eventually confirmed it was an administrative error that could be corrected and it did not affect my visa status.</p>
+      <p>If you are coming on a visa of any kind, have your documentation organized and accessible and be prepared to communicate your situation even through a language barrier. Point to what you need to show. Use Google Translate. Be patient and polite with the officers. They are managing a new system under significant pressure.</p>
+      <p class="signature">Spain has not changed. I am the one adapting.</p>
+    </div>
+
+    <p>If you are coming as a regular tourist for a week or two, the process is simpler. Show your passport, have your biometrics taken, and confirm your expected departure date.</p>
+
+    <h3>Step 3: Baggage Claim, Recogida de Equipaje</h3>
+    <p>After clearing passport control, follow signs to Recogida de Equipaje / Baggage Claim. Screens throughout the hall show which carousel is assigned to your flight.</p>
+    <p>Luggage carts are FREE here. This is not the case at most US domestic airports. At European airports including Madrid they are simply available at no charge. Grab one if you have checked bags and save yourself the misery of dragging everything across a large terminal.</p>
+    <p>If you have a lot of luggage, note that the carts operate on a squeeze to keep moving, release to stop mechanism. You squeeze the handle to move forward and release to brake. It takes about thirty seconds to figure out and then makes complete sense.</p>
+    <p>ATM tip. While you are in the baggage claim area, look for an ATM before you proceed through customs. This is the best time to get your cash situation sorted.</p>
+
+    <h3>Step 4: Customs, Aduana</h3>
+    <p>After collecting your bags proceed through Aduana / Customs. Spain uses the standard red and green channel system.</p>
+    <p>Green channel, Nada que Declarar / Nothing to Declare. Walk through if you are not carrying anything that requires declaration. Most visitors use this channel.</p>
+    <p>Red channel, Algo que Declarar / Something to Declare. Use this if you are carrying cash or monetary instruments over 10,000 euros, food products, plants, animals, certain medications in large quantities, or high value electronics. When in doubt, declare.</p>
+    <p>Bring a pen on the plane. You may be given a customs declaration form during the flight and filling it out before you land saves you scrambling at the customs area.</p>
+
+    <h3>Step 5: The Arrivals Hall, Sala de Llegadas</h3>
+    <p>Once you clear customs you enter the public Arrivals Hall. Taxis, metro access, bus stops, car rentals, ATMs, currency exchange counters, shops, cafes, and free WiFi are all here. It is also where anyone meeting you will be waiting.</p>
+
+    <div class="mood-break">
+      <p>Take a breath. You made it through. Now let us get you to your hotel.</p>
+    </div>
+
+    <h2>Getting Your Money Right Before You Leave the Airport</h2>
+    <p><strong>Use the ATM. Not the currency exchange.</strong></p>
+    <p>ATMs are available throughout the airport including in the baggage claim area and in the Arrivals Hall. Withdraw Euros directly from your bank debit card. Always select to be charged in Euros not your home currency if the machine gives you a choice.</p>
+    <p>Currency exchange counters, the Cambio de Moneda booths, are located in prominent spots throughout the terminal because they want you to use them. The rates are poor and the fees are significant. Walk past them every single time.</p>
+    <p>How much should you withdraw? It depends on how you prefer to pay. If you plan to use your credit card for most purchases, around 25 euros a day in cash covers small items, cash only spots, and tips. If you prefer using cash for most things, budget around 50 to 60 euros a day to cover meals, transport, and a museum entry comfortably. Museums, nicer restaurants, and larger purchases can be paid by card. The cash covers your everyday smaller spending.</p>
+    <p>If you are staying five days, withdrawing 300 euros at the airport gives you comfortable spending without running short.</p>
+
+    <div class="section-dots">· · ·</div>
+
+    <h2>Getting from the Airport to Your Hotel</h2>
+
+    <h3>Option 1: Official Taxi</h3>
+    <p>Official taxis are white with a red diagonal stripe and the Madrid city crest on the doors. Available 24 hours at Parada de Taxis / Taxi Ranks outside each terminal's arrivals area.</p>
+    <p>The fixed fare from the airport to anywhere inside the M-30 city center ring is 33 euros flat. No surcharges for luggage, no night rate, no holiday premium. Make sure the taximeter is set to Tariff 4 for airport trips. If a driver tries to charge more than 33 euros or adds fees for your bags, that is not legitimate.</p>
+    <p>Not all taxis accept credit cards so have some cash available as backup. Never accept a ride from anyone approaching you inside the terminal offering transportation. Only use the official taxi ranks outside.</p>
+
+    <h3>Option 2: Rideshare Apps</h3>
+    <p>All three operate from the airport. Bolt has dedicated pickup zones at the airport, making it a particularly smooth option. Have your app downloaded and payment method set up before you land. Have your hotel address saved in Spanish and ready to share through the app.</p>
+
+    <h3>Option 3: Metro</h3>
+    <p>Line 8, the pink line, connects both airport metro stations directly to the city center. About 12 minutes from T1, T2, and T3 to Nuevos Ministerios, and about 20 minutes from T4.</p>
+    <p>To use the metro you need a Tarjeta Multi card, available at ticket machines in the airport stations. Look for the red sticker that says Tarjeta MULTI Disponible AQUI. The card costs 2.50 euros.</p>
+    <p>The Abono Turistico / Tourist Travel Pass is your best option if you plan to use public transport throughout your stay. Prices start at 10 euros for one day up to 42 euros for seven days. Buying it here at the airport means the airport supplement is automatically included at no extra charge.</p>
+    <p>Metro hours are 6 AM to 1:30 AM daily. If you land after 1:30 AM take the Airport Express Bus or a taxi.</p>
+    <p>A realistic note on luggage and the metro. The metro is great for lighter luggage situations. If you have four large checked bags plus a carry on, a taxi or rideshare will serve you significantly better.</p>
+
+    <h3>Option 4: Airport Express Bus, Line 203</h3>
+    <p>Runs 24 hours a day, connecting all terminals to Plaza de Cibeles and Atocha. Fare is around 5 euros. Excellent for late night arrivals when the metro is not running.</p>
+
+    <h3>Option 5: Cercanias Train, From T4 Only</h3>
+    <p>Connects to major city stations including Chamartin, Nuevos Ministerios, and Atocha. A one-way ticket costs approximately 2.60 euros. Journey to Atocha takes around 25 to 30 minutes. Most affordable option but only from T4.</p>
+
+    <h2>Transport Options at a Glance</h2>
+    <div class="ref-list">
+      <div class="row">
+        <div class="name">Official Taxi</div>
+        <div class="meta">Cost: 33 euros fixed · Hours: 24 hours · Best for: Convenience, heavy luggage, groups</div>
+      </div>
+      <div class="row">
+        <div class="name">Rideshare: Bolt, Uber, Cabify</div>
+        <div class="meta">Cost: Similar to taxi · Hours: 24 hours · Best for: App users, solo travelers</div>
+      </div>
+      <div class="row">
+        <div class="name">Metro Line 8</div>
+        <div class="meta">Cost: Around 5 euros with supplement · Hours: 6 AM to 1:30 AM · Best for: Light luggage, budget travelers</div>
+      </div>
+      <div class="row">
+        <div class="name">Airport Express Bus 203</div>
+        <div class="meta">Cost: Around 5 euros · Hours: 24 hours · Best for: Late night arrivals</div>
+      </div>
+      <div class="row">
+        <div class="name">Cercanias Train (T4 only)</div>
+        <div class="meta">Cost: Around 2.60 euros · Hours: 5 AM to midnight · Best for: Budget, heading to Atocha</div>
+      </div>
+    </div>
+
+    <div class="section-dots">· · ·</div>
+
+    <h2>Practical Airport Tips</h2>
+    <p><strong>Print your boarding pass.</strong> For international travel, always print your boarding pass. Do not rely solely on your phone. Also take a screenshot and save it in your photos. The screenshot works when your app has a dead battery, a frozen screen, or decides right now is the perfect time to require a login. It asks nothing of you. It just works.</p>
+    <p>This saved someone I know from missing a flight when their itinerary changed and they needed to prove their original booking to get on a standby list. The screenshot was the evidence. Always take the screenshot.</p>
+    <p><strong>Your documents go in your carry on.</strong> Always. Passport, visa paperwork, printed hotel confirmation, travel insurance, anything critical lives in your carry on bag not your checked luggage.</p>
+    <p><strong>Have your accommodation address ready.</strong> Save your hotel or accommodation address in Spanish in your phone before you land. A Google Maps pin works well. A screenshot of the address also works. The goal is to show someone exactly where you are going without having to spell it out or rely on them understanding English.</p>
+    <p><strong>The WiFi is free.</strong> Madrid airport offers free WiFi throughout all terminals. Connect as soon as you land to get your apps working before you leave the building.</p>
+    <p><strong>Pharmacy in the airport.</strong> There is a pharmacy in the airport if you need anything before heading to the city. Useful if you land and your eyes are already telling you that La Calima has its own plans for your arrival day. Ask for lagrimas artificiales if needed.</p>
+
+    <h2>Departing Madrid: What to Know Before You Leave</h2>
+    <p>The 100ml, 3.4oz, liquids rule still applies at Madrid Barajas. Despite new 3D scanners being installed at the airport, the European Commission has kept the 100ml restriction in place across EU airports for now. There is no confirmed timeline for when it will be lifted.</p>
+    <p>What this means practically. All liquid containers in your carry on must be 100ml, 3.4oz, or less. All liquids must fit in a single clear resealable plastic bag, maximum 1 litre, about 34oz, capacity, one bag per person. This includes toiletries, perfume, and anything liquid or gel-like.</p>
+    <p>Pack a clear quart size zip lock bag in your luggage before you leave home. When packing to head to the airport on your last day, transfer all your liquids into it so you are ready at security. You can also buy these bags at most supermarkets in Madrid including Mercadona if you forgot to bring one.</p>
+
+    <h2>Key Spanish Words You Will Need at the Airport</h2>
+    <table class="phrase-table">
+      <tr><td class="en">Arrivals</td><td class="es">Llegadas</td></tr>
+      <tr><td class="en">Departures</td><td class="es">Salidas</td></tr>
+      <tr><td class="en">Baggage Claim</td><td class="es">Recogida de Equipaje</td></tr>
+      <tr><td class="en">Customs</td><td class="es">Aduana</td></tr>
+      <tr><td class="en">Passport Control</td><td class="es">Control de Pasaportes</td></tr>
+      <tr><td class="en">Nothing to Declare</td><td class="es">Nada que Declarar</td></tr>
+      <tr><td class="en">Exit</td><td class="es">Salida</td></tr>
+      <tr><td class="en">Taxi Rank</td><td class="es">Parada de Taxis</td></tr>
+      <tr><td class="en">ATM</td><td class="es">Cajero Automatico</td></tr>
+      <tr><td class="en">Currency Exchange (avoid)</td><td class="es">Cambio de Moneda</td></tr>
+      <tr><td class="en">Bathroom</td><td class="es">Aseos</td></tr>
+      <tr><td class="en">Lost Luggage</td><td class="es">Equipaje Perdido</td></tr>
+      <tr><td class="en">Information</td><td class="es">Informacion</td></tr>
+      <tr><td class="en">Pharmacy</td><td class="es">Farmacia</td></tr>
+    </table>
+
+    <div class="section-dots">· · ·</div>
+
+    <h2>Let Me Be Real With You</h2>
+    <div class="insider-list">
+      <div class="item">
+        <strong>The luggage cart mechanism will surprise you</strong>
+        <span>Airport luggage carts do not roll freely. You squeeze the handle to move and release to brake. If you let go the cart stops immediately. This makes complete sense once you know it but if nobody tells you, that first sudden stop is going to get you. Now you know.</span>
+      </div>
+      <div class="item">
+        <strong>The EES system is new and still finding its rhythm</strong>
+        <span>Wait times are longer than pre-EES and the process varies depending on the officer and the volume of arrivals. Be patient, have your documents organized, and do not schedule anything time-sensitive for the first few hours after your landing time.</span>
+      </div>
+      <div class="item">
+        <strong>Not all drivers speak English</strong>
+        <span>This applies to both taxi and rideshare drivers. Have that address ready to show. Have Google Translate open. A calm smile and a pointed finger at a screen communicates more than you think.</span>
+      </div>
+      <div class="item">
+        <strong>Bolt is airport approved</strong>
+        <span>As of 2024 Bolt has designated pickup zones at the airport putting it on equal footing with taxis for convenience. If the app is set up before you land, requesting a Bolt from arrivals is genuinely seamless.</span>
+      </div>
+      <div class="item">
+        <strong>Currency exchange at the airport is a trap</strong>
+        <span>The booths are positioned prominently and look official because they want you to use them. The rates are consistently poor. There is always an ATM nearby. Use the ATM every single time.</span>
+      </div>
+      <div class="item">
+        <strong>Arriving on a Sunday changes your first few hours</strong>
+        <span>If you land on a Sunday and are heading to a residential neighborhood, many local shops and some grocery chains may be closed. Come prepared with enough cash and snacks to get through until Monday morning.</span>
+      </div>
+      <div class="item">
+        <strong>ATMs often dispense 50 euro bills</strong>
+        <span>Be aware that ATMs in Spain frequently give you 50 euro notes by default. Some smaller shops and cafes will not accept them. If you can select smaller denominations do so. Otherwise use your 50 euro notes at supermarkets or larger shops where they are reliably accepted.</span>
+      </div>
+      <div class="item">
+        <strong>Seatbelts apply in the back seat</strong>
+        <span>The moment you get into any taxi or rideshare, buckle up. Seatbelts are mandatory for all passengers in every seat in Spain. Fines apply.</span>
+      </div>
+    </div>
+
+    <div class="section-dots">· · ·</div>
+
+    <p>Want updates as new posts drop? Subscribe to the She Left the Chat newsletter below. No spam. Just Madrid, the real version, delivered to your inbox.</p>
+    <p>Follow along on Instagram [INSTAGRAM HANDLE PLACEHOLDER]</p>
+    <p><em>Spain has not changed. I am the one adapting. And I will see you in the next post.</em></p>
+
+    <p class="closing-line">She Left the Chat · shelefthechat.com · By Kimberly · Madrid, Spain</p>
+
+  </article>
+
+</body>
+</html>
