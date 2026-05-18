@@ -201,21 +201,38 @@ const Resources = () => {
 
           <Dots />
 
-          {/* SECTION 2 — Language Tools */}
+          {/* SECTION 2 — Free AI Tools */}
           <section>
-            <div style={sectionLabelStyle}>LANGUAGE TOOLS</div>
-            <h2 style={sectionTitleStyle}>Start Speaking Before You Land</h2>
-            <p style={sectionSubStyle}>AI-powered language tools built for curious travelers and bold dreamers. Free to use.</p>
+            <div style={sectionLabelStyle}>FREE AI TOOLS</div>
+            <h2 style={sectionTitleStyle}>Tools That Think With You</h2>
+            <p style={sectionSubStyle}>Interactive AI tools built for people who are curious, planning, or already on their way. Free to use.</p>
+
+            {/* Group: Language Tools — Live Now */}
+            <div
+              style={{
+                marginTop: 32,
+                marginBottom: 14,
+                paddingBottom: 8,
+                borderBottom: `1px solid ${BORDER}`,
+                fontFamily: lato,
+                fontWeight: 700,
+                fontSize: 10,
+                letterSpacing: "0.18em",
+                textTransform: "uppercase",
+                color: FOOT,
+              }}
+            >
+              LANGUAGE TOOLS — LIVE NOW
+            </div>
 
             <div
               style={{
-                marginTop: 24,
                 display: "grid",
                 gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
                 gap: 20,
               }}
             >
-              {languages.map((l) => (
+              {liveLanguages.map((l) => (
                 <div
                   key={l.name}
                   style={{
@@ -231,7 +248,7 @@ const Resources = () => {
                   <h3 style={{ fontFamily: display, fontWeight: 700, fontSize: 17, color: INK, margin: "12px 0 8px" }}>{l.name}</h3>
                   <p style={{ fontFamily: lato, fontSize: 14, color: MUTED, lineHeight: 1.6, margin: 0, flex: 1 }}>{l.desc}</p>
                   <a
-                    href={`https://chat.openai.com/?placeholder=${l.name.toLowerCase()}`}
+                    href={l.href}
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{
@@ -254,7 +271,160 @@ const Resources = () => {
                 </div>
               ))}
             </div>
+
+            {/* Group: Language Tools — Coming Soon */}
+            <div
+              style={{
+                marginTop: 32,
+                marginBottom: 14,
+                paddingBottom: 8,
+                borderBottom: `1px solid ${BORDER}`,
+                fontFamily: lato,
+                fontWeight: 700,
+                fontSize: 10,
+                letterSpacing: "0.18em",
+                textTransform: "uppercase",
+                color: FOOT,
+              }}
+            >
+              LANGUAGE TOOLS — COMING SOON
+            </div>
+
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+                gap: 20,
+              }}
+            >
+              {soonLanguages.map((l) => (
+                <div
+                  key={l.name}
+                  style={{
+                    background: "#FFFFFF",
+                    border: `1.5px dashed ${BORDER}`,
+                    borderRadius: 12,
+                    padding: 24,
+                    display: "flex",
+                    flexDirection: "column",
+                  }}
+                >
+                  <span
+                    style={{
+                      alignSelf: "flex-start",
+                      fontFamily: lato,
+                      fontWeight: 700,
+                      fontSize: 9,
+                      letterSpacing: "0.14em",
+                      textTransform: "uppercase",
+                      background: PAGE_BG,
+                      color: FOOT,
+                      border: `1px solid ${BORDER}`,
+                      borderRadius: 20,
+                      padding: "3px 10px",
+                      marginBottom: 10,
+                    }}
+                  >
+                    Coming Soon
+                  </span>
+                  <div style={{ fontSize: 36, lineHeight: 1, opacity: 0.4 }}>{l.flag}</div>
+                  <h3 style={{ fontFamily: display, fontWeight: 700, fontSize: 17, color: FOOT, margin: "12px 0 8px" }}>{l.name}</h3>
+                  <p style={{ fontFamily: lato, fontSize: 14, color: "#B0A89E", lineHeight: 1.6, margin: 0 }}>{l.desc}</p>
+                </div>
+              ))}
+            </div>
+
+            {/* Dots break */}
+            <div
+              style={{
+                textAlign: "center",
+                color: TERRA,
+                opacity: 0.5,
+                fontSize: 14,
+                letterSpacing: "0.5em",
+                margin: "2.8rem 0",
+              }}
+            >
+              · · ·
+            </div>
+
+            {/* Group: Planning Tools — Coming Soon */}
+            <div
+              style={{
+                marginBottom: 14,
+                paddingBottom: 8,
+                borderBottom: `1px solid ${BORDER}`,
+                fontFamily: lato,
+                fontWeight: 700,
+                fontSize: 10,
+                letterSpacing: "0.18em",
+                textTransform: "uppercase",
+                color: FOOT,
+              }}
+            >
+              PLANNING TOOLS — COMING SOON
+            </div>
+
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+                gap: 20,
+              }}
+            >
+              {planningTools.map((p, i) => {
+                const isTerra = i % 2 === 0;
+                return (
+                  <div
+                    key={p.title}
+                    style={{
+                      background: "#2C1F1A",
+                      borderRadius: 12,
+                      padding: 24,
+                      display: "flex",
+                      flexDirection: "column",
+                    }}
+                  >
+                    <span
+                      style={{
+                        alignSelf: "flex-start",
+                        fontFamily: lato,
+                        fontWeight: 700,
+                        fontSize: 9,
+                        letterSpacing: "0.14em",
+                        textTransform: "uppercase",
+                        background: "rgba(155,58,42,0.3)",
+                        color: "#E07A5F",
+                        borderRadius: 20,
+                        padding: "3px 10px",
+                        marginBottom: 16,
+                      }}
+                    >
+                      Coming Soon
+                    </span>
+                    <div
+                      style={{
+                        width: 46,
+                        height: 46,
+                        borderRadius: "50%",
+                        background: isTerra ? "rgba(155,58,42,0.28)" : "rgba(42,107,138,0.28)",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        fontSize: 22,
+                        marginBottom: 16,
+                      }}
+                    >
+                      {p.emoji}
+                    </div>
+                    <h3 style={{ fontFamily: display, fontWeight: 700, fontSize: 15, color: "#F2EDE4", lineHeight: 1.3, margin: "0 0 8px" }}>{p.title}</h3>
+                    <p style={{ fontFamily: lato, fontSize: 12, color: "rgba(242,237,228,0.6)", lineHeight: 1.7, margin: 0 }}>{p.desc}</p>
+                  </div>
+                );
+              })}
+            </div>
           </section>
+
 
           <Dots />
 
