@@ -62,11 +62,25 @@ const Dots = () => (
   </div>
 );
 
-const languages = [
-  { flag: "🇪🇸", name: "Spanish", desc: "Order tapas, navigate the metro, and chat with your portera like a local." },
+const liveLanguages = [
+  { flag: "🇪🇸", name: "Spanish", desc: "Order tapas, navigate the metro, and chat with your portera like a local.", href: "https://chat.openai.com/?placeholder=spanish" },
+  { flag: "🇸🇳", name: "Wolof", desc: "Connect in Senegal. Greetings, market phrases, and everyday conversation.", href: "https://chat.openai.com/?placeholder=wolof" },
+];
+
+const soonLanguages = [
   { flag: "🇫🇷", name: "French", desc: "From Paris cafes to Provence markets, confidence in every conversation." },
   { flag: "🇮🇹", name: "Italian", desc: "Pronounce the wine list correctly and actually enjoy the conversation." },
   { flag: "🇵🇹", name: "Portuguese", desc: "Lisbon, Porto, or Rio. Soft accents, warm people, worth every word." },
+  { flag: "🇬🇧", name: "British English", desc: "Navigate London like you belong there. The phrases that actually matter." },
+];
+
+const planningTools = [
+  { emoji: "📍", title: "Madrid Neighborhood Matcher", desc: "Tell it how you live. It tells you where in Madrid you belong." },
+  { emoji: "🎒", title: "Packing List Builder", desc: "Answer a few questions. Get a list built for your trip, not everyone else's." },
+  { emoji: "✅", title: "Relocation Readiness Quiz", desc: "Are you actually ready to make the move? Find out where you really stand." },
+  { emoji: "🧮", title: "Cost of Living Calculator", desc: "Compare your current city to Madrid. See what your money actually buys." },
+  { emoji: "📅", title: "Your Move Timeline Builder", desc: "Tell it your target date. It builds your backwards planning checklist." },
+  { emoji: "🍽️", title: "Madrid Barrio Food Guide", desc: "Tell it what you like to eat. It points you to the right neighborhood." },
 ];
 
 const comingSoon = [
