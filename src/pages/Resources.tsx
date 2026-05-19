@@ -81,12 +81,15 @@ const planningTools = [
 ];
 
 const comingSoon = [
-  { emoji: "🗺️", title: "City Cheat Sheets", desc: "Paris done. London next. More cities as the journey expands." },
   { emoji: "🌍", title: "Country Matching App", desc: "Figure out where you actually want to live. Builds your personal roadmap." },
   { emoji: "🧭", title: "Move Abroad Roadmap", desc: "Step by step for people who are actually planning to do this." },
   { emoji: "🐾", title: "Service Dog Travel Guide", desc: "Everything that comes with traveling internationally with a service animal." },
   { emoji: "📋", title: "What I Learned About Visas", desc: "An honest overview of the options, what I researched, and what nobody told me upfront.", live: true, button: "READ THE OVERVIEW", href: "/resources/spain-visa-overview" },
-  { emoji: "🏡", title: "Extended Stay Guide", desc: "For people settling in longer. The things you only learn by actually living here." },
+  { emoji: "⚠️", title: "Consider Yourself Warned", desc: "The laws, regulations, and unspoken rules nobody warned me about before I moved to Madrid." },
+  { emoji: "💰", title: "The Banking and Money Guide", desc: "Opening accounts, transferring money, and avoiding fees. The stuff nobody explains clearly." },
+  { emoji: "🧠", title: "The Inner Work", desc: "The mental and emotional preparation guide for anyone about to make a big life change." },
+  { emoji: "🤝", title: "The Community Guide", desc: "How to find your people in a new city. Groups, spaces, and communities worth knowing in Madrid." },
+  { emoji: "🛍️", title: "Digital Products", desc: "Courses, templates, and tools built for people who are ready to make the move or grow what they are building." },
 ];
 
 const pills = ["Before You Leave", "At the Airport", "Getting Around", "Food & Dining", "Culture", "Safety", "Essential Apps", "Money Tips"];
