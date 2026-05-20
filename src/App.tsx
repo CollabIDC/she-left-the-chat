@@ -14,6 +14,7 @@ import SheActuallyDidIt from "./pages/SheActuallyDidIt";
 import RealGuidesPage from "./pages/RealGuidesPage";
 import StumbledUpon from "./pages/StumbledUpon";
 import StumbledUponPost from "./pages/StumbledUponPost";
+import CountryMatchQuiz from "./pages/CountryMatchQuiz";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -38,6 +39,7 @@ const App = () => (
           <Route path="/videos" element={<Videos />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/resources" element={<Resources />} />
+          <Route path="/quiz" element={<CountryMatchQuiz />} />
           <Route path="/about" element={<About />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
