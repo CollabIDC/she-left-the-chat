@@ -81,7 +81,7 @@ const planningTools = [
 ];
 
 const comingSoon = [
-  { emoji: "🌍", title: "Country Matching App", desc: "Figure out where you actually want to live. Builds your personal roadmap." },
+  { emoji: "🌍", title: "Country Matching App", desc: "Figure out where you actually want to live. Builds your personal roadmap.", live: true, button: "TRY THE QUIZ", href: "/quiz" },
   { emoji: "🧭", title: "Move Abroad Roadmap", desc: "Step by step for people who are actually planning to do this." },
   { emoji: "🐾", title: "Service Dog Travel Guide", desc: "Everything that comes with traveling internationally with a service animal." },
   { emoji: "📋", title: "What I Learned About Visas", desc: "An honest overview of the options, what I researched, and what nobody told me upfront.", live: true, button: "READ THE OVERVIEW", href: "/resources/spain-visa-overview" },
