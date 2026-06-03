@@ -70,7 +70,7 @@ const sections: Section[] = [
       },
       {
         title: "There Is a Portal to New Orleans Hiding in Chamberí",
-        cardTitle: "Trikki",
+        cardTitle: "Trikki New Orleans Restaurant",
         slug: "trikki-new-orleans-chamberi",
         image: "/posts/images/trikki-hero.jpg",
         teaser:
