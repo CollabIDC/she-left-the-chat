@@ -37,11 +37,11 @@ const Footer = () => {
                 { label: "Home", to: "/" },
                 { label: "Stories", to: "/stories" },
                 { label: "Stumbled Upon", to: "/stumbled-upon" },
-                { label: "Videos", to: "/videos" },
                 { label: "Gallery", to: "/gallery" },
                 { label: "The Real Guides", to: "/the-real-guides" },
                 { label: "Resources", to: "/resources" },
                 { label: "My Story", to: "/about" },
+
               ].map((l) => (
                 <li key={l.label}>
                   <Link
