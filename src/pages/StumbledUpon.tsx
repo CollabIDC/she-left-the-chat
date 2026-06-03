@@ -317,7 +317,6 @@ const AngleCard = ({
 /* ---------- Section block ---------- */
 
 const SectionBlock = ({ section }: { section: Section }) => {
-  const { Icon } = section;
   const filled = section.posts.length;
   const placeholders = Math.max(0, section.totalSlots - filled);
   return (
@@ -340,10 +339,13 @@ const SectionBlock = ({ section }: { section: Section }) => {
             alignItems: "center",
             justifyContent: "center",
             flexShrink: 0,
+            fontSize: 22,
+            lineHeight: 1,
           }}
         >
-          <Icon size={21} color={section.iconColor} />
+          <span>{section.emoji}</span>
         </div>
+
         <div className="flex-1 min-w-0">
           <h2
             style={{
