@@ -61,14 +61,14 @@ const StumbledUponMadrid = () => {
             <Link to="/stumbled-upon" key={angle.name} className="block">
               <motion.div
                 {...anim(i + 1)}
-                className="bg-surface rounded-xl p-8 cursor-pointer transition-shadow hover:shadow-lg"
-                style={{ border: "1.5px solid #B8952A" }}
+                className="rounded-xl p-8 cursor-pointer transition-shadow hover:shadow-lg"
+                style={{ border: "1.5px solid #D4A843", backgroundColor: "#F5EDD8" }}
               >
                 <span className="text-4xl mb-4 block leading-none">{angle.emoji}</span>
-                <h3 className="font-display text-lg font-bold text-charcoal mb-2">
+                <h3 className="font-display text-lg font-bold mb-2" style={{ color: "#2C1810" }}>
                   {angle.name}
                 </h3>
-                <p className="font-body text-charcoal/70 text-sm leading-relaxed">
+                <p className="font-body text-sm leading-relaxed" style={{ color: "#8A7D72" }}>
                   {angle.description}
                 </p>
               </motion.div>

@@ -9,58 +9,58 @@
 
 @layer base {
   :root {
-    /* Warm ivory cream #FAF7F2 */
-    --background: 38 35% 96%;
-    --foreground: 0 0% 10%;
+    /* Warm cream page bg #FAF4E8 */
+    --background: 40 64% 95%;
+    --foreground: 17 47% 12%;
 
-    /* White contrast */
-    --surface: 0 0% 100%;
-    --surface-foreground: 0 0% 10%;
+    /* Light section surface #F5EDD8 */
+    --surface: 43 59% 90%;
+    --surface-foreground: 17 47% 12%;
 
-    /* Card surfaces (white) */
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 10%;
+    /* Card surfaces #F5EDD8 */
+    --card: 43 59% 90%;
+    --card-foreground: 17 47% 12%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 10%;
+    --popover: 43 59% 90%;
+    --popover-foreground: 17 47% 12%;
 
-    /* Antique gold #C9A84C - primary accent */
-    --primary: 44 56% 54%;
-    --primary-foreground: 0 0% 10%;
+    /* Gold #D4A843 */
+    --primary: 42 63% 55%;
+    --primary-foreground: 17 47% 12%;
 
     /* Sand secondary */
-    --secondary: 38 25% 92%;
-    --secondary-foreground: 0 0% 10%;
+    --secondary: 43 59% 90%;
+    --secondary-foreground: 17 47% 12%;
 
     /* Muted warm */
-    --muted: 38 20% 90%;
-    --muted-foreground: 0 0% 40%;
+    --muted: 43 40% 88%;
+    --muted-foreground: 28 10% 49%;
 
-    /* Dusty terracotta #C4714F - secondary warm */
+    /* Dusty terracotta */
     --accent: 16 47% 54%;
     --accent-foreground: 0 0% 100%;
 
-    /* Near black #111111 - nav/footer */
-    --ink: 0 0% 7%;
-    --ink-foreground: 38 35% 96%;
+    /* Deep forest #1A4A2E - dark sections */
+    --ink: 145 48% 20%;
+    --ink-foreground: 40 64% 95%;
 
     --destructive: 0 70% 50%;
-    --destructive-foreground: 38 35% 96%;
+    --destructive-foreground: 40 64% 95%;
 
-    --border: 38 18% 85%;
-    --input: 38 18% 85%;
-    --ring: 44 56% 54%;
+    --border: 60 13% 81%;
+    --input: 60 13% 81%;
+    --ring: 42 63% 55%;
 
     --radius: 0.875rem;
 
     /* Custom design tokens */
-    --gold: 44 56% 54%;
-    --gold-soft: 44 56% 64%;
-    --gold-deep: 44 56% 42%;
+    --gold: 42 63% 55%;
+    --gold-soft: 42 63% 65%;
+    --gold-deep: 42 63% 45%;
     --terracotta: 16 47% 54%;
     --blush: 16 35% 92%;
-    --ivory: 38 35% 96%;
-    --charcoal: 0 0% 10%;
+    --ivory: 43 59% 90%;
+    --charcoal: 17 47% 12%;
 
     --gradient-hero: linear-gradient(90deg, hsl(0 0% 0% / 0.55) 0%, hsl(0 0% 0% / 0.38) 25%, hsl(0 0% 0% / 0.05) 60%, hsl(0 0% 0% / 0) 100%);
     --gradient-warm: linear-gradient(180deg, hsl(38 35% 96%), hsl(38 30% 93%));
