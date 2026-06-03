@@ -240,7 +240,6 @@ const AngleCard = ({
   active: boolean;
   onClick: () => void;
 }) => {
-  const { Icon } = section;
   const [hover, setHover] = useState(false);
   const lifted = hover || active;
   return (
@@ -252,7 +251,7 @@ const AngleCard = ({
       className="text-left transition-all"
       style={{
         background: lifted ? "#FBF7EF" : C.cardBg,
-        border: `1.5px solid ${lifted ? C.gold : C.border}`,
+        border: `1.5px solid ${C.gold}`,
         borderRadius: 12,
         padding: 22,
         transform: lifted ? "translateY(-2px)" : "translateY(0)",
@@ -270,10 +269,13 @@ const AngleCard = ({
           alignItems: "center",
           justifyContent: "center",
           marginBottom: 14,
+          fontSize: 24,
+          lineHeight: 1,
         }}
       >
-        <Icon size={22} color={section.iconColor} />
+        <span>{section.emoji}</span>
       </div>
+
       <h3
         style={{
           fontFamily: "'Playfair Display', serif",
