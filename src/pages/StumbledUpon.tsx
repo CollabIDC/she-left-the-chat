@@ -2,16 +2,8 @@ import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import {
-  Store,
-  Footprints,
-  Clock,
-  Eye,
-  MapPin,
-  Ticket,
-  PencilLine,
-  type LucideIcon,
-} from "lucide-react";
+import { PencilLine } from "lucide-react";
+
 
 /* ---------- Brand tokens (scoped to this page) ---------- */
 const C = {
