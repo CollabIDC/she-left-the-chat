@@ -176,7 +176,10 @@ const Resources = () => {
                   ))}
                 </div>
                 <a
-                  href="#"
+                  href="https://drive.google.com/file/d/1vyQciv-h5zgGyhMQm53cyGYl0MpVf5yB/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+
                   style={{
                     marginTop: 20,
                     display: "inline-flex",
