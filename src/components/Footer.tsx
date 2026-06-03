@@ -4,7 +4,7 @@ import Logo from "./Logo";
 
 const Footer = () => {
   return (
-    <footer className="bg-ink text-ivory">
+    <footer className="bg-[#0D2B1A] text-ivory">
       <div className="container mx-auto px-6 pt-16 pb-8">
         {/* Logo + tagline */}
         <div className="text-center mb-12">
