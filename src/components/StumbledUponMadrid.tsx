@@ -1,49 +1,36 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Store, PersonStanding, Clock, Eye, Map, Ticket } from "lucide-react";
 
 const angles = [
   {
-    icon: Store,
+    emoji: "🏪",
     name: "The Unexpected Business",
     description: "The shops, restaurants, and people doing something remarkable in plain sight.",
-    iconColor: "#C5A028",
-    iconBg: "#FFF8E7",
   },
   {
-    icon: PersonStanding,
+    emoji: "🚶",
     name: "While You Are There",
     description: "Experiences you will only find if someone who actually lives here tells you.",
-    iconColor: "#B05A3A",
-    iconBg: "#FDF0EA",
   },
   {
-    icon: Clock,
+    emoji: "⏳",
     name: "Old Madrid",
     description: "The deep traditions, the tabernas, the things that have not changed in a hundred years.",
-    iconColor: "#4a7c59",
-    iconBg: "#EEF5F1",
   },
   {
-    icon: Eye,
+    emoji: "👁️",
     name: "Through a Black Lens",
     description: "Madrid through my eyes. My perspective, my experience, my community.",
-    iconColor: "#5a4a8a",
-    iconBg: "#F0EEF8",
   },
   {
-    icon: Map,
+    emoji: "🗺️",
     name: "Only Locals Know",
     description: "The places, the shortcuts, the tips that never make the tourist lists.",
-    iconColor: "#c4603a",
-    iconBg: "#FDF0EA",
   },
   {
-    icon: Ticket,
+    emoji: "🎟️",
     name: "Things to Do",
     description: "Curated, honest, written from real experience. No affiliate fluff.",
-    iconColor: "#2a6b8a",
-    iconBg: "#EAF3F8",
   },
 ];
 
@@ -55,7 +42,6 @@ const anim = (i: number) => ({
 });
 
 const StumbledUponMadrid = () => {
-
   return (
     <section className="py-24 bg-background">
       <div className="container mx-auto px-6">
@@ -70,31 +56,25 @@ const StumbledUponMadrid = () => {
           <span className="block w-20 h-px bg-gold mx-auto mt-6" />
         </motion.div>
 
-        {/* Angle cards grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-          {angles.map((angle, i) => {
-            const Icon = angle.icon;
-            return (
-              <Link to="/stumbled-upon" key={angle.name} className="block">
-                <motion.div
-                  {...anim(i + 1)}
-                  className="bg-surface rounded-xl p-8 card-elevated cursor-pointer hover:shadow-lg transition-shadow"
-                >
-                  <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-4" style={{ backgroundColor: angle.iconBg }}>
-                    <Icon className="w-6 h-6" style={{ color: angle.iconColor }} />
-                  </div>
-                  <h3 className="font-display text-lg font-bold text-charcoal mb-2">
-                    {angle.name}
-                  </h3>
-                  <p className="font-body text-charcoal/70 text-sm leading-relaxed">
-                    {angle.description}
-                  </p>
-                </motion.div>
-              </Link>
-            );
-          })}
+          {angles.map((angle, i) => (
+            <Link to="/stumbled-upon" key={angle.name} className="block">
+              <motion.div
+                {...anim(i + 1)}
+                className="bg-surface rounded-xl p-8 cursor-pointer transition-shadow hover:shadow-lg"
+                style={{ border: "1.5px solid #B8952A" }}
+              >
+                <span className="text-4xl mb-4 block leading-none">{angle.emoji}</span>
+                <h3 className="font-display text-lg font-bold text-charcoal mb-2">
+                  {angle.name}
+                </h3>
+                <p className="font-body text-charcoal/70 text-sm leading-relaxed">
+                  {angle.description}
+                </p>
+              </motion.div>
+            </Link>
+          ))}
         </div>
-
       </div>
     </section>
   );

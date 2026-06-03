@@ -2,16 +2,8 @@ import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import {
-  Store,
-  Footprints,
-  Clock,
-  Eye,
-  MapPin,
-  Ticket,
-  PencilLine,
-  type LucideIcon,
-} from "lucide-react";
+import { PencilLine } from "lucide-react";
+
 
 /* ---------- Brand tokens (scoped to this page) ---------- */
 const C = {
@@ -43,8 +35,7 @@ type Section = {
   title: string;
   description: string;
   iconBg: string;
-  iconColor: string;
-  Icon: LucideIcon;
+  emoji: string;
   posts: Post[];
   emptyFirstLabel?: string;
   totalSlots: number;
@@ -57,8 +48,7 @@ const sections: Section[] = [
     description:
       "The shops, restaurants, and people doing something remarkable in plain sight.",
     iconBg: "#F0ECE2",
-    iconColor: C.gold,
-    Icon: Store,
+    emoji: "🏪",
     totalSlots: 3,
     posts: [
       {
@@ -70,7 +60,7 @@ const sections: Section[] = [
       },
       {
         title: "There Is a Portal to New Orleans Hiding in Chamberí",
-        cardTitle: "Trikki",
+        cardTitle: "Trikki New Orleans Restaurant",
         slug: "trikki-new-orleans-chamberi",
         image: "/posts/images/trikki-hero.jpg",
         teaser:
@@ -84,8 +74,7 @@ const sections: Section[] = [
     description:
       "Experiences you will only find if someone who actually lives here tells you.",
     iconBg: "#F5EAE8",
-    iconColor: "#C0674E",
-    Icon: Footprints,
+    emoji: "🚶",
     totalSlots: 3,
     posts: [
       {
@@ -104,8 +93,7 @@ const sections: Section[] = [
     description:
       "The deep traditions, the tabernas, the things that have not changed in a hundred years.",
     iconBg: "#EAF0EC",
-    iconColor: "#4A7A58",
-    Icon: Clock,
+    emoji: "⏳",
     totalSlots: 3,
     posts: [
       {
@@ -123,8 +111,7 @@ const sections: Section[] = [
     description:
       "Madrid through my eyes. My perspective, my experience, my community.",
     iconBg: "#ECE9F5",
-    iconColor: "#6B58A8",
-    Icon: Eye,
+    emoji: "👁️",
     totalSlots: 3,
     posts: [],
     emptyFirstLabel: "First story coming soon",
@@ -135,8 +122,7 @@ const sections: Section[] = [
     description:
       "The places, the shortcuts, the tips that never make the tourist lists.",
     iconBg: "#E8EFF5",
-    iconColor: "#3A6A8A",
-    Icon: MapPin,
+    emoji: "🗺️",
     totalSlots: 3,
     posts: [],
     emptyFirstLabel: "First story coming soon",
@@ -147,13 +133,13 @@ const sections: Section[] = [
     description:
       "Curated, honest, written from real experience. No affiliate fluff.",
     iconBg: "#F5EDE8",
-    iconColor: "#B05A30",
-    Icon: Ticket,
+    emoji: "🎟️",
     totalSlots: 3,
     posts: [],
     emptyFirstLabel: "First story coming soon",
   },
 ];
+
 
 /* ---------- Card pieces ---------- */
 
@@ -163,7 +149,8 @@ const PostCard = ({ post }: { post: Post }) => (
     className="group block rounded-[12px] overflow-hidden transition-all"
     style={{
       background: C.cardBg,
-      border: `1.5px solid ${C.border}`,
+      border: `1.5px solid ${C.gold}`,
+
     }}
   >
     <div
@@ -254,7 +241,6 @@ const AngleCard = ({
   active: boolean;
   onClick: () => void;
 }) => {
-  const { Icon } = section;
   const [hover, setHover] = useState(false);
   const lifted = hover || active;
   return (
@@ -266,7 +252,7 @@ const AngleCard = ({
       className="text-left transition-all"
       style={{
         background: lifted ? "#FBF7EF" : C.cardBg,
-        border: `1.5px solid ${lifted ? C.gold : C.border}`,
+        border: `1.5px solid ${C.gold}`,
         borderRadius: 12,
         padding: 22,
         transform: lifted ? "translateY(-2px)" : "translateY(0)",
@@ -284,10 +270,13 @@ const AngleCard = ({
           alignItems: "center",
           justifyContent: "center",
           marginBottom: 14,
+          fontSize: 24,
+          lineHeight: 1,
         }}
       >
-        <Icon size={22} color={section.iconColor} />
+        <span>{section.emoji}</span>
       </div>
+
       <h3
         style={{
           fontFamily: "'Playfair Display', serif",
@@ -329,7 +318,6 @@ const AngleCard = ({
 /* ---------- Section block ---------- */
 
 const SectionBlock = ({ section }: { section: Section }) => {
-  const { Icon } = section;
   const filled = section.posts.length;
   const placeholders = Math.max(0, section.totalSlots - filled);
   return (
@@ -352,10 +340,13 @@ const SectionBlock = ({ section }: { section: Section }) => {
             alignItems: "center",
             justifyContent: "center",
             flexShrink: 0,
+            fontSize: 22,
+            lineHeight: 1,
           }}
         >
-          <Icon size={21} color={section.iconColor} />
+          <span>{section.emoji}</span>
         </div>
+
         <div className="flex-1 min-w-0">
           <h2
             style={{
