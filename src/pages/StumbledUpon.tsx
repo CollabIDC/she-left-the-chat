@@ -35,8 +35,7 @@ type Section = {
   title: string;
   description: string;
   iconBg: string;
-  iconColor: string;
-  Icon: LucideIcon;
+  emoji: string;
   posts: Post[];
   emptyFirstLabel?: string;
   totalSlots: number;
@@ -49,8 +48,7 @@ const sections: Section[] = [
     description:
       "The shops, restaurants, and people doing something remarkable in plain sight.",
     iconBg: "#F0ECE2",
-    iconColor: C.gold,
-    Icon: Store,
+    emoji: "🏪",
     totalSlots: 3,
     posts: [
       {
@@ -76,8 +74,7 @@ const sections: Section[] = [
     description:
       "Experiences you will only find if someone who actually lives here tells you.",
     iconBg: "#F5EAE8",
-    iconColor: "#C0674E",
-    Icon: Footprints,
+    emoji: "🚶",
     totalSlots: 3,
     posts: [
       {
@@ -96,8 +93,7 @@ const sections: Section[] = [
     description:
       "The deep traditions, the tabernas, the things that have not changed in a hundred years.",
     iconBg: "#EAF0EC",
-    iconColor: "#4A7A58",
-    Icon: Clock,
+    emoji: "⏳",
     totalSlots: 3,
     posts: [
       {
@@ -115,8 +111,7 @@ const sections: Section[] = [
     description:
       "Madrid through my eyes. My perspective, my experience, my community.",
     iconBg: "#ECE9F5",
-    iconColor: "#6B58A8",
-    Icon: Eye,
+    emoji: "👁️",
     totalSlots: 3,
     posts: [],
     emptyFirstLabel: "First story coming soon",
@@ -127,8 +122,7 @@ const sections: Section[] = [
     description:
       "The places, the shortcuts, the tips that never make the tourist lists.",
     iconBg: "#E8EFF5",
-    iconColor: "#3A6A8A",
-    Icon: MapPin,
+    emoji: "🗺️",
     totalSlots: 3,
     posts: [],
     emptyFirstLabel: "First story coming soon",
@@ -139,13 +133,13 @@ const sections: Section[] = [
     description:
       "Curated, honest, written from real experience. No affiliate fluff.",
     iconBg: "#F5EDE8",
-    iconColor: "#B05A30",
-    Icon: Ticket,
+    emoji: "🎟️",
     totalSlots: 3,
     posts: [],
     emptyFirstLabel: "First story coming soon",
   },
 ];
+
 
 /* ---------- Card pieces ---------- */
 
