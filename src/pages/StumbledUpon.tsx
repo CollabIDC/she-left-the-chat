@@ -149,7 +149,8 @@ const PostCard = ({ post }: { post: Post }) => (
     className="group block rounded-[12px] overflow-hidden transition-all"
     style={{
       background: C.cardBg,
-      border: `1.5px solid ${C.border}`,
+      border: `1.5px solid ${C.gold}`,
+
     }}
   >
     <div
