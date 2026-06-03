@@ -12,7 +12,7 @@ const Footer = () => {
             <Logo tone="ivory" size="lg" />
           </Link>
           <p className="font-body italic text-sm text-ivory/70 mt-3">
-            Real stories. Bold choices. Life in Madrid and beyond.
+            Choosing myself, one country at a time.
           </p>
 
         </div>
