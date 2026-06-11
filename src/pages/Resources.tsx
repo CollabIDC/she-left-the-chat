@@ -316,13 +316,13 @@ const Resources = () => {
                 gap: 20,
               }}
             >
-              {planningTools.map((p) => (
+              {planningTools.map((p: any) => (
                 <div
                   key={p.title}
                   style={{
                     background: "#FFFFFF",
-                    border: `1.5px solid ${BORDER}`,
-                    borderLeft: `4px solid ${GOLD}`,
+                    border: p.live ? `1.5px solid ${GOLD}` : `1.5px solid ${BORDER}`,
+                    borderLeft: p.live ? `1.5px solid ${GOLD}` : `4px solid ${GOLD}`,
                     borderRadius: 12,
                     padding: 22,
                     display: "flex",
@@ -331,7 +331,27 @@ const Resources = () => {
                 >
                   <span style={{ fontSize: 26, display: "block", marginBottom: 10, lineHeight: 1 }}>{p.emoji}</span>
                   <h3 style={{ fontFamily: display, fontWeight: 700, fontSize: 14, color: INK, lineHeight: 1.3, margin: "0 0 5px" }}>{p.title}</h3>
-                  <p style={{ fontFamily: lato, fontSize: 12, color: MUTED, lineHeight: 1.6, margin: 0 }}>{p.desc}</p>
+                  <p style={{ fontFamily: lato, fontSize: 12, color: MUTED, lineHeight: 1.6, margin: 0, marginBottom: p.live && p.href ? 14 : 0, flex: 1 }}>{p.desc}</p>
+                  {p.live && p.href && (
+                    <a
+                      href={p.href}
+                      style={{
+                        alignSelf: "flex-start",
+                        background: GOLD,
+                        color: INK,
+                        fontFamily: lato,
+                        fontWeight: 700,
+                        fontSize: 10,
+                        letterSpacing: "0.1em",
+                        textTransform: "uppercase",
+                        padding: "8px 16px",
+                        borderRadius: 20,
+                        textDecoration: "none",
+                      }}
+                    >
+                      {p.button}
+                    </a>
+                  )}
                 </div>
               ))}
             </div>
