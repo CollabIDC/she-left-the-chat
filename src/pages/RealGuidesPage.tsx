@@ -20,6 +20,13 @@ const RealGuidesPage = () => {
   const [topic, setTopic] = useState<(typeof topics)[number]>("All");
   const [readerNeed, setReaderNeed] =
     useState<(typeof readerNeeds)[number]>("All");
+  const [filtersOpen, setFiltersOpen] = useState(false);
+
+  const activeCount =
+    (destination !== "All" ? 1 : 0) +
+    (topic !== "All" ? 1 : 0) +
+    (readerNeed !== "All" ? 1 : 0);
+
 
   const filtered = stories.filter((s) => {
     if (s.stream !== "view-from-here") return false;
