@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { ChevronDown } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
@@ -12,12 +13,20 @@ import {
 } from "@/data/stories";
 import { cn } from "@/lib/utils";
 
+
 const RealGuidesPage = () => {
   const [destination, setDestination] =
     useState<(typeof destinations)[number]>("All");
   const [topic, setTopic] = useState<(typeof topics)[number]>("All");
   const [readerNeed, setReaderNeed] =
     useState<(typeof readerNeeds)[number]>("All");
+  const [filtersOpen, setFiltersOpen] = useState(false);
+
+  const activeCount =
+    (destination !== "All" ? 1 : 0) +
+    (topic !== "All" ? 1 : 0) +
+    (readerNeed !== "All" ? 1 : 0);
+
 
   const filtered = stories.filter((s) => {
     if (s.stream !== "view-from-here") return false;
@@ -68,12 +77,42 @@ const RealGuidesPage = () => {
         />
 
         <section className="bg-background pt-4 pb-12">
-          <div className="container mx-auto px-6 space-y-7 max-w-5xl">
-            {renderPillRow("Destination", destinations, destination, setDestination as (v: string) => void)}
-            {renderPillRow("Topic", topics, topic, setTopic as (v: string) => void)}
-            {renderPillRow("Reader Need", readerNeeds, readerNeed, setReaderNeed as (v: string) => void)}
+          <div className="container mx-auto px-6 max-w-5xl">
+            <div className="flex justify-center">
+              <button
+                onClick={() => setFiltersOpen((v) => !v)}
+                className="inline-flex items-center gap-2 px-5 py-2 rounded-full font-label text-[11px] uppercase tracking-[0.2em] border border-gold bg-ivory text-charcoal hover:bg-gold hover:text-charcoal transition-all"
+                aria-expanded={filtersOpen}
+              >
+                <span>Filter Guides</span>
+                {activeCount > 0 && (
+                  <span className="inline-flex items-center justify-center min-w-[20px] h-5 px-1.5 rounded-full bg-gold text-charcoal text-[10px] font-semibold tracking-normal">
+                    {activeCount}
+                  </span>
+                )}
+                <ChevronDown
+                  className={cn(
+                    "h-3.5 w-3.5 transition-transform duration-300",
+                    filtersOpen && "rotate-180",
+                  )}
+                />
+              </button>
+            </div>
+            <div
+              className={cn(
+                "overflow-hidden transition-all duration-300 ease-in-out",
+                filtersOpen
+                  ? "max-h-[1000px] opacity-100 mt-7 space-y-7"
+                  : "max-h-0 opacity-0",
+              )}
+            >
+              {renderPillRow("Destination", destinations, destination, setDestination as (v: string) => void)}
+              {renderPillRow("Topic", topics, topic, setTopic as (v: string) => void)}
+              {renderPillRow("Reader Need", readerNeeds, readerNeed, setReaderNeed as (v: string) => void)}
+            </div>
           </div>
         </section>
+
 
         <section className="bg-background pb-24">
           <div className="container mx-auto px-6">
