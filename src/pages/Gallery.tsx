@@ -7,18 +7,18 @@ import PageHeader from "@/components/PageHeader";
 import Seo from "@/components/Seo";
 
 const photos = [
-  { src: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80", alt: "Madrid street at sunset", aspect: "aspect-[3/4]" },
-  { src: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=1200&q=80", alt: "Cafe interior", aspect: "aspect-[4/3]" },
-  { src: "https://images.unsplash.com/photo-1543783207-ec64e4d95325?w=1200&q=80", alt: "Gran Via at night", aspect: "aspect-[4/3]" },
-  { src: "https://images.unsplash.com/photo-1509840841025-9088ba78a826?w=1200&q=80", alt: "Retiro Park", aspect: "aspect-[3/4]" },
-  { src: "https://images.unsplash.com/photo-1578912996078-305d92249aa6?w=1200&q=80", alt: "Toledo", aspect: "aspect-[3/4]" },
-  { src: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1200&q=80", alt: "Apartment", aspect: "aspect-[4/3]" },
-  { src: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&q=80", alt: "Tapas spread", aspect: "aspect-[4/3]" },
-  { src: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&q=80", alt: "Old door detail", aspect: "aspect-[3/4]" },
-  { src: "https://images.unsplash.com/photo-1473773508845-188df298d2d1?w=1200&q=80", alt: "Train window", aspect: "aspect-[3/4]" },
-  { src: "https://images.unsplash.com/photo-1519677100203-a0e668c92439?w=1200&q=80", alt: "Plaza Mayor", aspect: "aspect-[4/3]" },
-  { src: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=1200&q=80", alt: "Paris detour", aspect: "aspect-[3/4]" },
-  { src: "https://images.unsplash.com/photo-1493558103817-58b2924bce98?w=1200&q=80", alt: "Mediterranean coast", aspect: "aspect-[4/3]" },
+  { src: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80", alt: "Modern glass skyscrapers rising against a clear sky in a city business district", aspect: "aspect-[3/4]" },
+  { src: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=1200&q=80", alt: "Cozy cafe interior with wooden tables, warm lighting, and patrons seated at the counter", aspect: "aspect-[4/3]" },
+  { src: "https://images.unsplash.com/photo-1543783207-ec64e4d95325?w=1200&q=80", alt: "Madrid's Gran Via at night with illuminated facades and light trails from passing traffic", aspect: "aspect-[4/3]" },
+  { src: "https://images.unsplash.com/photo-1509840841025-9088ba78a826?w=1200&q=80", alt: "Tree-lined park path with sunlight filtering through green leaves overhead", aspect: "aspect-[3/4]" },
+  { src: "https://images.unsplash.com/photo-1578912996078-305d92249aa6?w=1200&q=80", alt: "Hilltop view of Toledo, Spain, with stone bridge and the Alcazar rising above the old town", aspect: "aspect-[3/4]" },
+  { src: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1200&q=80", alt: "Bright minimalist living room with a white sofa, large window, and soft natural light", aspect: "aspect-[4/3]" },
+  { src: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&q=80", alt: "Group of friends raising glasses of beer together over a table at a bar", aspect: "aspect-[4/3]" },
+  { src: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&q=80", alt: "Close-up of a black circuit board with copper traces and electronic components", aspect: "aspect-[3/4]" },
+  { src: "https://images.unsplash.com/photo-1473773508845-188df298d2d1?w=1200&q=80", alt: "View through a rain-streaked train window of a blurred green countryside passing by", aspect: "aspect-[3/4]" },
+  { src: "https://images.unsplash.com/photo-1519677100203-a0e668c92439?w=1200&q=80", alt: "Crowd of people gathered at an outdoor event on a sunny day", aspect: "aspect-[4/3]" },
+  { src: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=1200&q=80", alt: "The Eiffel Tower in Paris seen from across the Champ de Mars on a clear day", aspect: "aspect-[3/4]" },
+  { src: "https://images.unsplash.com/photo-1493558103817-58b2924bce98?w=1200&q=80", alt: "Turquoise Mediterranean sea meeting a rocky coastline under a bright blue sky", aspect: "aspect-[4/3]" },
 ];
 
 const Gallery = () => {
