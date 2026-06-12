@@ -26,7 +26,7 @@ export default function Seo({
   jsonLd,
 }: SeoProps) {
   const url = `${SITE}${path}`;
-  const absImage = absoluteImage(image);
+  const absImage = absoluteImage(image) ?? `${SITE}/og-image.jpg`;
   const ldArray = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
 
   return (
