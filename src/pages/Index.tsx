@@ -38,7 +38,7 @@ const Index = () => {
         jsonLd={homeJsonLd}
       />
       <Navbar />
-      <main>
+      <main id="main-content">
         <HeroCarousel />
         <LatestStories />
         <StumbledUponMadrid />

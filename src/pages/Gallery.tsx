@@ -32,7 +32,7 @@ const Gallery = () => {
         path="/gallery"
       />
       <Navbar />
-      <main>
+      <main id="main-content">
         <PageHeader eyebrow="Photo Gallery" title="Moments Captured" />
 
         <section className="bg-background pb-24" aria-labelledby="gallery-heading">

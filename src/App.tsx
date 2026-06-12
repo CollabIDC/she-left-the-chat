@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import ScrollToTop from "@/components/ScrollToTop";
+import SkipLink from "@/components/SkipLink";
 import Index from "./pages/Index";
 import BlogPost from "./pages/BlogPost";
 import Resources from "./pages/Resources";
@@ -26,6 +27,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <ScrollToTop />
+        <SkipLink />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/stories" element={<SheActuallyDidIt />} />

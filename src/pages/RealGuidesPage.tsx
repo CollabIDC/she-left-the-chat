@@ -75,7 +75,7 @@ const RealGuidesPage = () => {
         path="/the-real-guides"
       />
       <Navbar />
-      <main>
+      <main id="main-content">
         <PageHeader
           eyebrow="The Real Guides"
           title="The Real Guides"

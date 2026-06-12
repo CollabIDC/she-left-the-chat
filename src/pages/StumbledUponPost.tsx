@@ -8,6 +8,7 @@ import { extractStyleAndBody, scopeCss, type ExtractedHtml } from "@/lib/htmlPos
 const C = {
   cream: "#faf7f2",
   gold: "#B8952A",
+  goldText: "#8A6D1F",
   textDark: "#1A1714",
   textMid: "#4A4540",
   textMuted: "#8A8078",
@@ -81,7 +82,7 @@ const BackLink = () => (
         fontSize: 12,
         letterSpacing: "0.14em",
         textTransform: "uppercase",
-        color: C.gold,
+        color: C.goldText,
         fontWeight: 600,
         textDecoration: "none",
       }}
@@ -142,7 +143,7 @@ const StumbledUponPost = () => {
       <Navbar />
       <div style={{ height: 72 }} aria-hidden />
       <BackLink />
-      <main>
+      <main id="main-content">
         {filePath ? (
           <>
             {loading && (

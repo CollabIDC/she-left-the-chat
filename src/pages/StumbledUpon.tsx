@@ -11,6 +11,7 @@ const C = {
   cream: "#F2EDE4",
   creamDark: "#E8E0D3",
   gold: "#B8952A",
+  goldText: "#8A6D1F",
   goldLight: "#D4AE45",
   textDark: "#1A1714",
   textMid: "#4A4540",
@@ -306,7 +307,7 @@ const AngleCard = ({
           fontFamily: "'Lato', sans-serif",
           fontSize: 12,
           letterSpacing: "0.08em",
-          color: C.gold,
+          color: C.goldText,
           fontWeight: 600,
         }}
       >
@@ -377,7 +378,7 @@ const SectionBlock = ({ section }: { section: Section }) => {
             fontSize: 11,
             letterSpacing: "0.14em",
             textTransform: "uppercase",
-            color: C.gold,
+            color: C.goldText,
             fontWeight: 600,
             cursor: "pointer",
             whiteSpace: "nowrap",
@@ -449,7 +450,7 @@ const StumbledUpon = () => {
         path="/stumbled-upon"
       />
       <Navbar />
-      <main>
+      <main id="main-content">
         {/* HERO */}
         <section
           style={{
@@ -490,7 +491,7 @@ const StumbledUpon = () => {
                 fontFamily: "'Playfair Display', serif",
                 fontStyle: "italic",
                 fontSize: "clamp(20px, 2.5vw, 28px)",
-                color: C.gold,
+                color: C.goldText,
               }}
             >
               Until now.

@@ -21,7 +21,7 @@ const SheActuallyDidIt = () => {
         path="/stories"
       />
       <Navbar />
-      <main>
+      <main id="main-content">
         <PageHeader
           eyebrow="Stories"
           title="She Actually Did It"
