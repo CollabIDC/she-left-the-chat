@@ -1,0 +1,15 @@
+# she left the chat
+
+> A travel and life blog by Kimberly about leaving Atlanta for Madrid, the practical stuff of moving abroad, and what it actually takes to choose yourself.
+
+## Pages
+
+- [Home](/): Latest stories, guides, and Madrid finds.
+- [About](/about): Who Kimberly is and why she left.
+- [Stories](/stories): Personal essays from inside the move and the months after.
+- [The Real Guides](/the-real-guides): Honest, filterable guides for Madrid, Paris, London, and Senegal.
+- [Stumbled Upon](/stumbled-upon): Small Madrid places, shows, and detours worth writing down.
+- [Videos](/videos): Day-in-the-life vlogs, apartment tours, and city guides.
+- [Gallery](/gallery): Photo journal from Madrid and nearby travel.
+- [Resources](/resources): Free downloadable tools and AI language helpers.
+- [Country Match Quiz](/quiz): A 12-question quiz to find the country that fits you.
