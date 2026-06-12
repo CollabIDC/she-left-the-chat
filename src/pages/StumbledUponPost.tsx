@@ -8,6 +8,7 @@ import { extractStyleAndBody, scopeCss, type ExtractedHtml } from "@/lib/htmlPos
 const C = {
   cream: "#faf7f2",
   gold: "#B8952A",
+  goldText: "#8A6D1F",
   textDark: "#1A1714",
   textMid: "#4A4540",
   textMuted: "#8A8078",
