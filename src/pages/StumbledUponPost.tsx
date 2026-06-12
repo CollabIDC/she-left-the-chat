@@ -233,7 +233,7 @@ const StumbledUponPost = () => {
               }}
             >
               Story coming soon
-            </h1>
+            </h2>
           </div>
         )}
       </main>
