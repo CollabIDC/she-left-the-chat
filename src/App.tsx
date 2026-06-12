@@ -27,6 +27,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <ScrollToTop />
+        <SkipLink />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/stories" element={<SheActuallyDidIt />} />
