@@ -148,7 +148,7 @@
     @apply inline-flex items-center justify-center gap-2 rounded-full px-7 py-3 font-medium transition-all border;
     font-family: var(--font-body);
     border-color: hsl(var(--gold));
-    color: hsl(var(--gold));
+    color: #8A6D1F;
     background: transparent;
   }
   .btn-gold-outline:hover {
