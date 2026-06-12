@@ -5,20 +5,30 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
 import Seo from "@/components/Seo";
+import chocolateriaSanGines from "@/assets/gallery/chocolateria-san-gines.jpg.asset.json";
+import floralHallway from "@/assets/gallery/floral-hallway.jpg.asset.json";
+import gumboAtTrikki from "@/assets/gallery/gumbo-at-trikki.jpg.asset.json";
+import hotelAtlanticoBlueHour from "@/assets/gallery/hotel-atlantico-blue-hour.jpg.asset.json";
+import metropolisCrosswalk from "@/assets/gallery/metropolis-crosswalk.jpg.asset.json";
+import metropolisSunTraffic from "@/assets/gallery/metropolis-sun-traffic.jpg.asset.json";
+import morningBreakfastTulips from "@/assets/gallery/morning-breakfast-tulips.jpg.asset.json";
+import parkSpringPlanting from "@/assets/gallery/park-spring-planting.jpg.asset.json";
+import quesadillaDinner from "@/assets/gallery/quesadilla-dinner.jpg.asset.json";
+import quinoaLunch from "@/assets/gallery/quinoa-lunch.jpg.asset.json";
+import redBarInterior from "@/assets/gallery/red-bar-interior.jpg.asset.json";
 
 const photos = [
-  { src: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80", alt: "Modern glass skyscrapers rising against a clear sky in a city business district", aspect: "aspect-[3/4]" },
-  { src: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=1200&q=80", alt: "Cozy cafe interior with wooden tables, warm lighting, and patrons seated at the counter", aspect: "aspect-[4/3]" },
-  { src: "https://images.unsplash.com/photo-1543783207-ec64e4d95325?w=1200&q=80", alt: "Madrid's Gran Via at night with illuminated facades and light trails from passing traffic", aspect: "aspect-[4/3]" },
-  { src: "https://images.unsplash.com/photo-1509840841025-9088ba78a826?w=1200&q=80", alt: "Tree-lined park path with sunlight filtering through green leaves overhead", aspect: "aspect-[3/4]" },
-  { src: "https://images.unsplash.com/photo-1578912996078-305d92249aa6?w=1200&q=80", alt: "Hilltop view of Toledo, Spain, with stone bridge and the Alcazar rising above the old town", aspect: "aspect-[3/4]" },
-  { src: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1200&q=80", alt: "Bright minimalist living room with a white sofa, large window, and soft natural light", aspect: "aspect-[4/3]" },
-  { src: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&q=80", alt: "Group of friends raising glasses of beer together over a table at a bar", aspect: "aspect-[4/3]" },
-  { src: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&q=80", alt: "Close-up of a black circuit board with copper traces and electronic components", aspect: "aspect-[3/4]" },
-  { src: "https://images.unsplash.com/photo-1473773508845-188df298d2d1?w=1200&q=80", alt: "View through a rain-streaked train window of a blurred green countryside passing by", aspect: "aspect-[3/4]" },
-  { src: "https://images.unsplash.com/photo-1519677100203-a0e668c92439?w=1200&q=80", alt: "Crowd of people gathered at an outdoor event on a sunny day", aspect: "aspect-[4/3]" },
-  { src: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=1200&q=80", alt: "The Eiffel Tower in Paris seen from across the Champ de Mars on a clear day", aspect: "aspect-[3/4]" },
-  { src: "https://images.unsplash.com/photo-1493558103817-58b2924bce98?w=1200&q=80", alt: "Turquoise Mediterranean sea meeting a rocky coastline under a bright blue sky", aspect: "aspect-[4/3]" },
+  { src: hotelAtlanticoBlueHour.url, alt: "Hotel Atlantico lit up at blue hour on Gran Via in Madrid", aspect: "aspect-[3/4]" },
+  { src: metropolisCrosswalk.url, alt: "The Metropolis building seen from a crosswalk on Gran Via under a bright blue sky", aspect: "aspect-[3/4]" },
+  { src: metropolisSunTraffic.url, alt: "The Metropolis building framed by sun and traffic on Gran Via in Madrid", aspect: "aspect-[3/4]" },
+  { src: chocolateriaSanGines.url, alt: "Chocolatería San Ginés sign glowing on a narrow Madrid street", aspect: "aspect-[3/4]" },
+  { src: redBarInterior.url, alt: "Red bar interior with a marble counter, gold lighting, and empty stools", aspect: "aspect-[3/4]" },
+  { src: floralHallway.url, alt: "Tall pink floral arrangements hanging in a marble hallway with black drapes", aspect: "aspect-[3/4]" },
+  { src: parkSpringPlanting.url, alt: "Young trees and rosemary bushes in a freshly planted Madrid park with apartment buildings behind", aspect: "aspect-[3/4]" },
+  { src: morningBreakfastTulips.url, alt: "A breakfast of a jamon croissant, green grapes, and coffee next to a vase of bright pink tulips", aspect: "aspect-[3/4]" },
+  { src: quesadillaDinner.url, alt: "Homemade quesadillas with guacamole and salsa on a blue plate, with a glass of tinto de verano", aspect: "aspect-[3/4]" },
+  { src: quinoaLunch.url, alt: "A lunch of quinoa and spinach salad with cherry tomatoes at my kitchen counter", aspect: "aspect-[3/4]" },
+  { src: gumboAtTrikki.url, alt: "A bowl of gumbo with rice at Trikki, the New Orleans restaurant in Madrid", aspect: "aspect-[3/4]" },
 ];
 
 const Gallery = () => {
