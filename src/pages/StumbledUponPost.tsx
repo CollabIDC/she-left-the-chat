@@ -118,8 +118,26 @@ const StumbledUponPost = () => {
       });
   }, [filePath]);
 
+  const meta = POST_META[slug] ?? {
+    title: "Stumbled Upon: a Madrid find",
+    description: "A small Madrid find worth writing down.",
+  };
+
   return (
     <div style={{ background: C.cream, minHeight: "100vh" }}>
+      <Seo
+        title={`${meta.title} | she left the chat`}
+        description={meta.description}
+        path={`/stumbled-upon/${slug}`}
+        ogType="article"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Article",
+          headline: meta.title,
+          description: meta.description,
+          author: { "@type": "Person", name: "Kimberly" },
+        }}
+      />
       <FontLoader />
       <Navbar />
       <div style={{ height: 72 }} aria-hidden />
