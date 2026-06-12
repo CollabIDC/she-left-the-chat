@@ -11,6 +11,7 @@ const C = {
   cream: "#F2EDE4",
   creamDark: "#E8E0D3",
   gold: "#B8952A",
+  goldText: "#8A6D1F",
   goldLight: "#D4AE45",
   textDark: "#1A1714",
   textMid: "#4A4540",
