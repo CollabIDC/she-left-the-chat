@@ -39,6 +39,8 @@ export default function Seo({
       <meta property="og:url" content={url} />
       <meta property="og:type" content={ogType} />
       {absImage && <meta property="og:image" content={absImage} />}
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       {absImage && <meta name="twitter:image" content={absImage} />}
