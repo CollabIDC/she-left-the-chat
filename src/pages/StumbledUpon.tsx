@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Seo from "@/components/Seo";
 import { PencilLine } from "lucide-react";
 
 
@@ -442,6 +443,11 @@ const StumbledUpon = () => {
 
   return (
     <div style={{ background: C.cream, minHeight: "100vh" }}>
+      <Seo
+        title="Stumbled Upon: small Madrid finds worth writing down"
+        description="A growing collection of the small places, shows, and detours in Madrid that surprised me enough to write them down."
+        path="/stumbled-upon"
+      />
       <Navbar />
       <main>
         {/* HERO */}

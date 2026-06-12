@@ -4,6 +4,7 @@ import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
+import Seo from "@/components/Seo";
 
 const photos = [
   { src: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80", alt: "Madrid street at sunset", aspect: "aspect-[3/4]" },
@@ -25,6 +26,11 @@ const Gallery = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Seo
+        title="Madrid photo gallery: streets, plazas, and quiet corners"
+        description="A photo journal from Madrid and nearby travels. Street scenes, cafes, doorways, and the small details of a slow life in Spain."
+        path="/gallery"
+      />
       <Navbar />
       <main>
         <PageHeader eyebrow="Photo Gallery" title="Moments Captured" />

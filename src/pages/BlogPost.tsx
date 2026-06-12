@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import EmailSignup from "@/components/EmailSignup";
 import StoryCard from "@/components/StoryCard";
+import Seo from "@/components/Seo";
 import { stories } from "@/data/stories";
 import { extractStyleAndBody, scopeCss, type ExtractedHtml } from "@/lib/htmlPost";
 import portrait from "@/assets/portrait-kimberly.jpg";
@@ -66,15 +67,36 @@ const BlogPost = () => {
     document.head.appendChild(link);
   }, [filePath]);
 
+  const basePath =
+    post.stream === "she-actually-did-it" ? "/stories" : "/the-real-guides";
+  const seo = (
+    <Seo
+      title={`${post.title} | she left the chat`}
+      description={post.excerpt}
+      path={`${basePath}/${post.slug}`}
+      ogType="article"
+      image={post.image}
+      jsonLd={{
+        "@context": "https://schema.org",
+        "@type": "Article",
+        headline: post.title,
+        description: post.excerpt,
+        image: post.image,
+        datePublished: post.date,
+        author: { "@type": "Person", name: "Kimberly" },
+      }}
+    />
+  );
+
   if (filePath) {
-    const backHref =
-      post.stream === "she-actually-did-it" ? "/stories" : "/the-real-guides";
+    const backHref = basePath;
     const backLabel =
       post.stream === "she-actually-did-it"
         ? "← Back to Stories"
         : "← Back to The Real Guides";
     return (
       <div className="min-h-screen bg-background">
+        {seo}
         <Navbar />
         <div className="h-16" aria-hidden />
         <div className="max-w-[1100px] mx-auto px-6 pt-6">
@@ -115,6 +137,7 @@ const BlogPost = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      {seo}
       <Navbar />
       <main className="pt-28 pb-20">
         <article className="container mx-auto px-6">

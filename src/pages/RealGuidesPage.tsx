@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
 import StoryCard from "@/components/StoryCard";
+import Seo from "@/components/Seo";
 import {
   stories,
   destinations,
@@ -68,6 +69,11 @@ const RealGuidesPage = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Seo
+        title="The Real Guides: honest Madrid and travel guides"
+        description="The practical stuff, honestly. Filterable guides for Madrid, Paris, London, and Senegal covering packing, paperwork, food, and culture."
+        path="/the-real-guides"
+      />
       <Navbar />
       <main>
         <PageHeader
