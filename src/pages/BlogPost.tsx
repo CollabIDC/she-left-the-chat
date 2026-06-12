@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import EmailSignup from "@/components/EmailSignup";
 import StoryCard from "@/components/StoryCard";
+import Seo from "@/components/Seo";
 import { stories } from "@/data/stories";
 import { extractStyleAndBody, scopeCss, type ExtractedHtml } from "@/lib/htmlPost";
 import portrait from "@/assets/portrait-kimberly.jpg";
