@@ -34,7 +34,7 @@ const slides: Slide[] = [
           From Atlanta to Madrid. Stories of wanderlust, bold choices, and building a life on your own terms. This is what it looks like when you finally choose yourself.
         </p>
         <Link to="/stories/she-actually-did-it" className="btn-gold">
-          Read My Story <ArrowRight className="w-4 h-4" />
+          Read She Actually Did It <ArrowRight className="w-4 h-4" />
         </Link>
       </div>
     ),
@@ -62,7 +62,7 @@ const slides: Slide[] = [
           Some places exist because someone refused to accept they couldn't.
         </h2>
         <Link to="/the-real-guides" className="btn-gold">
-          Read the Stories <ArrowRight className="w-4 h-4" />
+          Browse The Real Guides <ArrowRight className="w-4 h-4" />
         </Link>
       </div>
     ),
@@ -90,7 +90,7 @@ const slides: Slide[] = [
           This is what happens after you finally say yes to yourself.
         </p>
         <Link to="/stories" className="btn-gold">
-          Start Here <ArrowRight className="w-4 h-4" />
+          Read the Stories <ArrowRight className="w-4 h-4" />
         </Link>
       </div>
     ),

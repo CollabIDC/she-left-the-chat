@@ -164,7 +164,7 @@ const PostCard = ({ post }: { post: Post }) => (
       }}
     />
     <div style={{ padding: "16px 18px" }}>
-      <h4
+      <h3
         style={{
           fontFamily: "'Playfair Display', serif",
           fontWeight: 700,
@@ -175,7 +175,7 @@ const PostCard = ({ post }: { post: Post }) => (
         }}
       >
         {post.cardTitle || post.title}
-      </h4>
+      </h3>
       <p
         style={{
           fontFamily: "'Lato', sans-serif",

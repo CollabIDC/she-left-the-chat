@@ -55,7 +55,7 @@ const StoryCard = ({ story, index = 0 }: StoryCardProps) => {
               </div>
 
               <span className="inline-flex items-center gap-2 font-body text-sm font-medium text-gold group-hover:gap-3 transition-all">
-                Read on
+                Read this story
                 <ArrowRight className="w-4 h-4" />
               </span>
             </div>
@@ -104,7 +104,7 @@ const StoryCard = ({ story, index = 0 }: StoryCardProps) => {
             </p>
 
             <span className="inline-flex items-center gap-2 font-body text-sm font-medium text-terracotta group-hover:gap-3 transition-all">
-              Read more
+              Read this guide
               <ArrowRight className="w-4 h-4" />
             </span>
           </>

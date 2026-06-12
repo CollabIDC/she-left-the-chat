@@ -25,7 +25,7 @@ const CommunityTeaser = () => {
             href="#email-signup"
             className="btn-gold"
           >
-            Notify Me
+            Join the email list
           </a>
         </motion.div>
       </div>

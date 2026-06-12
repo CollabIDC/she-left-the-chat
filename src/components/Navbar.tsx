@@ -28,7 +28,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0D2B1A]/95 backdrop-blur-md border-b border-white/5">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <Link to="/" aria-label="Home" className="flex items-center">
+          <Link to="/" className="flex items-center">
             <Logo tone="ivory" size="md" />
           </Link>
 
@@ -56,6 +56,8 @@ const Navbar = () => {
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden p-2 text-ivory hover:text-gold transition-colors"
             aria-label="Toggle menu"
+            aria-expanded={isOpen}
+            aria-controls="mobile-nav"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -63,7 +65,7 @@ const Navbar = () => {
 
         {/* Mobile nav */}
         {isOpen && (
-          <div className="md:hidden pt-4 pb-2 animate-fade-in">
+          <div id="mobile-nav" className="md:hidden pt-4 pb-2 animate-fade-in">
             {navLinks.map((link) => (
               <NavLink
                 key={link.name}

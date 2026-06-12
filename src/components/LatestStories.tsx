@@ -62,7 +62,7 @@ const LatestStories = () => {
                     {card.story.excerpt}
                   </p>
                   <span className="inline-flex items-center gap-2 font-body text-sm text-gold group-hover:gap-3 transition-all">
-                    Read More <ArrowRight className="w-4 h-4" />
+                    Read {card.story.title} <ArrowRight className="w-4 h-4" />
                   </span>
                 </div>
               </Link>

@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="container mx-auto px-6 pt-16 pb-8">
         {/* Logo + tagline */}
         <div className="text-center mb-12">
-          <Link to="/" aria-label="Home" className="inline-block">
+          <Link to="/" className="inline-block">
             <Logo tone="ivory" size="lg" />
           </Link>
           <p className="font-body italic text-sm text-ivory/70 mt-3">
@@ -29,9 +29,9 @@ const Footer = () => {
 
           {/* Quick nav */}
           <div className="text-center">
-            <h4 className="font-label text-xs uppercase tracking-[0.22em] text-ivory/75 mb-4">
+            <h2 className="font-label text-xs uppercase tracking-[0.22em] text-ivory/75 mb-4">
               Explore
-            </h4>
+            </h2>
             <ul className="space-y-2 font-body text-sm">
               {[
                 { label: "Home", to: "/" },
@@ -57,9 +57,9 @@ const Footer = () => {
 
           {/* Social */}
           <div className="text-center md:text-right">
-            <h4 className="font-label text-xs uppercase tracking-[0.22em] text-ivory/75 mb-4">
+            <h2 className="font-label text-xs uppercase tracking-[0.22em] text-ivory/75 mb-4">
               Follow Along
-            </h4>
+            </h2>
             <div className="flex items-center justify-center md:justify-end gap-5">
               <a
                 href="https://instagram.com/shelefthechat"

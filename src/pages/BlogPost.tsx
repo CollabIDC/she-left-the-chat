@@ -230,9 +230,9 @@ const BlogPost = () => {
                 className="w-24 h-24 rounded-full object-cover flex-shrink-0"
               />
               <div className="text-center sm:text-left">
-                <h3 className="font-display text-xl font-semibold text-charcoal mb-2">
+                <h2 className="font-display text-xl font-semibold text-charcoal mb-2">
                   About Kimberly
-                </h3>
+                </h2>
                 <p className="font-body text-charcoal/70 text-sm leading-relaxed mb-4">
                   Atlanta-born, Madrid-based memoirist sharing the messy, magical
                   reality of choosing yourself in your second act.
