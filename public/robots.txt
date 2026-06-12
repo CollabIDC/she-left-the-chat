@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://shelefthechat.com/sitemap.xml
+Sitemap: https://www.shelefthechat.com/sitemap.xml

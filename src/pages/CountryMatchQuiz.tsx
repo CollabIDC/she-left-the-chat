@@ -497,7 +497,7 @@ const QuizPage = () => {
                     </span>
                     <a href={c.numbeo} target="_blank" rel="noopener noreferrer"
                       style={{ fontFamily: sans, fontSize: 13, color: GOLD, textDecoration: "underline" }}>
-                      Learn More →
+                      See {c.name} cost of living →
                     </a>
                   </div>
                 </article>

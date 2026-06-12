@@ -35,8 +35,9 @@ const Gallery = () => {
       <main>
         <PageHeader eyebrow="Photo Gallery" title="Moments Captured" />
 
-        <section className="bg-background pb-24">
+        <section className="bg-background pb-24" aria-labelledby="gallery-heading">
           <div className="container mx-auto px-6">
+            <h2 id="gallery-heading" className="sr-only">Photo gallery</h2>
             <div className="columns-1 sm:columns-2 lg:columns-3 gap-5 space-y-5">
               {photos.map((photo, i) => (
                 <motion.button

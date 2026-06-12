@@ -50,7 +50,7 @@ const ResourcesPreview = () => {
                 to="/resources"
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-gold text-gold text-sm font-label font-medium uppercase tracking-wider hover:bg-gold hover:text-ivory transition-all duration-300"
               >
-                Try It Free
+                Try {lang.name} free
               </Link>
             </motion.div>
           ))}

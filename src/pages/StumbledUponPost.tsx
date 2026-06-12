@@ -224,7 +224,7 @@ const StumbledUponPost = () => {
           </article>
         ) : (
           <div style={{ textAlign: "center", padding: "80px 24px" }}>
-            <h1
+            <h2
               style={{
                 fontFamily: "'Playfair Display', serif",
                 fontWeight: 700,

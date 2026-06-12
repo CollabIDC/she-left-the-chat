@@ -30,8 +30,9 @@ const Videos = () => {
           subtitle="Real moments from the First 60 Days. Life on my own terms in Madrid."
         />
 
-        <section className="bg-background pb-24">
+        <section className="bg-background pb-24" aria-labelledby="videos-heading">
           <div className="container mx-auto px-6">
+            <h2 id="videos-heading" className="sr-only">All videos</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {videos.map((v, i) => (
                 <motion.a
