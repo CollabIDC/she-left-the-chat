@@ -33,7 +33,7 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Seo
         title="She Left the Chat | Choosing Yourself in Madrid"
-        description="Stories of wanderlust, bold choices, and building a life on your own terms: from Atlanta to Madrid."
+        description="Stories of bold choices and building a life on your own terms in Madrid. Proof that it is never too late to choose yourself."
         path="/"
         jsonLd={homeJsonLd}
       />

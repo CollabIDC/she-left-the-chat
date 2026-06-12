@@ -12,7 +12,7 @@ const Footer = () => {
             <Logo tone="ivory" size="lg" />
           </Link>
           <p className="font-body italic text-sm text-ivory/70 mt-3">
-            Choosing myself, one country at a time.
+            Real stories. Bold choices. Life in Madrid and beyond.
           </p>
 
         </div>
@@ -22,8 +22,7 @@ const Footer = () => {
           {/* Brand description */}
           <div className="text-center md:text-left">
             <p className="font-body text-sm text-ivory/70 leading-relaxed max-w-xs mx-auto md:mx-0">
-              Stories of wanderlust, bold choices, and the beautiful chaos of
-              starting a brand new chapter abroad. From Atlanta to Madrid.
+              Stories from the other side of the decision. The good, the hard, and the surprisingly funny.
             </p>
           </div>
 

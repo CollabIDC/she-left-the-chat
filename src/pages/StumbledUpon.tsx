@@ -511,8 +511,7 @@ const StumbledUpon = () => {
         <section style={{ padding: "32px 24px 8px" }}>
           <div style={{ maxWidth: 1100, margin: "0 auto" }}>
             <div
-              className="grid gap-5"
-              style={{ gridTemplateColumns: "repeat(3, minmax(0, 1fr))" }}
+              className="grid gap-5 grid-cols-2 md:[grid-template-columns:repeat(3,minmax(0,1fr))]"
             >
               {sections.map((s) => (
                 <AngleCard
