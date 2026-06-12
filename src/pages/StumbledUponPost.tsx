@@ -2,6 +2,7 @@ import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Seo from "@/components/Seo";
 import { extractStyleAndBody, scopeCss, type ExtractedHtml } from "@/lib/htmlPost";
 
 const C = {
@@ -23,6 +24,27 @@ const POST_FILES: Record<string, string> = {
 
 // Inline placeholders for slugs without an uploaded file yet
 const PLACEHOLDERS: Record<string, { eyebrow: string; title: string }> = {};
+
+// Lightweight metadata for SEO (titles/descriptions per slug)
+const POST_META: Record<string, { title: string; description: string }> = {
+  "tablao-de-la-villa": {
+    title: "Tablao de la Villa: a Madrid flamenco night",
+    description: "Notes from an unforgettable flamenco night at Tablao de la Villa in Madrid.",
+  },
+  "the-bookstore-that-exists-because-of-a-love-story": {
+    title: "The Madrid bookstore that exists because of a love story",
+    description: "A small Madrid bookshop with a love story at its center, and why it stopped me in the street.",
+  },
+  "the-bullfight": {
+    title: "The Bullfight: what I felt watching one in Madrid",
+    description: "Honest notes from my first and only bullfight in Madrid.",
+  },
+  "trikki-new-orleans-chamberi": {
+    title: "Trikki: New Orleans in Chamberí, Madrid",
+    description: "Why a tiny New Orleans-flavored spot in Chamberí became one of my favorite Madrid finds.",
+  },
+};
+
 
 
 const FontLoader = () => {
