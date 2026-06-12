@@ -137,6 +137,7 @@ const BlogPost = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      {seo}
       <Navbar />
       <main className="pt-28 pb-20">
         <article className="container mx-auto px-6">
