@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const CommunityTeaser = () => {
   return (
-    <section className="py-24 bg-blush">
+    <section className="py-24" style={{ backgroundColor: "#E8C4B4" }}>
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
