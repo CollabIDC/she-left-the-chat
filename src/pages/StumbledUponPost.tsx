@@ -82,7 +82,7 @@ const BackLink = () => (
         fontSize: 12,
         letterSpacing: "0.14em",
         textTransform: "uppercase",
-        color: C.gold,
+        color: C.goldText,
         fontWeight: 600,
         textDecoration: "none",
       }}
