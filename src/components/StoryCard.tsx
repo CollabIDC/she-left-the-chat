@@ -49,7 +49,7 @@ const StoryCard = ({ story, index = 0 }: StoryCardProps) => {
                 {story.excerpt}
               </p>
 
-              <div className="flex items-center gap-2 text-ivory/50 mb-4 mt-auto">
+              <div className="flex items-center gap-2 text-ivory/75 mb-4 mt-auto">
                 <Calendar className="w-3.5 h-3.5" />
                 <span className="font-body text-xs">{story.date}</span>
               </div>

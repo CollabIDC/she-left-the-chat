@@ -29,7 +29,7 @@ const Footer = () => {
 
           {/* Quick nav */}
           <div className="text-center">
-            <h4 className="font-label text-xs uppercase tracking-[0.22em] text-ivory/50 mb-4">
+            <h4 className="font-label text-xs uppercase tracking-[0.22em] text-ivory/75 mb-4">
               Explore
             </h4>
             <ul className="space-y-2 font-body text-sm">
@@ -57,7 +57,7 @@ const Footer = () => {
 
           {/* Social */}
           <div className="text-center md:text-right">
-            <h4 className="font-label text-xs uppercase tracking-[0.22em] text-ivory/50 mb-4">
+            <h4 className="font-label text-xs uppercase tracking-[0.22em] text-ivory/75 mb-4">
               Follow Along
             </h4>
             <div className="flex items-center justify-center md:justify-end gap-5">
@@ -92,7 +92,7 @@ const Footer = () => {
 
         {/* Bottom bar */}
         <div className="pt-8 border-t border-gold/30">
-          <p className="text-center font-body text-xs text-ivory/60">
+          <p className="text-center font-body text-xs text-ivory/80">
             © 2026 She Left the Chat. All rights reserved.
           </p>
         </div>

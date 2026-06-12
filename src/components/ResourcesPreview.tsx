@@ -27,7 +27,7 @@ const ResourcesPreview = () => {
           <h2 className="font-display text-4xl md:text-5xl font-bold text-ivory mt-4">
             The Resources I Wish I Had Before I Left
           </h2>
-          <p className="font-display italic text-xl md:text-2xl text-ivory/60 mt-3">
+          <p className="font-display italic text-xl md:text-2xl text-ivory/80 mt-3">
             Starting with language. More coming soon.
           </p>
         </motion.div>
