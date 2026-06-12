@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Seo from "@/components/Seo";
 import { Download, FileText } from "lucide-react";
 
 const PAGE_BG = "#F2EDE4";
@@ -98,6 +99,11 @@ const pills = ["Before You Leave", "At the Airport", "Getting Around", "Food & D
 const Resources = () => {
   return (
     <div style={{ minHeight: "100vh", background: PAGE_BG }}>
+      <Seo
+        title="Free Madrid travel and AI language resources"
+        description="Free downloadable tools and AI language helpers for visiting Madrid or building a life in Spain. No fluff, just the stuff that actually helps."
+        path="/resources"
+      />
       <Navbar />
       <main style={{ background: PAGE_BG, paddingTop: 120, paddingBottom: 80 }}>
         {/* Header */}

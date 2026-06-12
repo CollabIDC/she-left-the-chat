@@ -3,6 +3,7 @@ import { Play, Youtube } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
+import Seo from "@/components/Seo";
 
 const videos = [
   { title: "A Day in My Life in Madrid", thumb: "https://images.unsplash.com/photo-1509840841025-9088ba78a826?w=900&q=80", duration: "12:34" },
@@ -16,6 +17,11 @@ const videos = [
 const Videos = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Seo
+        title="Madrid vlogs and city videos by Kimberly"
+        description="Day-in-the-life vlogs, apartment tours, and short city guides from Madrid and nearby weekend trips."
+        path="/videos"
+      />
       <Navbar />
       <main>
         <PageHeader

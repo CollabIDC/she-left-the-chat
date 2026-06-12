@@ -1,5 +1,6 @@
 import { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
+import Seo from "@/components/Seo";
 
 // ============ Design tokens ============
 const BG = "#FAF7F2";
@@ -363,6 +364,11 @@ const QuizPage = () => {
     const pct = ((step + 1) / 12) * 100;
     return (
       <div style={{ minHeight: "100vh", background: BG, color: INK }}>
+        <Seo
+          title="Country Match Quiz: where should you actually move?"
+          description="A 12-question quiz that matches your priorities, budget, and pace of life to the country that fits you best."
+          path="/quiz"
+        />
         {renderHeader()}
         <main style={{ maxWidth: 720, margin: "0 auto", padding: "20px 20px 80px" }}>
           {/* Progress */}

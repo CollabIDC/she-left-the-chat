@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
 import StoryCard from "@/components/StoryCard";
+import Seo from "@/components/Seo";
 import { stories } from "@/data/stories";
 
 const SheActuallyDidIt = () => {
@@ -14,6 +15,11 @@ const SheActuallyDidIt = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Seo
+        title="Stories: real essays from inside the move to Madrid"
+        description="Personal essays and journal entries written from inside the decision to leave, move, and start over in Madrid."
+        path="/stories"
+      />
       <Navbar />
       <main>
         <PageHeader

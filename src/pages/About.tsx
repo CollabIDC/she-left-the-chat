@@ -3,6 +3,7 @@ import { Instagram, Youtube, Mail, BookOpen, Video, Sparkles, Users } from "luci
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import EmailSignup from "@/components/EmailSignup";
+import Seo from "@/components/Seo";
 import portrait from "@/assets/portrait-kimberly.jpg";
 
 const tiles = [
@@ -31,6 +32,11 @@ const tiles = [
 const About = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Seo
+        title="About Kimberly: the woman behind she left the chat"
+        description="Kimberly on leaving Atlanta for Madrid after forty years of putting everyone else first, and what it actually takes to choose yourself."
+        path="/about"
+      />
       <Navbar />
       <main>
         {/* Full width portrait */}
