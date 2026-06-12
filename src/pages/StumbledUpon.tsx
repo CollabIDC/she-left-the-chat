@@ -307,7 +307,7 @@ const AngleCard = ({
           fontFamily: "'Lato', sans-serif",
           fontSize: 12,
           letterSpacing: "0.08em",
-          color: C.gold,
+          color: C.goldText,
           fontWeight: 600,
         }}
       >
@@ -378,7 +378,7 @@ const SectionBlock = ({ section }: { section: Section }) => {
             fontSize: 11,
             letterSpacing: "0.14em",
             textTransform: "uppercase",
-            color: C.gold,
+            color: C.goldText,
             fontWeight: 600,
             cursor: "pointer",
             whiteSpace: "nowrap",
@@ -491,7 +491,7 @@ const StumbledUpon = () => {
                 fontFamily: "'Playfair Display', serif",
                 fontStyle: "italic",
                 fontSize: "clamp(20px, 2.5vw, 28px)",
-                color: C.gold,
+                color: C.goldText,
               }}
             >
               Until now.
