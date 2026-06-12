@@ -124,6 +124,10 @@ const HeroCarousel = () => {
           <img
             src={slides[current].image}
             alt={slides[current].alt}
+            width={1920}
+            height={1080}
+            fetchPriority={current === 0 ? "high" : "auto"}
+            decoding="async"
             className={`absolute inset-0 w-full h-full object-cover object-center`}
           />
           {/* Gradient overlay */}
