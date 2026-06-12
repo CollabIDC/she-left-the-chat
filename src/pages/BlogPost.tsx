@@ -139,7 +139,7 @@ const BlogPost = () => {
     <div className="min-h-screen bg-background">
       {seo}
       <Navbar />
-      <main className="pt-28 pb-20">
+      <main id="main-content" className="pt-28 pb-20">
         <article className="container mx-auto px-6">
           <div className="max-w-[740px] mx-auto">
             {/* Stream / category pills */}

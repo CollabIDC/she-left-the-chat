@@ -438,7 +438,7 @@ const QuizPage = () => {
     return (
       <div style={{ minHeight: "100vh", background: BG, color: INK }}>
         {renderHeader()}
-        <main style={{ maxWidth: 720, margin: "0 auto", padding: "20px 20px 80px" }}>
+        <main id="main-content" style={{ maxWidth: 720, margin: "0 auto", padding: "20px 20px 80px" }}>
           <div style={{ marginTop: 20 }}>
             <h2 style={{ fontFamily: serif, fontWeight: 700, fontSize: 28, color: INK, margin: "0 0 8px" }}>
               Your Top Matches
@@ -688,7 +688,7 @@ const QuizPage = () => {
   return (
     <div style={{ minHeight: "100vh", background: BG, color: INK }}>
       {renderHeader()}
-      <main style={{ maxWidth: 720, margin: "0 auto", padding: "20px 20px 80px" }}>
+      <main id="main-content" style={{ maxWidth: 720, margin: "0 auto", padding: "20px 20px 80px" }}>
         <button
           onClick={() => setStep(12)}
           style={{ background: "none", border: "none", padding: 0, fontFamily: sans, fontSize: 13, color: MUTED, cursor: "pointer", marginTop: 20, marginBottom: 16 }}
