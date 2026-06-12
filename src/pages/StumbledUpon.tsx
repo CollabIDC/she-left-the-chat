@@ -449,7 +449,7 @@ const StumbledUpon = () => {
         path="/stumbled-upon"
       />
       <Navbar />
-      <main>
+      <main id="main-content">
         {/* HERO */}
         <section
           style={{

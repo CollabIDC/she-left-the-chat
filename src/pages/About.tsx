@@ -38,7 +38,7 @@ const About = () => {
         path="/about"
       />
       <Navbar />
-      <main>
+      <main id="main-content">
         {/* Full width portrait */}
         <div className="pt-20">
           <div className="overflow-hidden rounded-b-3xl">

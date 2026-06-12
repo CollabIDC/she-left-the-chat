@@ -105,7 +105,7 @@ const Resources = () => {
         path="/resources"
       />
       <Navbar />
-      <main style={{ background: PAGE_BG, paddingTop: 120, paddingBottom: 80 }}>
+      <main id="main-content" style={{ background: PAGE_BG, paddingTop: 120, paddingBottom: 80 }}>
         {/* Header */}
         <header style={{ maxWidth: 900, margin: "0 auto", padding: "0 24px", textAlign: "center" }}>
           <div style={eyebrowStyle}>FREE TOOLS &amp; RESOURCES</div>

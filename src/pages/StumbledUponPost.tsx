@@ -142,7 +142,7 @@ const StumbledUponPost = () => {
       <Navbar />
       <div style={{ height: 72 }} aria-hidden />
       <BackLink />
-      <main>
+      <main id="main-content">
         {filePath ? (
           <>
             {loading && (

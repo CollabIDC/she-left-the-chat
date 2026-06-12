@@ -23,7 +23,7 @@ const Videos = () => {
         path="/videos"
       />
       <Navbar />
-      <main>
+      <main id="main-content">
         <PageHeader
           eyebrow="Video Diary"
           title="Watch My Adventures"

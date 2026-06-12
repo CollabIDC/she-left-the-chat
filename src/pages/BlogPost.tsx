@@ -107,7 +107,7 @@ const BlogPost = () => {
             {backLabel}
           </Link>
         </div>
-        <main>
+        <main id="main-content">
           {htmlLoading && (
             <div className="text-center py-20 font-body text-charcoal/60">
               Loading story…

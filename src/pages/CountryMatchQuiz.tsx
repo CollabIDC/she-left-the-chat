@@ -370,7 +370,7 @@ const QuizPage = () => {
           path="/quiz"
         />
         {renderHeader()}
-        <main style={{ maxWidth: 720, margin: "0 auto", padding: "20px 20px 80px" }}>
+        <main id="main-content" style={{ maxWidth: 720, margin: "0 auto", padding: "20px 20px 80px" }}>
           {/* Progress */}
           <div style={{ marginTop: 20, marginBottom: 28 }}>
             <div style={{ display: "flex", justifyContent: "space-between", fontFamily: sans, fontSize: 12, color: MUTED, marginBottom: 8 }}>
