@@ -15,7 +15,7 @@ const homeJsonLd = [
     name: "she left the chat",
     url: "https://shelefthechat.com",
     description:
-      "Stories of wanderlust, bold choices, and building a life on your own terms — from Atlanta to Madrid.",
+      "Stories of wanderlust, bold choices, and building a life on your own terms: from Atlanta to Madrid.",
   },
   {
     "@context": "https://schema.org",
@@ -32,8 +32,8 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Seo
-        title="she left the chat — Madrid life, travel, and choosing yourself"
-        description="Stories of wanderlust, bold choices, and building a life on your own terms — from Atlanta to Madrid."
+        title="she left the chat: Madrid life, travel, and choosing yourself"
+        description="Stories of wanderlust, bold choices, and building a life on your own terms: from Atlanta to Madrid."
         path="/"
         jsonLd={homeJsonLd}
       />
