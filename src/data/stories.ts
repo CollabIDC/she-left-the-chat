@@ -54,7 +54,7 @@ export const stories: Story[] = [
     slug: "first-time-in-madrid",
     title: "First Time in Madrid? Start Here.",
     excerpt:
-      "Your honest beginner's guide to one of Europe's most underrated cities — what to see, skip, and savor.",
+      "Your honest beginner's guide to one of Europe's most underrated cities. What to see, skip, and savor.",
     date: "January 2025",
     image:
       "https://images.unsplash.com/photo-1543783207-ec64e4d95325?w=1200&q=80",
