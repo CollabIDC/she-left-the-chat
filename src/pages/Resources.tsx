@@ -98,6 +98,7 @@ const comingSoon = [
 const pills = ["Before You Leave", "At the Airport", "Getting Around", "Food & Dining", "Culture", "Safety", "Essential Apps", "Money Tips"];
 
 const Resources = () => {
+  const [roadmapOpen, setRoadmapOpen] = useState(false);
   return (
     <div style={{ minHeight: "100vh", background: PAGE_BG }}>
       <Seo
