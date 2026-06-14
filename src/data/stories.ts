@@ -109,7 +109,7 @@ export const stories: Story[] = [
     slug: "madrid-airport-guide",
     title: "The Madrid Airport Guide",
     excerpt:
-      "Everything that happens from the moment you land at Barajas — customs, transit, SIM cards, and getting into the city.",
+      "Everything that happens from the moment you land at Barajas. Customs, transit, SIM cards, and getting into the city.",
     date: "November 2024",
     image:
       "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=80",
