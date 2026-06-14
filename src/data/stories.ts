@@ -95,7 +95,7 @@ export const stories: Story[] = [
     slug: "honest-guide-spanish-culture-etiquette-madrid",
     title: "The Honest Guide to Spanish Culture and Etiquette in Madrid",
     excerpt:
-      "How locals actually greet, eat, queue, and socialize — the unspoken rules that make or break your first weeks.",
+      "How locals actually greet, eat, queue, and socialize. The unspoken rules that make or break your first weeks.",
     date: "December 2024",
     image:
       "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&q=80",
