@@ -1,14 +1,16 @@
 import { motion } from "framer-motion";
 import { useState, FormEvent } from "react";
-import { toast } from "sonner";
 
 const EmailSignup = () => {
   const [email, setEmail] = useState("");
+  const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     if (!email) return;
-    toast.success("You're on the list! Check your inbox soon.");
+    const url = `https://shelefthechat.beehiiv.com/subscribe?email=${encodeURIComponent(email)}`;
+    window.open(url, "_blank", "noopener,noreferrer");
+    setSubmitted(true);
     setEmail("");
   };
 
@@ -32,27 +34,35 @@ const EmailSignup = () => {
             Delivered straight to your inbox. No spam. Just the good stuff.
           </p>
 
-          <form
-            onSubmit={handleSubmit}
-            className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
-          >
-            <input
-              type="email"
-              required
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="Your email address"
-              className="flex-1 px-5 py-3 rounded-full border border-border bg-surface text-charcoal placeholder:text-charcoal/40 focus:outline-none focus:border-gold transition-colors font-body"
-              aria-label="Email address"
-            />
-            <button type="submit" className="btn-gold whitespace-nowrap">
-              Send Me the Dispatches
-            </button>
-          </form>
+          {submitted ? (
+            <p className="font-body text-charcoal/80 leading-relaxed max-w-md mx-auto">
+              Opening your signup in a new tab. Check your email to confirm.
+            </p>
+          ) : (
+            <form
+              onSubmit={handleSubmit}
+              className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
+            >
+              <input
+                type="email"
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Your email address"
+                className="flex-1 px-5 py-3 rounded-full border border-border bg-surface text-charcoal placeholder:text-charcoal/40 focus:outline-none focus:border-gold transition-colors font-body"
+                aria-label="Email address"
+              />
+              <button type="submit" className="btn-gold whitespace-nowrap">
+                Send Me the Dispatches
+              </button>
+            </form>
+          )}
 
-          <p className="font-body italic text-sm text-charcoal/60 mt-5">
-            Join a growing community of travelers and dreamers.
-          </p>
+          {!submitted && (
+            <p className="font-body italic text-sm text-charcoal/60 mt-5">
+              Join a growing community of travelers and dreamers.
+            </p>
+          )}
 
           <span className="block w-20 h-px bg-gold mx-auto mt-10" />
         </motion.div>

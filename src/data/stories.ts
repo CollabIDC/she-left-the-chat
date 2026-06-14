@@ -54,7 +54,7 @@ export const stories: Story[] = [
     slug: "first-time-in-madrid",
     title: "First Time in Madrid? Start Here.",
     excerpt:
-      "Your honest beginner's guide to one of Europe's most underrated cities — what to see, skip, and savor.",
+      "Your honest beginner's guide to one of Europe's most underrated cities. What to see, skip, and savor.",
     date: "January 2025",
     image:
       "https://images.unsplash.com/photo-1543783207-ec64e4d95325?w=1200&q=80",
@@ -81,7 +81,7 @@ export const stories: Story[] = [
     slug: "what-to-pack-for-madrid",
     title: "What to Pack for Madrid",
     excerpt:
-      "A real style and practical guide — what actually earns space in your suitcase for Madrid's seasons and streets.",
+      "A real style and practical guide. What actually earns space in your suitcase for Madrid's seasons and streets.",
     date: "December 2024",
     image:
       "https://images.unsplash.com/photo-1581553680321-4fffae59fccd?w=1200&q=80",
@@ -95,7 +95,7 @@ export const stories: Story[] = [
     slug: "honest-guide-spanish-culture-etiquette-madrid",
     title: "The Honest Guide to Spanish Culture and Etiquette in Madrid",
     excerpt:
-      "How locals actually greet, eat, queue, and socialize — the unspoken rules that make or break your first weeks.",
+      "How locals actually greet, eat, queue, and socialize. The unspoken rules that make or break your first weeks.",
     date: "December 2024",
     image:
       "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&q=80",
@@ -109,7 +109,7 @@ export const stories: Story[] = [
     slug: "madrid-airport-guide",
     title: "The Madrid Airport Guide",
     excerpt:
-      "Everything that happens from the moment you land at Barajas — customs, transit, SIM cards, and getting into the city.",
+      "Everything that happens from the moment you land at Barajas. Customs, transit, SIM cards, and getting into the city.",
     date: "November 2024",
     image:
       "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=80",

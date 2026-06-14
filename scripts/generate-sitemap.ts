@@ -33,11 +33,13 @@ const streamMatches = Array.from(
 );
 const streamMap = new Map(streamMatches.map((m) => [m[1], m[2]]));
 
-const storyEntries: SitemapEntry[] = storySlugs.map((slug) => {
-  const stream = streamMap.get(slug);
-  const base = stream === "she-actually-did-it" ? "/stories" : "/the-real-guides";
-  return { path: `${base}/${slug}`, changefreq: "monthly", priority: "0.7" };
-});
+const storyEntries: SitemapEntry[] = storySlugs
+  .filter((slug) => slug !== "the-bookstore-that-exists-because-of-a-love-story")
+  .map((slug) => {
+    const stream = streamMap.get(slug);
+    const base = stream === "she-actually-did-it" ? "/stories" : "/the-real-guides";
+    return { path: `${base}/${slug}`, changefreq: "monthly", priority: "0.7" };
+  });
 
 // Stumbled-upon slugs are hand-listed in src/pages/StumbledUpon.tsx
 const stumbledSrc = readFileSync(resolve("src/pages/StumbledUpon.tsx"), "utf8");

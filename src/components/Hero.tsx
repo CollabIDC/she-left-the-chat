@@ -50,9 +50,8 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.45 }}
             className="font-body font-light text-base md:text-lg text-ivory/95 max-w-xl mb-10 leading-relaxed"
           >
-            From Atlanta to Madrid. Stories of wanderlust, bold choices, and
-            building a life on your own terms. This is what it looks like when
-            you finally choose yourself.
+            From Atlanta to Madrid. On purpose. This is what it looks like
+            when you finally choose yourself.
           </motion.p>
 
           <motion.a
