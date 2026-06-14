@@ -6,6 +6,7 @@ import RealGuides from "@/components/RealGuides";
 import Seo from "@/components/Seo";
 
 import CommunityTeaser from "@/components/CommunityTeaser";
+import EmailSignup from "@/components/EmailSignup";
 import Footer from "@/components/Footer";
 
 const homeJsonLd = [
@@ -45,6 +46,7 @@ const Index = () => {
         <RealGuides />
         
         <CommunityTeaser />
+        <EmailSignup />
       </main>
       <Footer />
     </div>
