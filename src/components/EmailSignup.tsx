@@ -15,7 +15,7 @@ const EmailSignup = () => {
   };
 
   return (
-    <section className="bg-background">
+    <section id="email-signup" className="bg-background">
       <div className="container mx-auto px-6 py-20 md:py-24">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
