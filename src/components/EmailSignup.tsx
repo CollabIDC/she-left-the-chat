@@ -58,6 +58,12 @@ const EmailSignup = () => {
             </form>
           )}
 
+          {!submitted && (
+            <p className="font-body italic text-sm text-charcoal/60 mt-5">
+              Join a growing community of travelers and dreamers.
+            </p>
+          )}
+
           <span className="block w-20 h-px bg-gold mx-auto mt-10" />
         </motion.div>
       </div>
