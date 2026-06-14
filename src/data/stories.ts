@@ -81,7 +81,7 @@ export const stories: Story[] = [
     slug: "what-to-pack-for-madrid",
     title: "What to Pack for Madrid",
     excerpt:
-      "A real style and practical guide — what actually earns space in your suitcase for Madrid's seasons and streets.",
+      "A real style and practical guide. What actually earns space in your suitcase for Madrid's seasons and streets.",
     date: "December 2024",
     image:
       "https://images.unsplash.com/photo-1581553680321-4fffae59fccd?w=1200&q=80",
