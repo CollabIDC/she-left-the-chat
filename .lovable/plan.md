@@ -1,9 +1,9 @@
-## Goal
-Insert the existing `EmailSignup` component into the homepage so it appears between the `CommunityTeaser` and `Footer` sections.
-
 ## Changes
-1. In `src/pages/Index.tsx`:
-   - Add `import EmailSignup from "@/components/EmailSignup";`
-   - Insert `<EmailSignup />` on a new line immediately after `<CommunityTeaser />` and before the closing `</main>` tag.
+
+1. **src/components/EmailSignup.tsx**
+   - Change the submit button text from `Send Me the Dispatches` to exactly `I'm In`.
+
+2. **src/pages/Index.tsx**
+   - Verify `EmailSignup` is imported and placed between `CommunityTeaser` and `Footer`. (Already present from prior change; confirm only.)
 
 No other files or components will be touched.

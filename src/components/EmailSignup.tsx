@@ -53,7 +53,7 @@ const EmailSignup = () => {
                 aria-label="Email address"
               />
               <button type="submit" className="btn-gold whitespace-nowrap">
-                Send Me the Dispatches
+                I'm In
               </button>
             </form>
           )}
