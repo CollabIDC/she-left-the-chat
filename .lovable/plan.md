@@ -1,9 +1,7 @@
-## Changes
+In `src/components/CommunityTeaser.tsx`, replace the anchor tag:
+```tsx
+<a href="#email-signup" className="btn-gold">Join the email list</a>
+```
+with a `<button>` element that keeps the same `btn-gold` className and "Join the email list" text, but adds an `onClick` handler calling `document.getElementById('email-signup')?.scrollIntoView({ behavior: 'smooth' })`.
 
-1. **src/components/EmailSignup.tsx**
-   - Change the submit button text from `Send Me the Dispatches` to exactly `I'm In`.
-
-2. **src/pages/Index.tsx**
-   - Verify `EmailSignup` is imported and placed between `CommunityTeaser` and `Footer`. (Already present from prior change; confirm only.)
-
-No other files or components will be touched.
+This change is limited to the CommunityTeaser component only. No other files or content will be touched.

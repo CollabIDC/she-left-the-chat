@@ -21,12 +21,13 @@ const CommunityTeaser = () => {
             list and be the first to know.
           </p>
           {/* PLACEHOLDER community URL — swap for real link */}
-          <a
-            href="#email-signup"
+          <button
+            type="button"
+            onClick={() => document.getElementById('email-signup')?.scrollIntoView({ behavior: 'smooth' })}
             className="btn-gold"
           >
             Join the email list
-          </a>
+          </button>
         </motion.div>
       </div>
     </section>
