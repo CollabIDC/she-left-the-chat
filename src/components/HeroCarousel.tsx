@@ -31,7 +31,7 @@ const slides: Slide[] = [
           <span className="block italic font-normal text-5xl md:text-6xl lg:text-7xl mt-1">the chat</span>
         </h1>
         <p className="font-body font-light text-base md:text-lg text-ivory/95 max-w-xl mb-10 leading-relaxed">
-          From Atlanta to Madrid. Stories of wanderlust, bold choices, and building a life on your own terms. This is what it looks like when you finally choose yourself.
+          From Atlanta to Madrid. On purpose. This is what it looks like when you finally choose yourself.
         </p>
         <Link to="/stories/she-actually-did-it" className="btn-gold">
           Read She Actually Did It <ArrowRight className="w-4 h-4" />
