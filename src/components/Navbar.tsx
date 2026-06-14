@@ -8,6 +8,7 @@ const navLinks = [
   { name: "Home", to: "/" },
   { name: "Stories", to: "/stories" },
   { name: "Stumbled Upon", to: "/stumbled-upon" },
+  { name: "Videos", to: "/videos" },
   { name: "Gallery", to: "/gallery" },
   { name: "The Real Guides", to: "/the-real-guides" },
   { name: "Resources", to: "/resources" },
