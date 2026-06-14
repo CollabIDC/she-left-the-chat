@@ -45,8 +45,8 @@ const Index = () => {
         <StumbledUponMadrid />
         <RealGuides />
         
-        <CommunityTeaser />
         <EmailSignup />
+        <CommunityTeaser />
       </main>
       <Footer />
     </div>
