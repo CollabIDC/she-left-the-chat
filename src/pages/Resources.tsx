@@ -1,7 +1,8 @@
+import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Seo from "@/components/Seo";
-import { Download, FileText } from "lucide-react";
+import { Download, FileText, X } from "lucide-react";
 
 const PAGE_BG = "#F2EDE4";
 const INK = "#1A1714";
