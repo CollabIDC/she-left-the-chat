@@ -23,7 +23,7 @@ const CommunityTeaser = () => {
           {/* PLACEHOLDER community URL — swap for real link */}
           <button
             type="button"
-            onClick={() => document.getElementById('email-signup')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={() => window.open("https://shelefthechat.beehiiv.com/subscribe", "_blank", "noopener,noreferrer")}
             className="btn-gold"
           >
             Join the email list
