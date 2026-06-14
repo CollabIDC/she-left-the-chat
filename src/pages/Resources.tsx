@@ -505,7 +505,185 @@ const Resources = () => {
           </div>
         </div>
       </main>
+      {roadmapOpen && <RoadmapModal onClose={() => setRoadmapOpen(false)} />}
       <Footer />
+    </div>
+  );
+};
+
+type RoadmapModalProps = { onClose: () => void };
+
+const RoadmapModal = ({ onClose }: RoadmapModalProps) => {
+  const [email, setEmail] = useState("");
+  const [submitting, setSubmitting] = useState(false);
+  const [done, setDone] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const triggerDownload = () => {
+    const a = document.createElement("a");
+    a.href = "/assets/move-abroad-roadmap.pdf";
+    a.download = "Move-Abroad-Roadmap.pdf";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setError(null);
+    setSubmitting(true);
+    try {
+      const res = await fetch("https://formspree.io/f/REPLACE_WITH_YOUR_ID", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({ email, source: "Move Abroad Roadmap" }),
+      });
+      if (!res.ok) throw new Error("Submission failed");
+      setDone(true);
+      triggerDownload();
+    } catch {
+      setError("Something went wrong. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
+  return (
+    <div
+      role="dialog"
+      aria-modal="true"
+      onClick={onClose}
+      style={{
+        position: "fixed",
+        inset: 0,
+        background: "rgba(20,15,12,0.65)",
+        zIndex: 1000,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: 16,
+      }}
+    >
+      <div
+        onClick={(e) => e.stopPropagation()}
+        style={{
+          position: "relative",
+          background: "#FFFFFF",
+          borderTop: `3px solid ${GOLD}`,
+          borderRadius: 12,
+          maxWidth: 460,
+          width: "100%",
+          padding: "36px 28px 28px",
+          boxShadow: "0 20px 60px rgba(0,0,0,0.25)",
+        }}
+      >
+        <button
+          type="button"
+          aria-label="Close"
+          onClick={onClose}
+          style={{
+            position: "absolute",
+            top: 12,
+            right: 12,
+            background: "transparent",
+            border: "none",
+            cursor: "pointer",
+            color: MUTED,
+            padding: 6,
+            lineHeight: 0,
+          }}
+        >
+          <X size={20} />
+        </button>
+
+        {!done ? (
+          <>
+            <h2 style={{ fontFamily: display, fontWeight: 700, fontSize: 24, color: INK, margin: "0 0 8px", lineHeight: 1.2 }}>
+              The Move Abroad Roadmap
+            </h2>
+            <p style={{ fontFamily: lato, fontSize: 14, color: MUTED, margin: "0 0 20px", lineHeight: 1.6 }}>
+              Your step-by-step guide to starting your life in Madrid. Free.
+            </p>
+            <form onSubmit={handleSubmit}>
+              <input
+                type="email"
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Your email address"
+                style={{
+                  width: "100%",
+                  padding: "12px 14px",
+                  fontFamily: lato,
+                  fontSize: 14,
+                  border: `1px solid ${BORDER}`,
+                  borderRadius: 6,
+                  outline: "none",
+                  marginBottom: 12,
+                  boxSizing: "border-box",
+                }}
+              />
+              <button
+                type="submit"
+                disabled={submitting}
+                style={{
+                  width: "100%",
+                  background: GOLD,
+                  color: INK,
+                  fontFamily: lato,
+                  fontWeight: 700,
+                  fontSize: 12,
+                  letterSpacing: "0.12em",
+                  textTransform: "uppercase",
+                  padding: "13px 18px",
+                  borderRadius: 6,
+                  border: "none",
+                  cursor: submitting ? "wait" : "pointer",
+                  opacity: submitting ? 0.7 : 1,
+                }}
+              >
+                {submitting ? "Sending..." : "Send me the roadmap"}
+              </button>
+              <p style={{ fontFamily: lato, fontSize: 11, color: FOOT, textAlign: "center", margin: "10px 0 0" }}>
+                No spam. Just the guide.
+              </p>
+              {error && (
+                <p style={{ fontFamily: lato, fontSize: 12, color: TERRA, textAlign: "center", margin: "10px 0 0" }}>
+                  {error}
+                </p>
+              )}
+            </form>
+          </>
+        ) : (
+          <div style={{ textAlign: "center", padding: "12px 0 4px" }}>
+            <h2 style={{ fontFamily: display, fontWeight: 700, fontSize: 22, color: INK, margin: "0 0 10px", lineHeight: 1.3 }}>
+              Check your inbox.
+            </h2>
+            <p style={{ fontFamily: display, fontStyle: "italic", fontSize: 16, color: MUTED, margin: "0 0 20px" }}>
+              And welcome to the next chapter.
+            </p>
+            <button
+              type="button"
+              onClick={triggerDownload}
+              style={{
+                background: "transparent",
+                color: GOLD,
+                fontFamily: lato,
+                fontWeight: 700,
+                fontSize: 11,
+                letterSpacing: "0.12em",
+                textTransform: "uppercase",
+                border: `1px solid ${GOLD}`,
+                borderRadius: 6,
+                padding: "10px 18px",
+                cursor: "pointer",
+              }}
+            >
+              Download again
+            </button>
+          </div>
+        )}
+      </div>
     </div>
   );
 };
