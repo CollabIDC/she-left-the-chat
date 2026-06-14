@@ -80,12 +80,12 @@ const planningTools = [
   { emoji: "🧮", title: "Cost of Living Calculator", desc: "Compare your current city to Madrid. See what your money actually buys." },
   { emoji: "📅", title: "Your Move Timeline Builder", desc: "Tell it your target date. It builds your backwards planning checklist." },
   { emoji: "🍽️", title: "Madrid Barrio Food Guide", desc: "Tell it what you like to eat. It points you to the right neighborhood." },
+  { emoji: "🐾", title: "Service Dog Travel Guide", desc: "Everything that comes with traveling internationally with a service animal.", live: true, button: "DOWNLOAD THE GUIDE", href: "/assets/service-dog-travel-guide.pdf", download: true },
 ];
 
 const comingSoon = [
   { emoji: "🌍", title: "Country Matching App", desc: "Answer a few questions and get matched with the countries where your life, your work, and your next chapter actually fit.", live: true, button: "FIND MY COUNTRY", href: "/quiz" },
   { emoji: "🧭", title: "Move Abroad Roadmap", desc: "Step by step for people who are actually planning to do this." },
-  { emoji: "🐾", title: "Service Dog Travel Guide", desc: "Everything that comes with traveling internationally with a service animal." },
   { emoji: "📋", title: "What I Learned About Visas", desc: "An honest overview of the options, what I researched, and what nobody told me upfront.", live: true },
   { emoji: "⚠️", title: "Consider Yourself Warned", desc: "The laws, regulations, and unspoken rules nobody warned me about before I moved to Madrid." },
   { emoji: "💰", title: "The Banking and Money Guide", desc: "Opening accounts, transferring money, and avoiding fees. The stuff nobody explains clearly." },
@@ -322,44 +322,51 @@ const Resources = () => {
                 gap: 20,
               }}
             >
-              {planningTools.map((p: any) => (
-                <div
-                  key={p.title}
-                  style={{
-                    background: "#FFFFFF",
-                    border: p.live ? `1.5px solid ${GOLD}` : `1.5px solid ${BORDER}`,
-                    borderLeft: p.live ? `1.5px solid ${GOLD}` : `4px solid ${GOLD}`,
-                    borderRadius: 12,
-                    padding: 22,
-                    display: "flex",
-                    flexDirection: "column",
-                  }}
-                >
-                  <span style={{ fontSize: 26, display: "block", marginBottom: 10, lineHeight: 1 }}>{p.emoji}</span>
-                  <h3 style={{ fontFamily: display, fontWeight: 700, fontSize: 14, color: INK, lineHeight: 1.3, margin: "0 0 5px" }}>{p.title}</h3>
-                  <p style={{ fontFamily: lato, fontSize: 12, color: MUTED, lineHeight: 1.6, margin: 0, marginBottom: p.live && p.href ? 14 : 0, flex: 1 }}>{p.desc}</p>
-                  {p.live && p.href && (
-                    <a
-                      href={p.href}
-                      style={{
-                        alignSelf: "flex-start",
-                        background: GOLD,
-                        color: INK,
-                        fontFamily: lato,
-                        fontWeight: 700,
-                        fontSize: 10,
-                        letterSpacing: "0.1em",
-                        textTransform: "uppercase",
-                        padding: "8px 16px",
-                        borderRadius: 20,
-                        textDecoration: "none",
-                      }}
-                    >
-                      {p.button}
-                    </a>
-                  )}
-                </div>
-              ))}
+              {planningTools.map((p: any) => {
+                const isDownload = p.download;
+                const borderColor = isDownload ? "#8B7D3A" : p.live ? GOLD : BORDER;
+                const leftBorderWidth = isDownload ? "4px" : p.live ? "1.5px" : "4px";
+                const leftBorderColor = isDownload ? "#8B7D3A" : p.live ? GOLD : GOLD;
+                return (
+                  <div
+                    key={p.title}
+                    style={{
+                      background: "#FFFFFF",
+                      border: `1.5px solid ${borderColor}`,
+                      borderLeft: `${leftBorderWidth} solid ${leftBorderColor}`,
+                      borderRadius: 12,
+                      padding: 22,
+                      display: "flex",
+                      flexDirection: "column",
+                    }}
+                  >
+                    <span style={{ fontSize: 26, display: "block", marginBottom: 10, lineHeight: 1 }}>{p.emoji}</span>
+                    <h3 style={{ fontFamily: display, fontWeight: 700, fontSize: 14, color: INK, lineHeight: 1.3, margin: "0 0 5px" }}>{p.title}</h3>
+                    <p style={{ fontFamily: lato, fontSize: 12, color: MUTED, lineHeight: 1.6, margin: 0, marginBottom: p.live && p.href ? 14 : 0, flex: 1 }}>{p.desc}</p>
+                    {p.live && p.href && (
+                      <a
+                        href={p.href}
+                        download={isDownload ? "" : undefined}
+                        style={{
+                          alignSelf: "flex-start",
+                          background: isDownload ? "#8B7D3A" : GOLD,
+                          color: isDownload ? "#FFFFFF" : INK,
+                          fontFamily: lato,
+                          fontWeight: 700,
+                          fontSize: 10,
+                          letterSpacing: "0.1em",
+                          textTransform: "uppercase",
+                          padding: isDownload ? "10px 18px" : "8px 16px",
+                          borderRadius: isDownload ? 6 : 20,
+                          textDecoration: "none",
+                        }}
+                      >
+                        {p.button}
+                      </a>
+                    )}
+                  </div>
+                );
+              })}
             </div>
           </section>
 
