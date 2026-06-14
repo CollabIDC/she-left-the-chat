@@ -5,7 +5,7 @@ import StumbledUponMadrid from "@/components/StumbledUponMadrid";
 import RealGuides from "@/components/RealGuides";
 import Seo from "@/components/Seo";
 
-import EmailSignup from "@/components/EmailSignup";
+
 import Footer from "@/components/Footer";
 
 const homeJsonLd = [
@@ -44,7 +44,7 @@ const Index = () => {
         <StumbledUponMadrid />
         <RealGuides />
         
-        <EmailSignup />
+        
       </main>
       <Footer />
     </div>
