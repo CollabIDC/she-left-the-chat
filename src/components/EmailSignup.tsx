@@ -1,14 +1,16 @@
 import { motion } from "framer-motion";
 import { useState, FormEvent } from "react";
-import { toast } from "sonner";
 
 const EmailSignup = () => {
   const [email, setEmail] = useState("");
+  const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     if (!email) return;
-    toast.success("You're on the list! Check your inbox soon.");
+    const url = `https://shelefthechat.beehiiv.com/subscribe?email=${encodeURIComponent(email)}`;
+    window.open(url, "_blank", "noopener,noreferrer");
+    setSubmitted(true);
     setEmail("");
   };
 
