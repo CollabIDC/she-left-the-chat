@@ -439,7 +439,7 @@ const Resources = () => {
                 gap: 20,
               }}
             >
-              {comingSoon.map((c) => {
+              {comingSoon.map((c: any) => {
                 const cardStyle: React.CSSProperties = {
                   background: "#FFFFFF",
                   border: c.live ? `1.5px solid ${GOLD}` : `1.5px solid ${BORDER}`,
@@ -450,30 +450,33 @@ const Resources = () => {
                   flexDirection: "column",
                   textDecoration: "none",
                 };
+                const btnStyle: React.CSSProperties = {
+                  alignSelf: "flex-start",
+                  background: GOLD,
+                  color: INK,
+                  fontFamily: lato,
+                  fontWeight: 700,
+                  fontSize: 10,
+                  letterSpacing: "0.1em",
+                  textTransform: "uppercase",
+                  padding: "8px 16px",
+                  borderRadius: 20,
+                  textDecoration: "none",
+                  border: "none",
+                  cursor: "pointer",
+                };
                 return (
                   <div key={c.title} style={cardStyle}>
                     <span style={{ fontSize: 26, display: "block", marginBottom: 10, lineHeight: 1 }}>{c.emoji}</span>
                     <h3 style={{ fontFamily: display, fontWeight: 700, fontSize: 14, color: INK, lineHeight: 1.3, margin: "0 0 5px" }}>{c.title}</h3>
                     <p style={{ fontFamily: lato, fontSize: 12, color: MUTED, lineHeight: 1.6, margin: 0, marginBottom: c.live ? 14 : 0, flex: 1 }}>{c.desc}</p>
+                    {c.live && c.modal === "roadmap" && (
+                      <button type="button" onClick={() => setRoadmapOpen(true)} style={btnStyle}>
+                        {c.button}
+                      </button>
+                    )}
                     {c.live && c.href && (
-                      <a
-                        href={c.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        style={{
-                          alignSelf: "flex-start",
-                          background: GOLD,
-                          color: INK,
-                          fontFamily: lato,
-                          fontWeight: 700,
-                          fontSize: 10,
-                          letterSpacing: "0.1em",
-                          textTransform: "uppercase",
-                          padding: "8px 16px",
-                          borderRadius: 20,
-                          textDecoration: "none",
-                        }}
-                      >
+                      <a href={c.href} target="_blank" rel="noopener noreferrer" style={btnStyle}>
                         {c.button}
                       </a>
                     )}
