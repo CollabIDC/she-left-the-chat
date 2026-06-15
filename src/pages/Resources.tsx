@@ -489,7 +489,12 @@ const Resources = () => {
                         {c.button}
                       </button>
                     )}
-                    {c.live && c.href && (
+                    {c.live && c.href && c.href.startsWith("/") && (
+                      <a href={c.href} style={btnStyle}>
+                        {c.button}
+                      </a>
+                    )}
+                    {c.live && c.href && !c.href.startsWith("/") && (
                       <a href={c.href} target="_blank" rel="noopener noreferrer" style={btnStyle}>
                         {c.button}
                       </a>
