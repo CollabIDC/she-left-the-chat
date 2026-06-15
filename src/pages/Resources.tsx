@@ -101,6 +101,13 @@ const pills = ["Before You Leave", "At the Airport", "Getting Around", "Food & D
 const Resources = () => {
   const [roadmapOpen, setRoadmapOpen] = useState(false);
   const [innerworkOpen, setInnerworkOpen] = useState(false);
+  const location = useLocation();
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const modal = params.get("modal");
+    if (modal === "roadmap") setRoadmapOpen(true);
+    if (modal === "innerwork") setInnerworkOpen(true);
+  }, [location.search]);
   return (
     <div style={{ minHeight: "100vh", background: PAGE_BG }}>
       <Seo
