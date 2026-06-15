@@ -90,7 +90,7 @@ const comingSoon = [
   { emoji: "📋", title: "What I Learned About Visas", desc: "An honest overview of the options, what I researched, and what nobody told me upfront.", live: true },
   { emoji: "⚠️", title: "Consider Yourself Warned", desc: "The laws, regulations, and unspoken rules nobody warned me about before I moved to Madrid." },
   { emoji: "💰", title: "The Banking and Money Guide", desc: "Opening accounts, transferring money, and avoiding fees. The stuff nobody explains clearly." },
-  { emoji: "🧠", title: "The Inner Work", desc: "The mental and emotional preparation guide for anyone about to make a big life change." },
+  { emoji: "🧠", title: "The Inner Work", desc: "The mental and emotional preparation guide for anyone about to make a big life change.", live: true, button: "GET THE FREE WORKBOOK", modal: "innerwork" },
   { emoji: "🤝", title: "The Community Guide", desc: "How to find your people in a new city. Groups, spaces, and communities worth knowing in Madrid." },
   { emoji: "🛍️", title: "Digital Products", desc: "Courses, templates, and tools built for people who are ready to make the move or grow what they are building." },
 ];
@@ -99,6 +99,7 @@ const pills = ["Before You Leave", "At the Airport", "Getting Around", "Food & D
 
 const Resources = () => {
   const [roadmapOpen, setRoadmapOpen] = useState(false);
+  const [innerworkOpen, setInnerworkOpen] = useState(false);
   return (
     <div style={{ minHeight: "100vh", background: PAGE_BG }}>
       <Seo
@@ -475,6 +476,11 @@ const Resources = () => {
                         {c.button}
                       </button>
                     )}
+                    {c.live && c.modal === "innerwork" && (
+                      <button type="button" onClick={() => setInnerworkOpen(true)} style={btnStyle}>
+                        {c.button}
+                      </button>
+                    )}
                     {c.live && c.href && (
                       <a href={c.href} target="_blank" rel="noopener noreferrer" style={btnStyle}>
                         {c.button}
@@ -506,6 +512,7 @@ const Resources = () => {
         </div>
       </main>
       {roadmapOpen && <RoadmapModal onClose={() => setRoadmapOpen(false)} />}
+      {innerworkOpen && <InnerWorkModal onClose={() => setInnerworkOpen(false)} />}
       <Footer />
     </div>
   );
