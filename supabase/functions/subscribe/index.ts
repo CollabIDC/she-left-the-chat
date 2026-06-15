@@ -1,6 +1,6 @@
 import { corsHeaders } from 'npm:@supabase/supabase-js@2/cors';
 
-const KIT_API_KEY = "uHPgFjP4zNw77Q2Kqh6JlQ";
+const KIT_API_KEY = "kit_bd8240292e08e27da93f4b767451dc4b";
 const KIT_FORM_ID = "9568035";
 
 Deno.serve(async (req) => {
