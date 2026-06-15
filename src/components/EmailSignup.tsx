@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { supabase } from "@/integrations/supabase/client";
 
 const EmailSignup = () => {
   const [email, setEmail] = useState("");
@@ -10,28 +11,10 @@ const EmailSignup = () => {
 
     if (!email) return;
 
-    const KIT_API_KEY = "uHPgFjP4zNw77Q2Kqh6JlQ";
-    const KIT_FORM_ID = "9568035";
-
     try {
-      await fetch("https://api.kit.com/v4/subscribers", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "X-Kit-Api-Key": KIT_API_KEY,
-        },
-        body: JSON.stringify({ email_address: email }),
+      await supabase.functions.invoke("subscribe", {
+        body: { email_address: email },
       });
-
-      await fetch(`https://api.kit.com/v4/forms/${KIT_FORM_ID}/subscribers`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "X-Kit-Api-Key": KIT_API_KEY,
-        },
-        body: JSON.stringify({ email_address: email }),
-      });
-
       setSubmitted(true);
     } catch (error) {
       console.error("Subscription error:", error);
