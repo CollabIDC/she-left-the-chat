@@ -480,11 +480,6 @@ const Resources = () => {
                     <span style={{ fontSize: 26, display: "block", marginBottom: 10, lineHeight: 1 }}>{c.emoji}</span>
                     <h3 style={{ fontFamily: display, fontWeight: 700, fontSize: 14, color: INK, lineHeight: 1.3, margin: "0 0 5px" }}>{c.title}</h3>
                     <p style={{ fontFamily: lato, fontSize: 12, color: MUTED, lineHeight: 1.6, margin: 0, marginBottom: c.live ? 14 : 0, flex: 1 }}>{c.desc}</p>
-                    {c.live && c.modal === "innerwork" && (
-                      <button type="button" onClick={() => setInnerworkOpen(true)} style={btnStyle}>
-                        {c.button}
-                      </button>
-                    )}
                     {c.live && c.href && c.href.startsWith("/") && !(c.download || c.href.endsWith(".pdf")) && (
                       <a href={c.href} style={btnStyle}>
                         {c.button}
