@@ -91,7 +91,7 @@ const comingSoon = [
   { emoji: "📋", title: "What I Learned About Visas", desc: "An honest overview of the options, what I researched, and what nobody told me upfront.", live: true },
   { emoji: "⚠️", title: "Consider Yourself Warned", desc: "The laws, regulations, and unspoken rules nobody warned me about before I moved to Madrid.", live: true, button: "READ IT", href: "/resources/consider-yourself-warned" },
   { emoji: "💰", title: "The Banking and Money Guide", desc: "Opening accounts, transferring money, and avoiding fees. The stuff nobody explains clearly." },
-  { emoji: "🧠", title: "The Inner Work", desc: "The mental and emotional preparation guide for anyone about to make a big life change.", live: true, button: "GET THE FREE WORKBOOK", modal: "innerwork" },
+  { emoji: "🧠", title: "The Inner Work", desc: "The mental and emotional preparation guide for anyone about to make a big life change.", live: true, button: "GET THE FREE WORKBOOK", href: "/assets/the-inner-work.pdf", download: true },
   { emoji: "🤝", title: "The Community Guide", desc: "How to find your people in a new city. Groups, spaces, and communities worth knowing in Madrid." },
   { emoji: "🛍️", title: "Digital Products", desc: "Courses, templates, and tools built for people who are ready to make the move or grow what they are building." },
 ];
