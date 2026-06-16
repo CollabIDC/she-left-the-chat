@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Seo from "@/components/Seo";
-import { Download, FileText, X } from "lucide-react";
+import { Download, FileText } from "lucide-react";
 
 const PAGE_BG = "#F2EDE4";
 const INK = "#1A1714";
