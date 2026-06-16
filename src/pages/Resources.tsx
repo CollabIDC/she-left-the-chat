@@ -521,7 +521,6 @@ const Resources = () => {
         </div>
       </main>
       
-      {innerworkOpen && <InnerWorkModal onClose={() => setInnerworkOpen(false)} />}
       <Footer />
     </div>
   );
