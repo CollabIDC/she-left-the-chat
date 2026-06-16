@@ -1,20 +1,14 @@
 ## Goal
-Make the "Consider Yourself Warned" card on the Resources page clickable so it links to its live page.
+Remove the email-capture popup for the "Move Abroad Roadmap" card on `/resources`. Clicking "GET THE FREE ROADMAP" should take the user straight to the PDF.
 
-## Current State
-The page `/resources/consider-yourself-warned` already exists and is routed in `App.tsx`. In `src/pages/Resources.tsx`, the card in the `comingSoon` array is missing the `live: true` flag and `href` property, so no link or button renders.
+## Changes (src/pages/Resources.tsx)
+1. Replace the roadmap modal button (line ~482-483) with an anchor link to `/assets/move-abroad-roadmap.pdf` opening in a new tab, styled with the same `btnStyle` as other live buttons.
+2. Remove the now-unused pieces:
+   - `roadmapOpen` state (line 102)
+   - `if (modal === "roadmap") setRoadmapOpen(true);` handler (line 108)
+   - `{roadmapOpen && <RoadmapModal ... />}` render (line 527)
+   - The entire `RoadmapModal` component definition (lines ~534 to end of component)
+3. Leave the card metadata (`modal: "roadmap"`) as-is or swap to an `href` — I'll switch it to `href: "/assets/move-abroad-roadmap.pdf"` and drop the `modal` field so it follows the same pattern as other PDF cards.
 
-## Change
-In `src/pages/Resources.tsx`, line 92, update the "Consider Yourself Warned" item from:
-
-```js
-{ emoji: "⚠️", title: "Consider Yourself Warned", desc: "The laws, regulations, and unspoken rules nobody warned me about before I moved to Madrid." },
-```
-
-to:
-
-```js
-{ emoji: "⚠️", title: "Consider Yourself Warned", desc: "The laws, regulations, and unspoken rules nobody warned me about before I moved to Madrid.", live: true, button: "READ IT", href: "/resources/consider-yourself-warned" },
-```
-
-This follows the exact pattern used by the other live cards (e.g. Country Matching App, Move Abroad Roadmap). No other UI or logic changes are needed.
+## Out of scope
+No other modals, cards, styles, or pages are touched. The Inner Work and any other email-gated modals stay exactly as they are.
