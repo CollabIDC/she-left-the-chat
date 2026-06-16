@@ -99,12 +99,13 @@ const comingSoon = [
 const pills = ["Before You Leave", "At the Airport", "Getting Around", "Food & Dining", "Culture", "Safety", "Essential Apps", "Money Tips"];
 
 const Resources = () => {
-  const [innerworkOpen, setInnerworkOpen] = useState(false);
   const location = useLocation();
   useEffect(() => {
     const params = new URLSearchParams(location.search);
-    const modal = params.get("modal");
-    if (modal === "innerwork") setInnerworkOpen(true);
+    if (params.get("modal") === "innerwork") {
+      // Legacy modal param no longer used; redirect to resources page
+      window.history.replaceState({}, "", "/resources");
+    }
   }, [location.search]);
   return (
     <div style={{ minHeight: "100vh", background: PAGE_BG }}>
