@@ -482,12 +482,17 @@ const Resources = () => {
                         {c.button}
                       </button>
                     )}
-                    {c.live && c.href && c.href.startsWith("/") && (
+                    {c.live && c.href && c.href.startsWith("/") && !(c.download || c.href.endsWith(".pdf")) && (
                       <a href={c.href} style={btnStyle}>
                         {c.button}
                       </a>
                     )}
-                    {c.live && c.href && !c.href.startsWith("/") && (
+                    {c.live && c.href && (c.download || c.href.endsWith(".pdf")) && (
+                      <a href={c.href} target="_blank" rel="noopener noreferrer" download style={btnStyle}>
+                        {c.button}
+                      </a>
+                    )}
+                    {c.live && c.href && !c.href.startsWith("/") && !(c.download || c.href.endsWith(".pdf")) && (
                       <a href={c.href} target="_blank" rel="noopener noreferrer" style={btnStyle}>
                         {c.button}
                       </a>
