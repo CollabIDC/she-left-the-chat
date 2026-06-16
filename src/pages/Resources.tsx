@@ -87,7 +87,7 @@ const planningTools = [
 
 const comingSoon = [
   { emoji: "🌍", title: "Country Matching App", desc: "Answer a few questions and get matched with the countries where your life, your work, and your next chapter actually fit.", live: true, button: "FIND MY COUNTRY", href: "/quiz" },
-  { emoji: "🧭", title: "Move Abroad Roadmap", desc: "Step by step for people who are actually planning to do this.", live: true, button: "GET THE FREE ROADMAP", modal: "roadmap" },
+  { emoji: "🧭", title: "Move Abroad Roadmap", desc: "Step by step for people who are actually planning to do this.", live: true, button: "GET THE FREE ROADMAP", href: "/assets/move-abroad-roadmap.pdf", download: true },
   { emoji: "📋", title: "What I Learned About Visas", desc: "An honest overview of the options, what I researched, and what nobody told me upfront.", live: true },
   { emoji: "⚠️", title: "Consider Yourself Warned", desc: "The laws, regulations, and unspoken rules nobody warned me about before I moved to Madrid.", live: true, button: "READ IT", href: "/resources/consider-yourself-warned" },
   { emoji: "💰", title: "The Banking and Money Guide", desc: "Opening accounts, transferring money, and avoiding fees. The stuff nobody explains clearly." },
@@ -99,13 +99,11 @@ const comingSoon = [
 const pills = ["Before You Leave", "At the Airport", "Getting Around", "Food & Dining", "Culture", "Safety", "Essential Apps", "Money Tips"];
 
 const Resources = () => {
-  const [roadmapOpen, setRoadmapOpen] = useState(false);
   const [innerworkOpen, setInnerworkOpen] = useState(false);
   const location = useLocation();
   useEffect(() => {
     const params = new URLSearchParams(location.search);
     const modal = params.get("modal");
-    if (modal === "roadmap") setRoadmapOpen(true);
     if (modal === "innerwork") setInnerworkOpen(true);
   }, [location.search]);
   return (
@@ -479,11 +477,6 @@ const Resources = () => {
                     <span style={{ fontSize: 26, display: "block", marginBottom: 10, lineHeight: 1 }}>{c.emoji}</span>
                     <h3 style={{ fontFamily: display, fontWeight: 700, fontSize: 14, color: INK, lineHeight: 1.3, margin: "0 0 5px" }}>{c.title}</h3>
                     <p style={{ fontFamily: lato, fontSize: 12, color: MUTED, lineHeight: 1.6, margin: 0, marginBottom: c.live ? 14 : 0, flex: 1 }}>{c.desc}</p>
-                    {c.live && c.modal === "roadmap" && (
-                      <button type="button" onClick={() => setRoadmapOpen(true)} style={btnStyle}>
-                        {c.button}
-                      </button>
-                    )}
                     {c.live && c.modal === "innerwork" && (
                       <button type="button" onClick={() => setInnerworkOpen(true)} style={btnStyle}>
                         {c.button}
@@ -524,7 +517,7 @@ const Resources = () => {
           </div>
         </div>
       </main>
-      {roadmapOpen && <RoadmapModal onClose={() => setRoadmapOpen(false)} />}
+      
       {innerworkOpen && <InnerWorkModal onClose={() => setInnerworkOpen(false)} />}
       <Footer />
     </div>
