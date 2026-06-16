@@ -356,6 +356,8 @@ const Resources = () => {
                       <a
                         href={p.href}
                         download={isDownload ? "" : undefined}
+                        target={isDownload ? "_blank" : undefined}
+                        rel={isDownload ? "noopener noreferrer" : undefined}
                         style={{
                           alignSelf: "flex-start",
                           background: isDownload ? "#8B7D3A" : GOLD,
