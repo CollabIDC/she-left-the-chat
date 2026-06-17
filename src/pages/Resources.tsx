@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Seo from "@/components/Seo";
 import { Download, FileText } from "lucide-react";
+import cheatSheetAsset from "@/assets/madrid-cheat-sheet.pdf.asset.json";
 
 const PAGE_BG = "#F2EDE4";
 const INK = "#1A1714";
@@ -192,10 +193,10 @@ const Resources = () => {
                   ))}
                 </div>
                 <a
-                  href="https://drive.google.com/file/d/1vyQciv-h5zgGyhMQm53cyGYl0MpVf5yB/view?usp=sharing"
+                  href={cheatSheetAsset.url}
                   target="_blank"
                   rel="noopener noreferrer"
-
+                  download
                   style={{
                     marginTop: 20,
                     display: "inline-flex",
