@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Seo from "@/components/Seo";
 import { Download, FileText } from "lucide-react";
+import cheatSheetAsset from "@/assets/madrid-cheat-sheet.pdf.asset.json";
 
 const PAGE_BG = "#F2EDE4";
 const INK = "#1A1714";
