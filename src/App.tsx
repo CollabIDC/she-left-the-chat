@@ -20,6 +20,7 @@ import ConsiderYourselfWarned from "./pages/ConsiderYourselfWarned";
 import WhatILearnedAboutVisas from "./pages/WhatILearnedAboutVisas";
 import BankingAndMoneyGuide from "./pages/BankingAndMoneyGuide";
 import NeighborhoodMatcher from "./pages/NeighborhoodMatcher";
+import PackingListBuilder from "./pages/PackingListBuilder";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
