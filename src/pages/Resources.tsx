@@ -78,7 +78,7 @@ const languageCards = [
 
 const planningTools = [
   { emoji: "📍", title: "Madrid Neighborhood Matcher", desc: "Tell it how you live. It tells you where in Madrid you belong.", live: true, button: "FIND MY NEIGHBORHOOD", href: "/resources/neighborhood-matcher" },
-  { emoji: "🎒", title: "Packing List Builder", desc: "Answer a few questions. Get a list built for your trip, not everyone else's." },
+  { emoji: "🎒", title: "Packing List Builder", desc: "Answer a few questions. Get a list built for your trip, not everyone else's.", live: true, button: "BUILD MY LIST", href: "/resources/packing-list-builder" },
   { emoji: "✅", title: "Relocation Readiness Quiz", desc: "Are you actually ready to make the move? Find out where you really stand.", live: true, button: "TRY THE QUIZ", href: "/tools/relocation-readiness-quiz" },
   { emoji: "🧮", title: "Cost of Living Calculator", desc: "Compare your current city to Madrid. See what your money actually buys." },
   { emoji: "📅", title: "Your Move Timeline Builder", desc: "Tell it your target date. It builds your backwards planning checklist." },
