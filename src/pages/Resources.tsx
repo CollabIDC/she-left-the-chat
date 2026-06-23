@@ -89,7 +89,7 @@ const planningTools = [
 const comingSoon = [
   { emoji: "🌍", title: "Country Matching App", desc: "Answer a few questions and get matched with the countries where your life, your work, and your next chapter actually fit.", live: true, button: "FIND MY COUNTRY", href: "/quiz" },
   { emoji: "🧭", title: "Move Abroad Roadmap", desc: "Step by step for people who are actually planning to do this.", live: true, button: "GET THE FREE ROADMAP", href: "/assets/move-abroad-roadmap.pdf", download: true },
-  { emoji: "📋", title: "What I Learned About Visas", desc: "An honest overview of the options, what I researched, and what nobody told me upfront.", live: true },
+  { emoji: "📋", title: "What I Learned About Visas", desc: "An honest overview of the options, what I researched, and what nobody told me upfront.", live: true, button: "READ IT", href: "/resources/what-i-learned-about-visas" },
   { emoji: "⚠️", title: "Consider Yourself Warned", desc: "The laws, regulations, and unspoken rules nobody warned me about before I moved to Madrid.", live: true, button: "READ IT", href: "/resources/consider-yourself-warned" },
   { emoji: "💰", title: "The Banking and Money Guide", desc: "Opening accounts, transferring money, and avoiding fees. The stuff nobody explains clearly." },
   { emoji: "🧠", title: "The Inner Work", desc: "The mental and emotional preparation guide for anyone about to make a big life change.", live: true, button: "GET THE FREE WORKBOOK", href: "/assets/the-inner-work.pdf", download: true },
