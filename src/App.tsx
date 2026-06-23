@@ -17,6 +17,7 @@ import StumbledUpon from "./pages/StumbledUpon";
 import StumbledUponPost from "./pages/StumbledUponPost";
 import CountryMatchQuiz from "./pages/CountryMatchQuiz";
 import ConsiderYourselfWarned from "./pages/ConsiderYourselfWarned";
+import WhatILearnedAboutVisas from "./pages/WhatILearnedAboutVisas";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
