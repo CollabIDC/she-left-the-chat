@@ -19,6 +19,7 @@ import CountryMatchQuiz from "./pages/CountryMatchQuiz";
 import ConsiderYourselfWarned from "./pages/ConsiderYourselfWarned";
 import WhatILearnedAboutVisas from "./pages/WhatILearnedAboutVisas";
 import BankingAndMoneyGuide from "./pages/BankingAndMoneyGuide";
+import NeighborhoodMatcher from "./pages/NeighborhoodMatcher";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
