@@ -21,6 +21,7 @@ import WhatILearnedAboutVisas from "./pages/WhatILearnedAboutVisas";
 import BankingAndMoneyGuide from "./pages/BankingAndMoneyGuide";
 import NeighborhoodMatcher from "./pages/NeighborhoodMatcher";
 import PackingListBuilder from "./pages/PackingListBuilder";
+import TimelineBuilder from "./pages/TimelineBuilder";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
