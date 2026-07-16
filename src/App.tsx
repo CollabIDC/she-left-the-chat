@@ -21,6 +21,7 @@ import WhatILearnedAboutVisas from "./pages/WhatILearnedAboutVisas";
 import BankingAndMoneyGuide from "./pages/BankingAndMoneyGuide";
 import NeighborhoodMatcher from "./pages/NeighborhoodMatcher";
 import PackingListBuilder from "./pages/PackingListBuilder";
+import TimelineBuilder from "./pages/TimelineBuilder";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -55,6 +56,7 @@ const App = () => (
           <Route path="/resources/banking-and-money-guide" element={<BankingAndMoneyGuide />} />
           <Route path="/resources/neighborhood-matcher" element={<NeighborhoodMatcher />} />
           <Route path="/resources/packing-list-builder" element={<PackingListBuilder />} />
+          <Route path="/resources/timeline-builder" element={<TimelineBuilder />} />
           <Route path="/quiz" element={<CountryMatchQuiz />} />
           <Route path="/about" element={<About />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
