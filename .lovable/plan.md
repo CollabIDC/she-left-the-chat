@@ -1,8 +1,23 @@
-The 'What I Learned About Visas' card on /resources is marked as live but currently has no call-to-action button, while other live cards do. The new article page already exists at /resources/what-i-learned-about-visas.
+# Add the Timeline Builder button to the Resources page
 
-Plan
-1. Update the card data in src/pages/Resources.tsx for the 'What I Learned About Visas' entry:
-   - Add `href: "/resources/what-i-learned-about-visas"`
-   - Add `button: "READ IT"`
-2. The existing card-rendering loop already handles internal relative links with a styled button, so no UI changes outside the data array are needed.
-3. Build to confirm no TypeScript errors and the button renders and links to the new page.
+## Problem
+On `/resources`, the "Your Move Timeline Builder" card in the `planningTools` array (line 84 of `src/pages/Resources.tsx`) has no `live`, `button`, or `href` properties. The card render logic only draws a button when `p.live && p.href` is true (line 357), so the card currently shows no button and the tool is unreachable from this page.
+
+The route `/resources/timeline-builder` already exists and is wired in `src/App.tsx`.
+
+## Change
+In `src/pages/Resources.tsx`, update the single `planningTools` entry for the Timeline Builder:
+
+```text
+Before:
+{ emoji: "📅", title: "Your Move Timeline Builder", desc: "Tell it your target date. It builds your backwards planning checklist." },
+
+After:
+{ emoji: "📅", title: "Your Move Timeline Builder", desc: "Tell it your target date. It builds your backwards planning checklist.", live: true, button: "BUILD MY TIMELINE", href: "/resources/timeline-builder" },
+```
+
+This matches the exact pattern used by the live sibling cards (Neighborhood Matcher, Packing List Builder) and will render a gold pill button linking to the existing internal route. No styling, no other cards, and no other files are touched.
+
+## Verification
+- Confirm the button appears on the card in the preview at `/resources`.
+- Confirm clicking it navigates to `/resources/timeline-builder`.
