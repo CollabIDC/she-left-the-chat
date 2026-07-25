@@ -35,11 +35,11 @@ const CATS: Cat[] = [
 ];
 
 // Hardcoded Madrid figures (EUR/month). Source: Numbeo, Madrid, July 2026,
-// adjusted for household size. Single excludes rent ≈ €813; family of four ≈ €2,920.
+// adjusted for household size. Single (excl rent) = €813; couple ≈ €1,560; family of four ≈ €2,850.
 const MADRID: Record<Household, Record<string, number>> = {
   single: { groceries: 250, dining: 150, transport: 35, utilities: 169, phone: 47, fitness: 43, leisure: 60, personal: 59, childcare: 0 },
-  couple: { groceries: 400, dining: 240, transport: 60, utilities: 185, phone: 78, fitness: 86, leisure: 100, personal: 120, childcare: 0 },
-  family: { groceries: 700, dining: 300, transport: 100, utilities: 220, phone: 110, fitness: 100, leisure: 150, personal: 200, childcare: 627 },
+  couple: { groceries: 480, dining: 280, transport: 70, utilities: 185, phone: 78, fitness: 86, leisure: 130, personal: 250, childcare: 0 },
+  family: { groceries: 1000, dining: 380, transport: 130, utilities: 220, phone: 110, fitness: 100, leisure: 220, personal: 690, childcare: 627 },
 };
 
 const RENT: Record<HousingKey, number> = {
