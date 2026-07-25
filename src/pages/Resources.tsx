@@ -81,7 +81,7 @@ const planningTools = [
   { emoji: "🎒", title: "Packing List Builder", desc: "Answer a few questions. Get a list built for your trip, not everyone else's.", live: true, button: "BUILD MY LIST", href: "/resources/packing-list-builder" },
   { emoji: "✅", title: "Relocation Readiness Quiz", desc: "Are you actually ready to make the move? Find out where you really stand.", live: true, button: "TRY THE QUIZ", href: "/tools/relocation-readiness-quiz" },
   { emoji: "🧮", title: "Cost of Living Calculator", desc: "Compare your current city to Madrid. See what your money actually buys." },
-  { emoji: "📅", title: "Your Move Timeline Builder", desc: "Tell it your target date. It builds your backwards planning checklist." },
+  { emoji: "📅", title: "Your Move Timeline Builder", desc: "Tell it your target date. It builds your backwards planning checklist.", live: true, button: "BUILD MY TIMELINE", href: "/resources/timeline-builder" },
   { emoji: "🍽️", title: "Madrid Barrio Food Guide", desc: "Tell it what you like to eat. It points you to the right neighborhood." },
   { emoji: "🐾", title: "Service Dog Travel Guide", desc: "Everything that comes with traveling internationally with a service animal.", live: true, button: "DOWNLOAD THE GUIDE", href: "/assets/service-dog-travel-guide.pdf", download: true },
 ];
