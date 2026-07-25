@@ -30,7 +30,7 @@ const CATS: Cat[] = [
   { key: "phone", label: "Phone & internet" },
   { key: "fitness", label: "Fitness & health" },
   { key: "leisure", label: "Leisure & entertainment" },
-  { key: "personal", label: "Personal care & household" },
+  { key: "personal", label: "Personal & household", sub: "Toiletries, cleaning, clothing" },
   { key: "childcare", label: "Childcare", sub: "Preschool, per child", familyOnly: true },
 ];
 
