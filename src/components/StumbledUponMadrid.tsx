@@ -30,7 +30,7 @@ const angles = [
   {
     emoji: "🎟️",
     name: "Things to Do",
-    description: "Curated, honest, written from real experience. No affiliate fluff.",
+    description: "I only link to things I actually used or would use. Some links are affiliate links. If you buy through them I may earn a commission at no extra cost to you, and it helps keep these guides free. No one can pay for a recommendation.",
   },
 ];
 
