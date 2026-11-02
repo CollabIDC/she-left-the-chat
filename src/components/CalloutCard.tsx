@@ -58,10 +58,16 @@ const CalloutCard = ({
             >
               {buttonLabel}
             </a>
-          ) : (
+          ) : buttonLink.startsWith("/") ? (
             <Link to={buttonLink} className={buttonClass}>
               {buttonLabel}
             </Link>
+          ) : (
+            // Placeholder destination ("#" or anything unqualified): no new
+            // tab, and flagged so it is easy to find and replace.
+            <a href={buttonLink} className={buttonClass} data-placeholder-link="">
+              {buttonLabel}
+            </a>
           )}
         </div>
       )}

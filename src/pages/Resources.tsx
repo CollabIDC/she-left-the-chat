@@ -6,6 +6,8 @@ import Seo from "@/components/Seo";
 import { Download, FileText } from "lucide-react";
 import cheatSheetAsset from "@/assets/madrid-cheat-sheet.pdf.asset.json";
 import ComparisonTable from "@/components/ComparisonTable";
+import CtaButton from "@/components/CtaButton";
+import CalloutCard from "@/components/CalloutCard";
 
 const PAGE_BG = "#F2EDE4";
 const INK = "#1A1714";
@@ -423,6 +425,30 @@ const Resources = () => {
                   },
                 ]}
                 affiliateLabel=""
+              />
+            </div>
+          </section>
+
+          <Dots />
+
+          {/* SECTION — Banking and Money */}
+          <section>
+            <div style={sectionLabelStyle}>BANKING AND MONEY</div>
+            <h2 style={sectionTitleStyle}>The Banking and Money Guide</h2>
+            <p style={sectionSubStyle}>
+              Opening accounts, moving money, and staying covered while you are here.
+            </p>
+
+            <div style={{ marginTop: 28 }}>
+              <CtaButton label="Open a Wise account / see fees" link="#" />
+            </div>
+
+            <div style={{ marginTop: 28 }}>
+              <CalloutCard
+                heading="Sort Your Coverage Before You Fly"
+                body="A long stay needs different coverage than a vacation. Get a quote before you leave home, then keep the confirmation with the rest of your documents."
+                buttonLabel="Get a SafetyWing quote for a long stay"
+                buttonLink="#"
               />
             </div>
           </section>

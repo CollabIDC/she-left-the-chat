@@ -74,4 +74,14 @@ describe("CtaButton", () => {
     expect(screen.getByText("Get the roadmap")).toBeTruthy();
     expect(screen.getByText("Get the roadmap").className).toContain("mt-6");
   });
+
+  it("treats # as an editable placeholder, not a destination", () => {
+    renderButton({ link: "#" });
+    const button = screen.getByText("Read the guide");
+    expect(button.getAttribute("href")).toBe("#");
+    expect(button.getAttribute("data-placeholder-link")).toBe("");
+    expect(button.getAttribute("target")).toBeNull();
+    expect(button.getAttribute("rel")).toBeNull();
+    expect(button.className).toContain("btn-gold");
+  });
 });
