@@ -61,10 +61,20 @@ const CtaButton = ({
     );
   }
 
+  if (link.startsWith("/")) {
+    return (
+      <Link to={link} className={classes}>
+        {label}
+      </Link>
+    );
+  }
+
+  // Placeholder destination ("#" or anything unqualified): no new tab, no
+  // sponsored claim, and flagged so it is easy to find and replace.
   return (
-    <Link to={link} className={classes}>
+    <a href={link} className={classes} data-placeholder-link="">
       {label}
-    </Link>
+    </a>
   );
 };
 
