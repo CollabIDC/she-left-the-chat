@@ -23,6 +23,7 @@ import NeighborhoodMatcher from "./pages/NeighborhoodMatcher";
 import PackingListBuilder from "./pages/PackingListBuilder";
 import TimelineBuilder from "./pages/TimelineBuilder";
 import CostOfLivingCalculator from "./pages/CostOfLivingCalculator";
+import __ComponentPreview from "./pages/__ComponentPreview";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
