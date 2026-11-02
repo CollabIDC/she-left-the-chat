@@ -23,7 +23,6 @@ import NeighborhoodMatcher from "./pages/NeighborhoodMatcher";
 import PackingListBuilder from "./pages/PackingListBuilder";
 import TimelineBuilder from "./pages/TimelineBuilder";
 import CostOfLivingCalculator from "./pages/CostOfLivingCalculator";
-import __ComponentPreview from "./pages/__ComponentPreview";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -60,7 +59,6 @@ const App = () => (
           <Route path="/resources/packing-list-builder" element={<PackingListBuilder />} />
           <Route path="/resources/timeline-builder" element={<TimelineBuilder />} />
           <Route path="/resources/cost-of-living-calculator" element={<CostOfLivingCalculator />} />
-          <Route path="/__component-preview" element={<__ComponentPreview />} />
           <Route path="/quiz" element={<CountryMatchQuiz />} />
           <Route path="/about" element={<About />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
