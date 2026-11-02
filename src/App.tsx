@@ -60,6 +60,7 @@ const App = () => (
           <Route path="/resources/packing-list-builder" element={<PackingListBuilder />} />
           <Route path="/resources/timeline-builder" element={<TimelineBuilder />} />
           <Route path="/resources/cost-of-living-calculator" element={<CostOfLivingCalculator />} />
+          <Route path="/__component-preview" element={<__ComponentPreview />} />
           <Route path="/quiz" element={<CountryMatchQuiz />} />
           <Route path="/about" element={<About />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
