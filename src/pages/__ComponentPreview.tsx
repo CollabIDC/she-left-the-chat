@@ -8,37 +8,37 @@ import metropolisCrosswalk from "@/assets/gallery/metropolis-crosswalk.jpg.asset
 
 const ITEMS = [
   {
-    photo: morningBreakfastTulips.url,
+    photo: "/og-image.jpg",
     name: "Ceramic breakfast plate",
     why: "The blue plate I use every morning.",
     link: "https://example.com/plate",
   },
   {
-    photo: quinoaLunch.url,
+    photo: "/og-image.jpg",
     name: "Glass food container",
     why: "Keeps salad dressed for two days.",
     link: "https://example.com/container",
   },
   {
-    photo: gumboAtTrikki.url,
+    photo: "/og-image.jpg",
     name: "Deep cereal bowl",
     why: "Right size for soup and rice.",
     link: "https://example.com/bowl",
   },
   {
-    photo: parkSpringPlanting.url,
+    photo: "/og-image.jpg",
     name: "Watering can",
     why: "Small enough for a balcony.",
     link: "https://example.com/can",
   },
   {
-    photo: hotelAtlanticoBlueHour.url,
+    photo: "/og-image.jpg",
     name: "Packable day bag",
     why: "Fits under a plane seat.",
     link: "https://example.com/bag",
   },
   {
-    photo: metropolisCrosswalk.url,
+    photo: "/og-image.jpg",
     name: "Compact umbrella",
     why: "Survived every Madrid downpour.",
     link: "https://example.com/umbrella",
