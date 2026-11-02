@@ -272,6 +272,29 @@
     border-top: 1px solid var(--soft-line);
   }
 
+  /* ── Affiliate disclosure strip ── */
+  .disclosure {
+    background: #FFFFFF;
+    border: 1px solid var(--soft-line);
+    border-radius: 16px;
+    padding: 18px 22px;
+    margin: 0 0 40px;
+  }
+  .disclosure .label {
+    font-family: 'Lato', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+  }
+  .disclosure p {
+    font-size: 15px !important;
+    line-height: 1.7 !important;
+    margin-bottom: 0 !important;
+  }
+
   @media (max-width: 640px) {
     .hero { height: 320px; }
     .post-body { padding: 48px 22px 64px; }
@@ -302,6 +325,11 @@
   </div>
 
   <article class="post-body">
+
+    <aside class="disclosure" role="note" aria-label="Affiliate disclosure">
+      <p class="label">Affiliate disclosure</p>
+      <p>This post contains affiliate links. If you buy through them, we may earn a commission at no extra cost to you.</p>
+    </aside>
 
     <p class="lead">There are a thousand Madrid travel guides on the internet. Most of them were written by someone who spent a long weekend there, ate at the most Instagrammable spots, took approximately 400 photos of churros, and called themselves an expert.</p>
 
