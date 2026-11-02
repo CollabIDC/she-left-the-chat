@@ -60,7 +60,10 @@ const FeaturedBusiness = ({
       )}
     >
       {paidPartnership && (
-        <p className="border-b border-border bg-blush/60 px-5 py-2 text-center font-label text-[10px] font-medium uppercase tracking-[0.18em] text-charcoal sm:text-[11px]">
+        <p
+          data-partnership-label
+          className="border-b border-border bg-blush/60 px-5 py-2 text-center font-label text-[10px] font-medium uppercase tracking-[0.18em] text-charcoal sm:text-[11px]"
+        >
           {partnershipLabel}
         </p>
       )}
