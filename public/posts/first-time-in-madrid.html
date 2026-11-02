@@ -295,6 +295,13 @@
     margin-bottom: 0 !important;
   }
 
+  /* ── Stay22 embed block ── */
+  .stay22-block { width: 100%; margin: 8px 0 0; }
+  .stay22-embed { width: 100%; overflow-x: auto; }
+  /* Hidden while empty. Shows automatically once a real snippet is pasted
+     inside the div, so nothing is claimed before one exists. */
+  .stay22-embed:empty { display: none; }
+
   @media (max-width: 640px) {
     .hero { height: 320px; }
     .post-body { padding: 48px 22px 64px; }
@@ -442,6 +449,18 @@
 
     <h3>Google Is Not Always Your Friend Here</h3>
     <p>Specifically when it comes to holiday closures. There is an entire post dedicated to this topic because learning it the hard way is not the experience you want. Google Maps will confidently tell you a place is open when it is completely, absolutely not open. Plan accordingly. We will get into all of it.</p>
+
+    <div class="section-dots">· · ·</div>
+
+    <h2>Where to Stay</h2>
+    <p>Where you sleep sets the tone for the whole trip. Compare options before you book.</p>
+
+    <!-- Stay22 booking block. Nothing here is a snippet, widget ID or affiliate
+         code. Paste the real Stay22 embed markup inside the div below and it
+         appears automatically; while the div is empty it stays hidden. -->
+    <section class="stay22-block" aria-label="Stay22 booking widget">
+      <div class="stay22-embed" data-stay22-embed=""></div>
+    </section>
 
     <div class="section-dots">· · ·</div>
 
