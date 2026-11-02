@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import Seo from "@/components/Seo";
 import { Download, FileText } from "lucide-react";
 import cheatSheetAsset from "@/assets/madrid-cheat-sheet.pdf.asset.json";
+import ComparisonTable from "@/components/ComparisonTable";
 
 const PAGE_BG = "#F2EDE4";
 const INK = "#1A1714";
@@ -393,45 +394,36 @@ const Resources = () => {
             <h2 style={sectionTitleStyle}>Do Not Overpay for Data</h2>
             <p style={sectionSubStyle}>Compare eSIM providers before you fly. These four all work well for Spain.</p>
 
-            <div
-              style={{
-                marginTop: 24,
-                background: "#FFFFFF",
-                border: `1.5px solid ${GOLD}`,
-                borderRadius: 12,
-                padding: 22,
-                display: "flex",
-                flexDirection: "column",
-                maxWidth: 360,
-              }}
-            >
-              <span style={{ fontSize: 26, display: "block", marginBottom: 10, lineHeight: 1 }}>📶</span>
-              <h3 style={{ fontFamily: display, fontWeight: 700, fontSize: 14, color: INK, lineHeight: 1.3, margin: "0 0 5px" }}>
-                Compare eSIM Providers for Spain
-              </h3>
-              <p style={{ fontFamily: lato, fontSize: 12, color: MUTED, lineHeight: 1.6, margin: 0, marginBottom: 14 }}>
-                Jetpac, Holafly, Airalo, and Saily all work well for Spain. Use esimdb.com to compare current pricing before you buy.
-              </p>
-              <a
-                href="https://esimdb.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  alignSelf: "flex-start",
-                  background: GOLD,
-                  color: INK,
-                  fontFamily: lato,
-                  fontWeight: 700,
-                  fontSize: 10,
-                  letterSpacing: "0.1em",
-                  textTransform: "uppercase",
-                  padding: "8px 16px",
-                  borderRadius: 20,
-                  textDecoration: "none",
-                }}
-              >
-                Visit esimdb.com
-              </a>
+            <div style={{ marginTop: 24 }}>
+              <ComparisonTable
+                rows={[
+                  {
+                    name: "Jetpac",
+                    specs: {},
+                    link: "#",
+                    linkLabel: "Check Jetpac plans for Spain →",
+                  },
+                  {
+                    name: "Holafly",
+                    specs: {},
+                    link: "#",
+                    linkLabel: "Check Holafly plans for Spain →",
+                  },
+                  {
+                    name: "Airalo",
+                    specs: {},
+                    link: "#",
+                    linkLabel: "Check Airalo plans for Spain →",
+                  },
+                  {
+                    name: "Saily",
+                    specs: {},
+                    link: "#",
+                    linkLabel: "Check Saily plans for Spain →",
+                  },
+                ]}
+                affiliateLabel=""
+              />
             </div>
           </section>
 
