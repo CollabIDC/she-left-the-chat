@@ -261,6 +261,131 @@
     border-top: 1px solid var(--soft-line);
   }
 
+
+  /* ── Affiliate disclosure strip ── */
+  .disclosure {
+    background: #FFFFFF;
+    border: 1px solid var(--soft-line);
+    border-radius: 16px;
+    padding: 18px 22px;
+    margin: 0 0 40px;
+  }
+  .disclosure .label {
+    font-family: 'Lato', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+  }
+  .disclosure p {
+    font-size: 15px !important;
+    line-height: 1.7 !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* ── Product cards ── */
+  .product-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin: 26px 0 10px;
+  }
+  .product-card {
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    border: 1px solid var(--soft-line);
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  .product-photo {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    display: block;
+    background: #E7DECF;
+  }
+  .product-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 14px 16px 16px;
+  }
+  .product-info h4 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 1.3;
+    color: var(--ink);
+    margin-bottom: 6px;
+  }
+  .product-info .why {
+    font-family: 'Lato', sans-serif;
+    font-size: 13.5px !important;
+    line-height: 1.6 !important;
+    color: var(--warm-mid) !important;
+    margin-bottom: 0 !important;
+  }
+  .product-info .helper {
+    font-family: 'Lato', sans-serif;
+    font-size: 11.5px !important;
+    font-weight: 700;
+    line-height: 1.5 !important;
+    letter-spacing: 0.06em;
+    color: var(--accent) !important;
+    margin-top: 8px !important;
+    margin-bottom: 0 !important;
+  }
+  .product-btn {
+    margin-top: auto;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--gold);
+    color: var(--ink);
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 11px 16px;
+    border-radius: 999px;
+    text-decoration: none;
+  }
+  .product-btn:hover { background: #A5841F; }
+  .affiliate-label {
+    font-family: 'Lato', sans-serif;
+    font-size: 9.5px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    margin-top: 8px !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* ── Shop this list grid ── */
+  .shop-list { margin: 44px 0 8px; }
+  .shop-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .shop-grid .product-info { padding: 12px 12px 14px; }
+  .shop-grid .product-info h4 { font-size: 15px; }
+  .shop-grid .why { font-size: 12.5px !important; }
+  .shop-grid .product-btn { font-size: 9.5px; padding: 9px 10px; }
+
+  @media (min-width: 640px) {
+    .product-cards { grid-template-columns: 1fr 1fr; gap: 20px; }
+  }
+  @media (min-width: 760px) {
+    .shop-grid { grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  }
+
   @media (max-width: 640px) {
     .hero { height: 320px; }
     .post-body { padding: 48px 22px 64px; }
@@ -291,6 +416,11 @@
   </div>
 
   <article class="post-body">
+
+    <aside class="disclosure" role="note" aria-label="Affiliate disclosure">
+      <p class="label">Affiliate disclosure</p>
+      <p>This post contains affiliate links. If you buy through them, we may earn a commission at no extra cost to you.</p>
+    </aside>
 
     <p class="lead">Let me tell you something nobody puts in a packing guide.</p>
 
@@ -360,6 +490,27 @@
 
     <p>In between shoes. This is the gap in most people's packing. Something that is not a gym shoe and not a formal shoe. A clean sneaker, a loafer, a casual flat. Something you can wear to a nicer café or a casual dinner without feeling underdressed.</p>
 
+    <div class="product-cards">
+      <article class="product-card">
+        <img class="product-photo" data-photo="REPLACE: add your own photo of this item" src="/posts/images/photo-placeholder.svg" alt="Neutral placeholder photo. Replace with your own photo of this item." />
+        <div class="product-info">
+          <h4>Hokas</h4>
+          <p class="why">The shoes I walk Madrid in. Supportive, cushioned, and the pair I actually reach for every day.</p>
+          <a class="product-btn" href="#" data-placeholder-link="">Shop the Hokas I walk Madrid in</a>
+          <p class="affiliate-label">Affiliate link</p>
+        </div>
+      </article>
+      <article class="product-card">
+        <img class="product-photo" data-photo="REPLACE: add your own photo of this item" src="/posts/images/photo-placeholder.svg" alt="Neutral placeholder photo. Replace with your own photo of this item." />
+        <div class="product-info">
+          <h4>Transitional loafers</h4>
+          <p class="why">The gap in most packing lists. Not a gym shoe, not a dress shoe, and needed about every other day.</p>
+          <a class="product-btn" href="#" data-placeholder-link="">Shop transitional loafers</a>
+          <p class="affiliate-label">Affiliate link</p>
+        </div>
+      </article>
+    </div>
+
     <p>Boots or warm weather shoes depending on your season. If you are coming in winter or fall, boots. If you are coming in summer, comfortable sandals that can handle cobblestones.</p>
 
     <p>Leave the stilettos at home. Cobblestone streets are everywhere in Madrid's historic areas. Heels and cobblestones have a complicated relationship that never ends well for the heels.</p>
@@ -402,6 +553,28 @@
     <p>A multi plug charging bank. One device that charges your Android, your iPhone, and your iPad without carrying three separate cables.</p>
 
     <p>Plug adapter. Spain uses Type C and F plugs at 220V. Buy before you leave.</p>
+
+    <div class="product-cards">
+      <article class="product-card">
+        <img class="product-photo" data-photo="REPLACE: add your own photo of this item" src="/posts/images/photo-placeholder.svg" alt="Neutral placeholder photo. Replace with your own photo of this item." />
+        <div class="product-info">
+          <h4>Portable charging bank</h4>
+          <p class="why">I pack two, not one. You will use them both.</p>
+          <a class="product-btn" href="#" data-placeholder-link="">Shop the charging bank I carry (I pack two)</a>
+          <p class="affiliate-label">Affiliate link</p>
+        </div>
+      </article>
+      <article class="product-card">
+        <img class="product-photo" data-photo="REPLACE: add your own photo of this item" src="/posts/images/photo-placeholder.svg" alt="Neutral placeholder photo. Replace with your own photo of this item." />
+        <div class="product-info">
+          <h4>Type C / F plug adapter</h4>
+          <p class="why">220V. Buy it before you leave, not at the airport.</p>
+          <p class="helper">Spain uses Type C / F plugs</p>
+          <a class="product-btn" href="#" data-placeholder-link="">Shop a Type C / F adapter for Spain</a>
+          <p class="affiliate-label">Affiliate link</p>
+        </div>
+      </article>
+    </div>
 
     <p>Portable WiFi device. Essential for longer stays as a bridge until your home WiFi is set up.</p>
 
@@ -477,6 +650,86 @@
     </div>
 
     <div class="section-dots">· · ·</div>
+
+
+    <section class="shop-list" aria-label="Shop this list">
+      <h2>Shop This List</h2>
+      <p>The things I actually pack and would buy again.</p>
+      <div class="shop-grid">
+      <article class="product-card">
+        <img class="product-photo" data-photo="REPLACE: add your own photo of this item" src="/posts/images/photo-placeholder.svg" alt="Neutral placeholder photo. Replace with your own photo of this item." />
+        <div class="product-info">
+          <h4>Beanie</h4>
+          <p class="why">The one item I wore almost every single day from December to April.</p>
+          <a class="product-btn" href="#" data-placeholder-link="">Shop</a>
+          <p class="affiliate-label">Affiliate link</p>
+        </div>
+      </article>
+      <article class="product-card">
+        <img class="product-photo" data-photo="REPLACE: add your own photo of this item" src="/posts/images/photo-placeholder.svg" alt="Neutral placeholder photo. Replace with your own photo of this item." />
+        <div class="product-info">
+          <h4>Shout Wipes</h4>
+          <p class="why">Hard to find in Spain. Bring them from home.</p>
+          <a class="product-btn" href="#" data-placeholder-link="">Shop</a>
+          <p class="affiliate-label">Affiliate link</p>
+        </div>
+      </article>
+      <article class="product-card">
+        <img class="product-photo" data-photo="REPLACE: add your own photo of this item" src="/posts/images/photo-placeholder.svg" alt="Neutral placeholder photo. Replace with your own photo of this item." />
+        <div class="product-info">
+          <h4>5-tier door organiser</h4>
+          <p class="why">European bathrooms have little to no cabinet storage. This changes the situation.</p>
+          <a class="product-btn" href="#" data-placeholder-link="">Shop</a>
+          <p class="affiliate-label">Affiliate link</p>
+        </div>
+      </article>
+      <article class="product-card">
+        <img class="product-photo" data-photo="REPLACE: add your own photo of this item" src="/posts/images/photo-placeholder.svg" alt="Neutral placeholder photo. Replace with your own photo of this item." />
+        <div class="product-info">
+          <h4>Neti pot</h4>
+          <p class="why">The Spanish version is not the same. Bring yours.</p>
+          <a class="product-btn" href="#" data-placeholder-link="">Shop</a>
+          <p class="affiliate-label">Affiliate link</p>
+        </div>
+      </article>
+      <article class="product-card">
+        <img class="product-photo" data-photo="REPLACE: add your own photo of this item" src="/posts/images/photo-placeholder.svg" alt="Neutral placeholder photo. Replace with your own photo of this item." />
+        <div class="product-info">
+          <h4>Measuring tape (inches + cm)</h4>
+          <p class="why">A tape measure that speaks metric. Inches only is a lesson in humility.</p>
+          <a class="product-btn" href="#" data-placeholder-link="">Shop</a>
+          <p class="affiliate-label">Affiliate link</p>
+        </div>
+      </article>
+      <article class="product-card">
+        <img class="product-photo" data-photo="REPLACE: add your own photo of this item" src="/posts/images/photo-placeholder.svg" alt="Neutral placeholder photo. Replace with your own photo of this item." />
+        <div class="product-info">
+          <h4>Earplugs</h4>
+          <p class="why">Madrid is loud at 2 AM. Not optional if you value sleep.</p>
+          <a class="product-btn" href="#" data-placeholder-link="">Shop</a>
+          <p class="affiliate-label">Affiliate link</p>
+        </div>
+      </article>
+      <article class="product-card">
+        <img class="product-photo" data-photo="REPLACE: add your own photo of this item" src="/posts/images/photo-placeholder.svg" alt="Neutral placeholder photo. Replace with your own photo of this item." />
+        <div class="product-info">
+          <h4>Reusable water bottle</h4>
+          <p class="why">The tap water is safe and good. Fill up anywhere instead of paying every time.</p>
+          <a class="product-btn" href="#" data-placeholder-link="">Shop</a>
+          <p class="affiliate-label">Affiliate link</p>
+        </div>
+      </article>
+      <article class="product-card">
+        <img class="product-photo" data-photo="REPLACE: add your own photo of this item" src="/posts/images/photo-placeholder.svg" alt="Neutral placeholder photo. Replace with your own photo of this item." />
+        <div class="product-info">
+          <h4>Suitcase</h4>
+          <p class="why">Everything has to fit somewhere. Mine survived four checked bags and a carry on.</p>
+          <a class="product-btn" href="#" data-placeholder-link="">Shop</a>
+          <p class="affiliate-label">Affiliate link</p>
+        </div>
+      </article>
+      </div>
+    </section>
 
     <p>Want updates as new posts drop? Subscribe to the She Left the Chat newsletter below. No spam. Just Madrid, the real version, delivered to your inbox.</p>
 
