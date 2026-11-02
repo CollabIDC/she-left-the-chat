@@ -30,7 +30,7 @@ describe("FeaturedBusiness", () => {
   it("hides the partnership label unless paidPartnership is true", () => {
     const { container } = renderCard();
     expect(screen.queryByText("Paid partnership")).toBeNull();
-    expect(container.querySelector("p")).toBeNull();
+    expect(container.querySelector("[data-partnership-label]")).toBeNull();
     renderCard({ paidPartnership: true });
     expect(screen.getAllByText("Paid partnership").length).toBeGreaterThan(0);
   });
